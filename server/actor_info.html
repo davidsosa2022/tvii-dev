@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+  <title>Nintendo TVii</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/vino_en.css">
+  <script type="text/javascript" src="js/vino_en.js"></script>
+</head>
+  <body data-page="actor-page" class="actor-page">
+<div class="wrapper">
+  <menu class="menu-buttons">
+    <a class="top-bar no-after" no_touch></a>
+    <button navi_target navi_no_reset onmousedown="vino.soundPlay('SE_COMMON_TOUCH_ON'), app.utils.hover(true, this)" onmouseout="app.utils.hover(false, this)" href="javascript:void(0);" onmouseup="app.utils.hover(false, this)" class="favoritebtn" onclick="toggleFavorite();"></button>
+    <a navi_target onmousedown="vino.soundPlay('SE_COMMON_TOUCH_ON'), app.utils.hover(true, this)" onmouseout="app.utils.hover(false, this)" href="javascript:void(0);" onmouseup="app.utils.hover(false, this)" class="toppagebtn" onclick="app.utils.top()" data-sound="SE_TOP_TOUCH_OFF">Back to Top</a>
+
+    <a onmousedown="vino.soundPlay('SE_MOVEPAGE_SELECT'), app.utils.hover(true, this)" onmouseout="app.utils.hover(false, this)" href="javascript:void(0);" onmouseup="app.utils.hover(false, this)" class="before_page_button" style="display: none;" onclick="scrollLeftPPage();" data-sound="SE_MOVEPAGE_PLAY"></a>
+    <a onmousedown="vino.soundPlay('SE_MOVEPAGE_SELECT'), app.utils.hover(true, this)" onmouseout="app.utils.hover(false, this)" href="javascript:void(0);" onmouseup="app.utils.hover(false, this)" class="next_page_button" style="display: block;" onclick="scrollRightPPage();" data-sound="SE_MOVEPAGE_PLAY"></a>
+
+    <button navi_target onmousedown="vino.soundPlay('SE_COMMON_TOUCH_ON'), app.utils.hover(true, this)" onmouseout="app.utils.hover(false, this)" href="javascript:void(0);" onmouseup="app.utils.hover(false, this)" class="back_white_button" onclick="app.utils.back();" data-sound="SE_RETURN_TOUCH_OFF"></button>
+    <a class="info-tab program" no_touch>Information about this actor/performer/team is shown.</a>
+    <button navi_target onmousedown="vino.soundPlay('SE_COMMON_TOUCH_ON'), app.utils.hover(true, this)" onmouseout="app.utils.hover(false, this)" onmouseup="app.utils.hover(false, this)" href="javascript:void(0)" class="miiverse-button" disabled onclick="prepareMiiverseModal()" data-sound="SE_POPUP_TOUCH_OFF"></button>
+
+    <div class="day-info">
+      <div class="date-day-name"></div>
+      <div class="date-day"></div>
+      <div class="date-time"></div>
+    </div>
+  
+ </menu>
+
+<div class="actor-content">
+
+<section class="actor-details">
+</section>
+
+<label class="related-programs-label">Related programs</label>
+
+<section class="related-programs">
+</section>
+
+<button class="jump-browser" navi_target no_touch disabled>See additional information</button>
+<a class="spacer"></a>
+
+</div>
+
+<div class="miiverse-posts program">
+  <a no_touch onmousemove="void(0)" class="loading_miiverse"></a>
+  <a navi_target onmousedown="vino.soundPlay('SE_COMMON_TOUCH_ON'), app.utils.hover(true, this)" onmouseout="app.utils.hover(false, this)" href="javascript:void(0);" onmouseup="app.utils.hover(false, this)" class="back_white_button posts_back" onclick="closeMiiverseModal()" data-sound="SE_RETURN_TOUCH_OFF"></a>
+
+<header class="posts-top-bar"></header>
+
+<div class="post-list">
+</div>
+
+<div class="post-confirm-modal" onmousemove="void(0);">
+  <h1 class="confirm-header">The content you've entered will now be sent.</h1>
+  <p1 class="confirm-text">If your post contains spoilers (such as important parts of the plot), please go back and check the Spoilers option.</p1>
+  <section class="message-content">
+  <img class="mii-img" data-sound="SE_WORD_MII" src="img/normal_face.png">
+  <p class="user-text none"></p>
+  <div class="user-memo none">
+  <img class="memo" src="img/memo.png"/>
+  </div>
+</section>
+<span class="spoilers-status"></span>
+<button onmousedown="vino.soundPlay('SE_COMMON_TOUCH_ON'), app.utils.hover(true, this)" onmouseout="app.utils.hover(false, this)" href="javascript:void(0);" onmouseup="app.utils.hover(false, this)" class="cancel-post">Cancel</button>
+<button onmousedown="vino.soundPlay('SE_COMMON_TOUCH_ON'), app.utils.hover(true, this)" onmouseout="app.utils.hover(false, this)" href="javascript:void(0);" onmouseup="app.utils.hover(false, this)" class="finish-post">Post</button>
+</div>
+
+</div>
+
+</div>
+</body>
+</html>

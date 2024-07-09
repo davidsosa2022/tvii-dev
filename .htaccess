@@ -1,0 +1,34 @@
+#Nintendo TVii - Vino
+Options +FollowSymLinks -Indexes
+# based heavily on Rixys htaccess for grape
+RewriteEngine on
+ErrorDocument 404 /index.php
+
+RewriteRule ^$ /server/tabs-popular.php [L,NC,QSA]
+RewriteRule ^guide$ /server/tabs-guide.php [L,NC,QSA]
+RewriteRule ^create$ /server/create-account.php [L,NC,QSA]
+RewriteRule ^menu$ /server/menu.php [L,NC,QSA]
+
+# Other rewrite rules...
+RewriteRule ^program$ /server/program.php [L,NC,QSA]
+RewriteRule ^actor$ /pages/actor_info.html [L,NC,QSA]
+RewriteRule ^v1/bsky/auth$ /api/bsky_auth.php [L,NC,QSA]
+RewriteRule ^v1/bsky/post$ /api/bsky_crosspost.php [L,NC,QSA]
+RewriteRule ^v1/miis$ /api/get_miis.php [L,NC,QSA]
+RewriteRule ^v1/miiverse/upload_post$ /api/miiverse_post.php [L,NC,QSA]
+RewriteRule ^v1/miiverse/upload_message$ /api/miiverse_post_message.php [L,NC,QSA]
+RewriteRule ^v1/miiverse/get_post$ /api/miiverse_get_posts.php [L,NC,QSA]
+RewriteRule ^v1/recommend$ /api/recommend.php [L,NC,QSA]
+RewriteRule ^v1/create$ /api/create.php [L,NC,QSA]
+RewriteRule ^v1/me/update$ /api/update_profile.php [L,NC,QSA]
+RewriteRule ^v1/me/activity$ /api/last_seen.php [L,NC,QSA]
+
+RewriteRule ^manage$ /admin/manage-programs.php [L,NC,QSA]
+RewriteRule ^manage/users$ /admin/manage-users.php [L,NC,QSA]
+RewriteRule ^manage/actors$ /admin/manage-actors.php [L,NC,QSA]
+
+
+RewriteRule ^whitelist\.txt$ /api/whitelist.php [QSA,NC,L]
+RewriteRule ^error$ /server/error.php [L,NC,QSA]
+
+php_value display_errors 1
