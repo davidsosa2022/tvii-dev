@@ -2136,7 +2136,7 @@ function prepareMiiverseModal() {
                 post.body = $(".miiverse-posts .textarea-text-input").val();
             } else if (checkedPostType == "memo") {
                 post.body = "";
-                post.painting = vino.memo_getImageTgaRaw();
+                post.painting = vino.memo_getImageTgaCompressed();
             }
 
             post.is_spoiler = isSpoilerChecked ? 1 : 0;
