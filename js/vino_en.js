@@ -386,7 +386,7 @@ var tvii = {
             this.community_id = 0;
             this.app_data = '';
             this.topic_tag = '';
-            this.search_key = [];
+            this.search_key = '';
             this.is_autopost = 0;
             this.is_spoiler = 0;
             this.is_app_jumpable = 0;
@@ -412,6 +412,7 @@ var tvii = {
             this.message_to_pid = '';
             this.body = '';
             this.painting = '';
+            this.searchKey = '';
         },
         getParamPackProperty: function (key) {
             var param = vino.olv_getParameterPack();
@@ -1998,6 +1999,7 @@ function prepareMiiverseModal() {
                     var recAutopost = new tvii.olv.uploadMessage();
                     var recAutopostAppData = Base64.encode(JSON.stringify({ program_name: showName, program_id: showId }));
                     recAutopost.is_autopost = 1;
+                    recAutopost.searchKey = "vino_friend_rec";
                     recAutopost.message_to_pid = recBut.attr("data-miiverse-user-pid");
                     recAutopost.body = "I recommend you this program: " + showName + " - Start Nintendo TVii for details.";
                     recAutopost.app_data = recAutopostAppData;
