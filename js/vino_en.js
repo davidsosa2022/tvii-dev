@@ -463,6 +463,7 @@ var tvii = {
                             callbackSuccess();
                         }
                     } else {
+                        vino.runOliveErrorDialog(1152004);
                         if (typeof callbackError === 'function') {
                             callbackError();
                         }
@@ -497,17 +498,11 @@ var tvii = {
             olvPostReq.onreadystatechange = function () {
                 if (olvPostReq.readyState === 4) {
                     if (olvPostReq.status === 200) {
-                        var wasSuccess = olvPostReq.responseText;
-                        if (wasSuccess.indexOf("OK") === -1) {
-                            if (typeof callbackError === 'function') {
-                                callbackError();
-                            }
-                            return;
-                        }
                         if (typeof callbackSuccess === 'function') {
                             callbackSuccess();
                         }
                     } else {
+                        vino.runOliveErrorDialog(1152004);
                         if (typeof callbackError === 'function') {
                             callbackError();
                         }
@@ -527,12 +522,6 @@ var tvii = {
             olvPostReq.onreadystatechange = function () {
                 if (olvPostReq.readyState === 4) {
                     if (olvPostReq.status === 200 && olvPostReq.responseXML) {
-                        if (!olvPostReq.responseXML.getElementsByTagName('posts')[0]) {
-                            if (typeof callbackError === 'function') {
-                                callbackError();
-                            }
-                            return;
-                        }
                         if (typeof callbackSuccess === 'function') {
                             tvii.isOlvRequesting = false;
                             var miiResponse = olvPostReq.responseXML;
@@ -600,6 +589,7 @@ var tvii = {
                         }
                     } else {
                         tvii.isOlvRequesting = false;
+                        vino.runOliveErrorDialog(1155016);
                         if (typeof callbackError === 'function') {
                             callbackError();
                         }
@@ -678,6 +668,7 @@ var tvii = {
                         }
                         callbackSuccess(miiObjects);
                     } else {
+                        vino.runOliveErrorDialog(1159999);
                         if (typeof callbackError === 'function') {
                             callbackError();
                         }
@@ -686,7 +677,10 @@ var tvii = {
             };
             miisQ.send();
         },
-        requestNotificationsDirectMessage: function () {
+        getDirectMessages: function(query, callbackSuccess, callbackError) {
+
+        },
+        requestNotifications: function (callbackSuccess, callbackError) {
 
         }
     },
@@ -1686,9 +1680,9 @@ function prepareMiiverseModal() {
         return;
     }
     var pageType = /\/program/.test(window.location.pathname) ? $(".program-content") : $(".actor-content");
-    var searchKey = $("header.top-bar").attr("data-miiverse-search-key");
-    var topicTag = $("header.top-bar").attr("data-miiverse-topic-tag");
-
+    var searchKey = $("header.miiverse-with-attributes-top-bar").attr("data-miiverse-search-key");
+    var topicTag = $("header.miiverse-with-attributes-top-bar").attr("data-miiverse-topic-tag");
+    var appData = $("header.miiverse-with-attributes-top-bar").attr("data-miiverse-app-data");
     //set distinct_pid to 1 after debug
     var queryPoll = '?language_id=254&with_mii=1&limit=50&distinct_pid=0&search_key=' + searchKey + "(P)";
     var query = '?language_id=254&with_mii=1&limit=50&distinct_pid=0&search_key=' + searchKey;
@@ -2092,6 +2086,61 @@ function prepareMiiverseModal() {
         $(".feeling-buttons li").on('click', toggleFeeling)
         $(".miiverse-posts .cancel-post").on('click', closePostModal)
         $(".miiverse-posts .confirm-post").on('click', confirmPost)
+
+        $(".miiverse-posts .post-confirm-modal .confirm-cancel-post").on('click', cancelPostConfirmation)
+        $(".miiverse-posts .post-confirm-modal .confirm-finish-post").on('click', finishPostConfirmation)
+
+        function cancelPostConfirmation() {
+            $(".miiverse-posts .post-confirm-modal").addClass("none");
+        }
+
+        function finishPostConfirmation() {
+            var checkedPostType = $(".miiverse-posts .textarea-menu li label.checked").attr("id");
+            var isSpoilerChecked = $(".miiverse-posts .spoiler-button.checkbox-button").find('input').prop('checked');
+
+            $('.miiverse-posts .loading_miiverse').addClass('show');
+            tvii.utils.lockUserOperation(true);
+
+            var post = new tvii.olv.uploadPost();
+            if (checkedPostType == "text") {
+                post.body = $(".miiverse-posts .textarea-text-input").val();
+            } else if (checkedPostType == "memo") {
+                post.painting = vino.memo_getImageTgaRaw();
+            }
+
+            post.is_spoiler = isSpoilerChecked ? 1 : 0;
+            post.is_autopost = 0;
+            post.feeling_id = parseInt($(".feeling-buttons li.checked").find("input").val(), 10)
+            post.search_key = searchKey;
+            post.topic_tag = topicTag;
+
+            //todo: add User Description to appdata
+            var postAppData = {
+                description: appData
+            }
+
+            post.app_data = Base64.encode(postAppData);
+            post.is_app_jumpable = 0;
+            post.community_id = 0;
+
+
+            tvii.olv.sendPost(post, onPostSuccess, onPostFailure);
+
+            function onPostSuccess() {
+                alert("The content you entered\nwas sent successfully.")
+                tvii.utils.lockUserOperation(false);
+                $('.miiverse-posts .loading_miiverse').removeClass('show');
+                $(".miiverse-posts .post-confirm-modal").addClass("none");
+                closePostModal();
+            }
+
+            function onPostFailure() {
+                tvii.utils.lockUserOperation(false);
+                $('.miiverse-posts .loading_miiverse').removeClass('show');
+                $(".miiverse-posts .post-confirm-modal").addClass("none");
+            }
+        }
+
         $(".miiverse-posts .textarea-menu li label").on('click', changePostType)
         $(".miiverse-posts .textarea-memo").on('click', openMemo)
         $(".miiverse-posts .spoiler-button.checkbox-button").on('click', toggleSpoiler)
@@ -2257,6 +2306,7 @@ function prepareMiiverseModal() {
         $(".miiverse-posts .back_white_button.miiverse-back").removeClass("none")
         $(".miiverse-posts .post-list").removeClass("none");
         $('.miiverse-posts .loading_miiverse').addClass('show');
+        tvii.utils.lockUserOperation(true);
         tvii.olv.getPosts(query, appendNormalPosts, errorHandler);
     }
 
