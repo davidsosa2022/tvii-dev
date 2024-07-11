@@ -2245,7 +2245,7 @@ function prepareMiiverseModal() {
 
         $(".user-icon .mii").attr("src", vino.act_getMiiImageEx(tvii.userSlot, 1))
         $(".post-input-modal .modal-content .username").text(vino.act_getName(tvii.userSlot));
-        $(".post-input-modal .modal-content .nnid").text(nnidValue);
+        $(".post-input-modal .modal-content .nnid").text("");
         $(".post-input-modal .modal-content .topic-tag").text(topicTag);
     }
 
