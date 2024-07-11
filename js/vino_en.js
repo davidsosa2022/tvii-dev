@@ -2157,7 +2157,9 @@ function prepareMiiverseModal() {
             tvii.olv.sendPost(post, onPostSuccess, onPostFailure);
 
             function onPostSuccess() {
-                alert("The content you entered\nwas sent successfully.")
+                $(".miiverse-posts .textarea-text-input").val("");
+                vino.memo_reset();
+                alert("The content you entered\nwas sent successfully.");
                 tvii.utils.lockUserOperation(false);
                 $(".miiverse-posts .cancel-post").css('pointer-events', 'auto');
                 $('.miiverse-posts .loading_miiverse').removeClass('show');
