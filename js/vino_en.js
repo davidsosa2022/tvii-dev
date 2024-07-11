@@ -2246,6 +2246,12 @@ function prepareMiiverseModal() {
         }
 
         function confirmPost() {
+
+            if ($(".miiverse-posts .textarea-text-input").val().length < 1) {
+                alert("Please input some text on this post.");
+                return;
+            }
+
             switch ($(".feeling-buttons li.checked").find("input").val()) {
                 case "0":
                     $(".miiverse-posts .post-confirm-modal .message-content .mii-img").attr("src", vino.act_getMiiImageEx(tvii.userSlot, 1))
@@ -2279,6 +2285,7 @@ function prepareMiiverseModal() {
             } else if (checkedPostType == "memo") {
                 $(".miiverse-posts .post-confirm-modal .message-content .user-text").addClass("none")
                 $(".miiverse-posts .post-confirm-modal .message-content .user-memo").removeClass("none")
+                $(".miiverse-posts .post-confirm-modal .message-content .user-memo .memo").attr("src", vino.memo_getImagePng())
             }
 
             if (isSpoilerChecked) {
