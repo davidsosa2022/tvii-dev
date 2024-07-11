@@ -1998,7 +1998,7 @@ function prepareMiiverseModal() {
                 }
 
                 var friendsUrl = "";
-                if (friends.includes(",")) {
+                if (friends.indexOf(",") !== -1) {
                     var friendIds = friends.split(",");
     
                     for (var i = 0; i < friendIds.length; i++) {
