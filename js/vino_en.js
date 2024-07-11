@@ -451,6 +451,7 @@ var tvii = {
             function isEmpty(obj) {
                 return obj == null || Object.keys(obj).length === 0;
             }
+            alert(formData)
             var olvPostReq = new XMLHttpRequest();
             olvPostReq.open("POST", tvii.clientUrl + "/v1/miiverse/upload_post")
             olvPostReq.setRequestHeader('X-Nintendo-Olv-User-Agent', vino.olv_getUserAgent());
@@ -2100,33 +2101,32 @@ function prepareMiiverseModal() {
         function finishPostConfirmation() {
             var checkedPostType = $(".miiverse-posts .textarea-menu li label.checked").attr("id");
             var isSpoilerChecked = $(".miiverse-posts .spoiler-button.checkbox-button").find('input').prop('checked');
-            alert("sigma")
+
             $('.miiverse-posts .loading_miiverse').addClass('show');
             tvii.utils.lockUserOperation(true);
-            alert("sigma")
+
             var post = new tvii.olv.uploadPost();
             if (checkedPostType == "text") {
                 post.body = $(".miiverse-posts .textarea-text-input").val();
             } else if (checkedPostType == "memo") {
                 post.painting = vino.memo_getImageTgaRaw();
             }
-            alert("sigma")
+
             post.is_spoiler = isSpoilerChecked ? 1 : 0;
             post.is_autopost = 0;
             post.feeling_id = parseInt($(".feeling-buttons li.checked").find("input").val(), 10)
             post.search_key = searchKey;
             post.topic_tag = topicTag;
-            alert("sigma")
+
             //todo: add User Description to appdata
             var postAppData = {
                 description: appData
             }
-            alert("sigma")
+
             post.app_data = Base64.encode(postAppData);
             post.is_app_jumpable = 0;
             post.community_id = 0;
 
-            alert("sigma")
             tvii.olv.sendPost(post, onPostSuccess, onPostFailure);
 
             function onPostSuccess() {
