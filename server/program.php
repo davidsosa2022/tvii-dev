@@ -321,7 +321,7 @@ if (!empty($actors_html)) {
 
 <div class="post-input-modal none">
     <header class="post-modal-header"><?php echo localize("vino.program.olv.solv.post") ?></header>
-    <a navi_target navi_no_reset data-hover data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" data-sound="SE_COMMON_FINISH_TOUCH_OFF" class="cancel-post"></a>
+    <a navi_target navi_no_reset data-hover data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" data-sound="SE_COMMON_FINISH_TOUCH_OFF" class="cancel-post accesskey-b"></a>
     <a navi_target navi_no_reset data-hover data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" data-sound="SE_BAR_BTN_TOUCH_OFF"  class="confirm-post"><?php echo localize("vino.program.olv.solv.send") ?></a>
 
 <div class="modal-content">
