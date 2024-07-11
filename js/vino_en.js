@@ -457,8 +457,8 @@ var tvii = {
                 }
             }
 
-            function isEmpty(obj) {
-                return obj === null || obj === undefined || (typeof obj === 'object' && Object.keys(obj).length === 0);
+            function isEmpty(data) {
+                return data === "";
             }
 
             var olvPostReq = new XMLHttpRequest();
@@ -497,8 +497,8 @@ var tvii = {
                 }
             }
 
-            function isEmpty(obj) {
-                return obj === null || obj === undefined || (typeof obj === 'object' && Object.keys(obj).length === 0);
+            function isEmpty(data) {
+                return data === "";
             }
             var olvPostReq = new XMLHttpRequest();
             olvPostReq.open("POST", tvii.clientUrl + "/v1/miiverse/upload_message")
