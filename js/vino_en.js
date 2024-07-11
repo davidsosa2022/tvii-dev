@@ -2011,6 +2011,8 @@ function prepareMiiverseModal() {
 
 
                 function recommendShow() {
+                    tvii.utils.lockUserOperation(true);
+                    $('.miiverse-posts .loading_miiverse').addClass('show');
                     vino.soundPlayVolume("SE_CMN_TOUCH_ON", 25);
                     var recBut = $(this);
                     if (recBut.hasClass("checked") || recBut.hasClass("adding")) { return; }
@@ -2030,12 +2032,15 @@ function prepareMiiverseModal() {
                         recBut.removeClass("adding");
                         recBut.addClass("checked");
                         vino.soundPlayVolume("SE_FAVORITE", 25);
+                        tvii.utils.lockUserOperation(false);
+                        $('.miiverse-posts .loading_miiverse').removeClass('show');
                     }
 
                     function onSendFail() {
                         recBut.removeClass("adding");
                         vino.soundPlayVolume("SE_NO_FAVORITE", 25);
-                        alert("Could not recommend program.\nYou have to start a conversation\nwith this user before,\nSet up Miiverse and start a conversation\nwith this friend.")
+                        tvii.utils.lockUserOperation(false);
+                        $('.miiverse-posts .loading_miiverse').removeClass('show');
                     }
                 }
 
