@@ -1971,7 +1971,8 @@ function prepareMiiverseModal() {
                     errorDiv.addClass("message");
                     errorDiv.text("You do not have any friends\non your Friend List.");
                     $('.miiverse-posts .post-list').append(errorDiv);
-                    tvii.utils.lockUserOperation(false)
+                    $('.miiverse-posts .loading_miiverse').removeClass('show');
+                    tvii.utils.lockUserOperation(false);
                     return;
                 }
                 var friendIds = friends.split(",");
