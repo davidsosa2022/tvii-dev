@@ -20,6 +20,15 @@ if (typeof vino === 'undefined') {
         requestGarbageCollect: function () {
             console.log('Requested Garbage collection');
         },
+        title_getImageCount: function() {
+            return 0;
+        },
+        title_hasImage: function(img) {
+            return false;
+        },
+        title_setFixedImage: function(url, id, n, n, n, type) {
+            return true;
+        },
         soundStopAll: function () {
             console.log("Stop all sounds")
         },
@@ -1088,6 +1097,7 @@ var tvii = {
             tvii.utils.setActivityInterval();
 
             tvii.utils.getRandomTopBarColor();
+            tvii.utils.setLoadingScreenBG();
             //if TVii was returned from the Internet Browser (jumped from the app), redirect to the original page
             tvii.utils.checkReturnedFlagAndRedirect();
         },
@@ -1172,8 +1182,17 @@ var tvii = {
             }
 
         },
-        setLoadingScreen: function (logo) {
-            vino.ls_setItem('vino_client_loading_title', logo);
+        setLoadingScreenBG: function () {
+            if (vino.title_getImageCount() >= 1 &&
+             !vino.title_hasImage("vino_blue") &&
+             !vino.title_hasImage("vino_orange") &&
+             !vino.title_hasImage("vino_pink")
+            ) {
+                vino.title_clearImage();
+                vino.title_setFixedImage(tvii.clientUrl + "/img/title/blue.png", "vino_blue", "","","", 2);
+                vino.title_setFixedImage(tvii.clientUrl + "/img/title/orange.png", "vino_orange", "","","", 2);
+                vino.title_setFixedImage(tvii.clientUrl + "/img/title/pink.png", "vino_pink", "","","", 2);
+            }
         },
         resetLoadingIconPosition: function () {
             vino.loading_setIconRect(360, 160, 120, 120);
@@ -1977,14 +1996,19 @@ function prepareMiiverseModal() {
                     tvii.utils.lockUserOperation(false);
                     return;
                 }
-                var friendIds = friends.split(",");
-                var friendsUrl = "";
 
-                for (var i = 0; i < friendIds.length; i++) {
-                    friendsUrl += friendIds[i].trim();
-                    if (i < friendIds.length - 1) {
-                        friendsUrl += ",";
+                var friendsUrl = "";
+                if (friends.includes(",")) {
+                    var friendIds = friends.split(",");
+    
+                    for (var i = 0; i < friendIds.length; i++) {
+                        friendsUrl += friendIds[i].trim();
+                        if (i < friendIds.length - 1) {
+                            friendsUrl += ",";
+                        }
                     }
+                } else {
+                    friendsUrl = friends;
                 }
 
                 tvii.olv.getMiisByPidQuery(friendsUrl, handleFriendList, friendListFail)
