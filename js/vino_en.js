@@ -449,9 +449,9 @@ var tvii = {
             }
 
             function isEmpty(obj) {
-                return obj == null || Object.keys(obj).length === 0;
+                return obj === null || obj === undefined || (typeof obj === 'object' && Object.keys(obj).length === 0);
             }
-            alert(formData)
+
             var olvPostReq = new XMLHttpRequest();
             olvPostReq.open("POST", tvii.clientUrl + "/v1/miiverse/upload_post")
             olvPostReq.setRequestHeader('X-Nintendo-Olv-User-Agent', vino.olv_getUserAgent());
