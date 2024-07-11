@@ -314,7 +314,7 @@ if (!empty($actors_html)) {
 
 <span class="spoilers-status"></span>
 
-<a href="javascript:void(0)" data-hover-sound="SE_COMMON_TOUCH_ON" data-sound="SE_WAVE_CANCEL_TOUCH_OFF" data-hover class="confirm-cancel-post">Cancel</a>
+<a href="javascript:void(0)" data-hover-sound="SE_COMMON_TOUCH_ON" data-sound="SE_WAVE_CANCEL_TOUCH_OFF" data-hover class="confirm-cancel-post accesskey-b">Cancel</a>
 <a href="javascript:void(0)" data-hover-sound="SE_COMMON_TOUCH_ON" data-sound="SE_WAVE_OK_TOUCH_OFF" data-hover class="confirm-finish-post">Post</a>
 
 </div>
