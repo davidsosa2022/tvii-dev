@@ -2120,7 +2120,7 @@ function prepareMiiverseModal() {
         $(".miiverse-posts .post-confirm-modal .confirm-finish-post").on('click', finishPostConfirmation)
 
         function cancelPostConfirmation() {
-            $(".miiverse-posts .cancel-post").removeClass("none");
+            $(".miiverse-posts .cancel-post").css('pointer-events', 'auto');
             $(".miiverse-posts .post-confirm-modal").addClass("none");
         }
 
@@ -2159,6 +2159,7 @@ function prepareMiiverseModal() {
             function onPostSuccess() {
                 alert("The content you entered\nwas sent successfully.")
                 tvii.utils.lockUserOperation(false);
+                $(".miiverse-posts .cancel-post").css('pointer-events', 'auto');
                 $('.miiverse-posts .loading_miiverse').removeClass('show');
                 $(".miiverse-posts .post-confirm-modal").addClass("none");
                 closePostModal();
@@ -2166,6 +2167,7 @@ function prepareMiiverseModal() {
 
             function onPostFailure() {
                 tvii.utils.lockUserOperation(false);
+                $(".miiverse-posts .cancel-post").css('pointer-events', 'auto');
                 $('.miiverse-posts .loading_miiverse').removeClass('show');
                 $(".miiverse-posts .post-confirm-modal").addClass("none");
             }
@@ -2296,7 +2298,7 @@ function prepareMiiverseModal() {
                 $(".miiverse-posts .post-confirm-modal .spoilers-status").text("Spoilers: No")
             }
 
-            $(".miiverse-posts .cancel-post").addClass("none");
+            $(".miiverse-posts .cancel-post").css('pointer-events', 'none');
             $(".miiverse-posts .post-confirm-modal").removeClass("none");
         }
 
