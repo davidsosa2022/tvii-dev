@@ -421,7 +421,7 @@ var tvii = {
             this.message_to_pid = '';
             this.body = '';
             this.painting = '';
-            this.searchKey = '';
+            this.search_key = '';
         },
         getParamPackProperty: function (key) {
             var param = vino.olv_getParameterPack();
@@ -1696,10 +1696,6 @@ function toggleFavorite() {
 }
 
 function prepareMiiverseModal() {
-    if (!vino.olv_isEnabled()) {
-        alert("Could not contact Miiverse.\nPlease wait a moment\nor try restarting.");
-        return;
-    }
     var pageType = /\/program/.test(window.location.pathname) ? $(".program-content") : $(".actor-content");
     var searchKey = $("header.miiverse-with-attributes-top-bar").attr("data-miiverse-search-key");
     var topicTag = $("header.miiverse-with-attributes-top-bar").attr("data-miiverse-topic-tag");
@@ -2018,13 +2014,13 @@ function prepareMiiverseModal() {
                     vino.soundPlayVolume("SE_CMN_TOUCH_ON", 25);
                     var recBut = $(this);
                     if (recBut.hasClass("checked") || recBut.hasClass("adding")) { return; }
-                    var showName = $("header.top-bar").attr("data-miiverse-topic-tag");
-                    var showId = $("header.top-bar").attr("data-miiverse-search-key");
+                    var showName = $("header.miiverse-with-attributes-top-bar").attr("data-miiverse-topic-tag");
+                    var showId = $("header.miiverse-with-attributes-top-bar").attr("data-miiverse-search-key");
                     recBut.addClass("adding");
                     var recAutopost = new tvii.olv.uploadMessage();
                     var recAutopostAppData = Base64.encode(JSON.stringify({ program_name: showName, program_id: showId }));
                     recAutopost.is_autopost = 1;
-                    recAutopost.searchKey = "vino_friend_rec";
+                    recAutopost.search_key = "vino_friend_rec";
                     recAutopost.message_to_pid = recBut.attr("data-miiverse-user-pid");
                     recAutopost.body = "I recommend you this program: " + showName + " - Start Nintendo TVii for details.";
                     recAutopost.app_data = recAutopostAppData;
@@ -2345,6 +2341,11 @@ function prepareMiiverseModal() {
     $(".back_white_button.miiverse-back").on("click", function () { closeMiiverseModal() })
 
     function openMiiverseModal() {
+        if (!vino.olv_isEnabled() && vino.olv_getErrorCodeOnInitialize()) {
+            vino.runOliveErrorDialog(vino.olv_getErrorCodeOnInitialize())
+            return;
+        }
+
         $(".miiverse-posts .post-list").html("");
         tvii.scrollPosition = window.scrollX;
         pageType.addClass("none");
