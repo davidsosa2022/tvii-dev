@@ -2120,6 +2120,7 @@ function prepareMiiverseModal() {
         $(".miiverse-posts .post-confirm-modal .confirm-finish-post").on('click', finishPostConfirmation)
 
         function cancelPostConfirmation() {
+            $(".miiverse-posts .cancel-post").removeClass("none");
             $(".miiverse-posts .post-confirm-modal").addClass("none");
         }
 
@@ -2294,6 +2295,7 @@ function prepareMiiverseModal() {
                 $(".miiverse-posts .post-confirm-modal .spoilers-status").text("Spoilers: No")
             }
 
+            $(".miiverse-posts .cancel-post").addClass("none");
             $(".miiverse-posts .post-confirm-modal").removeClass("none");
         }
 
