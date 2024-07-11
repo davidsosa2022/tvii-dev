@@ -2135,6 +2135,7 @@ function prepareMiiverseModal() {
             if (checkedPostType == "text") {
                 post.body = $(".miiverse-posts .textarea-text-input").val();
             } else if (checkedPostType == "memo") {
+                post.body = "";
                 post.painting = vino.memo_getImageTgaRaw();
             }
 
