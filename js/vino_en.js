@@ -2339,6 +2339,7 @@ function prepareMiiverseModal() {
     }
 
     function closePostModal() {
+        $(".miiverse-posts .post-confirm-modal").addClass("none");
         $(".miiverse-posts .post-input-modal").addClass("none")
         $(".miiverse-posts .posts-top-bar").removeClass("none")
         $(".miiverse-posts .tab-header").removeClass("none")
