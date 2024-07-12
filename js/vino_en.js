@@ -1571,28 +1571,43 @@ tvii.router.connect("^/program$", function () {
     prepareMiiverseModal();
     updateButtonVisibility();
 
-    function updateButtonVisibility() {
-        var scrollThreshold = 500;
+    var scrollAmount = 430;
+    var scrollThreshold = 430;
+    var fadeDuration = 500;
 
-        if (window.scrollX > scrollThreshold) {
-            $('.before_page_button').css("display", "block")
-            $('.next_page_button').css("display", "none")
+    function updateButtonVisibility() {
+        var scrollLeft = $(window).scrollLeft();
+        var maxScrollLeft = $(document).width() - $(window).width();
+
+        if (scrollLeft < scrollThreshold) {
+            $('.before_page_button').fadeOut(fadeDuration);
+            $('.next_page_button').fadeIn(fadeDuration);
+        } else if (scrollLeft >= maxScrollLeft) {
+            $('.before_page_button').fadeIn(fadeDuration);
+            $('.next_page_button').fadeOut(fadeDuration);
         } else {
-            $('.before_page_button').css("display", "none")
-            $('.next_page_button').css("display", "block")
+            $('.before_page_button').fadeIn(fadeDuration);
+            $('.next_page_button').fadeIn(fadeDuration);
         }
     }
 
     function scrollLeftPPage() {
-        $('html, body').animate({
-            scrollLeft: '-=' + 430
-        }, 600);
+        var scrollLeft = $(window).scrollLeft();
+        if (scrollLeft <= scrollThreshold) {
+            $('html, body').animate({ scrollLeft: 0 }, 600);
+        } else {
+            $('html, body').animate({ scrollLeft: 0 }, 600);
+        }
     }
 
     function scrollRightPPage() {
-        $('html, body').animate({
-            scrollLeft: '+=' + 430
-        }, 600);
+        var scrollLeft = $(window).scrollLeft();
+        var maxScrollLeft = $(document).width() - $(window).width();
+        if (scrollLeft >= scrollThreshold) {
+            $('html, body').animate({ scrollLeft: maxScrollLeft }, 600);
+        } else {
+            $('html, body').animate({ scrollLeft: '+=' + scrollAmount }, 600);
+        }
     }
 
 });
