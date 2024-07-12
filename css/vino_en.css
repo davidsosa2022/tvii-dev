@@ -803,7 +803,10 @@ button {
 
 .daily-tip {
   position: relative;
-  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
   margin-top: 10px;
   margin-bottom: 0px;
   border-bottom: 1px solid #e2e2e2;
@@ -817,7 +820,7 @@ button {
   max-width: 350px;
   white-space: nowrap;
   overflow: hidden;
-  margin: auto;
+  margin: 0px auto;
   display: block;
   color: #545553;
   font-size: 16px;
@@ -857,8 +860,8 @@ button {
   text-align: center;
   letter-spacing: 6px;
   margin-left: 6px;
+  margin-right: 6px;
   color: #959794;
-  content: "----------------------";
 }
 
 .program-preview {
