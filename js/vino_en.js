@@ -1573,7 +1573,7 @@ tvii.router.connect("^/program$", function () {
 
     var scrollAmount = 430;
     var scrollThreshold = 430;
-    var scrollBackAmount = 458;
+    var scrollBackAmount = 462;
     var fadeDuration = 100;
     var isAnimating = false;
 
