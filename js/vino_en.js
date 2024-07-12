@@ -1569,11 +1569,10 @@ tvii.router.connect("^/program$", function () {
     })
 
     prepareMiiverseModal();
-    updateButtonVisibility();
 
     var scrollAmount = 430;
     var scrollThreshold = 430;
-    var scrollBackAmount = 462;
+    var scrollBackAmount = 464;
     var fadeDuration = 100;
     var isAnimating = false;
 
@@ -1631,6 +1630,7 @@ tvii.router.connect("^/program$", function () {
         }
     }
 
+    updateButtonVisibility();
 });
 
 function toggleFavorite() {
