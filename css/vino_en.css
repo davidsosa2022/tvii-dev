@@ -852,10 +852,10 @@ button {
 .program-preview {
   position: fixed;
   display: block;
-  left: 57px;
+  left: 42px;
   top: 68px;
   z-index: 9;
-  width: 357px;
+  width: 375px;
   height: auto;
 }
 
@@ -873,8 +873,21 @@ button {
   -webkit-box-orient: vertical;
   background: #ffffff;
   border-radius: 4px;
-  width: 357px;
-  height: 345px;
+  width: 375px;
+  margin: 10px 0px;
+}
+
+.program-preview .program-metadata .show-rating {
+  margin: 4px 6px;
+  float: left;
+  font-size: 16px;
+  padding: 2px;
+  text-shadow: 0px 0px 2px #000;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 2px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#575757), color-stop(0.50, #303030), color-stop(0.55, #303030), to(#797979));
+  color: #fff;
 }
 
 .program-preview .program-metadata .show-services {
