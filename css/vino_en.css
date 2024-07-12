@@ -949,16 +949,17 @@ button {
   position: relative;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 9;
   text-align: left;
   font-size: 14px;
   overflow: hidden;
   line-height: 1.4;
   border-radius: 4px;
-  height: 80px;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+  height: 180px;
   padding-left: 10px;
   padding-right: 10px;
+  border-top: 7px solid #fff;
+  border-bottom: 7px solid #fff;
 }
 
 .program-preview .program-metadata .show-description::-webkit-scrollbar {

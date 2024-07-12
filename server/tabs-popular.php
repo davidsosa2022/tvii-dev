@@ -75,9 +75,6 @@ if ($result) {
   if ($result->num_rows > 0) {
       // Loop through each program
       while ($row = $result->fetch_assoc()) {
-          // Truncate description if longer than 178 characters
-          $description = strlen($row['program_description']) > 178 ? substr($row['program_description'], 0, 175) . "..." : $row['program_description'];
-          
           // Determine class based on program type
           switch ($row['program_type']) {
               case "1":
@@ -192,7 +189,9 @@ if ($result) {
                'data-program-id="' . htmlspecialchars($row['program_id']) . '" ' .
                'data-program-name="' . htmlspecialchars($row['program_name']) . '" ' .
                'data-streaming="' . htmlspecialchars($row['program_streaming_services']) . '" ' .
-               'data-program-description="' . htmlspecialchars($description) . '">' .
+               'data-program-description="' . htmlspecialchars($row['program_description']) . '">' .
+               'data-program-rating="' . htmlspecialchars($row['program_rating']) . '">' .
+               'data-program-year="' . htmlspecialchars($row['program_year']) . '">' .
                '<span class="show-genre '  . $genreClass . '">' . $genreText . '</span>' .
                '<span class="streaming-service">' . htmlspecialchars($row['program_streaming_services']) . '</span>' .
                '<span class="program-name">' . htmlspecialchars($row['program_name']) . '</span>' .
