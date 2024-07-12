@@ -688,6 +688,29 @@ var tvii = {
             };
             miisQ.send();
         },
+        addEmpathyToPost(postId, removeEmpathy, callbackSuccess, callbackError) {
+            var olvPostReq = new XMLHttpRequest();
+            olvPostReq.open("POST", tvii.clientUrl + "/v1/miiverse/empathies?postid=" + encodeURIComponent(postId) + removeEmpathy ? "&delete=1" : "&delete=0")
+            olvPostReq.setRequestHeader('X-Nintendo-Olv-User-Agent', vino.olv_getUserAgent());
+            olvPostReq.setRequestHeader('X-Nintendo-Olv-Url', vino.olv_getHostName());
+            olvPostReq.setRequestHeader('X-Nintendo-ParamPack', vino.olv_getParameterPack());
+            olvPostReq.setRequestHeader('X-Nintendo-ServiceToken', vino.olv_getServiceToken());
+            olvPostReq.onreadystatechange = function () {
+                if (olvPostReq.readyState === 4) {
+                    if (olvPostReq.status === 200) {
+                        if (typeof callbackSuccess === 'function') {
+                            callbackSuccess();
+                        }
+                    } else {
+                        vino.runOliveErrorDialog(1155927);
+                        if (typeof callbackError === 'function') {
+                            callbackError();
+                        }
+                    }
+                }
+            }
+            olvPostReq.send();
+        },
         getDirectMessages: function(query, callbackSuccess, callbackError) {
 
         },
@@ -1708,6 +1731,7 @@ function prepareMiiverseModal() {
             var jumpToPost = $("<button>");
             jumpToPost.addClass("jump-miiverse")
             jumpToPost.on("click", function () {
+                vino.soundPlayVolume("SE_WAVE_OK_SUB", 25);
                 if (vino.runTwoButtonDialog("Do you want to close Nintendo TVii and\nsee this post on Miiverse?", "Cancel", "OK") == 0) {
                     vino.jumpToMiiversePostId(post.id, false);
                 }
@@ -1715,7 +1739,19 @@ function prepareMiiverseModal() {
 
             var yeahButton = $("<button>");
             yeahButton.addClass("yeah-button");
-            yeahButton.text("Yeah!")
+            yeahButton.text("Yeah!");
+            yeahButton.on("click", function () {
+                vino.soundPlayVolume("SE_WAVE_MII", 25);
+                if ($(this).hasClass("added")) {
+                    tvii.olv.addEmpathyToPost(post.id, true, function(){
+                        yeahButton.text("Unyeah!");
+                    }, null)
+                } else {
+                    tvii.olv.addEmpathyToPost(post.id, false, function(){
+                        yeahButton.text("Yeah!");
+                    }, null)
+                }
+            });
 
             postDiv.append(postMii)
             postDiv.append(postUsername)
@@ -1741,6 +1777,7 @@ function prepareMiiverseModal() {
         seeMoreButton.text("See more on Miiverse")
         seeMoreButton.off("click");
         seeMoreButton.on("click", function () {
+            vino.soundPlayVolume("SE_WAVE_OK", 25);
             vino.jumpToMiiverse(true);
         })
         $(".miiverse-posts .post-list").append(seeMoreButton);
@@ -2196,8 +2233,9 @@ function prepareMiiverseModal() {
         }
 
         function confirmPost() {
+            var checkedPostType = $(".miiverse-posts .textarea-menu li label.checked").attr("id");
 
-            if ($(".miiverse-posts .textarea-text-input").val().length < 1) {
+            if ($(".miiverse-posts .textarea-text-input").val().length < 1 && checkedPostType == "text") {
                 alert("Please input some text on this post.");
                 return;
             }
@@ -2227,7 +2265,6 @@ function prepareMiiverseModal() {
             }
             var isSpoilerChecked = $(".miiverse-posts .spoiler-button.checkbox-button").find('input').prop('checked');
 
-            var checkedPostType = $(".miiverse-posts .textarea-menu li label.checked").attr("id");
             if (checkedPostType == "text") {
                 $(".miiverse-posts .post-confirm-modal .message-content .user-text").removeClass("none")
                 $(".miiverse-posts .post-confirm-modal .message-content .user-text").text($(".miiverse-posts .textarea-text-input").val());
@@ -2335,11 +2372,6 @@ function prepareMiiverseModal() {
     
 }
 
-function addEmpathy(miitooEvt) {
-}
-
-function prepareActorPage() {
-}
 
 $(window).on('load', function () {
     tvii.utils.prepare();
