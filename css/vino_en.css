@@ -876,18 +876,19 @@ button {
   border-radius: 4px;
   width: 375px;
   margin: 10px 0px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
 .program-preview .program-metadata .show-rating {
   margin: 5px 6px;
   float: left;
-  height: 30px;
-  line-height: 1.9;
-  font-size: 16px;
+  height: 28px;
+  line-height: 1.7;
+  font-size: 17px;
   padding: 2px;
   text-shadow: 0px 0px 2px #000;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
   border-radius: 2px;
   background: -webkit-gradient(linear, left top, left bottom, from(#575757), color-stop(0.50, #303030), color-stop(0.55, #303030), to(#797979));
   color: #fff;
@@ -948,14 +949,15 @@ button {
 .program-preview .program-metadata .show-description {
   position: relative;
   display: -webkit-box;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 9;
   text-align: left;
-  font-size: 14px;
+  font-size: 15px;
   overflow: hidden;
   line-height: 1.4;
   border-radius: 4px;
-  height: 180px;
+  height: 192px;
   padding-left: 10px;
   padding-right: 10px;
   border-top: 7px solid #fff;
