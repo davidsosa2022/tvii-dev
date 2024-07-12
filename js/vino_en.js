@@ -1232,32 +1232,21 @@ tvii.router.connect("^/$", function () {
         tvii.browse.openGuide();
     })
 
-    function changePreviewImage(program) {
+    function changePreview(program) {
         vino.loading_setIconRect(180, 120, 100, 100);
         vino.loading_setIconAppear(true);
-        var prevImg = $('<img>');
-        var programImage = program.attr('data-image');
-        prevImg.attr('src', programImage);
-
-        $('.program-preview .image').attr('src', programImage);
         var streamingI = program.attr('data-streaming');
         var ThisShowName = program.attr('data-program-name');
+        var ThisShowYear = program.attr('data-program-year');
+        var ThisShowAge = program.attr('data-program-rating');
         var ThisShowDescription = program.attr('data-program-description');
 
         $('.program-preview .show-title').text(ThisShowName);
         $('.program-preview .show-services').text(streamingI);
+        $('.program-preview .show-rating').text(ThisShowAge);
+        $('.program-preview .show-year').text(ThisShowYear);
         $('.program-preview .show-description').text(ThisShowDescription);
-
-        prevImg.on("load", function () {
-            vino.loading_setIconAppear(false);
-            prevImg.off("load");
-        });
-
-        prevImg.on("error", function () {
-            prevImg.attr("src", "/img/no-image.png");
-            vino.loading_setIconAppear(false);
-            prevImg.off("error");
-        });
+        vino.loading_setIconAppear(false);
     }
 
     var liveProgram = $(".live-program");
@@ -1269,14 +1258,14 @@ tvii.router.connect("^/$", function () {
             vino.soundPlayVolume("SE_APPEAR_DETAIL", 25);
             tvii.browse.openProgramPage($(this).attr('data-program-id'));
         } else {
-            vino.soundPlayVolume("SE_PROGRAM_SLIDE_SPEED", 25);
-            changePreviewImage($(this));
-            scrollToProgram($(this));
             clearInterval(tvii.scrollProgramListInterval)
+            vino.soundPlayVolume("SE_PROGRAM_SLIDE_SPEED", 25);
+            changePreview($(this));
+            scrollToProgram($(this));
         }
 
         var allLivePrograms = $('.live-program');
-        allLivePrograms.removeClass("selected")
+        allLivePrograms.removeClass("selected");
 
         $(this).addClass('selected');
     });
@@ -1344,33 +1333,23 @@ tvii.router.connect("^/$", function () {
     var firstLoad = $('header.top-bar');
 
     if (firstLoad.attr('data-page-first-load') == "0") {
-        var bootPrevImg = $('<img>');
-        bootPrevImg.attr("src", firstChild.attr('data-image'));
-        $('.program-preview .image').attr("src", bootPrevImg.attr("src"));
-
         firstChild.addClass('selected');
         firstLoad.attr('data-page-first-load', '1')
 
-        var bootAir = firstChild.attr('data-air-date');
+        var bootYear = firstChild.attr('data-program-year');
+        var bootAge = firstChild.attr('data-program-rating');
         var bootStreaming = firstChild.attr('data-streaming');
         var bootThisShowName = firstChild.attr('data-program-name');
         var bootThisShowDescription = firstChild.attr('data-program-description');
 
         $('.program-preview .show-services').text(bootStreaming);
         $('.program-preview .show-title').text(bootThisShowName);
+        $('.program-preview .show-year').text(bootYear);
+        $('.program-preview .show-rating').text(bootAge);
         $('.program-preview .show-description').text(bootThisShowDescription);
-
-        bootPrevImg.on("load", function () {
-            bootPrevImg.off("load")
-        });
-
-        bootPrevImg.on("error", function () {
-            bootPrevImg.attr("src", "/img/no-image.png");
-            bootPrevImg.off("error")
-        });
     } else {
         var selectedP = $(".live-program.selected")
-        changePreviewImage(selectedP);
+        changePreview(selectedP);
         scrollToProgram(selectedP);
         vino.lyt_drawFixedFrame(455, 211, 383, 86);
     }

@@ -951,13 +951,13 @@ button {
   display: -webkit-box;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 9;
+  -webkit-line-clamp: 8;
   text-align: left;
-  font-size: 15px;
+  font-size: 16px;
   overflow: hidden;
   line-height: 1.4;
   border-radius: 4px;
-  height: 192px;
+  height: 183px;
   padding-left: 10px;
   padding-right: 10px;
   border-top: 7px solid #fff;

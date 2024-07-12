@@ -40,10 +40,10 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
       <div class="program-metadata">
         <span class="show-services"></span>
         <div class="program-title">
-        <span class="show-rating">PG-13</span>
+        <span class="show-rating"></span>
         <span class="show-title"></span>
         </div>
-        <span class="show-year">2024</span>
+        <span class="show-year"></span>
       </div>
 
       <div class="program-metadata">
