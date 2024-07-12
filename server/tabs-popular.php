@@ -189,8 +189,8 @@ if ($result) {
                'data-program-id="' . htmlspecialchars($row['program_id']) . '" ' .
                'data-program-name="' . htmlspecialchars($row['program_name']) . '" ' .
                'data-streaming="' . htmlspecialchars($row['program_streaming_services']) . '" ' .
-               'data-program-description="' . htmlspecialchars($row['program_description']) . '">' .
-               'data-program-rating="' . htmlspecialchars($row['program_rating']) . '">' .
+               'data-program-description="' . htmlspecialchars($row['program_description']) . '" ' .
+               'data-program-rating="' . htmlspecialchars($row['program_rating']) . '" ' .
                'data-program-year="' . htmlspecialchars($row['program_year']) . '">' .
                '<span class="show-genre '  . $genreClass . '">' . $genreText . '</span>' .
                '<span class="streaming-service">' . htmlspecialchars($row['program_streaming_services']) . '</span>' .
