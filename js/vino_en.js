@@ -1585,13 +1585,13 @@ tvii.router.connect("^/program$", function () {
 
     function scrollLeftPPage() {
         $('html, body').animate({
-            scrollLeft: '-=' + 400
+            scrollLeft: '-=' + 430
         }, 600);
     }
 
     function scrollRightPPage() {
         $('html, body').animate({
-            scrollLeft: '+=' + 400
+            scrollLeft: '+=' + 430
         }, 600);
     }
 
