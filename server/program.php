@@ -201,7 +201,7 @@ if(isset($_GET['program'])) {
 
     <div class="fixed-left-buttons">
     <button navi_target navi_mouse data-hover class="back_white_button accesskey-b" data-sound="SE_RETURN_TOUCH_OFF"></button>
-    <a navi_target navi_mouse data-hover href="javascript:void(0)" class="remote accesskey-x" data-sound="SE_RETURN_TOUCH_OFF"></a>
+    <a navi_target navi_mouse data-hover href="javascript:void(0)" class="remote accesskey-x" data-sound="SE_RETURN_TOUCH_OFF">Remote Control</a>
     </div>
 
     <a class="info-tab program" no_touch><?php echo localize("vino.program.info-tab") ?>
