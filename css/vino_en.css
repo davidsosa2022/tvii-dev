@@ -1599,7 +1599,7 @@ button {
 .extra-information .program-more-details{
   position: relative;
   display: block;
-  border-radius: 2px;
+  border-radius: 4px;
   background: #fafafa;
   border: 1px solid #ffffff;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
