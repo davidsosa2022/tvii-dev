@@ -690,7 +690,7 @@ var tvii = {
         },
         addEmpathyToPost(postId, removeEmpathy, callbackSuccess, callbackError) {
             var olvPostReq = new XMLHttpRequest();
-            olvPostReq.open("POST", tvii.clientUrl + "/v1/miiverse/empathies?postid=" + encodeURIComponent(postId) + removeEmpathy ? "&delete=1" : "&delete=0")
+            olvPostReq.open("POST", tvii.clientUrl + "/v1/miiverse/empathies?postid=" + encodeURIComponent(postId) + (removeEmpathy ? "&delete=1" : "&delete=0"));
             olvPostReq.setRequestHeader('X-Nintendo-Olv-User-Agent', vino.olv_getUserAgent());
             olvPostReq.setRequestHeader('X-Nintendo-Olv-Url', vino.olv_getHostName());
             olvPostReq.setRequestHeader('X-Nintendo-ParamPack', vino.olv_getParameterPack());
@@ -1744,11 +1744,11 @@ function prepareMiiverseModal() {
                 vino.soundPlayVolume("SE_WAVE_MII", 25);
                 if ($(this).hasClass("added")) {
                     tvii.olv.addEmpathyToPost(post.id, true, function(){
-                        yeahButton.text("Unyeah!");
+                        yeahButton.text("Yeah!");
                     }, null)
                 } else {
                     tvii.olv.addEmpathyToPost(post.id, false, function(){
-                        yeahButton.text("Yeah!");
+                        yeahButton.text("Unyeah!");
                     }, null)
                 }
             });
