@@ -280,7 +280,11 @@ if (!empty($actors_html)) {
 <a href="javascript:void(0)" data-sound="SE_WAVE_OK" class="open-trailer-modal" navi_target><?php echo localize("vino.program.jump.trailer") ?></a>
 </div>
 
-<div class="trailer-div">
+</section>
+
+</div>
+
+<div class="trailer-modal-div none">
   <video class="program-trailer" width="563" height="316" src="/img/no-image.png">
   </video>
   <a href="javascript:void(0)" class="exit-trailer"><?php echo localize("vino.program.jump.trailer.close") ?></a>
@@ -289,10 +293,6 @@ if (!empty($actors_html)) {
 <div class="remote-modal-div none">
   <div class="remote-content">
   </div>
-</div>
-
-</section>
-
 </div>
 
 <div class="miiverse-posts program">
