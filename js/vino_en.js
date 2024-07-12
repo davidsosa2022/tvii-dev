@@ -2108,6 +2108,7 @@ function prepareMiiverseModal() {
 
             function onPostSuccess() {
                 $(".miiverse-posts .textarea-text-input").val("");
+                $(".miiverse-posts .textarea-text-preview").text("");
                 vino.memo_reset();
                 var bgImage = "url(" + vino.memo_getImagePng() + ")";
                 $(".textarea-memo-preview").css("background-image", bgImage);
