@@ -1594,6 +1594,7 @@ tvii.router.connect("^/program$", function () {
 
     function scrollLeftPPage() {
         if (isAnimating) return;
+        vino.soundPlayVolume("SE_MOVEPAGE_PLAY", 25);
         isAnimating = true;
 
         var scrollLeft = $(window).scrollLeft();
@@ -1613,6 +1614,7 @@ tvii.router.connect("^/program$", function () {
 
     function scrollRightPPage() {
         if (isAnimating) return;
+        vino.soundPlayVolume("SE_MOVEPAGE_PLAY", 25);
         isAnimating = true;
 
         var scrollLeft = $(window).scrollLeft();
