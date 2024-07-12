@@ -199,7 +199,11 @@ if(isset($_GET['program'])) {
     <a data-hover navi_target data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON"  href="javascript:void(0);" class="before_page_button accesskey-l accesskey-zl" data-sound="SE_MOVEPAGE_PLAY"></a>
     <a data-hover navi_target data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" href="javascript:void(0);" class="next_page_button accesskey-r accesskey-zr" data-sound="SE_MOVEPAGE_PLAY"></a>
 
+    <div class="fixed-left-buttons">
     <button navi_target navi_mouse data-hover class="back_white_button accesskey-b" data-sound="SE_RETURN_TOUCH_OFF"></button>
+    <a navi_target navi_mouse data-hover href="javascript:void(0)" class="remote accesskey-x" data-sound="SE_RETURN_TOUCH_OFF"></a>
+    </div>
+
     <a class="info-tab program" no_touch><?php echo localize("vino.program.info-tab") ?>
     <div class="day-info">
       <div class="date-day-name"></div>
@@ -275,11 +279,18 @@ if (!empty($actors_html)) {
 <a href="javascript:void(0)" data-sound="SE_WAVE_OK" class="jump-browser" navi_target><span><?php echo localize("vino.program.jump.wave") ?></span></a>
 <a href="javascript:void(0)" data-sound="SE_WAVE_OK" class="open-trailer-modal" navi_target><?php echo localize("vino.program.jump.trailer") ?></a>
 </div>
+
 <div class="trailer-div">
   <video class="program-trailer" width="563" height="316" src="/img/no-image.png">
   </video>
   <a href="javascript:void(0)" class="exit-trailer"><?php echo localize("vino.program.jump.trailer.close") ?></a>
 </div>
+
+<div class="remote-modal-div none">
+  <div class="remote-content">
+  </div>
+</div>
+
 </section>
 
 </div>
