@@ -21,6 +21,10 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
       <a navi_target navi_margin="4" data-hover
         href="javascript:void(0);" class="exitbtn loading-el" data-sound="SE_COMMON_FINISH_TOUCH_OFF"></a>
 
+    <div class="fixed-left-buttons">
+    <a navi_target navi_mouse data-hover href="javascript:void(0)" class="remote accesskey-x" data-sound="SE_RETURN_TOUCH_OFF">Remote Control</a>
+    </div>
+
       <a class="info-tab" no_touch><span class="loading-el"><?php echo localize("vino.program.info-tab2") ?></span>
       <div class="day-info">
         <div class="date-day-name"></div>
