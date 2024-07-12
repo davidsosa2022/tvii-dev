@@ -2100,7 +2100,7 @@ function prepareMiiverseModal() {
                 description: appData
             }
 
-            post.app_data = Base64.encode(postAppData);
+            post.app_data = Base64.encode(JSON.stringify(postAppData));
             post.is_app_jumpable = 0;
             post.community_id = 0;
 
