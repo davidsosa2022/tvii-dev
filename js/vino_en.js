@@ -2109,6 +2109,8 @@ function prepareMiiverseModal() {
             function onPostSuccess() {
                 $(".miiverse-posts .textarea-text-input").val("");
                 vino.memo_reset();
+                var bgImage = "url(" + vino.memo_getImagePng() + ")";
+                $(".textarea-memo-preview").css("background-image", bgImage);
                 alert("The content you entered\nwas sent successfully.");
                 tvii.utils.lockUserOperation(false);
                 $(".miiverse-posts .cancel-post").css('pointer-events', 'auto');
