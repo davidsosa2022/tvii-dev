@@ -688,29 +688,6 @@ var tvii = {
             };
             miisQ.send();
         },
-        addEmpathyToPost(postId, removeEmpathy, callbackSuccess, callbackError) {
-            var olvPostReq = new XMLHttpRequest();
-            olvPostReq.open("POST", tvii.clientUrl + "/v1/miiverse/empathies?postid=" + encodeURIComponent(postId) + (removeEmpathy ? "&delete=1" : "&delete=0"));
-            olvPostReq.setRequestHeader('X-Nintendo-Olv-User-Agent', vino.olv_getUserAgent());
-            olvPostReq.setRequestHeader('X-Nintendo-Olv-Url', vino.olv_getHostName());
-            olvPostReq.setRequestHeader('X-Nintendo-ParamPack', vino.olv_getParameterPack());
-            olvPostReq.setRequestHeader('X-Nintendo-ServiceToken', vino.olv_getServiceToken());
-            olvPostReq.onreadystatechange = function () {
-                if (olvPostReq.readyState === 4) {
-                    if (olvPostReq.status === 200) {
-                        if (typeof callbackSuccess === 'function') {
-                            callbackSuccess();
-                        }
-                    } else {
-                        vino.runOliveErrorDialog(1155927);
-                        if (typeof callbackError === 'function') {
-                            callbackError();
-                        }
-                    }
-                }
-            }
-            olvPostReq.send();
-        },
         getDirectMessages: function(query, callbackSuccess, callbackError) {
 
         },
@@ -1742,15 +1719,7 @@ function prepareMiiverseModal() {
             yeahButton.text("Yeah!");
             yeahButton.on("click", function () {
                 vino.soundPlayVolume("SE_WAVE_MII", 25);
-                if ($(this).hasClass("added")) {
-                    tvii.olv.addEmpathyToPost(post.id, true, function(){
-                        yeahButton.text("Yeah!");
-                    }, null)
-                } else {
-                    tvii.olv.addEmpathyToPost(post.id, false, function(){
-                        yeahButton.text("Unyeah!");
-                    }, null)
-                }
+                
             });
 
             postDiv.append(postMii)
