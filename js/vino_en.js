@@ -1400,85 +1400,8 @@ tvii.router.connect("^/guide$", function () {
 
     vino.loading_setIconAppear(true);
 
-    tvii.browse.ajax.get("https://api.tvmaze.com/schedule?country=US", {}, {},
-        function (data) {
-            function createProgramTable(data) {
-                // Create table element
-                var table = $('<table>').css('width', '100%').attr('border', '1');
-
-                // Create table header with hours
-                var header = $('<thead>').appendTo(table);
-                var headerRow = $('<tr>').appendTo(header);
-                $('<th>').appendTo(headerRow); // Empty cell for top-left corner
-                for (var hour = 0; hour < 24; hour++) {
-                    $('<th>').text((hour < 10 ? '0' + hour : hour) + ':00').appendTo(headerRow);
-                }
-
-                // Create table body
-                var tbody = $('<tbody>').appendTo(table);
-
-                // Create an object to store channels and their corresponding programs
-                var channels = {};
-
-                // Iterate through data to organize channels and programs
-                for (var i = 0; i < data.length; i++) {
-                    var item = data[i];
-                    var networkName = (item.show.network && item.show.network.name) ? item.show.network.name : 'Unknown Network';
-
-                    // Create channel if not exists
-                    if (!channels[networkName]) {
-                        channels[networkName] = [];
-                    }
-
-                    // Push the program into the channel's programs array
-                    channels[networkName].push({
-                        name: item.show.name,
-                        airtime: item.airtime
-                    });
-                }
-
-                // Sort programs by airtime within each channel
-                for (var channel in channels) {
-                    if (channels.hasOwnProperty(channel)) {
-                        channels[channel].sort(function (a, b) {
-                            return new Date('1970/01/01 ' + a.airtime) - new Date('1970/01/01 ' + b.airtime);
-                        });
-                    }
-                }
-
-                // Populate table rows with programs
-                $.each(channels, function (channelName, programs) {
-                    var row = $('<tr>').appendTo(tbody);
-                    $('<td>').text(channelName).appendTo(row);
-
-                    // Create cells for each hour slot
-                    for (var hour = 0; hour < 24; hour++) {
-                        var program = getProgramForHour(programs, hour);
-                        $('<td>').text(program ? program.name + ' - ' + program.airtime : '').appendTo(row);
-                    }
-                });
-
-                // Append table to the existing container
-                $('.program-guide-container').append(table);
-            }
-
-            // Helper function to find program for a specific hour
-            function getProgramForHour(programs, hour) {
-                for (var i = 0; i < programs.length; i++) {
-                    var programHour = parseInt(programs[i].airtime.split(':')[0], 10);
-                    if (programHour === hour) {
-                        return programs[i];
-                    }
-                }
-                return null;
-            }
-
-            createProgramTable(data);
-            vino.loading_setIconAppear(false);
-        },
-        function () {
-            vino.loading_setIconAppear(false);
-        });
+    //New guide code TODO
+    vino.loading_setIconAppear(false);
 });
 
 // Favorites page code

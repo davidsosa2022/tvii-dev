@@ -192,7 +192,7 @@ if(isset($_GET['program'])) {
 ?>
 
   <menu class="menu-buttons">
-    <header class="top-bar full"><?php echo htmlspecialchars($name); ?></header>
+    <header class="top-bar no-after full"><?php echo htmlspecialchars($name); ?></header>
     <button navi_target navi_mouse navi_no_reset data-hover class="favoritebtn"></button>
     <a navi_target navi_mouse data-hover href="javascript:void(0);" class="toppagebtn accesskey-minus" data-sound="SE_TOP_TOUCH_OFF"><?php echo localize("vino.program.top") ?></a>
 
