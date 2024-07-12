@@ -1573,7 +1573,7 @@ tvii.router.connect("^/program$", function () {
 
     var scrollAmount = 430;
     var scrollThreshold = 430;
-    var scrollBackAmount = 460;
+    var scrollBackAmount = 455;
     var fadeDuration = 500;
 
     function updateButtonVisibility() {
