@@ -44,6 +44,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         <div class="daily-tip">
           <span class="tips-title"><?php echo localize("vino.program.tips.tips-title") ?></span>
           <span class="tip-content"></span>
+          <span class="tip-ending"></span>
         </div>
 <?php
 $conn = new mysqli(CONFIG_DB_SERVER, CONFIG_DB_USER, CONFIG_DB_PASS, CONFIG_DB_NAME);

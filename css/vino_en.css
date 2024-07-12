@@ -807,14 +807,16 @@ button {
   margin-top: 10px;
   margin-bottom: 0px;
   border-bottom: 1px solid #e2e2e2;
-  top: 0px;
+  height: 145px;
   z-index: 3;
   text-align: center;
   font-size: 16px;
 }
 
 .daily-tip .tips-title {
-  width: 374px;
+  max-width: 350px;
+  white-space: nowrap;
+  overflow: hidden;
   margin: auto;
   display: block;
   color: #545553;
@@ -841,12 +843,15 @@ button {
   width: 310px;
   margin: auto;
   position: relative;
-  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
   color: #4b4c48;
   font-size: 16px;
 }
 
-.daily-tip .tip-content:after {
+.daily-tip .tip-ending {
   height: 25px;
   display: block;
   text-align: center;
