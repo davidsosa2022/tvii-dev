@@ -25,13 +25,13 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
     <a navi_target navi_mouse data-hover href="javascript:void(0)" class="remote accesskey-x" data-sound="SE_RETURN_TOUCH_OFF">Remote Control</a>
     </div>
 
-      <a class="info-tab" no_touch><span class="loading-el"><?php echo localize("vino.program.info-tab2") ?></span>
+      <div class="info-tab" no_touch><span class="loading-el"><?php echo localize("vino.program.info-tab2") ?></span>
       <div class="day-info">
         <div class="date-day-name"></div>
         <div class="date-day"></div>
         <div class="date-time"></div>
       </div>
-      </a>
+     </div>
 
     </menu>
 

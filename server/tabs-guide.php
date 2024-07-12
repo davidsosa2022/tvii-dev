@@ -21,13 +21,13 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
       <a navi_target navi_margin="4" data-hover
         href="javascript:void(0);" class="exitbtn" data-sound="SE_COMMON_FINISH_TOUCH_OFF"></a>
 
-      <a class="info-tab" no_touch><span><?php echo localize("vino.program.info-tab2") ?></span>
+      <div class="info-tab" no_touch><span><?php echo localize("vino.program.info-tab2") ?></span>
       <div class="day-info">
         <div class="date-day-name"></div>
         <div class="date-day"></div>
         <div class="date-time"></div>
       </div>
-      </a>
+    </div>
 
     </menu>
 
