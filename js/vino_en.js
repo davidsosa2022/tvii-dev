@@ -1575,6 +1575,7 @@ tvii.router.connect("^/program$", function () {
     var scrollThreshold = 430;
     var scrollBackAmount = 458;
     var fadeDuration = 100;
+    var isAnimating = false;
 
     function updateButtonVisibility() {
         var scrollLeft = $(window).scrollLeft();
@@ -1593,22 +1594,40 @@ tvii.router.connect("^/program$", function () {
     }
 
     function scrollLeftPPage() {
+        if (isAnimating) return;
+        isAnimating = true;
+
         var scrollLeft = $(window).scrollLeft();
         var maxScrollLeft = $(document).width() - $(window).width();
         if (scrollLeft >= maxScrollLeft) {
-            $('html, body').animate({ scrollLeft: '-=' + scrollBackAmount }, 600);
+            $('html, body').animate({ scrollLeft: '-=' + scrollBackAmount }, 600, function() {
+                isAnimating = false;
+                updateButtonVisibility();
+            });
         } else {
-            $('html, body').animate({ scrollLeft: 0 }, 600);
+            $('html, body').animate({ scrollLeft: 0 }, 600, function() {
+                isAnimating = false;
+                updateButtonVisibility();
+            });
         }
     }
 
     function scrollRightPPage() {
+        if (isAnimating) return;
+        isAnimating = true;
+
         var scrollLeft = $(window).scrollLeft();
         var maxScrollLeft = $(document).width() - $(window).width();
         if (scrollLeft >= scrollThreshold) {
-            $('html, body').animate({ scrollLeft: maxScrollLeft }, 600);
+            $('html, body').animate({ scrollLeft: maxScrollLeft }, 600, function() {
+                isAnimating = false;
+                updateButtonVisibility();
+            });
         } else {
-            $('html, body').animate({ scrollLeft: '+=' + scrollAmount }, 600);
+            $('html, body').animate({ scrollLeft: '+=' + scrollAmount }, 600, function() {
+                isAnimating = false;
+                updateButtonVisibility();
+            });
         }
     }
 
