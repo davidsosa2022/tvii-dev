@@ -1573,7 +1573,8 @@ tvii.router.connect("^/program$", function () {
 
     var scrollAmount = 430;
     var scrollThreshold = 430;
-    var fadeDuration = 200;
+    var scrollBackAmount = 450;
+    var fadeDuration = 500;
 
     function updateButtonVisibility() {
         var scrollLeft = $(window).scrollLeft();
@@ -1595,7 +1596,7 @@ tvii.router.connect("^/program$", function () {
         var scrollLeft = $(window).scrollLeft();
         var maxScrollLeft = $(document).width() - $(window).width();
         if (scrollLeft >= maxScrollLeft) {
-            $('html, body').animate({ scrollLeft: '-=' + scrollAmount }, 600);
+            $('html, body').animate({ scrollLeft: '-=' + scrollBackAmount }, 600);
         } else {
             $('html, body').animate({ scrollLeft: 0 }, 600);
         }
