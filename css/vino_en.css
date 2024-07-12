@@ -78,7 +78,8 @@ button {
   cursor: pointer;
 }
 
-.none, .loading-el {
+.none,
+.loading-el {
   display: none !important;
 }
 
@@ -878,16 +879,22 @@ button {
 }
 
 .program-preview .program-metadata .show-rating {
-  margin: 4px 6px;
+  margin: 5px 6px;
   float: left;
+  height: 30px;
+  line-height: 1.9;
   font-size: 16px;
   padding: 2px;
   text-shadow: 0px 0px 2px #000;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
   border-radius: 2px;
   background: -webkit-gradient(linear, left top, left bottom, from(#575757), color-stop(0.50, #303030), color-stop(0.55, #303030), to(#797979));
   color: #fff;
+}
+
+.program-preview .program-metadata .program-title {
+  height: 40px;
 }
 
 .program-preview .program-metadata .show-services {
@@ -919,15 +926,24 @@ button {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1.9;
+  line-height: 2.4;
   border-radius: 4px;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  padding-left: 10px;
-  padding-right: 10px;
-  height: 30px;
+  padding-right: 2px;
+  height: 40px;
 }
 
+.program-preview .program-metadata .show-year {
+  color: #939393;
+  margin: 5px auto;
+  width: 95%;
+  text-align: center;
+  display: block;
+  font-size: 14px;
+  border-top: 1px dashed #c1c1c1;
+  padding-top: 4px;
+}
 
 .program-preview .program-metadata .show-description {
   position: relative;
@@ -1582,7 +1598,7 @@ button {
   z-index: 1;
 }
 
-.extra-information .program-more-details{
+.extra-information .program-more-details {
   position: relative;
   display: block;
   border-radius: 4px;
@@ -3125,7 +3141,9 @@ button {
   margin-top: 30px;
 }
 
-.setup-modal#set-1 a.button {width: 450px;}
+.setup-modal#set-1 a.button {
+  width: 450px;
+}
 
 .setup-modal textarea.brief_bio {
   background: #ffffff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAaBAMAAACeFstsAAAAKlBMVEX////9/f3j4+PDw8Pq6urIyMj4+Pj7+/vPz8/d3d309PT+/v7v7+/W1tbJUIE4AAAARElEQVQIW2M0ZgCBvyxKYPo3C4T/g/EumP7MsgdMf2eEyP+DqvvDeAZMf2G5B6a/QdX9YhEE0z8ZIfR/xt1g+isDnQAAEmIScIJZK8QAAAAASUVORK5CYII=) repeat-x;

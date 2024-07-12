@@ -43,7 +43,6 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         <span class="show-rating">PG-13</span>
         <span class="show-title"></span>
         </div>
-        <hr>
         <span class="show-year">2024</span>
       </div>
 
