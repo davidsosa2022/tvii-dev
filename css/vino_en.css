@@ -851,18 +851,16 @@ button {
 
 .program-preview {
   position: fixed;
-  border: 4px solid #ffffff;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASNSURBVHhe7ZxPaFRXFMYzk5mONpqFI1hTaCvd2UAF3YqgSFfNMpu2hoHSB+IiCwu6C9XugriSBGIm4yKLrNzZRWgKpV3YQgstUigNJJZGRdOasbXJdN70+967E72ZN3/yzjO+mTk/+LjnXuZP7jfv3nvezL3pURRFURRFUbqShClbplKpbPs57UYikaiYsClNzZibm/MeUywWs3jh3VAvxDfx2mEoi7aGXWE/IHamgrqbSqVW+/v7nw4NDbn+o4JpaODMzMwevOYRhB9ALF+Fqs+plu3vYG1fWP4LfQ3d6Ovr+2l4eDiwn3UNhHl7Yd4owk+hvV5jd/IAugYTPwsyMdDAQqGQcV13EuFHUNJrVC4nk8nPR0ZGeGVuUmPO9PR0ulwun0H4IaTmPeM8RuR7kHXR1RiECfQA9AnCXr9FMeyCeednZ2czpu5hGbiwsEB334be9RqUrQyWSqV3TOxhGYilmwYehdJeg7IVXoWvmdjDMnB9fZ0G7vdrSgC7oIPIjTd9q5kDlaZYnlmV1dVVFoGpzRaYDzFDX4eeQMU2Ff/2pxBTk4Z3HPWwzJqYmEhlMplLCC/4LXXhm/0J3YWYaD6CSlBgth5Dqv1mpsEpawB6HdoHNcNBUj2FpNoz3DJwfHw8lc1mWzGwDN3N5XKH/Gp7k8/nb6Jg5vGW19AYZ2NjY8pxHM9AyRy4ZspO4D7EodwSKysrJpIZGGrOiCmcDzmqtk1YA6uLSEeA3I7mheqP5ApslwWjVUL1R2Jgx2C+Gw6FGugTejSpgULUQCFqoBA1UIgaKEQNFKIGClEDhaiBQtRAIWqgEDVQiBooRA0UogYKUQOFqIFC1EAhaqAQNVBIWAP5M1b4n7LiR+jduJIrsJOuXvYlVH8kJvSZshM4AO32w+0RdncWt0FwW9sv0BLEjYV/Q+1Cwuy256krmncYegOytu/WwVlaWpoaGxvztoJYBhYKhV7XdS8jbGYg4Qs8vzEx1N6SGMBR+ArEebCVubC+gfPz873Ly8uX8KlcNE1KLR/ncrnrJrbnwHI51A6vbqJmF5dl4MDAgIur73eEnbbzKir+gR76oY9l4ODgIHcq/YDQOg+mbPIYi88fJvawDIR5lWQyeQfhl36LsoXvoZ/90McyECtLYnFxsQiXr5km5Rm/wZcrpVJpw9Q9LAOrYCX+Ag8+i5BjvuuBF0WkdxdRfuM4jrU+NLyfzefzPKl+DjoGpdjWZXDz+W0Yd3Vtbe3W6OhoTZrS0MDJyclEOp1+E3PjKVR5SpEHUqJkD3QSCnUbZbgHfQvxoE+UcLXlkf8F5H286wqkoYEvGlzhvHVi5yUHdn6ETqOTVnqxUwTOgTvMS/0QpcTBwLbmpRqIyTmLQvofQfoh6xj+ThLp8MGcxsXgfYj/Y6bZh8NT8Twdf8KryeA8ygm/EUw//oO+grgwRPLtUdQGHkTB7wh5VcQV/n1DMPBXvyoj6iHMoRRn8wiP7Uf2bbouIkKiNpCZ+mM/jC1PcGPwl4nFRD0H8gM5DvGuJa753XeY/26bWFEURVEURVFC0NPzP/joX5mNEG0/AAAAAElFTkSuQmCC) center center no-repeat, -webkit-gradient(linear, left top, left bottom, from(#b5b5b5), to(#dfdfdf)) 0 0;
   display: block;
   left: 57px;
   top: 68px;
-  width: 345px;
-  height: 194px;
   z-index: 9;
+  width: 357px;
+  height: auto;
 }
 
 .program-preview .image {
-  position: absolute;
+  position: relative;
   display: block;
   box-shadow: 0px 0px 0px 1px #f0f0f0;
   width: 345px;
@@ -870,15 +868,13 @@ button {
 }
 
 .program-preview .program-metadata {
-  position: absolute;
+  position: relative;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  left: -6px;
-  top: 203px;
   background: #ffffff;
   border-radius: 4px;
   width: 357px;
-  height: 145px;
+  height: 345px;
 }
 
 .program-preview .program-metadata .show-services {

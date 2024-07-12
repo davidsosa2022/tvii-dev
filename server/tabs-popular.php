@@ -35,13 +35,20 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 
     </menu>
 
-    <section class="program-preview">
-      <img class="image" src="/img/no-image.png" />
-      <div class="program-metadata loading-el">
+    <section class="program-preview loading-el">
+
+      <div class="program-metadata">
         <span class="show-services"></span>
+        <span class="show-rating">PG-13</span>
         <span class="show-title"></span>
+        <hr>
+        <span class="show-year">2024</span>
+      </div>
+
+      <div class="program-metadata">
         <span class="show-description"></span>
       </div>
+      
     </section>
 
     <section class="scroll-programs loading-el">
