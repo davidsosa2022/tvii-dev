@@ -200,7 +200,7 @@ if(isset($_GET['program'])) {
     <a data-hover navi_target data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" href="javascript:void(0);" class="next_page_button accesskey-r accesskey-zr" data-sound="SE_MOVEPAGE_PLAY"></a>
 
     <div class="fixed-left-buttons">
-    <button navi_target navi_mouse data-hover class="back_white_button accesskey-b" data-sound="SE_RETURN_TOUCH_OFF"></button>
+    <a navi_target navi_mouse data-hover href="javascript:void(0)" class="back_white_button accesskey-b" data-sound="SE_RETURN_TOUCH_OFF"></a>
     <a navi_target navi_mouse data-hover href="javascript:void(0)" class="remote accesskey-x" data-sound="SE_RETURN_TOUCH_OFF">Remote Control</a>
     </div>
 
@@ -210,7 +210,7 @@ if(isset($_GET['program'])) {
       <div class="date-day"></div>
       <div class="date-time"></div>
     </div>
-    <button navi_target data-hover class="miiverse-button" data-sound="SE_POPUP_TOUCH_OFF"></button>
+    <a href="javascript:void(0)" navi_target data-hover class="miiverse-button" data-sound="SE_POPUP_TOUCH_OFF"></a>
     </a>
   
  </menu>
@@ -297,7 +297,7 @@ if (!empty($actors_html)) {
 
 <div class="miiverse-posts program">
   <span class="loading_miiverse"></span>
-  <button data-hover navi_target class="back_white_button miiverse-back accesskey-b" data-sound="SE_RETURN_TOUCH_OFF"></button>
+  <a href="javascript:void(0)" data-hover navi_target class="back_white_button miiverse-back accesskey-b" data-sound="SE_RETURN_TOUCH_OFF"></a>
 
 <header class="posts-top-bar miiverse-with-attributes-top-bar" data-miiverse-app-data="<?php echo $userData['mii_user_bio'] ?>"  data-miiverse-search-key="<?php echo $program_id ?>"  data-miiverse-topic-tag="<?php if (strlen($name) > 50) { $name = substr($name, 0, 47) . "..."; echo htmlspecialchars($name); } else { echo htmlspecialchars($name); } ?>"><?php echo localize("vino.program.olv.viewer.header", ["%s" => htmlspecialchars($name)]); ?></header>
 <a navi_target href="javascript:void(0)" data-sound="SE_WAVE_OK_SUB" class="post-button"><?php echo localize("vino.program.olv.viewer.post-button") ?></a>
