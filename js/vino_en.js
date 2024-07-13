@@ -1644,6 +1644,7 @@ function prepareMiiverseModal() {
     var searchKey = $("header.miiverse-with-attributes-top-bar").attr("data-miiverse-search-key");
     var topicTag = $("header.miiverse-with-attributes-top-bar").attr("data-miiverse-topic-tag");
     var appData = $("header.miiverse-with-attributes-top-bar").attr("data-miiverse-app-data");
+    var canClosePostApplet = true;
     //set distinct_pid to 1 after debug
     var queryPoll = '?language_id=254&with_mii=1&limit=50&distinct_pid=0&search_key=' + searchKey + "(P)";
     var query = '?language_id=254&with_mii=1&limit=50&distinct_pid=0&search_key=' + searchKey;
@@ -2070,7 +2071,7 @@ function prepareMiiverseModal() {
         $(".miiverse-posts .post-confirm-modal .confirm-finish-post").on('click', finishPostConfirmation)
 
         function cancelPostConfirmation() {
-            $(".miiverse-posts .cancel-post").css('pointer-events', 'auto');
+            canClosePostApplet = true;
             $(".miiverse-posts .post-confirm-modal").addClass("none");
         }
 
@@ -2114,7 +2115,7 @@ function prepareMiiverseModal() {
                 $(".textarea-memo-preview").css("background-image", bgImage);
                 alert("The content you entered\nwas sent successfully.");
                 tvii.utils.lockUserOperation(false);
-                $(".miiverse-posts .cancel-post").css('pointer-events', 'auto');
+                canClosePostApplet = true;
                 $('.miiverse-posts .loading_miiverse').removeClass('show');
                 $(".miiverse-posts .post-confirm-modal").addClass("none");
                 closePostModal();
@@ -2122,7 +2123,7 @@ function prepareMiiverseModal() {
 
             function onPostFailure() {
                 tvii.utils.lockUserOperation(false);
-                $(".miiverse-posts .cancel-post").css('pointer-events', 'auto');
+                canClosePostApplet = true;
                 $('.miiverse-posts .loading_miiverse').removeClass('show');
                 $(".miiverse-posts .post-confirm-modal").addClass("none");
             }
@@ -2253,7 +2254,7 @@ function prepareMiiverseModal() {
                 $(".miiverse-posts .post-confirm-modal .spoilers-status").text("Spoilers: No")
             }
 
-            $(".miiverse-posts .cancel-post").css('pointer-events', 'none');
+            canClosePostApplet = false;
             $(".miiverse-posts .post-confirm-modal").removeClass("none");
         }
 
@@ -2294,6 +2295,19 @@ function prepareMiiverseModal() {
     }
 
     function closePostModal() {
+        if (!canClosePostApplet) {return;}
+        if ($(".miiverse-posts .textarea-text-input").val().length > 1 || vino.memo_isFinish() && vino.memo_getImagePng()) {
+            if (vino.runTwoButtonDialog("Cancel this post?", "No", "Yes") == 1) {
+                return;
+            }
+        }
+        
+        $(".miiverse-posts .textarea-text-input").val("");
+        $(".miiverse-posts .textarea-text-preview").text("");
+        vino.memo_reset();
+        var bgImage = "url(" + vino.memo_getImagePng() + ")";
+        $(".textarea-memo-preview").css("background-image", bgImage);
+
         $(".miiverse-posts .post-confirm-modal").addClass("none");
         $(".miiverse-posts .post-input-modal").addClass("none")
         $(".miiverse-posts .posts-top-bar").removeClass("none")
