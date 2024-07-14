@@ -1103,63 +1103,63 @@ var tvii = {
         },
         hideMenuButtons: function(hide) {
             function moveAndFade($element, animationType) {
-                var startTop, endTop, startOpacity, endOpacity;
-    
+                var startValue, endValue, property;
+            
                 switch (animationType) {
                     case 'hideUp':
-                        startTop = 0;
-                        endTop = -50;
-                        startOpacity = 1;
-                        endOpacity = 0;
+                        startValue = 0;
+                        endValue = -50;
+                        property = 'top';
                         break;
                     case 'hideDown':
-                        startTop = 0;
-                        endTop = 50;
-                        startOpacity = 1;
-                        endOpacity = 0;
+                        startValue = 0;
+                        endValue = -50;
+                        property = 'bottom';
                         break;
                     case 'showUp':
-                        startTop = 50;
-                        endTop = 0;
-                        startOpacity = 0;
-                        endOpacity = 1;
+                        startValue = -50;
+                        endValue = 0;
+                        property = 'top';
                         break;
                     case 'showDown':
-                        startTop = -50;
-                        endTop = 0;
-                        startOpacity = 0;
-                        endOpacity = 1;
+                        startValue = -50;
+                        endValue = 0;
+                        property = 'bottom';
                         break;
                     default:
                         console.error('Invalid animation type');
                         return;
                 }
-    
+            
+                var startOpacity = animationType.startsWith('hide') ? 1 : 0;
+                var endOpacity = animationType.startsWith('hide') ? 0 : 1;
                 var duration = 1000; // 1 second
-    
                 var startTime = new Date().getTime();
-    
+                var timeoutId;
+            
                 function animate() {
                     var currentTime = new Date().getTime();
                     var elapsed = currentTime - startTime;
                     var progress = Math.min(elapsed / duration, 1);
-    
-                    var currentTop = startTop + (endTop - startTop) * progress;
+            
+                    var currentValue = startValue + (endValue - startValue) * progress;
                     var currentOpacity = startOpacity + (endOpacity - startOpacity) * progress;
-    
-                    $element.css({
-                        top: currentTop + 'px',
-                        opacity: currentOpacity
-                    });
-    
+            
+                    var cssProperties = {};
+                    cssProperties[property] = currentValue + 'px';
+                    cssProperties['opacity'] = currentOpacity;
+            
+                    $element.css(cssProperties);
+            
                     if (progress < 1) {
-                        setTimeout(animate, 16); // Roughly 60 frames per second
+                        timeoutId = setTimeout(animate, 16); // Roughly 60 frames per second
+                    } else {
+                        clearTimeout(timeoutId); // Clear the timeout when animation completes
                     }
                 }
-    
+            
                 animate();
             }
-
             var topBar = $("header.top-bar, .favoritebtn, .toppagebtn, .menubtn, .exitbtn");
             var bottomBar = $(".info-tab, .fixed-left-buttons");
 
