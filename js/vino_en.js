@@ -838,7 +838,7 @@ var tvii = {
             if (!elt.length) return;
             elt.on("click", touchEffect)
             function touchEffect() {
-                if (wiiu.gamepad.hold || $(this).attr('disabled') !== undefined) { return; }
+                if (wiiu.gamepad.hold || vino.navi_getRect() ||$(this).attr('disabled') !== undefined) { return; }
                 vino.lyt_startTouchEffect();
             }
         },
