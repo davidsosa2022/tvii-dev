@@ -205,10 +205,30 @@ button {
 
 .label.selected:before {
   content: "";
+  position: absolute;
+  bottom: 0;
+  left: -5px;
+  width: 20px;
+  height: 100%;
+  z-index: 0;
+  border-top-left-radius: 20px;
+  -webkit-transform: skew(345deg);
+  transform: skew(-345deg);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.95, #f7f7f7), to(#f7f7f7)) 0 0;
 }
 
 .label.selected:after {
   content: "";
+  position: absolute;
+  bottom: 0;
+  right: -5px;
+  width: 20px;
+  height: 100%;
+  z-index: 0;
+  border-top-right-radius: 20px;
+  -webkit-transform: skew(-345deg);
+  transform: skew(-345deg);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.95, #f7f7f7), to(#f7f7f7)) 0 0;
 }
 
 .exitbtn {
