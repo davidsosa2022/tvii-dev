@@ -213,7 +213,7 @@ button {
   z-index: 0;
   border-top-left-radius: 20px;
   -webkit-transform: skew(345deg);
-  transform: skew(-345deg);
+  transform: skew(345deg);
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.95, #f7f7f7), to(#f7f7f7)) 0 0;
 }
 
