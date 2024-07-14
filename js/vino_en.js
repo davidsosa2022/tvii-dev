@@ -1101,6 +1101,76 @@ var tvii = {
             //if TVii was returned from the Internet Browser (jumped from the app), redirect to the original page
             tvii.utils.checkReturnedFlagAndRedirect();
         },
+        hideMenuButtons: function(hide) {
+            function moveAndFade($element, animationType) {
+                var startTop, endTop, startOpacity, endOpacity;
+    
+                switch (animationType) {
+                    case 'hideUp':
+                        startTop = 0;
+                        endTop = -50;
+                        startOpacity = 1;
+                        endOpacity = 0;
+                        break;
+                    case 'hideDown':
+                        startTop = 0;
+                        endTop = 50;
+                        startOpacity = 1;
+                        endOpacity = 0;
+                        break;
+                    case 'showUp':
+                        startTop = 50;
+                        endTop = 0;
+                        startOpacity = 0;
+                        endOpacity = 1;
+                        break;
+                    case 'showDown':
+                        startTop = -50;
+                        endTop = 0;
+                        startOpacity = 0;
+                        endOpacity = 1;
+                        break;
+                    default:
+                        console.error('Invalid animation type');
+                        return;
+                }
+    
+                var duration = 1000; // 1 second
+    
+                var startTime = new Date().getTime();
+    
+                function animate() {
+                    var currentTime = new Date().getTime();
+                    var elapsed = currentTime - startTime;
+                    var progress = Math.min(elapsed / duration, 1);
+    
+                    var currentTop = startTop + (endTop - startTop) * progress;
+                    var currentOpacity = startOpacity + (endOpacity - startOpacity) * progress;
+    
+                    $element.css({
+                        top: currentTop + 'px',
+                        opacity: currentOpacity
+                    });
+    
+                    if (progress < 1) {
+                        setTimeout(animate, 16); // Roughly 60 frames per second
+                    }
+                }
+    
+                animate();
+            }
+
+            var topBar = $("header.top-bar, .favoritebtn, .toppagebtn, .menubtn, .exitbtn");
+            var bottomBar = $(".info-tab, .fixed-left-buttons");
+
+            if (hide) {
+                moveAndFade(topBar, 'hideUp');
+                moveAndFade(bottomBar, 'hideDown');
+            } else {
+                moveAndFade(topBar, 'showUp');
+                moveAndFade(bottomBar, 'showDown');
+            }
+        },
         getRandomTopBarColor: function () {
             var barColors = ['blue', 'red', 'green', 'purple', 'pink'];
             if (!sessionStorage.getItem('vino_top_bar_color')) {
@@ -1217,6 +1287,7 @@ tvii.router.connect("^/$", function () {
     tvii.utils.setTabMenuTips();
     tvii.utils.setTopBarColor();
     tvii.utils.prepareHover();
+    tvii.utils.prepareMouseEffect();
     tvii.utils.setNaviTargetResetInterval();
 
     $(".exitbtn").on("click", function () {
@@ -1362,6 +1433,7 @@ tvii.router.connect("^/guide$", function () {
     tvii.utils.setTabMenuTips();
     tvii.utils.setTopBarColor();
     tvii.utils.prepareHover();
+    tvii.utils.prepareMouseEffect();
     tvii.utils.setNaviTargetResetInterval();
 
     $(".exitbtn").on("click", function () {
@@ -2365,6 +2437,7 @@ $(window).on('load', function () {
 });
 
 $(document).on("pjax:beforeSend", function () {
+    tvii.utils.hideMenuButtons(true);
     vino.loading_setIconAppear(false);
     tvii.utils.lockUserOperation(true);
     tvii.utils.resetLoadingIconPosition();
@@ -2384,6 +2457,7 @@ $(document).on("pjax:end", function () {
     tvii.router.checkRoutes(window.location.pathname);
     tvii.utils.lockUserOperation(false);
     vino.loading_setIconAppear(false);
+    tvii.utils.hideMenuButtons(false);
 })
 
 $(window).on("beforeunload", function (e) {
