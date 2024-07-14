@@ -1139,7 +1139,7 @@ var tvii = {
             
                 var startOpacity = animationType.indexOf('hide') === 0 ? 1 : 0;
                 var endOpacity = animationType.indexOf('hide') === 0 ? 0 : 1;
-                var duration = 1000; // 1 second
+                var duration = 300;
                 var startTime = new Date().getTime();
                 var timeoutId;
             
