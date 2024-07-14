@@ -746,9 +746,11 @@ var tvii = {
             tvii.browse.pjax.go(tvii.clientUrl + '/menu');
         },
         openProgramPage: function (program) {
+            tvii.utils.hideMenuButtons(true);
             tvii.browse.pjax.go(tvii.clientUrl + '/program' + '?program=' + program);
         },
         openActorPage: function (actor) {
+            tvii.utils.hideMenuButtons(true);
             tvii.browse.pjax.go(tvii.clientUrl + '/actor' + '?actor=' + actor);
         },
         top: function (replace) {
@@ -1069,7 +1071,7 @@ var tvii = {
             }, 0);
         },
         back: function() {
-            $(window).trigger('tvii:back');
+            $(window).trigger('tvii:back', {page: window.location.pathname});
             history.back();
         },
         prepare: function () {
@@ -1621,6 +1623,7 @@ tvii.router.connect("^/menu$", function () {
 });
 
 tvii.router.connect("^/program$", function () {
+    tvii.utils.hideMenuButtons(false);
     tvii.utils.setDateTimeInterval();
     tvii.utils.setTopBarColor();
     tvii.utils.prepareSound();
@@ -2447,8 +2450,6 @@ $(window).on('load', function () {
 $(document).on("pjax:beforeSend", function (xhr, options) {
     console.log(xhr)
     console.log(options)
-
-    tvii.utils.hideMenuButtons(true);
     vino.loading_setIconAppear(false);
     tvii.utils.lockUserOperation(true);
     tvii.utils.resetLoadingIconPosition();
@@ -2461,6 +2462,11 @@ $(document).on("pjax:beforeSend", function (xhr, options) {
 $(window).on("popstate", function () {
 })
 
+$(window).on("tvii:back", function (path) {
+    console.log(path)
+    tvii.utils.hideMenuButtons(false);
+})
+
 $(document).on("pjax:error", function (event) {
 })
 
@@ -2468,7 +2474,6 @@ $(document).on("pjax:end", function () {
     tvii.router.checkRoutes(window.location.pathname);
     tvii.utils.lockUserOperation(false);
     vino.loading_setIconAppear(false);
-    tvii.utils.hideMenuButtons(false);
 })
 
 $(window).on("beforeunload", function (e) {
