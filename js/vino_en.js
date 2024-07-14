@@ -2445,7 +2445,7 @@ $(window).on('load', function () {
 });
 
 $(document).on("pjax:beforeSend", function (xhr, options) {
-
+    console.log(xhr)
     console.log(options)
 
     tvii.utils.hideMenuButtons(true);
