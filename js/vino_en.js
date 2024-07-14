@@ -1068,6 +1068,10 @@ var tvii = {
                 }
             }, 0);
         },
+        back: function() {
+            $(window).trigger('tvii:back');
+            history.back();
+        },
         prepare: function () {
             vino.lyt_setIsEnableClientLoadingIcon(true);
             vino.lyt_setIsEnableWhiteMask(false);
@@ -1611,7 +1615,9 @@ tvii.router.connect("^/menu$", function () {
     tvii.utils.prepareHover();
     tvii.utils.setNaviTargetResetInterval();
 
-    $(".back_button").on("click", function () { history.back() })
+    $(".back_button").on("click", function () {
+        tvii.utils.back();
+    })
 });
 
 tvii.router.connect("^/program$", function () {
@@ -1630,7 +1636,9 @@ tvii.router.connect("^/program$", function () {
         }
     });
 
-    $(".back_white_button:not(.miiverse-back)").on("click", function () { history.back() })
+    $(".back_white_button:not(.miiverse-back)").on("click", function () {
+        tvii.utils.back();
+    })
     $(".before_page_button").on("click", function () { scrollLeftPPage() })
     $(".next_page_button").on("click", function () { scrollRightPPage() })
     $(".toppagebtn").on("click", function () { tvii.browse.top() })
@@ -2436,7 +2444,10 @@ $(window).on('load', function () {
     tvii.router.checkRoutes(window.location.pathname);
 });
 
-$(document).on("pjax:beforeSend", function () {
+$(document).on("pjax:beforeSend", function (xhr, options) {
+
+    console.log(options)
+
     tvii.utils.hideMenuButtons(true);
     vino.loading_setIconAppear(false);
     tvii.utils.lockUserOperation(true);
