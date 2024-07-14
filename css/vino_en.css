@@ -198,8 +198,8 @@ button {
   text-shadow: 0px 2px 0px #fff;
   box-shadow: 1px 0px 0px #bfbfbf;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.95, #f7f7f7), to(#f7f7f7)) 0 0;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  border-top-right-radius: 33px;
+  border-top-left-radius: 33px;
   color: #4b4c48;
 }
 
@@ -207,7 +207,7 @@ button {
   content: "";
   position: absolute;
   bottom: 0;
-  left: -5px;
+  left: 0x;
   width: 20px;
   height: 100%;
   z-index: 0;
@@ -221,7 +221,7 @@ button {
   content: "";
   position: absolute;
   bottom: 0;
-  right: -5px;
+  right: 0px;
   width: 20px;
   height: 100%;
   z-index: 0;
