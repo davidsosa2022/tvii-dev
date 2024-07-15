@@ -208,7 +208,7 @@ if(isset($_GET['program'])) {
   <?php echo localize("vino.program.info-tab") ?>
   <a href="javascript:void(0)" navi_target data-hover class="miiverse-button" data-sound="SE_POPUP_TOUCH_OFF"></a>
   <div class="day-info">
-    <div class="date-day-name fri"></div>
+    <div class="date-day-name"></div>
     <div class="date-day"></div>
     <div class="date-time"></div>
   </div>
