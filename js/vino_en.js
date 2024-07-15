@@ -1252,7 +1252,7 @@ var tvii = {
 tvii.router.connect("^/$", function () {
     $(".loading-el").removeClass("loading-el");
     vino.lyt_drawFixedFrame(455, 211, 383, 86);
-    
+
     tvii.utils.setDateTimeInterval();
     tvii.utils.prepareSound();
     tvii.utils.prepareTouchEffect();
@@ -1316,8 +1316,6 @@ tvii.router.connect("^/$", function () {
     })
 
     function changePreview(program) {
-        vino.loading_setIconRect(180, 120, 100, 100);
-        vino.loading_setIconAppear(true);
         var streamingI = program.attr('data-streaming');
         var ThisShowName = program.attr('data-program-name');
         var ThisShowYear = program.attr('data-program-year');
@@ -1329,7 +1327,6 @@ tvii.router.connect("^/$", function () {
         $('.program-preview .show-rating').text(ThisShowAge);
         $('.program-preview .show-year').text(ThisShowYear);
         $('.program-preview .show-description').text(ThisShowDescription);
-        vino.loading_setIconAppear(false);
     }
 
     var liveProgram = $(".live-program");
@@ -1354,24 +1351,7 @@ tvii.router.connect("^/$", function () {
     });
 
     function snapToCenter() {
-        var programHeight = $('.live-program').outerHeight();
-        var scrollTop = $(window).scrollTop();
-        var centerIndex = Math.round(scrollTop / programHeight);
-        var targetScrollTop = centerIndex * programHeight;
 
-        targetScrollTop = Math.min(targetScrollTop, $(document).height() - $(window).height());
-
-        if (targetScrollTop !== scrollTop) {
-            $('body, html').scrollTop(targetScrollTop);
-        }
-
-        if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
-            vino.soundPlayVolume("SE_LIST_SCROLL_END", 20);
-        }
-
-        if ($(window).scrollTop() === 0) {
-            vino.soundPlayVolume("SE_LIST_SCROLL_END", 20);
-        }
     }
 
     function scrollToProgram(program) {
