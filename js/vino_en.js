@@ -1503,7 +1503,6 @@ tvii.router.connect("^/guide$", function () {
     tvii.utils.prepareHover();
     tvii.utils.prepareMouseEffect();
     tvii.utils.setNaviTargetResetInterval();
-    tvii.utils.disableElement($(".label.popular"), true);
 
     $(".exitbtn").on("click", function () {
         vino.lyt_reset();
@@ -1522,6 +1521,8 @@ tvii.router.connect("^/guide$", function () {
 
     //New guide code TODO
     vino.loading_setIconAppear(false);
+
+    tvii.utils.disableElement($(".label.popular"), true);
 });
 
 // Favorites page code
