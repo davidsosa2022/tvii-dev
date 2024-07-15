@@ -1316,7 +1316,7 @@ tvii.router.connect("^/$", function () {
         }
     })
 
-    $(".scr-next").on("click", function () {
+    $(".scr-select").on("click", function () {
         if (!$(".live-program").length) {
             return;
         }
