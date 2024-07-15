@@ -20,13 +20,13 @@ if (typeof vino === 'undefined') {
         requestGarbageCollect: function () {
             console.log('Requested Garbage collection');
         },
-        title_getImageCount: function() {
+        title_getImageCount: function () {
             return 0;
         },
-        title_hasImage: function(img) {
+        title_hasImage: function (img) {
             return false;
         },
-        title_setFixedImage: function(url, id, n, n, n, type) {
+        title_setFixedImage: function (url, id, n, n, n, type) {
             return true;
         },
         soundStopAll: function () {
@@ -688,7 +688,7 @@ var tvii = {
             };
             miisQ.send();
         },
-        getCommunities: function(query, callbackSuccess, callbackError) {
+        getCommunities: function (query, callbackSuccess, callbackError) {
             tvii.isOlvRequesting = true;
             var olvPostReq = new XMLHttpRequest();
             olvPostReq.open("GET", tvii.clientUrl + "/v1/miiverse/communities" + query)
@@ -736,7 +736,7 @@ var tvii = {
             }
             olvPostReq.send();
         },
-        getDirectMessages: function(query, callbackSuccess, callbackError) {
+        getDirectMessages: function (query, callbackSuccess, callbackError) {
 
         },
         requestNotifications: function (callbackSuccess, callbackError) {
@@ -1116,8 +1116,8 @@ var tvii = {
                 }
             }, 0);
         },
-        back: function() {
-            $(window).trigger('tvii:back', {page: window.location.pathname});
+        back: function () {
+            $(window).trigger('tvii:back', { page: window.location.pathname });
             history.back();
         },
         prepare: function () {
@@ -1236,14 +1236,14 @@ var tvii = {
         },
         setLoadingScreenBG: function () {
             if (vino.title_getImageCount() >= 1 &&
-             !vino.title_hasImage("vino_blue") &&
-             !vino.title_hasImage("vino_orange") &&
-             !vino.title_hasImage("vino_pink")
+                !vino.title_hasImage("vino_blue") &&
+                !vino.title_hasImage("vino_orange") &&
+                !vino.title_hasImage("vino_pink")
             ) {
                 vino.title_clearImage();
-                vino.title_setFixedImage(tvii.clientUrl + "/img/title/blue.png", "vino_blue", "","","", 2);
-                vino.title_setFixedImage(tvii.clientUrl + "/img/title/orange.png", "vino_orange", "","","", 2);
-                vino.title_setFixedImage(tvii.clientUrl + "/img/title/pink.png", "vino_pink", "","","", 2);
+                vino.title_setFixedImage(tvii.clientUrl + "/img/title/blue.png", "vino_blue", "", "", "", 2);
+                vino.title_setFixedImage(tvii.clientUrl + "/img/title/orange.png", "vino_orange", "", "", "", 2);
+                vino.title_setFixedImage(tvii.clientUrl + "/img/title/pink.png", "vino_pink", "", "", "", 2);
             }
         },
         resetLoadingIconPosition: function () {
@@ -1287,18 +1287,27 @@ tvii.router.connect("^/$", function () {
 
     $(".scr-prev").on("click", function () {
         var prev = $(".live-program.selected").prev();
-        $(".live-program").removeClass("selected");
-        prev.addClass("selected");
-        changePreview(prev);
-        scrollToProgram(prev);
+
+        if (prev.length > 0) {
+            clearInterval(tvii.scrollProgramListInterval)
+            vino.soundPlayVolume("SE_PROGRAM_SLIDE_SPEED", 25);
+            $(".live-program").removeClass("selected");
+            prev.addClass("selected");
+            changePreview(prev);
+            scrollToProgram(prev);
+        }
     })
 
     $(".scr-next").on("click", function () {
         var next = $(".live-program.selected").next();
-        $(".live-program").removeClass("selected");
-        next.addClass("selected");
-        changePreview(next);
-        scrollToProgram(next);
+        if (next.length > 0) {
+            clearInterval(tvii.scrollProgramListInterval)
+            vino.soundPlayVolume("SE_PROGRAM_SLIDE_SPEED", 25);
+            $(".live-program").removeClass("selected");
+            next.addClass("selected");
+            changePreview(next);
+            scrollToProgram(next);
+        }
     })
 
     function changePreview(program) {
@@ -1669,12 +1678,12 @@ tvii.router.connect("^/program$", function () {
         var scrollLeft = $(window).scrollLeft();
         var maxScrollLeft = $(document).width() - $(window).width();
         if (scrollLeft >= maxScrollLeft) {
-            $('html, body').animate({ scrollLeft: '-=' + scrollBackAmount }, 600, function() {
+            $('html, body').animate({ scrollLeft: '-=' + scrollBackAmount }, 600, function () {
                 isAnimating = false;
                 updateButtonVisibility();
             });
         } else {
-            $('html, body').animate({ scrollLeft: 0 }, 600, function() {
+            $('html, body').animate({ scrollLeft: 0 }, 600, function () {
                 isAnimating = false;
                 updateButtonVisibility();
             });
@@ -1689,12 +1698,12 @@ tvii.router.connect("^/program$", function () {
         var scrollLeft = $(window).scrollLeft();
         var maxScrollLeft = $(document).width() - $(window).width();
         if (scrollLeft >= scrollThreshold) {
-            $('html, body').animate({ scrollLeft: maxScrollLeft }, 600, function() {
+            $('html, body').animate({ scrollLeft: maxScrollLeft }, 600, function () {
                 isAnimating = false;
                 updateButtonVisibility();
             });
         } else {
-            $('html, body').animate({ scrollLeft: '+=' + scrollAmount }, 600, function() {
+            $('html, body').animate({ scrollLeft: '+=' + scrollAmount }, 600, function () {
                 isAnimating = false;
                 updateButtonVisibility();
             });
@@ -1789,7 +1798,7 @@ function prepareMiiverseModal() {
             yeahButton.text("Yeah!");
             yeahButton.on("click", function () {
                 vino.soundPlayVolume("SE_WAVE_MII", 25);
-                
+
             });
 
             postDiv.append(postMii)
@@ -2016,7 +2025,7 @@ function prepareMiiverseModal() {
                 var friendsUrl = "";
                 if (friends.indexOf(",") !== -1) {
                     var friendIds = friends.split(",");
-    
+
                     for (var i = 0; i < friendIds.length; i++) {
                         friendsUrl += friendIds[i].trim();
                         if (i < friendIds.length - 1) {
@@ -2372,13 +2381,13 @@ function prepareMiiverseModal() {
     }
 
     function closePostModal() {
-        if (!canClosePostApplet) {return;}
+        if (!canClosePostApplet) { return; }
         if ($(".miiverse-posts .textarea-text-input").val().length > 1 || vino.memo_isFinish() && vino.memo_getImagePng()) {
             if (vino.runTwoButtonDialog("Cancel this post?", "No", "Yes") == 1) {
                 return;
             }
         }
-        
+
         $(".miiverse-posts .textarea-text-input").val("");
         $(".miiverse-posts .textarea-text-preview").text($(".textarea-text-preview").attr("data-placeholder"));
         vino.memo_reset();
@@ -2421,7 +2430,7 @@ function prepareMiiverseModal() {
         tvii.utils.lockUserOperation(true);
         tvii.olv.getPosts(query, appendNormalPosts, errorHandler);
     }
-    
+
     function closeMiiverseModal() {
         $(".miiverse-posts .tab-header .tab").removeClass("selected");
         $(".miiverse-posts .tab-header .tab:first-child").addClass("selected");
@@ -2432,7 +2441,7 @@ function prepareMiiverseModal() {
         pageType.removeClass("none");
         window.scrollTo(tvii.scrollPosition, 0);
     }
-    
+
 }
 
 
