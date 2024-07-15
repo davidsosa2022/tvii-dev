@@ -1367,7 +1367,7 @@ tvii.router.connect("^/$", function () {
         if (program && program.offset().top !== undefined) {
             var windowHeight = $(window).height();
             var programTop = program.offset().top;
-
+    
             // Calculate the target scroll position
             var targetScrollTop;
             if (programTop < windowHeight / 2) {
@@ -1380,14 +1380,15 @@ tvii.router.connect("^/$", function () {
                 // Scroll so that the program is centered vertically on the screen
                 targetScrollTop = programTop - windowHeight / 2 + program.outerHeight() / 2;
             }
-
-            // Animate scrolling to the target position
-            $('body, html').animate({ scrollTop: targetScrollTop }, 200, function () {
-                clearInterval(tvii.scrollProgramListInterval)
-                snapToCenter()
+    
+            // Cancel any ongoing animations and animate scrolling to the target position
+            $('body, html').stop().animate({ scrollTop: targetScrollTop }, 200, function () {
+                clearInterval(tvii.scrollProgramListInterval);
+                snapToCenter();
             });
         }
     }
+    
 
     function handleScroll() {
         vino.soundPlayVolume("SE_LIST_SCROLL", 15);
