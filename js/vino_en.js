@@ -1355,20 +1355,18 @@ tvii.router.connect("^/$", function () {
         var scrollTop = $(window).scrollTop();
         var centerIndex = Math.round(scrollTop / programHeight);
         var targetScrollTop = centerIndex * programHeight;
-
+    
         targetScrollTop = Math.min(targetScrollTop, $(document).height() - $(window).height());
-
-        if (targetScrollTop !== scrollTop) {
-            $('body, html').scrollTop(targetScrollTop);
-        }
-
-        if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
-            vino.soundPlayVolume("SE_LIST_SCROLL_END", 20);
-        }
-
-        if ($(window).scrollTop() === 0) {
-            vino.soundPlayVolume("SE_LIST_SCROLL_END", 20);
-        }
+    
+        // Animate scrolling to the target position
+        $('body, html').animate({ scrollTop: targetScrollTop }, 250, function() {
+            // Animation complete callback
+            console.log('Snap to center animation completed.');
+            // Play sound if at top or bottom of the page
+            if ($(window).scrollTop() === 0 || $(window).scrollTop() + $(window).height() >= $(document).height()) {
+                vino.soundPlayVolume("SE_LIST_SCROLL_END", 20);
+            }
+        });
     }
 
     function scrollToProgram(program) {
