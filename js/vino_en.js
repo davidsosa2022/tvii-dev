@@ -1383,6 +1383,7 @@ tvii.router.connect("^/$", function () {
 
             // Animate scrolling to the target position
             $('body, html').animate({ scrollTop: targetScrollTop }, 200, function () {
+                clearInterval(tvii.scrollProgramListInterval)
                 snapToCenter()
             });
         }
