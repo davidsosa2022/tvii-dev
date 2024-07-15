@@ -141,13 +141,20 @@ button {
   top: 0;
   display: -webkit-box;
   height: 58px;
-  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.59);
   background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAuSURBVDhPY/z//78kAxJgZGR8DmXiBUxQmmRAf41DCDBCaawAX1SNRgf1AQMDADJPCA8r961RAAAAAElFTkSuQmCC'), -webkit-gradient(linear, left top, left bottom, from(#fe846b), color-stop(0.95, #f03d2d), color-stop(0.97, #f03d2d), color-stop(0.98, #d51a1a), to(#d51a1a));
   z-index: 10;
 }
 
 .top-bar:after {
   content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 6px;
+  z-index: 10;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), color-stop(0.50, #f1f1f1), to(#868686)) 0 0;
 }
 
 .top-bar.full {
@@ -204,7 +211,7 @@ button {
 
 .label.selected {
   text-shadow: 0px 2px 0px #fff;
-  box-shadow: 1px 0px 0px #bfbfbf;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.95, #f1f1f1), to(#f3f3f3)) 0 0;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
