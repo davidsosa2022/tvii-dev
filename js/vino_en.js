@@ -1358,16 +1358,24 @@ tvii.router.connect("^/$", function () {
 
         targetScrollTop = Math.min(targetScrollTop, $(document).height() - $(window).height());
 
-        // Animate scrolling to the target position
-        $('body, html').stop().animate({ scrollTop: targetScrollTop }, 200, function () {
-        });
+        if (targetScrollTop !== scrollTop) {
+            $('body, html').scrollTop(targetScrollTop);
+        }
+
+        if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
+            vino.soundPlayVolume("SE_LIST_SCROLL_END", 20);
+        }
+
+        if ($(window).scrollTop() === 0) {
+            vino.soundPlayVolume("SE_LIST_SCROLL_END", 20);
+        }
     }
 
     function scrollToProgram(program) {
         if (program && program.offset().top !== undefined) {
             var windowHeight = $(window).height();
             var programTop = program.offset().top;
-    
+
             // Calculate the target scroll position
             var targetScrollTop;
             if (programTop < windowHeight / 2) {
@@ -1380,25 +1388,19 @@ tvii.router.connect("^/$", function () {
                 // Scroll so that the program is centered vertically on the screen
                 targetScrollTop = programTop - windowHeight / 2 + program.outerHeight() / 2;
             }
-    
-            // Cancel any ongoing animations and animate scrolling to the target position
-            $('body, html').stop().animate({ scrollTop: targetScrollTop }, 200, function () {
-                clearInterval(tvii.scrollProgramListInterval);
-                snapToCenter();
-            });
+
+            // Scroll to the target position
+            $('body, html').scrollTop(targetScrollTop);
+            snapToCenter();
         }
     }
-    
 
     function handleScroll() {
         vino.soundPlayVolume("SE_LIST_SCROLL", 15);
         clearInterval(tvii.scrollProgramListInterval)
         tvii.scrollProgramListInterval = setTimeout(function () {
             snapToCenter();
-        }, 250);
-        if ($(window).scrollTop() === 0 || $(window).scrollTop() + $(window).height() >= $(document).height()) {
-            vino.soundPlayVolume("SE_LIST_SCROLL_END", 20);
-        }
+        }, 200);
     }
 
     $(window).on('scroll', handleScroll);
