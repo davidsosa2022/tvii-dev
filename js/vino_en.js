@@ -837,19 +837,15 @@ var tvii = {
 
                 switch (wiiu.gamepad.hold) {
                     case 1073741824:
-                        vino.navi_reset();
                         document.body.scrollLeft += lerp(-15, -15, (wiiu.gamepad.lStickX));
                         break;
                     case 536870912:
-                        vino.navi_reset();
                         document.body.scrollLeft += lerp(-15, 15, (wiiu.gamepad.lStickX));
                         break;
                     case 268435456:
-                        vino.navi_reset();
                         document.body.scrollTop += lerp(-15, -15, (wiiu.gamepad.lStickY));
                         break;
                     case 134217728:
-                        vino.navi_reset();
                         document.body.scrollTop += lerp(15, 15, (wiiu.gamepad.lStickY));
                         break;
                 }
@@ -1649,9 +1645,6 @@ tvii.router.connect("^/program$", function () {
 
     $(window).on('scroll', function () {
         updateButtonVisibility();
-        if (vino.navi_getRect() && wiiu.gamepad.tpTouch === 1) {
-            vino.navi_reset();
-        }
     });
 
     $(".back_white_button:not(.miiverse-back)").on("click", function () {
