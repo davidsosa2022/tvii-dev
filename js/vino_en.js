@@ -1355,17 +1355,11 @@ tvii.router.connect("^/$", function () {
         var scrollTop = $(window).scrollTop();
         var centerIndex = Math.round(scrollTop / programHeight);
         var targetScrollTop = centerIndex * programHeight;
-    
+
         targetScrollTop = Math.min(targetScrollTop, $(document).height() - $(window).height());
-    
+
         // Animate scrolling to the target position
-        $('body, html').animate({ scrollTop: targetScrollTop }, 250, function() {
-            // Animation complete callback
-            console.log('Snap to center animation completed.');
-            // Play sound if at top or bottom of the page
-            if ($(window).scrollTop() === 0 || $(window).scrollTop() + $(window).height() >= $(document).height()) {
-                vino.soundPlayVolume("SE_LIST_SCROLL_END", 20);
-            }
+        $('body, html').animate({ scrollTop: targetScrollTop }, 200, function () {
         });
     }
 
@@ -1373,7 +1367,7 @@ tvii.router.connect("^/$", function () {
         if (program && program.offset().top !== undefined) {
             var windowHeight = $(window).height();
             var programTop = program.offset().top;
-        
+
             // Calculate the target scroll position
             var targetScrollTop;
             if (programTop < windowHeight / 2) {
@@ -1386,9 +1380,10 @@ tvii.router.connect("^/$", function () {
                 // Scroll so that the program is centered vertically on the screen
                 targetScrollTop = programTop - windowHeight / 2 + program.outerHeight() / 2;
             }
-        
+
             // Animate scrolling to the target position
-            $('body, html').animate({ scrollTop: targetScrollTop }, 250, function() {
+            $('body, html').animate({ scrollTop: targetScrollTop }, 250, function () {
+                snapToCenter()
             });
         }
     }
@@ -1398,7 +1393,10 @@ tvii.router.connect("^/$", function () {
         clearInterval(tvii.scrollProgramListInterval)
         tvii.scrollProgramListInterval = setTimeout(function () {
             snapToCenter();
-        }, 200);
+        }, 250);
+        if ($(window).scrollTop() === 0 || $(window).scrollTop() + $(window).height() >= $(document).height()) {
+            vino.soundPlayVolume("SE_LIST_SCROLL_END", 20);
+        }
     }
 
     $(window).on('scroll', handleScroll);
