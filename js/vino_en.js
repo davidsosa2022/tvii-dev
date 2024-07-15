@@ -1291,7 +1291,7 @@ tvii.router.connect("^/$", function () {
         }
         var prev = $(".live-program.selected").prev();
 
-        if (prev.length > 0 || !$(".scroll-programs:nth-child(2)").hasClass("selected")) {
+        if (prev.length > 0 || !prev.hasClass("daily-tip")) {
             clearInterval(tvii.scrollProgramListInterval)
             vino.soundPlayVolume("SE_PROGRAM_SLIDE_SPEED", 25);
             $(".live-program").removeClass("selected");
