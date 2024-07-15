@@ -1390,10 +1390,7 @@ tvii.router.connect("^/$", function () {
             }
         
             // Animate scrolling to the target position
-            $('body, html').animate({ scrollTop: targetScrollTop }, 500, function() {
-                // Animation complete callback
-                console.log('Scroll animation completed.');
-                // Call your callback function here if needed
+            $('body, html').animate({ scrollTop: targetScrollTop }, 250, function() {
             });
         }
     }
