@@ -1359,7 +1359,7 @@ tvii.router.connect("^/$", function () {
         targetScrollTop = Math.min(targetScrollTop, $(document).height() - $(window).height());
 
         // Animate scrolling to the target position
-        $('body, html').animate({ scrollTop: targetScrollTop }, 200, function () {
+        $('body, html').stop().animate({ scrollTop: targetScrollTop }, 200, function () {
         });
     }
 
