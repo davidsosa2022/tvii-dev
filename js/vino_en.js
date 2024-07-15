@@ -879,7 +879,6 @@ var tvii = {
             els.on("click", playSound)
 
             function playSound(e) {
-                if ($(this).attr('disabled') !== undefined) { return; }
                 vino.soundPlayVolume($(e.currentTarget).attr('data-sound'), 25);
             }
         },
@@ -888,7 +887,7 @@ var tvii = {
             if (!elt.length) return;
             elt.on("click", touchEffect)
             function touchEffect() {
-                if (wiiu.gamepad.hold || vino.navi_getRect() ||$(this).attr('disabled') !== undefined) { return; }
+                if (wiiu.gamepad.hold || vino.navi_getRect()) { return; }
                 vino.lyt_startTouchEffect();
             }
         },
@@ -1117,6 +1116,21 @@ var tvii = {
                     vino.navi_reset();
                 }
             }, 0);
+        },
+        disableElement: function(el, disable) {
+            var events = "click.disableElement mousedown.disableElement mouseup.disableElement mousemove.disableElement";
+    
+            if (disable) {
+                el.addClass("disabled");
+                el.on(events, tvii.utils.blockEvent);
+            } else {
+                el.removeClass("disabled");
+                el.off(events);
+            }
+        },
+        blockEvent: function(evt) {
+            evt.preventDefault();
+            evt.stopImmediatePropagation();
         },
         back: function() {
             $(window).trigger('tvii:back', {page: window.location.pathname});
@@ -1489,6 +1503,7 @@ tvii.router.connect("^/guide$", function () {
     tvii.utils.prepareHover();
     tvii.utils.prepareMouseEffect();
     tvii.utils.setNaviTargetResetInterval();
+    tvii.utils.disableElement($(".label.popular"), true);
 
     $(".exitbtn").on("click", function () {
         vino.lyt_reset();
@@ -1693,11 +1708,6 @@ tvii.router.connect("^/program$", function () {
     $(".before_page_button").on("click", function () { scrollLeftPPage() })
     $(".next_page_button").on("click", function () { scrollRightPPage() })
     $(".toppagebtn").on("click", function () { tvii.browse.top() })
-
-    $(".actors .actor .actor_image").on("error", function () {
-        $(this).attr("src", "/img/no-image.png");
-        $(this).off("error");
-    })
 
     prepareMiiverseModal();
 

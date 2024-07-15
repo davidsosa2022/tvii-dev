@@ -8,7 +8,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
     <menu class="menu-buttons">
 
       <header class="top-bar loading-el" data-page-first-load="0" no-touch>
-        <a href="javascript:void(0)" disabled class="label popular selected"
+        <a href="javascript:void(0)" class="label popular selected"
           data-sound="SE_A_TAB_TOUCH_OFF"><?php echo localize("vino.program.label.popular") ?></a>
         <a href="javascript:void(0)" class="label guide"
           data-sound="SE_A_TAB_TOUCH_OFF"><?php echo localize("vino.program.label.program-guide") ?></a>
