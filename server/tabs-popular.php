@@ -7,7 +7,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 ?>
     <menu class="menu-buttons">
 
-      <header class="top-bar loading-el" data-page-first-load="0">
+      <header class="top-bar <?php if (!isset($_SERVER['HTTP_X_PJAX'])) echo 'loading-el'; ?>" data-page-first-load="0">
         <a href="javascript:void(0)" class="label popular selected" no_touch
         ><?php echo localize("vino.program.label.popular") ?></a>
         <a href="javascript:void(0)" class="label accesskey-r guide"
@@ -21,15 +21,15 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
       <button class="accesskey-plus scr-select hidden none"></button>
 
       <a navi_target navi_margin="4" data-hover
-        href="javascript:void(0);" class="menubtn loading-el accesskey-y" data-sound="SE_POPUP_TOUCH_OFF"><?php echo localize("vino.program.menu") ?></a>
+        href="javascript:void(0);" class="menubtn <?php if (!isset($_SERVER['HTTP_X_PJAX'])) echo 'loading-el'; ?> accesskey-y" data-sound="SE_POPUP_TOUCH_OFF"><?php echo localize("vino.program.menu") ?></a>
       <a navi_target navi_margin="4" data-hover
-        href="javascript:void(0);" class="exitbtn loading-el" data-sound="SE_COMMON_FINISH_TOUCH_OFF"></a>
+        href="javascript:void(0);" class="exitbtn <?php if (!isset($_SERVER['HTTP_X_PJAX'])) echo 'loading-el'; ?>" data-sound="SE_COMMON_FINISH_TOUCH_OFF"></a>
 
     <div class="fixed-left-buttons">
-    <a navi_target navi_mouse data-hover href="javascript:void(0)" class="remote accesskey-x" data-sound="SE_RETURN_TOUCH_OFF">Remote Control</a>
+    <a navi_target navi_mouse data-hover href="javascript:void(0)" class="remote accesskey-x <?php if (!isset($_SERVER['HTTP_X_PJAX'])) echo 'loading-el'; ?>" data-sound="SE_RETURN_TOUCH_OFF">Remote Control</a>
     </div>
 
-      <div class="info-tab" no_touch><span class="loading-el"><?php echo localize("vino.program.info-tab2") ?></span>
+      <div class="info-tab" no_touch><span class="<?php if (!isset($_SERVER['HTTP_X_PJAX'])) echo 'loading-el'; ?>"><?php echo localize("vino.program.info-tab2") ?></span>
       <div class="day-info">
         <div class="date-day-name"></div>
         <div class="date-day"></div>

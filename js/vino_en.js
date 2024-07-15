@@ -1132,11 +1132,7 @@ var tvii = {
             }
 
             tvii.utils.requestProfileUpdateWithCallback(function (data) {
-                $(".loading-el").removeClass("loading-el");
-                sessionStorage.setItem("profileUpdateDone", "true");
-                if (window.location.pathname === '/') {
-                    vino.lyt_drawFixedFrame(455, 211, 383, 86);
-                }
+                tvii.router.checkRoutes(window.location.pathname);
             }, function () {
                 alert("Could not update profile, Nintendo TVii will now close.")
                 vino.exit();
@@ -1254,11 +1250,9 @@ var tvii = {
 };
 
 tvii.router.connect("^/$", function () {
-    if (sessionStorage.getItem("profileUpdateDone") == "true") {
-        $(".loading-el").removeClass("loading-el");
-        vino.lyt_drawFixedFrame(455, 211, 383, 86);
-    }
-
+    $(".loading-el").removeClass("loading-el");
+    vino.lyt_drawFixedFrame(455, 211, 383, 86);
+    
     tvii.utils.setDateTimeInterval();
     tvii.utils.prepareSound();
     tvii.utils.prepareTouchEffect();
@@ -2455,7 +2449,6 @@ function prepareMiiverseModal() {
 
 $(window).on('load', function () {
     tvii.utils.prepare();
-    tvii.router.checkRoutes(window.location.pathname);
 });
 
 $(document).on("pjax:beforeSend", function (xhr, options) {
