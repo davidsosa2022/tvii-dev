@@ -1117,21 +1117,6 @@ var tvii = {
                 }
             }, 0);
         },
-        disableElement: function(el, disable) {
-            var events = "click.disableElement mousedown.disableElement mouseup.disableElement mousemove.disableElement";
-    
-            if (disable) {
-                el.addClass("disabled");
-                el.on(events, function(evt){tvii.utils.blockEvent(evt)});
-            } else {
-                el.removeClass("disabled");
-                el.off(events);
-            }
-        },
-        blockEvent: function(evt) {
-            evt.preventDefault();
-            evt.stopImmediatePropagation();
-        },
         back: function() {
             $(window).trigger('tvii:back', {page: window.location.pathname});
             history.back();
@@ -1521,8 +1506,6 @@ tvii.router.connect("^/guide$", function () {
 
     //New guide code TODO
     vino.loading_setIconAppear(false);
-
-    tvii.utils.disableElement($(".label.popular"), true);
 });
 
 // Favorites page code

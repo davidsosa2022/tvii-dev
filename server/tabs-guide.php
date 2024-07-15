@@ -10,8 +10,8 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
       <header class="top-bar" data-page-first-load="0" no-touch>
         <a href="javascript:void(0)" class="label popular"
           data-sound="SE_A_TAB_TOUCH_OFF"><?php echo localize("vino.program.label.popular") ?></a>
-        <a href="javascript:void(0)" class="label guide selected"
-          data-sound="SE_A_TAB_TOUCH_OFF"><?php echo localize("vino.program.label.program-guide") ?></a>
+        <a href="javascript:void(0)" no_touch class="label guide selected"
+        ><?php echo localize("vino.program.label.program-guide") ?></a>
         <a href="javascript:void(0)" class="label favorites"
           data-sound="SE_A_TAB_TOUCH_OFF"><?php echo localize("vino.program.label.favorite") ?></a>
       </header>
