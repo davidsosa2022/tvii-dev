@@ -1122,7 +1122,7 @@ var tvii = {
     
             if (disable) {
                 el.addClass("disabled");
-                el.on(events, tvii.utils.blockEvent);
+                el.on(events, function(evt){tvii.utils.blockEvent(evt)});
             } else {
                 el.removeClass("disabled");
                 el.off(events);
