@@ -1286,9 +1286,12 @@ tvii.router.connect("^/$", function () {
     })
 
     $(".scr-prev").on("click", function () {
+        if (!$(".live-program").length) {
+            return;
+        }
         var prev = $(".live-program.selected").prev();
 
-        if (prev.length > 0) {
+        if (prev.length > 0 || !$(".live-program:first-child").hasClass("selected")) {
             clearInterval(tvii.scrollProgramListInterval)
             vino.soundPlayVolume("SE_PROGRAM_SLIDE_SPEED", 25);
             $(".live-program").removeClass("selected");
@@ -1299,6 +1302,9 @@ tvii.router.connect("^/$", function () {
     })
 
     $(".scr-next").on("click", function () {
+        if (!$(".live-program").length) {
+            return;
+        }
         var next = $(".live-program.selected").next();
         if (next.length > 0) {
             clearInterval(tvii.scrollProgramListInterval)
@@ -1308,6 +1314,15 @@ tvii.router.connect("^/$", function () {
             changePreview(next);
             scrollToProgram(next);
         }
+    })
+
+    $(".scr-next").on("click", function () {
+        if (!$(".live-program").length) {
+            return;
+        }
+        vino.lyt_decideFixedFrame();
+        vino.soundPlayVolume("SE_APPEAR_DETAIL", 25);
+        tvii.browse.openProgramPage($(".live-program.selected").attr('data-program-id'));
     })
 
     function changePreview(program) {
