@@ -1355,49 +1355,47 @@ tvii.router.connect("^/$", function () {
         var scrollTop = $(window).scrollTop();
         var centerIndex = Math.round(scrollTop / programHeight);
         var targetScrollTop = centerIndex * programHeight;
-    
+
         targetScrollTop = Math.min(targetScrollTop, $(document).height() - $(window).height());
-    
-        // Animate scrolling to the target position
-        $('body, html').animate({ scrollTop: targetScrollTop }, 500, function() {
-            // Animation complete callback
-            console.log('Snap to center animation completed.');
-            // Play sound if at top or bottom of the page
-            if ($(window).scrollTop() === 0 || $(window).scrollTop() + $(window).height() >= $(document).height()) {
-                vino.soundPlayVolume("SE_LIST_SCROLL_END", 20);
-            }
-        });
+
+        if (targetScrollTop !== scrollTop) {
+            $('body, html').scrollTop(targetScrollTop);
+        }
+
+        if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
+            vino.soundPlayVolume("SE_LIST_SCROLL_END", 20);
+        }
+
+        if ($(window).scrollTop() === 0) {
+            vino.soundPlayVolume("SE_LIST_SCROLL_END", 20);
+        }
     }
 
     function scrollToProgram(program) {
         if (program && program.offset().top !== undefined) {
             var windowHeight = $(window).height();
             var programTop = program.offset().top;
-            var programHeight = program.outerHeight();
-            var scrollTop = $(window).scrollTop();
-    
+        
             // Calculate the target scroll position
             var targetScrollTop;
-            if (programTop < scrollTop + windowHeight / 2) {
-                // If the program is near the top of the viewport, scroll to the top of the program
-                targetScrollTop = programTop;
-            } else if (programTop + programHeight > scrollTop + windowHeight) {
-                // If the program is near the bottom of the viewport, scroll to the bottom of the program
-                targetScrollTop = programTop + programHeight - windowHeight;
+            if (programTop < windowHeight / 2) {
+                // If the program is near the top of the screen, scroll to the top
+                targetScrollTop = 0;
+            } else if (programTop > $(document).height() - windowHeight / 2) {
+                // If the program is near the bottom of the screen, scroll to the bottom
+                targetScrollTop = $(document).height() - windowHeight;
             } else {
-                // Scroll so that the program is centered vertically in the viewport
-                targetScrollTop = programTop - windowHeight / 2 + programHeight / 2;
+                // Scroll so that the program is centered vertically on the screen
+                targetScrollTop = programTop - windowHeight / 2 + program.outerHeight() / 2;
             }
-    
+        
             // Animate scrolling to the target position
             $('body, html').animate({ scrollTop: targetScrollTop }, 500, function() {
                 // Animation complete callback
                 console.log('Scroll animation completed.');
-                // Call snapToCenter to ensure proper centering after animation
-                snapToCenter();
+                // Call your callback function here if needed
             });
         }
-    
     }
 
     function handleScroll() {
