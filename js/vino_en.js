@@ -2427,6 +2427,7 @@ $(window).on('load', function () {
 $(document).on("pjax:beforeSend", function (xhr, options) {
     console.log(xhr)
     console.log(options)
+    $('body').fadeOut(100);
     vino.loading_setIconAppear(false);
     tvii.utils.lockUserOperation(true);
     tvii.utils.resetLoadingIconPosition();
@@ -2434,10 +2435,6 @@ $(document).on("pjax:beforeSend", function (xhr, options) {
     vino.lyt_reset();
     tvii.utils.destroyAllIntervals();
     tvii.utils.destroyAllEventListeners();
-})
-
-$(document).on("pjax:beforeReplace", function (xhr, options) {
-    $('body').fadeOut(100);
 })
 
 $(window).on("popstate", function () {
