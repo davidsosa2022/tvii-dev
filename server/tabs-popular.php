@@ -16,6 +16,10 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
           data-sound="SE_A_TAB_TOUCH_OFF"><?php echo localize("vino.program.label.favorite") ?></a>
       </header>
 
+      <button class="accesskey-zl scr-prev hidden none"></button>
+      <button class="accesskey-zr scr-next hidden none"></button>
+      <button class="accesskey-plus scr-select hidden none"></button>
+
       <a navi_target navi_margin="4" data-hover
         href="javascript:void(0);" class="menubtn loading-el accesskey-y" data-sound="SE_POPUP_TOUCH_OFF"><?php echo localize("vino.program.menu") ?></a>
       <a navi_target navi_margin="4" data-hover

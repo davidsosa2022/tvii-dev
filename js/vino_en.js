@@ -866,6 +866,7 @@ var tvii = {
                 if (wiiu.gamepad.hold != lockW) {
                     lockW = wiiu.gamepad.hold;
                     $('.accesskey-' + tvii.utils.buttonType[lockW] + ':visible').trigger('click');
+                    $('.accesskey-' + tvii.utils.buttonType[lockW] + '.hidden').trigger('click');
                 };
 
             }, 0);
@@ -1282,6 +1283,18 @@ tvii.router.connect("^/$", function () {
 
     $(".label.guide").on("click", function () {
         tvii.browse.openGuide();
+    })
+
+    $(".scr-prev").on("click", function () {
+        var prev = $(".live-program.selected").prev();
+        changePreview(prev);
+        scrollToProgram(prev);
+    })
+
+    $(".scr-next").on("click", function () {
+        var next = $(".live-program.selected").next();
+        changePreview(next);
+        scrollToProgram(next);
     })
 
     function changePreview(program) {
