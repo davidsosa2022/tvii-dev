@@ -141,9 +141,13 @@ button {
   top: 0;
   display: -webkit-box;
   height: 58px;
-  box-shadow: 0px 4px 0px #f7f7f7, 0px 1px 4px 4px #676767;
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.59);
   background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAuSURBVDhPY/z//78kAxJgZGR8DmXiBUxQmmRAf41DCDBCaawAX1SNRgf1AQMDADJPCA8r961RAAAAAElFTkSuQmCC'), -webkit-gradient(linear, left top, left bottom, from(#fe846b), color-stop(0.95, #f03d2d), color-stop(0.97, #f03d2d), color-stop(0.98, #d51a1a), to(#d51a1a));
   z-index: 10;
+}
+
+.top-bar:after {
+  content: "";
 }
 
 .top-bar.full {
@@ -166,6 +170,10 @@ button {
 .top-bar.no-after {
   background: -webkit-gradient(linear, left top, left bottom, from(#fe846b), color-stop(0.95, #f03d2d), color-stop(0.97, #f03d2d), color-stop(0.98, #d51a1a), to(#d51a1a));
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2) !important
+}
+
+.top-bar.no-after:after {
+  content: none;
 }
 
 .label {
