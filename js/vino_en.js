@@ -1287,12 +1287,16 @@ tvii.router.connect("^/$", function () {
 
     $(".scr-prev").on("click", function () {
         var prev = $(".live-program.selected").prev();
+        $(".live-program").removeClass("selected");
+        prev.addClass("selected");
         changePreview(prev);
         scrollToProgram(prev);
     })
 
     $(".scr-next").on("click", function () {
         var next = $(".live-program.selected").next();
+        $(".live-program").removeClass("selected");
+        next.addClass("selected");
         changePreview(next);
         scrollToProgram(next);
     })
