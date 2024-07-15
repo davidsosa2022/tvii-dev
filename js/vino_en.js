@@ -688,6 +688,54 @@ var tvii = {
             };
             miisQ.send();
         },
+        getCommunities: function(query, callbackSuccess, callbackError) {
+            tvii.isOlvRequesting = true;
+            var olvPostReq = new XMLHttpRequest();
+            olvPostReq.open("GET", tvii.clientUrl + "/v1/miiverse/communities" + query)
+            olvPostReq.setRequestHeader('X-Nintendo-Olv-User-Agent', vino.olv_getUserAgent());
+            olvPostReq.setRequestHeader('X-Nintendo-Olv-Url', vino.olv_getHostName());
+            olvPostReq.setRequestHeader('X-Nintendo-ParamPack', vino.olv_getParameterPack());
+            olvPostReq.setRequestHeader('X-Nintendo-ServiceToken', vino.olv_getServiceToken());
+            olvPostReq.onreadystatechange = function () {
+                if (olvPostReq.readyState === 4) {
+                    if (olvPostReq.status === 200 && olvPostReq.responseXML) {
+                        if (typeof callbackSuccess === 'function') {
+                            tvii.isOlvRequesting = false;
+                            var communityResponse = olvPostReq.responseXML;
+                            var communityContainer = communityResponse.getElementsByTagName('communities')[0];
+                            var communities = communityContainer.getElementsByTagName('community');
+
+                            var communityObjects = [];
+
+                            for (var i = 0; i < communities.length; i++) {
+                                var com = communities[i];
+                                var comObject = {
+                                    olive_community_id: com.getElementsByTagName('olive_community_id')[0].textContent,
+                                    community_id: com.getElementsByTagName('community_id')[0].textContent,
+                                    name: com.getElementsByTagName('name')[0].name,
+                                    description: com.getElementsByTagName('description')[0].textContent,
+                                    icon: com.getElementsByTagName('icon')[0].textContent,
+                                    icon_3ds: com.getElementsByTagName('icon_3ds')[0].textContent,
+                                    pid: com.getElementsByTagName('pid')[0].textContent,
+                                    app_data: com.getElementsByTagName('app_data')[0].textContent,
+                                    is_user_community: com.getElementsByTagName('is_user_community')[0].textContent
+                                };
+                                communityObjects.push(comObject);
+                            }
+
+                            callbackSuccess(communityObjects);
+                        }
+                    } else {
+                        tvii.isOlvRequesting = false;
+                        vino.runOliveErrorDialog(1155925);
+                        if (typeof callbackError === 'function') {
+                            callbackError();
+                        }
+                    }
+                }
+            }
+            olvPostReq.send();
+        },
         getDirectMessages: function(query, callbackSuccess, callbackError) {
 
         },
@@ -1955,7 +2003,7 @@ function prepareMiiverseModal() {
             jumpToPost.addClass("jump-miiverse")
             jumpToPost.on("click", function () {
                 if (vino.runTwoButtonDialog("Do you want to close Nintendo TVii and\nsee this post on Miiverse?", "Cancel", "OK") == 0) {
-                    vino.jumpToMiiversePostId(post.id, false);
+                    vino.jumpToMiiversePostId($(this).parent().parent().attr("data-miiverse-post-id"), false);
                 }
             });
 
@@ -2128,6 +2176,14 @@ function prepareMiiverseModal() {
 
             loadFriends();
 
+        } else if (tab.attr("data-miiverse-tab") == "doodle") {
+            $('.miiverse-posts .loading_miiverse').addClass('show');
+            $(".miiverse-posts .post-list").html("");
+            tvii.olv.getCommunities(doodleCommunityQuery, getDoodlesFromDoodleSubcommunity, errorHandler);
+        } else if (tab.attr("data-miiverse-tab") == "reviews") {
+            $('.miiverse-posts .loading_miiverse').addClass('show');
+            $(".miiverse-posts .post-list").html("");
+            tvii.olv.getCommunities(reviewCommunityQuery, getReviewsFromReviewSubcommunity, errorHandler);
         }
         tab.addClass("selected");
     }
@@ -2386,7 +2442,7 @@ function prepareMiiverseModal() {
         }
         
         $(".miiverse-posts .textarea-text-input").val("");
-        $(".miiverse-posts .textarea-text-preview").text("");
+        $(".miiverse-posts .textarea-text-preview").text($(".textarea-text-preview").attr("data-placeholder"));
         vino.memo_reset();
         var bgImage = "url(" + vino.memo_getImagePng() + ")";
         $(".textarea-memo-preview").css("background-image", bgImage);
