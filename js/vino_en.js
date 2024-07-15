@@ -1372,7 +1372,6 @@ tvii.router.connect("^/$", function () {
     }
 
     function scrollToProgram(program) {
-        clearInterval(tvii.scrollProgramListInterval)
         if (program && program.offset().top !== undefined) {
             var windowHeight = $(window).height();
             var programTop = program.offset().top;
@@ -1402,9 +1401,11 @@ tvii.router.connect("^/$", function () {
 
         function handleScrollEnd() {
             clearInterval(tvii.scrollProgramListInterval)
-            tvii.scrollProgramListInterval = setTimeout(function () {
-                snapToCenter();
-            }, 200);
+            if (wiiu.gamepad.tpTouch == 1) {
+                tvii.scrollProgramListInterval = setTimeout(function () {
+                    snapToCenter();
+                }, 200);
+            }
         }
     }
 
