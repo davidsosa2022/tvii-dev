@@ -8,11 +8,11 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
     <menu class="menu-buttons">
 
       <header class="top-bar" data-page-first-load="0">
-        <a href="javascript:void(0)" class="label popular"
+        <a href="javascript:void(0)" class="label accesskey-l popular"
           data-sound="SE_A_TAB_TOUCH_OFF"><?php echo localize("vino.program.label.popular") ?></a>
         <a href="javascript:void(0)" no_touch class="label guide selected"
         ><?php echo localize("vino.program.label.program-guide") ?></a>
-        <a href="javascript:void(0)" class="label favorites"
+        <a href="javascript:void(0)" class="label accesskey-r favorites"
           data-sound="SE_A_TAB_TOUCH_OFF"><?php echo localize("vino.program.label.favorite") ?></a>
       </header>
 
