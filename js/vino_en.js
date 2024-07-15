@@ -1350,6 +1350,8 @@ tvii.router.connect("^/$", function () {
         $(this).addClass('selected');
     });
 
+    var canCenterProgram = true;
+
     function snapToCenter() {
         var programHeight = $('.live-program').outerHeight();
         var scrollTop = $(window).scrollTop();
@@ -1372,10 +1374,11 @@ tvii.router.connect("^/$", function () {
     }
 
     function scrollToProgram(program) {
+        canCenterProgram = false;
         if (program && program.offset().top !== undefined) {
             var windowHeight = $(window).height();
             var programTop = program.offset().top;
-
+        
             // Calculate the target scroll position
             var targetScrollTop;
             if (programTop < windowHeight / 2) {
@@ -1388,29 +1391,21 @@ tvii.router.connect("^/$", function () {
                 // Scroll so that the program is centered vertically on the screen
                 targetScrollTop = programTop - windowHeight / 2 + program.outerHeight() / 2;
             }
-
-            // Scroll to the target position
-            $('body, html').scrollTop(targetScrollTop);
+        
+            // Animate scrolling to the target position
+            $('body, html').animate({ scrollTop: targetScrollTop }, 500, function() {
+                canCenterProgram = true;
+            });
         }
     }
 
     function handleScroll() {
         vino.soundPlayVolume("SE_LIST_SCROLL", 15);
-
-        handleScrollEnd();
-
-        function handleScrollEnd() {
-            clearInterval(tvii.scrollProgramListInterval)
-            if (wiiu.gamepad.tpTouch == 1 ||
-                 wiiu.gamepad.hold == 1073741824 ||
-                 wiiu.gamepad.hold == 536870912 ||
-                 wiiu.gamepad.hold == 268435456 ||
-                 wiiu.gamepad.hold == 134217728) {
-                tvii.scrollProgramListInterval = setTimeout(function () {
-                    snapToCenter();
-                }, 200);
-            }
-        }
+        clearInterval(tvii.scrollProgramListInterval);
+        if (!canCenterProgram) {return;}
+        tvii.scrollProgramListInterval = setTimeout(function () {
+            snapToCenter();
+        }, 200);
     }
 
     $(window).on('scroll', handleScroll);
