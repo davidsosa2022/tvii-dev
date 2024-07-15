@@ -1155,73 +1155,15 @@ var tvii = {
             tvii.utils.checkReturnedFlagAndRedirect();
         },
         hideMenuButtons: function(hide) {
-            function moveAndFade($element, animationType) {
-                var startValue, endValue, property;
-            
-                switch (animationType) {
-                    case 'hideUp':
-                        startValue = 0;
-                        endValue = -50;
-                        property = 'top';
-                        break;
-                    case 'hideDown':
-                        startValue = 0;
-                        endValue = -50;
-                        property = 'bottom';
-                        break;
-                    case 'showUp':
-                        startValue = -50;
-                        endValue = 0;
-                        property = 'top';
-                        break;
-                    case 'showDown':
-                        startValue = -50;
-                        endValue = 0;
-                        property = 'bottom';
-                        break;
-                    default:
-                        console.error('Invalid animation type');
-                        return;
-                }
-            
-                var startOpacity = animationType.indexOf('hide') === 0 ? 1 : 0;
-                var endOpacity = animationType.indexOf('hide') === 0 ? 0 : 1;
-                var duration = 300;
-                var startTime = new Date().getTime();
-                var timeoutId;
-            
-                function animate() {
-                    var currentTime = new Date().getTime();
-                    var elapsed = currentTime - startTime;
-                    var progress = Math.min(elapsed / duration, 1);
-            
-                    var currentValue = startValue + (endValue - startValue) * progress;
-                    var currentOpacity = startOpacity + (endOpacity - startOpacity) * progress;
-            
-                    var cssProperties = {};
-                    cssProperties[property] = currentValue + 'px';
-                    cssProperties['opacity'] = currentOpacity;
-            
-                    $element.css(cssProperties);
-            
-                    if (progress < 1) {
-                        timeoutId = setTimeout(animate, 16); // Roughly 60 frames per second
-                    } else {
-                        clearTimeout(timeoutId); // Clear the timeout when animation completes
-                    }
-                }
-            
-                animate();
-            }
             var topBar = $("header.top-bar, .favoritebtn, .toppagebtn, .menubtn, .exitbtn");
             var bottomBar = $(".info-tab, .fixed-left-buttons");
 
             if (hide) {
-                moveAndFade(topBar, 'hideUp');
-                moveAndFade(bottomBar, 'hideDown');
+                topBar.fadeOut(200);
+                bottomBar.fadeOut(200);
             } else {
-                moveAndFade(topBar, 'showUp');
-                moveAndFade(bottomBar, 'showDown');
+                topBar.fadeIn(200);
+                bottomBar.fadeIn(200);
             }
         },
         getRandomTopBarColor: function () {
