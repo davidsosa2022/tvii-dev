@@ -1794,7 +1794,7 @@ function prepareMiiverseModal() {
             jumpToPost.on("click", function () {
                 vino.soundPlayVolume("SE_WAVE_OK_SUB", 25);
                 if (vino.runTwoButtonDialog("Do you want to close Nintendo TVii and\nsee this post on Miiverse?", "Cancel", "OK") == 0) {
-                    vino.jumpToMiiversePostId(post.id, false);
+                    vino.jumpToMiiversePostId($(this).parent().parent().attr("data-miiverse-post-id"), false);
                 }
             });
 
