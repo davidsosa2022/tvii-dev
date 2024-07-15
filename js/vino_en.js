@@ -1351,10 +1351,28 @@ tvii.router.connect("^/$", function () {
     });
 
     function snapToCenter() {
+        var programHeight = $('.live-program').outerHeight();
+        var scrollTop = $(window).scrollTop();
+        var centerIndex = Math.round(scrollTop / programHeight);
+        var targetScrollTop = centerIndex * programHeight;
 
+        targetScrollTop = Math.min(targetScrollTop, $(document).height() - $(window).height());
+
+        if (targetScrollTop !== scrollTop) {
+            $('body, html').scrollTop(targetScrollTop);
+        }
+
+        if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
+            vino.soundPlayVolume("SE_LIST_SCROLL_END", 20);
+        }
+
+        if ($(window).scrollTop() === 0) {
+            vino.soundPlayVolume("SE_LIST_SCROLL_END", 20);
+        }
     }
 
     function scrollToProgram(program) {
+        clearInterval(tvii.scrollProgramListInterval)
         if (program && program.offset().top !== undefined) {
             var windowHeight = $(window).height();
             var programTop = program.offset().top;
