@@ -794,11 +794,9 @@ var tvii = {
             tvii.browse.pjax.go(tvii.clientUrl + '/menu');
         },
         openProgramPage: function (program) {
-            tvii.utils.hideMenuButtons(true);
             tvii.browse.pjax.go(tvii.clientUrl + '/program' + '?program=' + program);
         },
         openActorPage: function (actor) {
-            tvii.utils.hideMenuButtons(true);
             tvii.browse.pjax.go(tvii.clientUrl + '/actor' + '?actor=' + actor);
         },
         top: function (replace) {
@@ -1153,18 +1151,6 @@ var tvii = {
             tvii.utils.setLoadingScreenBG();
             //if TVii was returned from the Internet Browser (jumped from the app), redirect to the original page
             tvii.utils.checkReturnedFlagAndRedirect();
-        },
-        hideMenuButtons: function(hide) {
-            var topBar = $("header.top-bar, .favoritebtn, .toppagebtn, .menubtn, .exitbtn");
-            var bottomBar = $(".info-tab, .fixed-left-buttons");
-
-            if (hide) {
-                topBar.fadeOut(200);
-                bottomBar.fadeOut(200);
-            } else {
-                topBar.fadeIn(200);
-                bottomBar.fadeIn(200);
-            }
         },
         getRandomTopBarColor: function () {
             var barColors = ['blue', 'red', 'green', 'purple', 'pink'];
@@ -1612,7 +1598,6 @@ tvii.router.connect("^/menu$", function () {
 });
 
 tvii.router.connect("^/program$", function () {
-    tvii.utils.hideMenuButtons(false);
     tvii.utils.setDateTimeInterval();
     tvii.utils.setTopBarColor();
     tvii.utils.prepareSound();
@@ -2442,6 +2427,7 @@ $(window).on('load', function () {
 $(document).on("pjax:beforeSend", function (xhr, options) {
     console.log(xhr)
     console.log(options)
+    $('body').addClass('pjax-load');
     vino.loading_setIconAppear(false);
     tvii.utils.lockUserOperation(true);
     tvii.utils.resetLoadingIconPosition();
@@ -2456,7 +2442,6 @@ $(window).on("popstate", function () {
 
 $(window).on("tvii:back", function (path) {
     console.log(path)
-    tvii.utils.hideMenuButtons(false);
 })
 
 $(document).on("pjax:error", function (event) {
@@ -2465,6 +2450,7 @@ $(document).on("pjax:error", function (event) {
 $(document).on("pjax:end", function () {
     tvii.router.checkRoutes(window.location.pathname);
     tvii.utils.lockUserOperation(false);
+    $('body').removeClass('pjax-load');
     vino.loading_setIconAppear(false);
 })
 

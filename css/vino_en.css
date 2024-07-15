@@ -9,7 +9,12 @@ body {
   margin: 0;
   padding: 0;
   color: #323232;
+  transition: opacity 0.5s ease-in-out;
   background: #e6e6e6 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD9SURBVFhH7ZhBDoMwDARJgP9/EIkLvwDarohPIFiT5JBKOxditd2OASmYsCxLx1jXdd93K3Lp+34cRyvuiXZsBgkxJMSQEOMPhb4HVhTgzOFCnwMrCnDmPG0daAgR27alzmKMIYT00StSDhb4+TAMzzlhnmdbXngV9MCrxsI0Tba8B5sitkYrcsH2jE3ainv4PYSGgBUFoCVPDv8GTm/elbriyanQel0kxJAQQ0IMCTEkxJAQQ0IMCTG4EJ7M08N5Ic4cLoSBIc0ehThz2huDmhsU6UtP5zzlwTPf8XvIOU9REOLJcf1T3pU6gRBPToXW6yIhhoQYEmI0JtR1P3L4nNgALKU3AAAAAElFTkSuQmCC);
+}
+
+body.pjax-load {
+  opacity: 0;
 }
 
 body.program {
