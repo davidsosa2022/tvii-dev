@@ -1375,7 +1375,7 @@ tvii.router.connect("^/$", function () {
         if (program && program.offset().top !== undefined) {
             var windowHeight = $(window).height();
             var programTop = program.offset().top;
-    
+
             // Calculate the target scroll position
             var targetScrollTop;
             if (programTop < windowHeight / 2) {
@@ -1388,21 +1388,9 @@ tvii.router.connect("^/$", function () {
                 // Scroll so that the program is centered vertically on the screen
                 targetScrollTop = programTop - windowHeight / 2 + program.outerHeight() / 2;
             }
-    
-            // Stop any ongoing animations and animate scrolling to the target position
-            $('body, html').stop().animate({ scrollTop: targetScrollTop }, {
-                duration: 200, // Animation duration in milliseconds
-                start: function() {
-                    // Animation start callback
-                    console.log('Scroll animation started.');
-                },
-                complete: function() {
-                    // Animation complete callback
-                    console.log('Scroll animation completed.');
-                    // After animation completes, snap to center
-                    snapToCenter();
-                }
-            });
+
+            // Scroll to the target position
+            $('body, html').scrollTop(targetScrollTop);
         }
     }
 
