@@ -1401,7 +1401,11 @@ tvii.router.connect("^/$", function () {
 
         function handleScrollEnd() {
             clearInterval(tvii.scrollProgramListInterval)
-            if (wiiu.gamepad.tpTouch == 1) {
+            if (wiiu.gamepad.tpTouch == 1 ||
+                 wiiu.gamepad.hold == 1073741824 ||
+                 wiiu.gamepad.hold == 536870912 ||
+                 wiiu.gamepad.hold == 268435456 ||
+                 wiiu.gamepad.hold == 134217728) {
                 tvii.scrollProgramListInterval = setTimeout(function () {
                     snapToCenter();
                 }, 200);
