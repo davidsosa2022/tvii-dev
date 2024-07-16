@@ -449,6 +449,7 @@ button {
 
 .program-content .program-page {
   height: 480px;
+  width: 854px;
   display: -webkit-box;
   -webkit-box-align: center;
 }
