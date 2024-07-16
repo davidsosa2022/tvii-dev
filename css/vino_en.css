@@ -1453,7 +1453,7 @@ button {
 
 .program-page .program-metadata {
   position: relative;
-  display: inline-block;
+  display: block;
   background: #ffffff;
   border-radius: 4px;
   width: 357px;
@@ -1513,7 +1513,7 @@ button {
 
 .actors {
   position: relative;
-  display: inline-block;
+  display: block;
   white-space: nowrap;
   text-align: center;
   border-radius: 4px;
@@ -1615,8 +1615,7 @@ button {
 
 .extra-information {
   position: relative;
-  display: inline-block;
-  z-index: 1;
+  display: block;
 }
 
 .extra-information .program-more-details {
