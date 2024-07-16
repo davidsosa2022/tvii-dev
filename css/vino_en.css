@@ -1561,7 +1561,7 @@ button {
   display: inline-block;
 }
 
-.actors:after {
+/*.program-page:last-child:after {
   position: relative;
   white-space: nowrap;
   content: "";
@@ -1572,7 +1572,7 @@ button {
   top: 0px;
   width: 3px;
   height: 3px;
-}
+}*/
 
 .actors .actor {
   position: relative;
