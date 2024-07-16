@@ -218,24 +218,15 @@ if(isset($_GET['program'])) {
 
 <div class="program-content">
 
-<section class="program-details">
+<div class="program-page">
 <img src="<?php echo htmlspecialchars($image ? $image : '/img/no-image.png'); ?>" class="image">
 <div class="program-metadata">
   <span class="show-services"><?php echo localize("vino.program.synopsis") ?></span>
   <span class="show-description"><?php echo $description; ?></span>
 </div>
-</section>
- 
-<section class="actors">
-<span class="slabel"><?php echo localize("vino.program.actors") ?></span>
-<?php
-if (!empty($actors_html)) {
-    echo $actors_html;
-} else {
-    echo '<span class="no-actors">' . localize("vino.program.no-actors") . '</span>';
-}
-?>
-</section>
+</div>
+
+<div class="program-page">
 
 <section class="extra-information">
 <div class="program-more-details">
@@ -282,6 +273,19 @@ if (!empty($actors_html)) {
 </div>
 
 </section>
+
+
+<section class="actors">
+<span class="slabel"><?php echo localize("vino.program.actors") ?></span>
+<?php
+if (!empty($actors_html)) {
+    echo $actors_html;
+} else {
+    echo '<span class="no-actors">' . localize("vino.program.no-actors") . '</span>';
+}
+?>
+</section>
+</div>
 
 </div>
 
