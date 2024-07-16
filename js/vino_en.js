@@ -2468,7 +2468,6 @@ $(document).on("pjax:end", function () {
     tvii.router.checkRoutes(window.location.pathname);
     tvii.utils.lockUserOperation(false);
     vino.loading_setIconAppear(false);
-    vino.requestGarbageCollect();
 })
 
 $(window).on("beforeunload", function (e) {
