@@ -831,7 +831,6 @@ var tvii = {
             var lockW = null;
 
             var stickCheck = setInterval(function () {
-                if (tvii.isUserOperationLocked) return;
                 wiiu.gamepad.update();
                 if (wiiu.gamepad.isDataValid === 0) return;
 

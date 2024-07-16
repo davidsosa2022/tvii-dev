@@ -1522,9 +1522,9 @@ button {
   border-radius: 4px;
   background: #fafafa;
   border: 1px solid #ffffff;
-  width: 462px;
+  width: 452px;
   height: 316px;
-  margin-top: 37px;
+  margin-top: 30px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -1568,7 +1568,7 @@ button {
   display: table;
   clear: both;
   background-color: transparent;
-  left: 480px;
+  right: 0px;
   top: 0px;
   width: 3px;
   height: 3px;
@@ -1620,7 +1620,7 @@ button {
   position: relative;
   display: block;
   margin-right: 20px;
-  margin-left: 50px;
+  margin-left: 75px;
 }
 
 .extra-information .program-more-details {
