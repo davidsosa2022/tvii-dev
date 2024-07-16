@@ -443,6 +443,8 @@ button {
 
 .program-content {
   height: auto;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
 }
 
 .program-content .program-page {
