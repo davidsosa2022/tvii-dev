@@ -219,11 +219,14 @@ if(isset($_GET['program'])) {
 <div class="program-content">
 
 <div class="program-page">
-<img src="<?php echo htmlspecialchars($image ? $image : '/img/no-image.png'); ?>" class="image">
+
+<img src="<?php echo htmlspecialchars($image ? $image : '/img/no-image.png'); ?>" class="program-image">
+
 <div class="program-metadata">
   <span class="show-services"><?php echo localize("vino.program.synopsis") ?></span>
   <span class="show-description"><?php echo $description; ?></span>
 </div>
+
 </div>
 
 <div class="program-page">
