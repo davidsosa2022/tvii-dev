@@ -1125,11 +1125,6 @@ var tvii = {
             tvii.utils.resetLoadingIconPosition();
             tvii.utils.initButton();
 
-            //if were on account creation, we dont really need to set anything else
-            if (window.location.pathname.match(/^\/create$/)) {
-                return;
-            }
-
             tvii.utils.requestProfileUpdateWithCallback(function (data) {
                 tvii.router.checkRoutes(window.location.pathname);
             }, function () {
@@ -1184,6 +1179,11 @@ var tvii = {
             tipContentElement.text(tipsArray[randomIndex]);
         },
         requestProfileUpdateWithCallback: function (callbackSuccessEx, callbackErrorEx) {
+            //if were on account creation, we dont really need to set anything else
+            if (window.location.pathname.match(/^\/create$/)) {
+                return callbackSuccessEx();
+            }
+
             vino.loading_setIconAppear(true);
             var updateForm = new FormData();
             updateForm.append("mii_country", vino.info_getCountry())
