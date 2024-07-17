@@ -1112,7 +1112,6 @@ var tvii = {
             }, 0);
         },
         back: function () {
-            $(window).trigger('tvii:back', { page: window.location.pathname });
             history.back();
         },
         prepare: function () {
@@ -2455,10 +2454,6 @@ $(document).on("pjax:beforeSend", function (xhr, options) {
 })
 
 $(window).on("popstate", function () {
-})
-
-$(window).on("tvii:back", function (path) {
-    console.log(path)
 })
 
 $(document).on("pjax:error", function (event) {
