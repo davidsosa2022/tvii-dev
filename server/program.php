@@ -299,7 +299,7 @@ if (!empty($actors_html)) {
 <div class="trailer-modal-div none">
   <video class="program-trailer" width="563" height="316" src="/img/no-image.png">
   </video>
-  <a href="javascript:void(0)" class="exit-trailer"><?php echo localize("vino.program.jump.trailer.close") ?></a>
+  <a href="javascript:void(0)"  data-sound="SE_RETURN_TOUCH_OFF" data-hover navi_target class="exit-trailer"><?php echo localize("vino.program.jump.trailer.close") ?></a>
 </div>
 
 <div class="remote-modal-div none">
