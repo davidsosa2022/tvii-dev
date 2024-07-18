@@ -1431,8 +1431,8 @@ button {
   padding-right: 5px;
 }
 
-.program-details .program-metadata .show-description::-webkit-scrollbar {
-  width: 0;
+.related-programs {
+
 }
 
 .actors {
