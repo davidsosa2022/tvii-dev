@@ -288,7 +288,6 @@ if (!empty($actors_html)) {
 }
 ?>
 </div>
-</div>
 
 <div class="related-programs">
 <div class="live-program">
@@ -296,6 +295,8 @@ if (!empty($actors_html)) {
   <span class="streaming-service">Amazon Prime Video, Hulu</span>
   <span class="program-name">Adam Sandler's Eight Crazy Nights</span>
 <span class="show-type">Movie</span></div>
+</div>
+
 </div>
 
 </div>
