@@ -1439,17 +1439,30 @@ button {
   border: 1px solid #ffffff;
   width: 372px;
   height: 316px;
-  margin-left: 10px;
+  margin-left: 12px;
   margin-top: 30px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
 .related-programs .live-program {
+  height: 78px;
+}
 
+.related-programs:first-child {
+  border-top: none;
+  margin-top: 1px;
 }
 
 .related-programs:after {
   content: "";
+  position: relative;
+  display: table;
+  float: right;
+  right: -16px;
+  width: 1px;
+  pointer-events: none;
+  background: transparent;
+  height: 1px;
 }
 
 .related-programs span.slabel {
