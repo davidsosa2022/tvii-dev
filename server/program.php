@@ -290,10 +290,6 @@ if (!empty($actors_html)) {
 </section>
 </div>
 
-<div class="program-page">
-  
-</div>
-
 </div>
 
 <div class="trailer-modal-div none">
