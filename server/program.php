@@ -231,7 +231,7 @@ if(isset($_GET['program'])) {
 
 <div class="program-page">
 
-<section class="extra-information">
+<div class="extra-information">
 <div class="program-more-details">
 
 <?php if (!empty($genre)) : ?>
@@ -275,10 +275,10 @@ if(isset($_GET['program'])) {
 <a href="javascript:void(0)" data-sound="SE_WAVE_OK" class="open-trailer-modal" navi_target><?php echo localize("vino.program.jump.trailer") ?></a>
 </div>
 
-</section>
+</div>
 
 
-<section class="actors">
+<div class="actors">
 <span class="slabel"><?php echo localize("vino.program.actors") ?></span>
 <?php
 if (!empty($actors_html)) {
@@ -287,7 +287,7 @@ if (!empty($actors_html)) {
     echo '<span class="no-actors">' . localize("vino.program.no-actors") . '</span>';
 }
 ?>
-</section>
+</div>
 </div>
 
 </div>
@@ -323,14 +323,13 @@ if (!empty($actors_html)) {
 <div class="post-confirm-modal none">
   <h1 class="confirm-header"><?php echo localize("vino.program.olv.solv.confirm.header") ?></h1>
   <p1 class="confirm-text"><?php echo localize("vino.program.olv.solv.confirm.text") ?></p1>
-<section class="message-content">
-
+<div class="message-content">
   <img class="mii-img" data-sound="SE_WORD_MII" src="/img/no-image.png">
   <p class="user-text none"></p>
   <div class="user-memo none">
   <img class="memo" src="img/memo.png"/>
   </div>
-</section>
+</div>
 
 
 <span class="spoilers-status"></span>

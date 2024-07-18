@@ -39,7 +39,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 
     </menu>
 
-    <section class="program-preview loading-el">
+    <div class="program-preview loading-el">
 
       <div class="program-metadata">
         <span class="show-services"></span>
@@ -54,9 +54,9 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         <span class="show-description"></span>
       </div>
       
-    </section>
+</div>
 
-    <section class="scroll-programs loading-el">
+    <div class="scroll-programs loading-el">
         <div class="daily-tip">
           <span class="tips-title"><?php echo localize("vino.program.tips.tips-title") ?></span>
           <span class="tip-content"></span>
@@ -212,7 +212,7 @@ if ($result) {
 // Close connection
 $conn->close();
 ?>
-    </section>
+    </div>
 
 <?php
 if(!isset($_SERVER['HTTP_X_PJAX'])) {
