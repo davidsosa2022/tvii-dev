@@ -1064,59 +1064,14 @@ var tvii = {
             $(window).off("scroll");
             $("body").off("scroll");
         },
-        setNaviTargetScrollInterval: function () {
-
-            tvii.naviInterval = setInterval(function () {
-                if (wiiu.gamepad.tpTouch == 1 && vino.navi_getRect()) {
-                    vino.navi_reset();
-                }
-                checkNaviBox()
-            }, 0);
-
-            var prevNaviBoxCoordinates = null;
-
-            function checkNaviBox() {
-                var naviBoxCoordinates = vino.navi_getRect();
-                if (!naviBoxCoordinates) return;
-                if (naviBoxCoordinates && naviBoxCoordinates !== prevNaviBoxCoordinates) {
-                    var coordinatesArray = naviBoxCoordinates.split(',').map(function (item) {
-                        return Number(item);
-                    });
-                    var x = coordinatesArray[0];
-                    var y = coordinatesArray[1];
-                    var width = coordinatesArray[2];
-                    var height = coordinatesArray[3];
-                    var scrollThreshold = 30;
-                    var scrollSpeed = 40;
-
-                    if (x < scrollThreshold && window.scrollBy) {
-                        window.scrollBy(-scrollSpeed, 0);
-                    } else if (x + width > window.innerWidth - scrollThreshold && window.scrollBy) {
-                        window.scrollBy(scrollSpeed, 0);
-                    }
-
-                    if (y < scrollThreshold && window.scrollBy) {
-                        window.scrollBy(0, -scrollSpeed);
-                    } else if (y + height > window.innerHeight - scrollThreshold && window.scrollBy) {
-                        window.scrollBy(0, scrollSpeed);
-                    }
-                    prevNaviBoxCoordinates = naviBoxCoordinates;
-                }
-            }
-        },
         setNaviTargetResetInterval: function () {
-            tvii.naviInterval = setInterval(function () {
-                if (wiiu.gamepad.tpTouch == 1 && vino.navi_getRect()) {
-                    vino.navi_reset();
-                }
-            }, 0);
         },
         back: function () {
             history.back();
         },
         prepare: function () {
             vino.lyt_setIsEnableClientLoadingIcon(true);
-            vino.lyt_setIsEnableWhiteMask(false);
+            vino.lyt_setIsEnableWhiteMask(true);
             vino.video_enableOnTV(true);
 
             //Enable IR right away, we do not need the DLC check since it was Japan only.
@@ -1459,7 +1414,6 @@ tvii.router.connect("^/guide$", function () {
 
 // Favorites page code
 tvii.router.connect("^/create", function () {
-    tvii.utils.setNaviTargetScrollInterval();
     tvii.utils.resetLoadingIconPosition();
     tvii.utils.setSuggestCheckInterval();
     tvii.utils.prepareSound();
