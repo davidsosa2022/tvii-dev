@@ -42,37 +42,37 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
           Select the TV/Film rating you want to set.
         </p>
         <div class="age-ratings program">
-          <label class="age selected">
+          <label navi_target class="age selected">
             <input type="radio" name="pc_age" value="TV-Y">
           </label>
-          <label class="age">
+          <label navi_target class="age">
             <input type="radio" name="pc_age" value="TV-G">
           </label>
-          <label class="age">
+          <label navi_target class="age">
             <input type="radio" name="pc_age" value="TV-Y7">
           </label>
-          <label class="age">
+          <label navi_target class="age">
             <input type="radio" name="pc_age" value="TV-PG">
           </label>
-          <label class="age">
+          <label navi_target class="age">
             <input type="radio" name="pc_age" value="TV-14">
           </label>
-          <label class="age">
+          <label navi_target class="age">
             <input type="radio" name="pc_age" value="TV-MA">
           </label>
         </div>
 
         <div class="age-ratings film">
-          <label class="age">
+          <label navi_target class="age">
             <input type="radio" name="pc_age_film" value="G">
           </label>
-          <label class="age">
+          <label navi_target class="age">
             <input type="radio" name="pc_age_film" value="PG">
           </label>
-          <label class="age">
+          <label navi_target class="age">
             <input type="radio" name="pc_age_film" value="PG-13">
           </label>
-          <label class="age">
+          <label navi_target class="age">
             <input type="radio" name="pc_age_film" value="R">
           </label>
         </div>
