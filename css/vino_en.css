@@ -1452,12 +1452,12 @@ button {
   margin-top: 6px !important;
 }
 
-.related-programs:first-child {
+.related-programs:nth-child(2) {
   border-top: none !important;
   margin-top: 1px  !important;
 }
 
-.related-programs .live-program:first-child {
+.related-programs .live-program:nth-child(2) {
   border-top: none !important;
   margin-top: 1px  !important;
 }
