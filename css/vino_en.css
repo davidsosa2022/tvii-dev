@@ -3319,7 +3319,7 @@ button {
 
 .menu-container {
   background: #fff;
-  margin-top: 60px;
+  margin-top: 65px;
   margin-bottom: 96px;
   width: 650px;
   border-radius: 10px;
@@ -3334,7 +3334,7 @@ button {
   width: 814px;
   display: -webkit-box;
   -webkit-box-align: center;
-  height: 35px;
+  height: 40px;
   line-height: 1.2;
   padding-left: 20px;
   padding-top: 4px;
@@ -3342,7 +3342,7 @@ button {
   padding-bottom: 2px;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f0f0f0));
   box-shadow: 0 3px 0 #dcdcdc, 0 3px 10px 0 rgba(0, 0, 0, 0.6);
-  font-size: 20px;
+  font-size: 22px;
   color: #808080;
   text-shadow: 0 2px 0 #ffffff;
 }
