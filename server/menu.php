@@ -42,37 +42,37 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
           Select the TV/Film rating you want to set.
         </p>
         <div class="age-ratings program">
-          <label navi_target class="age selected">
+          <label navi_target navi_no_reset navi_mouse class="age selected">
             <input type="radio" name="pc_age" value="TV-Y">
           </label>
-          <label navi_target navi_no_reset class="age">
+          <label navi_target navi_no_reset navi_mouse class="age">
             <input type="radio" name="pc_age" value="TV-G">
           </label>
-          <label navi_target navi_no_reset class="age">
+          <label navi_target navi_no_reset navi_mouse class="age">
             <input type="radio" name="pc_age" value="TV-Y7">
           </label>
-          <label navi_target  navi_no_reset class="age">
+          <label navi_target  navi_no_reset navi_mouse class="age">
             <input type="radio" name="pc_age" value="TV-PG">
           </label>
-          <label navi_target navi_no_reset class="age">
+          <label navi_target navi_no_reset navi_mouse class="age">
             <input type="radio" name="pc_age" value="TV-14">
           </label>
-          <label navi_target navi_no_reset class="age">
+          <label navi_target navi_no_reset navi_mouse class="age">
             <input type="radio" name="pc_age" value="TV-MA">
           </label>
         </div>
 
         <div class="age-ratings film">
-          <label navi_target navi_no_reset class="age">
+          <label navi_target navi_no_reset navi_mouse class="age">
             <input type="radio" name="pc_age_film" value="G">
           </label>
-          <label navi_target navi_no_reset class="age">
+          <label navi_target navi_no_reset navi_mouse class="age">
             <input type="radio" name="pc_age_film" value="PG">
           </label>
-          <label navi_target navi_no_reset class="age">
+          <label navi_target navi_no_reset navi_mouse class="age">
             <input type="radio" name="pc_age_film" value="PG-13">
           </label>
-          <label navi_target navi_no_reset class="age">
+          <label navi_target navi_no_reset navi_mouse class="age">
             <input type="radio" name="pc_age_film" value="R">
           </label>
         </div>
