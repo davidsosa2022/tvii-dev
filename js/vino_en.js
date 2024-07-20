@@ -1099,6 +1099,8 @@ var tvii = {
             tvii.utils.initButton();
 
             tvii.utils.requestProfileUpdateWithCallback(function (data) {
+                //if TVii was returned from the Internet Browser (jumped from the app), redirect to the original page
+                tvii.utils.checkReturnedFlagAndRedirect();
                 tvii.router.checkRoutes(window.location.pathname);
             }, function () {
                 alert("Could not update profile, Nintendo TVii will now close.")
@@ -1106,11 +1108,8 @@ var tvii = {
             });
 
             tvii.utils.setActivityInterval();
-
             tvii.utils.getRandomTopBarColor();
             tvii.utils.setLoadingScreenBG();
-            //if TVii was returned from the Internet Browser (jumped from the app), redirect to the original page
-            tvii.utils.checkReturnedFlagAndRedirect();
         },
         getRandomTopBarColor: function () {
             var barColors = ['blue', 'red', 'green', 'purple', 'pink'];
@@ -1615,6 +1614,10 @@ tvii.router.connect("^/menu$", function () {
         $(this).addClass("selected");
         vino.soundPlayVolume("SE_A_CHECK", 25);
     })
+
+    $(".menu-container .tvus-hyperlink").on("click", function () {
+        tvii.utils.jumpToBrowserAndSetReturnedFlag("http://www.tvguidelines.org")
+    });
 
 });
 

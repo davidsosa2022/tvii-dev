@@ -3449,7 +3449,7 @@ button {
 }
 
 .menu-container .tvus-hyperlink,.menu-container .mpa-hyperlink{
-
+  text-decoration: underline;
 }
 
 .menu-container .age-ratings label.age input{
