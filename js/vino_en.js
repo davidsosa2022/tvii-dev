@@ -1070,7 +1070,7 @@ var tvii = {
             history.back();
         },
         prepare: function () {
-            $.pjax.defaults.maxCacheLength = 10;
+            $.pjax.defaults.maxCacheLength = 0;
             $.pjax.defaults.timeout = 0;
 
             vino.lyt_setIsEnableClientLoadingIcon(true);
@@ -2399,8 +2399,6 @@ $(window).on('load', function () {
 });
 
 $(document).on("pjax:beforeSend", function (xhr, options) {
-    console.log(xhr)
-    console.log(options)
     vino.loading_setIconAppear(false);
     tvii.utils.lockUserOperation(true);
     tvii.utils.resetLoadingIconPosition();
