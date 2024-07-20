@@ -1939,8 +1939,8 @@ function prepareMiiverseModal() {
             var jumpToPost = $("<button>");
             jumpToPost.addClass("jump-miiverse")
             jumpToPost.on("click", function () {
-                if (vino.runTwoButtonDialog("Do you want to close Nintendo TVii and\nsee this post on Miiverse?", "Cancel", "OK") == 0) {
-                    vino.jumpToMiiversePostId($(this).parent().parent().attr("data-miiverse-post-id"), false);
+                if (vino.runTwoButtonDialog("Do you want to close Nintendo TVii and\nsee this poll on Miiverse?", "Cancel", "OK") == 0) {
+                    vino.jumpToMiiversePostId($(this).parent().parent().attr("data-miiverse-poll-id"), false);
                 }
             });
 
