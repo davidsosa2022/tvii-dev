@@ -940,37 +940,43 @@ var tvii = {
             });
         },
         setDateTimeInterval: function () {
+            var colonVisible = true; // Flag to control colon visibility
+
             tvii.timeInterval = setInterval(timeUpdate, 1000);
             timeUpdate();
-
+            
             function timeUpdate() {
                 if (!$('.day-info').length) return;
-
+            
                 var now = new Date();
-
+            
                 var dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
                 var dayName = dayNames[now.getDay()];
                 var day = now.getDate();
                 var hours = now.getHours();
                 var ampm = hours >= 12 ? 'pm' : 'am';
-
+            
                 hours = hours % 12;
                 hours = hours ? hours : 12;
-
+            
                 var minutes = now.getMinutes();
                 var seconds = now.getSeconds();
-
+            
                 minutes = minutes < 10 ? '0' + minutes : minutes;
                 seconds = seconds < 10 ? '0' + seconds : seconds;
-
+            
                 $('.day-info .date-day-name').text(dayName);
                 $('.day-info .date-day').text(day);
-
+            
                 // Update the time display with a span around the colon
-                $('.day-info .date-time').html(hours + '<span class="colon">:</span>' + minutes + ' ' + ampm);
-
+                var colonOpacity = colonVisible ? '1' : '0';
+                $('.day-info .date-time').html(hours + '<span class="colon" style="opacity:' + colonOpacity + '">:</span>' + minutes + ' ' + ampm);
+            
+                // Toggle the colon visibility flag
+                colonVisible = !colonVisible;
+            
                 var dateClassSw = $('.day-info .date-day-name').text();
-
+            
                 switch (dateClassSw) {
                     case 'Sun':
                         $('.day-info .date-day-name').addClass('sun');
@@ -994,10 +1000,7 @@ var tvii = {
                         $('.day-info .date-day-name').addClass('sat');
                         break;
                 }
-
-                // Make the colon flicker
-                $('.day-info .date-time .colon').toggleClass('invisible');
-            };
+            }
         },
         setSuggestCheckInterval: function () {
             var cachedInput = "";
