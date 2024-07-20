@@ -966,6 +966,10 @@ var tvii = {
                 seconds = seconds < 10 ? '0' + seconds : seconds;
             
                 $('.day-info .date-day-name').text(dayName);
+
+                //if user happens to use TVii at midnight and the day changes we should always make sure the classes are removed before hand
+                $('.day-info .date-day-name').removeClass();
+
                 $('.day-info .date-day').text(day);
             
                 // Update the time display with a span around the colon
@@ -976,25 +980,25 @@ var tvii = {
                 colonVisible = !colonVisible;
             
                 switch (now.getDay()) {
-                    case 1:
+                    case 0:
                         $('.day-info .date-day-name').addClass('sun');
                         break;
-                    case 2:
+                    case 1:
                         $('.day-info .date-day-name').addClass('mon');
                         break;
-                    case 3:
+                    case 2:
                         $('.day-info .date-day-name').addClass('tue');
                         break;
-                    case 4:
+                    case 3:
                         $('.day-info .date-day-name').addClass('wed');
                         break;
-                    case 5:
+                    case 4:
                         $('.day-info .date-day-name').addClass('thu');
                         break;
-                    case 6:
+                    case 5:
                         $('.day-info .date-day-name').addClass('fri');
                         break;
-                    case 7:
+                    case 6:
                         $('.day-info .date-day-name').addClass('sat');
                         break;
                 }
