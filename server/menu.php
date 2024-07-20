@@ -38,8 +38,9 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         <span class="settings-label">Parental Controls Settings</span>
         <span class="important">Parental Controls are enabled on the console</span>
         <p>Configure Parental Controls for programs that can or can not be recommended/shown in the application.
-          <br>
-          Select the TV/Film rating you want to set.
+          <br><br>
+          Select the TV rating you want to set.<br>
+          (Uses American TV Rating system)
         </p>
         <div class="age-ratings program">
           <label navi_target navi_no_reset navi_mouse class="age tv-y selected">
@@ -61,7 +62,9 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
             <input type="radio" name="pc_age" value="TV-MA">
           </label>
         </div>
-
+        <br><br>
+          Select the movie rating you want to set.<br>
+          (Uses MPAA Rating system)
         <div class="age-ratings film">
           <label navi_target navi_no_reset navi_mouse class="age g">
             <input type="radio" name="pc_age_film" value="G">
