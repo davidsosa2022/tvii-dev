@@ -1632,12 +1632,12 @@ function scrollLeftPPage() {
     var scrollLeft = $(window).scrollLeft();
 
     if (scrollLeft > scrollStartFirstAmount + scrollStartSecondAmount) {
-        $('html, body').animate({ scrollLeft: '-=' + scrollBackFirstAmount }, 600, function () {
+        $('html, body').animate({ scrollLeft: '-=' + scrollBackSecondAmount }, 600, function () {
             isAnimating = false;
             updateButtonVisibility();
         });
     } else if (scrollLeft > scrollStartFirstAmount) {
-        $('html, body').animate({ scrollLeft: 0 }, 600, function () {
+        $('html, body').animate({ scrollLeft: '-=' + scrollBackFirstAmount }, 600, function () {
             isAnimating = false;
             updateButtonVisibility();
         });
@@ -1674,6 +1674,7 @@ function scrollRightPPage() {
         });
     }
 }
+
     
 
     updateButtonVisibility();
