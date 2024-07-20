@@ -965,7 +965,9 @@ var tvii = {
 
                 $('.day-info .date-day-name').text(dayName);
                 $('.day-info .date-day').text(day);
-                $('.day-info .date-time').text(hours + ':' + minutes + ' ' + ampm);
+
+                // Update the time display with a span around the colon
+                $('.day-info .date-time').html(hours + '<span class="colon">:</span>' + minutes + ' ' + ampm);
 
                 var dateClassSw = $('.day-info .date-day-name').text();
 
@@ -992,6 +994,9 @@ var tvii = {
                         $('.day-info .date-day-name').addClass('sat');
                         break;
                 }
+
+                // Make the colon flicker
+                $('.colon').toggleClass('hidden');
             };
         },
         setSuggestCheckInterval: function () {
@@ -1601,88 +1606,88 @@ tvii.router.connect("^/program$", function () {
 
     prepareMiiverseModal();
 
-var scrollStartFirstAmount = 439;
-var scrollStartSecondAmount = 465;
-var scrollBackFirstAmount = 460; // First scroll back amount
-var scrollBackSecondAmount = 760; // Second scroll back amount
-var intermediateScrollBackAmount = 465; // Intermediate scroll back amount
-var endScrollBackAmount = 367; // Scroll back amount from the end
-var fadeDuration = 100;
-var isAnimating = false;
+    var scrollStartFirstAmount = 439;
+    var scrollStartSecondAmount = 465;
+    var scrollBackFirstAmount = 460; // First scroll back amount
+    var scrollBackSecondAmount = 760; // Second scroll back amount
+    var intermediateScrollBackAmount = 465; // Intermediate scroll back amount
+    var endScrollBackAmount = 367; // Scroll back amount from the end
+    var fadeDuration = 100;
+    var isAnimating = false;
 
-function updateButtonVisibility() {
-    var scrollLeft = $(window).scrollLeft();
-    var maxScrollLeft = $(document).width() - $(window).width();
+    function updateButtonVisibility() {
+        var scrollLeft = $(window).scrollLeft();
+        var maxScrollLeft = $(document).width() - $(window).width();
 
-    if (scrollLeft < scrollStartFirstAmount) {
-        $('.before_page_button').fadeOut(fadeDuration);
-        $('.next_page_button').fadeIn(fadeDuration);
-    } else if (scrollLeft >= maxScrollLeft) {
-        $('.before_page_button').fadeIn(fadeDuration);
-        $('.next_page_button').fadeOut(fadeDuration);
-    } else {
-        $('.before_page_button').fadeIn(fadeDuration);
-        $('.next_page_button').fadeIn(fadeDuration);
+        if (scrollLeft < scrollStartFirstAmount) {
+            $('.before_page_button').fadeOut(fadeDuration);
+            $('.next_page_button').fadeIn(fadeDuration);
+        } else if (scrollLeft >= maxScrollLeft) {
+            $('.before_page_button').fadeIn(fadeDuration);
+            $('.next_page_button').fadeOut(fadeDuration);
+        } else {
+            $('.before_page_button').fadeIn(fadeDuration);
+            $('.next_page_button').fadeIn(fadeDuration);
+        }
     }
-}
 
-function scrollLeftPPage() {
-    if (isAnimating) return;
-    vino.soundPlayVolume("SE_MOVEPAGE_PLAY", 25);
-    isAnimating = true;
+    function scrollLeftPPage() {
+        if (isAnimating) return;
+        vino.soundPlayVolume("SE_MOVEPAGE_PLAY", 25);
+        isAnimating = true;
 
-    var scrollLeft = $(window).scrollLeft();
-    var maxScrollLeft = $(document).width() - $(window).width();
+        var scrollLeft = $(window).scrollLeft();
+        var maxScrollLeft = $(document).width() - $(window).width();
 
-    if (scrollLeft >= maxScrollLeft) {
-        $('html, body').animate({ scrollLeft: '-=' + endScrollBackAmount }, 600, function () {
-            isAnimating = false;
-            updateButtonVisibility();
-        });
-    } else if (scrollLeft > scrollStartFirstAmount + scrollStartSecondAmount) {
-        $('html, body').animate({ scrollLeft: '-=' + intermediateScrollBackAmount }, 600, function () {
-            isAnimating = false;
-            updateButtonVisibility();
-        });
-    } else if (scrollLeft > scrollStartFirstAmount) {
-        $('html, body').animate({ scrollLeft: '-=' + scrollBackFirstAmount }, 600, function () {
-            isAnimating = false;
-            updateButtonVisibility();
-        });
-    } else {
-        $('html, body').animate({ scrollLeft: 0 }, 600, function () {
-            isAnimating = false;
-            updateButtonVisibility();
-        });
+        if (scrollLeft >= maxScrollLeft) {
+            $('html, body').animate({ scrollLeft: '-=' + endScrollBackAmount }, 600, function () {
+                isAnimating = false;
+                updateButtonVisibility();
+            });
+        } else if (scrollLeft > scrollStartFirstAmount + scrollStartSecondAmount) {
+            $('html, body').animate({ scrollLeft: '-=' + intermediateScrollBackAmount }, 600, function () {
+                isAnimating = false;
+                updateButtonVisibility();
+            });
+        } else if (scrollLeft > scrollStartFirstAmount) {
+            $('html, body').animate({ scrollLeft: '-=' + scrollBackFirstAmount }, 600, function () {
+                isAnimating = false;
+                updateButtonVisibility();
+            });
+        } else {
+            $('html, body').animate({ scrollLeft: 0 }, 600, function () {
+                isAnimating = false;
+                updateButtonVisibility();
+            });
+        }
     }
-}
 
-function scrollRightPPage() {
-    if (isAnimating) return;
-    vino.soundPlayVolume("SE_MOVEPAGE_PLAY", 25);
-    isAnimating = true;
+    function scrollRightPPage() {
+        if (isAnimating) return;
+        vino.soundPlayVolume("SE_MOVEPAGE_PLAY", 25);
+        isAnimating = true;
 
-    var scrollLeft = $(window).scrollLeft();
-    var maxScrollLeft = $(document).width() - $(window).width();
+        var scrollLeft = $(window).scrollLeft();
+        var maxScrollLeft = $(document).width() - $(window).width();
 
-    if (scrollLeft < scrollStartFirstAmount) {
-        $('html, body').animate({ scrollLeft: '+=' + scrollStartFirstAmount }, 600, function () {
-            isAnimating = false;
-            updateButtonVisibility();
-        });
-    } else if (scrollLeft < scrollStartFirstAmount + scrollStartSecondAmount) {
-        $('html, body').animate({ scrollLeft: '+=' + scrollStartSecondAmount }, 600, function () {
-            isAnimating = false;
-            updateButtonVisibility();
-        });
-    } else {
-        $('html, body').animate({ scrollLeft: maxScrollLeft }, 600, function () {
-            isAnimating = false;
-            updateButtonVisibility();
-        });
+        if (scrollLeft < scrollStartFirstAmount) {
+            $('html, body').animate({ scrollLeft: '+=' + scrollStartFirstAmount }, 600, function () {
+                isAnimating = false;
+                updateButtonVisibility();
+            });
+        } else if (scrollLeft < scrollStartFirstAmount + scrollStartSecondAmount) {
+            $('html, body').animate({ scrollLeft: '+=' + scrollStartSecondAmount }, 600, function () {
+                isAnimating = false;
+                updateButtonVisibility();
+            });
+        } else {
+            $('html, body').animate({ scrollLeft: maxScrollLeft }, 600, function () {
+                isAnimating = false;
+                updateButtonVisibility();
+            });
+        }
     }
-}
-    
+
 
     updateButtonVisibility();
 });
