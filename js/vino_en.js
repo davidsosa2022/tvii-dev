@@ -975,28 +975,26 @@ var tvii = {
                 // Toggle the colon visibility flag
                 colonVisible = !colonVisible;
             
-                var dateClassSw = $('.day-info .date-day-name').text();
-            
-                switch (dateClassSw) {
-                    case 'Sun':
+                switch (now.getDay()) {
+                    case 1:
                         $('.day-info .date-day-name').addClass('sun');
                         break;
-                    case 'Mon':
+                    case 2:
                         $('.day-info .date-day-name').addClass('mon');
                         break;
-                    case 'Tue':
+                    case 3:
                         $('.day-info .date-day-name').addClass('tue');
                         break;
-                    case 'Wed':
+                    case 4:
                         $('.day-info .date-day-name').addClass('wed');
                         break;
-                    case 'Thu':
+                    case 5:
                         $('.day-info .date-day-name').addClass('thu');
                         break;
-                    case 'Fri':
+                    case 6:
                         $('.day-info .date-day-name').addClass('fri');
                         break;
-                    case 'Sat':
+                    case 7:
                         $('.day-info .date-day-name').addClass('sat');
                         break;
                 }
