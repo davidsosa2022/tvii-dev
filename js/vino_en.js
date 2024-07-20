@@ -1607,11 +1607,13 @@ tvii.router.connect("^/menu$", function () {
     $(".menu-container .age-ratings.program label").on("click", function () {
         $(".menu-container .age-ratings.program label").removeClass("selected");
         $(this).addClass("selected")
+        vino.soundPlayVolume("SE_A_CHECK", 25);
     })
 
     $(".menu-container .age-ratings.film label").on("click", function () {
         $(".menu-container .age-ratings.film label").removeClass("selected");
-        $(this).addClass("selected")
+        $(this).addClass("selected");
+        vino.soundPlayVolume("SE_A_CHECK", 25);
     })
 
 });
