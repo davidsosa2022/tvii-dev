@@ -944,41 +944,41 @@ var tvii = {
 
             tvii.timeInterval = setInterval(timeUpdate, 1000);
             timeUpdate();
-            
+
             function timeUpdate() {
                 if (!$('.day-info').length) return;
-            
+
                 var now = new Date();
-            
+
                 var dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
                 var dayName = dayNames[now.getDay()];
                 var day = now.getDate();
                 var hours = now.getHours();
                 var ampm = hours >= 12 ? 'pm' : 'am';
-            
+
                 hours = hours % 12;
                 hours = hours ? hours : 12;
-            
+
                 var minutes = now.getMinutes();
                 var seconds = now.getSeconds();
-            
+
                 minutes = minutes < 10 ? '0' + minutes : minutes;
                 seconds = seconds < 10 ? '0' + seconds : seconds;
-            
+
                 $('.day-info .date-day-name').text(dayName);
 
                 //if user happens to use TVii at midnight and the day changes we should always make sure the classes are removed before hand
                 $('.day-info .date-day-name').removeClass('sun mon tue wed thu fri sat');
 
                 $('.day-info .date-day').text(day);
-            
+
                 // Update the time display with a span around the colon
                 var colonOpacity = colonVisible ? '1' : '0';
                 $('.day-info .date-time').html(hours + '<span class="colon" style="opacity:' + colonOpacity + '">:</span>' + minutes + ' ' + ampm);
-            
+
                 // Toggle the colon visibility flag
                 colonVisible = !colonVisible;
-            
+
                 switch (now.getDay()) {
                     case 0:
                         $('.day-info .date-day-name').addClass('sun');
@@ -1075,6 +1075,12 @@ var tvii = {
             $("body").off("scroll");
         },
         setNaviTargetResetInterval: function () {
+            tvii.naviInterval = setInterval(function () {
+                if (!vino.navi_getRect()) return;
+                if (wiiu.gamepad.tpTouch == 1) {
+                    vino.navi_reset();
+                }
+            }, 0)
         },
         back: function () {
             history.back();
