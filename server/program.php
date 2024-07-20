@@ -322,8 +322,6 @@ if (!empty($actors_html)) {
 <menu class="tab-header">
 <a href="javascript:void(0)" navi_target navi_no_reset data-sound="SE_WAVE_BALLOON_OPEN" data-miiverse-tab="posts" class="tab selected"><?php echo localize("vino.program.olv.viewer.tab-posts") ?></a>
 <a href="javascript:void(0)" navi_target navi_no_reset data-sound="SE_WAVE_BALLOON_OPEN" data-miiverse-tab="polls" class="tab"><?php echo localize("vino.program.olv.viewer.tab-poll") ?></a>
-<a href="javascript:void(0)" navi_target navi_no_reset data-sound="SE_WAVE_BALLOON_OPEN" data-miiverse-tab="reviews" class="tab">View Reviews</a>
-<a href="javascript:void(0)" navi_target navi_no_reset data-sound="SE_WAVE_BALLOON_OPEN" data-miiverse-tab="doodle" class="tab">Doodle</a>
 <a href="javascript:void(0)" navi_target navi_no_reset data-sound="SE_WAVE_BALLOON_OPEN" data-miiverse-tab="recommend" class="tab"><?php echo localize("vino.program.olv.viewer.tab-recommend") ?></a>
 </menu>
 

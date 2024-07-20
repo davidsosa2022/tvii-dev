@@ -2113,14 +2113,6 @@ function prepareMiiverseModal() {
 
             loadFriends();
 
-        } else if (tab.attr("data-miiverse-tab") == "doodle") {
-            $('.miiverse-posts .loading_miiverse').addClass('show');
-            $(".miiverse-posts .post-list").html("");
-            tvii.olv.getCommunities(doodleCommunityQuery, getDoodlesFromDoodleSubcommunity, errorHandler);
-        } else if (tab.attr("data-miiverse-tab") == "reviews") {
-            $('.miiverse-posts .loading_miiverse').addClass('show');
-            $(".miiverse-posts .post-list").html("");
-            tvii.olv.getCommunities(reviewCommunityQuery, getReviewsFromReviewSubcommunity, errorHandler);
         }
         tab.addClass("selected");
     }
