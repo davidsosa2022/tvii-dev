@@ -1603,8 +1603,8 @@ tvii.router.connect("^/program$", function () {
 
     var initialScrollAmount = 430;
     var subsequentScrollAmount = 470;
-    var scrollBackFirstAmount = 450; // Define the first scroll back offset
-    var scrollBackSecondAmount = 420; // Define the second scroll back offset
+    var scrollBackFirstAmount = 420; // Define the first scroll back offset
+    var scrollBackSecondAmount = 450; // Define the second scroll back offset
     var fadeDuration = 100;
     var isAnimating = false;
     
