@@ -1602,7 +1602,7 @@ tvii.router.connect("^/program$", function () {
     prepareMiiverseModal();
 
     var initialScrollAmount = 439;
-    var subsequentScrollAmount = 470;
+    var subsequentScrollAmount = 465;
     var scrollBackFirstAmount = 362; // Define the first scroll back offset
     var scrollBackSecondAmount = 530; // Define the second scroll back offset
     var fadeDuration = 100;
