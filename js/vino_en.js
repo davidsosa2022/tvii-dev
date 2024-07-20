@@ -1603,6 +1603,8 @@ tvii.router.connect("^/program$", function () {
 
     var initialScrollAmount = 430;
     var subsequentScrollAmount = 460;
+    var scrollBackFirstAmount = 460; // Define the first scroll back offset
+    var scrollBackSecondAmount = 430; // Define the second scroll back offset
     var fadeDuration = 100;
     var isAnimating = false;
     
@@ -1630,12 +1632,12 @@ tvii.router.connect("^/program$", function () {
         var scrollLeft = $(window).scrollLeft();
     
         if (scrollLeft > initialScrollAmount + subsequentScrollAmount) {
-            $('html, body').animate({ scrollLeft: '-=' + subsequentScrollAmount }, 600, function () {
+            $('html, body').animate({ scrollLeft: '-=' + scrollBackFirstAmount }, 600, function () {
                 isAnimating = false;
                 updateButtonVisibility();
             });
         } else if (scrollLeft > initialScrollAmount) {
-            $('html, body').animate({ scrollLeft: '-=' + initialScrollAmount }, 600, function () {
+            $('html, body').animate({ scrollLeft: '-=' + scrollBackSecondAmount }, 600, function () {
                 isAnimating = false;
                 updateButtonVisibility();
             });
@@ -1672,6 +1674,7 @@ tvii.router.connect("^/program$", function () {
             });
         }
     }
+    
 
     updateButtonVisibility();
 });
