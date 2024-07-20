@@ -2267,9 +2267,10 @@ button {
   position: relative;
   width: 854px;
   top: 0;
-  height: 58px;
-  box-shadow: 0px 4px 0px #f7f7f7, 0px 1px 4px 4px #676767;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAuSURBVDhPY/z//z8XAxJgZGT8BmXiBUxQmmRAf41DCDBCaawAX1SNRgf1AQMDADBvCA9v9v6OAAAAAElFTkSuQmCC), -webkit-gradient(linear, left top, left bottom, from(#ffaddc), color-stop(0.95, #f019d4), color-stop(0.97, #f019d4), color-stop(0.98, #86217b), to(#c140c9));
+  height: 59px;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid #d50094;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA2SURBVChTY/z//78kAwT8ZWRkfAVlYwAmKE0QgBT+heJ/IAH6AUYojQKweZAkz2ADNPcgAwMAOZkP+x8ViUwAAAAASUVORK5CYII=), -webkit-gradient(linear, left top, left bottom, from(#ffaddc), to(#ff03d4));
   padding-left: 23px;
   padding-right: 23px;
   -webkit-box-sizing: border-box;
@@ -2283,7 +2284,7 @@ button {
   text-overflow: ellipsis;
   white-space: nowrap;
   z-index: 10;
-  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.6), 0px 5px 0px rgba(0, 0, 0, 0.08);
 }
 
 .miiverse-posts .post-button {
