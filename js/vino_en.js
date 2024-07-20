@@ -1070,6 +1070,8 @@ var tvii = {
             history.back();
         },
         prepare: function () {
+            $.pjax.defaults.maxCacheLength = 1;
+
             vino.lyt_setIsEnableClientLoadingIcon(true);
             vino.lyt_setIsEnableWhiteMask(true);
             vino.video_enableOnTV(true);
