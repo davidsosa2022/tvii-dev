@@ -1714,7 +1714,7 @@ function prepareMiiverseModal() {
     var appData = $("header.miiverse-with-attributes-top-bar").attr("data-miiverse-app-data");
     var canClosePostApplet = true;
     //set distinct_pid to 1 after debug
-    var queryPoll = '?language_id=254&with_mii=1&limit=50&distinct_pid=0&search_key=' + searchKey + "(P)";
+    var queryPoll = '?language_id=254&with_mii=1&limit=15&distinct_pid=0&search_key=' + searchKey + "(P)";
     var query = '?language_id=254&with_mii=1&limit=50&distinct_pid=0&search_key=' + searchKey;
 
     setUpPostModal();
