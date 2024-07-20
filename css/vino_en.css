@@ -816,7 +816,7 @@ button {
   color: #fff;
   text-shadow: 0px -2px #292929;
   padding-left: 80px;
-  padding-right: 20px;
+  padding-right: 10px;
   box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.95);
 }
 
@@ -3402,6 +3402,46 @@ button {
   width: 100px;
   height: 100px;
   margin: 12px;
+}
+
+.menu-container .age-ratings label.age.tv-y{
+  background: url(/img/ratings/TV-Y_icon.svg.png)
+}
+
+.menu-container .age-ratings label.age.tv-g{
+  background: url(/img/ratings/TV-G_icon.svg.png)
+}
+
+.menu-container .age-ratings label.age.tv-y7{
+  background: url(/img/ratings/TV-Y7_icon.svg.png)
+}
+
+.menu-container .age-ratings label.age.tv-pg{
+  background: url(/img/ratings/TV-PG_icon.svg.png)
+}
+
+.menu-container .age-ratings label.age.tv-14{
+  background: url(/img/ratings/TV-14_icon.svg.png)
+}
+
+.menu-container .age-ratings label.age.tv-ma{
+  background: url(/img/ratings/TV-MA_icon.svg.png)
+}
+
+.menu-container .age-ratings label.age.g{
+  background: url(/img/ratings/MPA_G_RATING.svg.png)
+}
+
+.menu-container .age-ratings label.age.pg{
+  background: url(/img/ratings/MPA_PG_RATING.svg.png)
+}
+
+.menu-container .age-ratings label.age.pg13{
+  background: url(/img/ratings/MPA_PG-13_RATING.svg.png)
+}
+
+.menu-container .age-ratings label.age.r{
+  background: url(/img/ratings/MPA_R_RATING.svg.png)
 }
 
 .menu-container .age-ratings label.age.selected{
