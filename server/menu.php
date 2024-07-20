@@ -37,9 +37,12 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
       <div class="settings-option">
         <span class="settings-label">Parental Controls Settings</span>
         <span class="important">Parental Controls are enabled on the console</span>
-        <p>Configure Parental Controls for programs that can or can not be recommended/shown in the application.</p>
+        <p>Configure Parental Controls for programs that can or can not be recommended/shown in the application.
+          <br>
+          Select the TV/Film rating you want to set.
+        </p>
         <div class="age-ratings">
-          <label class="age">
+          <label class="age selected">
             <input type="radio" name="pc_age" value="TV-Y">
           </label>
           <label class="age">

@@ -3404,6 +3404,10 @@ button {
   margin: 12px;
 }
 
+.menu-container .age-ratings label.age.selected{
+
+}
+
 .menu-container .age-ratings label.age input{
   position: absolute;
   left: 0;
