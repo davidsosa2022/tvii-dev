@@ -996,7 +996,7 @@ var tvii = {
                 }
 
                 // Make the colon flicker
-                $('.day-info .date-time .colon').toggleClass('none');
+                $('.day-info .date-time .colon').toggleClass('invisible');
             };
         },
         setSuggestCheckInterval: function () {
