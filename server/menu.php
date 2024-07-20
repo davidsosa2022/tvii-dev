@@ -62,8 +62,8 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
             <input type="radio" name="pc_age" value="TV-MA">
           </label>
         </div>
-        <br><br>
-          <p>Select the movie rating you want to set.<br>
+          <p><br><br>
+          Select the movie rating you want to set.<br>
           (Uses MPAA Rating system)</p>
         <div class="age-ratings film">
           <label navi_target navi_no_reset navi_mouse class="age g">
