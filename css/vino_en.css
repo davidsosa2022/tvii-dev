@@ -3391,7 +3391,7 @@ button {
 }
 
 .menu-container .age-ratings label.age{
-  background: -webkit-gradient(linear, left top, left bottom, from(#e2e2e2), to(#ffffff));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e2e2e2), to(#ffffff));
   background-size: 100px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -3405,43 +3405,43 @@ button {
 }
 
 .menu-container .age-ratings label.age.tv-y{
-  background: url(/img/ratings/TV-Y_icon.svg.png)
+  background-image: url(/img/ratings/TV-Y_icon.svg.png)
 }
 
 .menu-container .age-ratings label.age.tv-g{
-  background: url(/img/ratings/TV-G_icon.svg.png)
+  background-image: url(/img/ratings/TV-G_icon.svg.png)
 }
 
 .menu-container .age-ratings label.age.tv-y7{
-  background: url(/img/ratings/TV-Y7_icon.svg.png)
+  background-image: url(/img/ratings/TV-Y7_icon.svg.png)
 }
 
 .menu-container .age-ratings label.age.tv-pg{
-  background: url(/img/ratings/TV-PG_icon.svg.png)
+  background-image: url(/img/ratings/TV-PG_icon.svg.png)
 }
 
 .menu-container .age-ratings label.age.tv-14{
-  background: url(/img/ratings/TV-14_icon.svg.png)
+  background-image: url(/img/ratings/TV-14_icon.svg.png)
 }
 
 .menu-container .age-ratings label.age.tv-ma{
-  background: url(/img/ratings/TV-MA_icon.svg.png)
+  background-image: url(/img/ratings/TV-MA_icon.svg.png)
 }
 
 .menu-container .age-ratings label.age.g{
-  background: url(/img/ratings/MPA_G_RATING.svg.png)
+  background-image: url(/img/ratings/MPA_G_RATING.svg.png)
 }
 
 .menu-container .age-ratings label.age.pg{
-  background: url(/img/ratings/MPA_PG_RATING.svg.png)
+  background-image: url(/img/ratings/MPA_PG_RATING.svg.png)
 }
 
 .menu-container .age-ratings label.age.pg13{
-  background: url(/img/ratings/MPA_PG-13_RATING.svg.png)
+  background-image: url(/img/ratings/MPA_PG-13_RATING.svg.png)
 }
 
 .menu-container .age-ratings label.age.r{
-  background: url(/img/ratings/MPA_R_RATING.svg.png)
+  background-image: url(/img/ratings/MPA_R_RATING.svg.png)
 }
 
 .menu-container .age-ratings label.age.selected{
