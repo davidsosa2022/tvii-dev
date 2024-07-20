@@ -795,7 +795,7 @@ button {
   border-radius: 6px;
 }
 
-.menu-tab .search-section .search-options {
+.menu-tab .search-section .watch-party {
   position: relative;
   display: -webkit-box;
   -webkit-box-align: center;
@@ -818,7 +818,7 @@ button {
   border-radius: 6px;
 }
 
-.menu-tab .search-section .search-options.hover {
+.menu-tab .search-section .watch-party.hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.5, #fafafa), color-stop(0.8, #efefef), color-stop(0.96, #efefef), to(#e1e1e1));
 }
 
