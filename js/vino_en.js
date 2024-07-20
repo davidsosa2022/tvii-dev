@@ -1601,8 +1601,8 @@ tvii.router.connect("^/program$", function () {
 
     prepareMiiverseModal();
 
-    var initialScrollAmount = 439;
-var subsequentScrollAmount = 465;
+    var scrollStartFirstAmount = 439;
+var scrollStartSecondAmount = 465;
 var scrollBackFirstAmount = 460; // New scroll back amount
 var scrollBackSecondAmount = 760; // Define the second scroll back offset
 var fadeDuration = 100;
@@ -1612,7 +1612,7 @@ function updateButtonVisibility() {
     var scrollLeft = $(window).scrollLeft();
     var maxScrollLeft = $(document).width() - $(window).width();
 
-    if (scrollLeft < initialScrollAmount) {
+    if (scrollLeft < scrollStartFirstAmount) {
         $('.before_page_button').fadeOut(fadeDuration);
         $('.next_page_button').fadeIn(fadeDuration);
     } else if (scrollLeft >= maxScrollLeft) {
@@ -1631,13 +1631,13 @@ function scrollLeftPPage() {
 
     var scrollLeft = $(window).scrollLeft();
 
-    if (scrollLeft > initialScrollAmount + subsequentScrollAmount) {
+    if (scrollLeft > scrollStartFirstAmount + scrollStartSecondAmount) {
         $('html, body').animate({ scrollLeft: '-=' + scrollBackFirstAmount }, 600, function () {
             isAnimating = false;
             updateButtonVisibility();
         });
-    } else if (scrollLeft > initialScrollAmount) {
-        $('html, body').animate({ scrollLeft: '-=' + scrollBackSecondAmount }, 600, function () {
+    } else if (scrollLeft > scrollStartFirstAmount) {
+        $('html, body').animate({ scrollLeft: 0 }, 600, function () {
             isAnimating = false;
             updateButtonVisibility();
         });
@@ -1657,13 +1657,13 @@ function scrollRightPPage() {
     var scrollLeft = $(window).scrollLeft();
     var maxScrollLeft = $(document).width() - $(window).width();
 
-    if (scrollLeft < initialScrollAmount) {
-        $('html, body').animate({ scrollLeft: '+=' + initialScrollAmount }, 600, function () {
+    if (scrollLeft < scrollStartFirstAmount) {
+        $('html, body').animate({ scrollLeft: '+=' + scrollStartFirstAmount }, 600, function () {
             isAnimating = false;
             updateButtonVisibility();
         });
-    } else if (scrollLeft < initialScrollAmount + subsequentScrollAmount) {
-        $('html, body').animate({ scrollLeft: '+=' + subsequentScrollAmount }, 600, function () {
+    } else if (scrollLeft < scrollStartFirstAmount + scrollStartSecondAmount) {
+        $('html, body').animate({ scrollLeft: '+=' + scrollStartSecondAmount }, 600, function () {
             isAnimating = false;
             updateButtonVisibility();
         });
