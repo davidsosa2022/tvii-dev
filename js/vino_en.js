@@ -1070,7 +1070,8 @@ var tvii = {
             history.back();
         },
         prepare: function () {
-            $.pjax.defaults.maxCacheLength = 1;
+            $.pjax.defaults.maxCacheLength = 10;
+            $.pjax.defaults.timeout = 0;
 
             vino.lyt_setIsEnableClientLoadingIcon(true);
             vino.lyt_setIsEnableWhiteMask(true);
@@ -2413,6 +2414,7 @@ $(window).on("popstate", function () {
 })
 
 $(document).on("pjax:error", function (event) {
+    event.preventDefault();
 })
 
 $(document).on("pjax:end", function () {
