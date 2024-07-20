@@ -3358,7 +3358,7 @@ button {
   margin-bottom: 5px;
 }
 
-.menu-container p, span {
+.menu-container p, .menu-container span {
   font-size: 20px;
   line-height: 1.5;
   padding: 10px;
