@@ -1604,8 +1604,13 @@ tvii.router.connect("^/menu$", function () {
         $(".menu-tab").removeClass("none");
     })
 
-    $(".menu-container .age-ratings label").on("click", function () {
-        $(".menu-container .age-ratings label").removeClass("selected");
+    $(".menu-container .age-ratings.program label").on("click", function () {
+        $(".menu-container .age-ratings.program label").removeClass("selected");
+        $(this).addClass("selected")
+    })
+
+    $(".menu-container .age-ratings.film label").on("click", function () {
+        $(".menu-container .age-ratings.film label").removeClass("selected");
         $(this).addClass("selected")
     })
 

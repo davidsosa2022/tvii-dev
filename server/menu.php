@@ -41,7 +41,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
           <br>
           Select the TV/Film rating you want to set.
         </p>
-        <div class="age-ratings">
+        <div class="age-ratings program">
           <label class="age selected">
             <input type="radio" name="pc_age" value="TV-Y">
           </label>
@@ -62,7 +62,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
           </label>
         </div>
 
-        <div class="age-ratings">
+        <div class="age-ratings film">
           <label class="age">
             <input type="radio" name="pc_age_film" value="G">
           </label>
