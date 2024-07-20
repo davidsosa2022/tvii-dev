@@ -968,7 +968,7 @@ var tvii = {
                 $('.day-info .date-time').text(hours + ':' + minutes + ' ' + ampm);
 
                 var dateClassSw = $('.day-info .date-day-name').text();
-
+                $('.day-info .date-day-name').removeClass();
                 switch (dateClassSw) {
                     case 'Sun':
                         $('.day-info .date-day-name').addClass('sun');
