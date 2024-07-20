@@ -200,8 +200,8 @@ if(isset($_GET['program'])) {
     <a data-hover navi_target data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" href="javascript:void(0);" class="next_page_button accesskey-r accesskey-zr"></a>
 
     <div class="fixed-left-buttons">
-    <a navi_target navi_mouse data-hover href="https://tvii.mig.lol/program?program=tt6226232" class="back_white_button accesskey-b" data-sound="SE_RETURN_TOUCH_OFF"></a>
-    <a navi_target navi_mouse data-hover href="javascript:void(0)" class="remote accesskey-x" data-sound="SE_RETURN_TOUCH_OFF">Remote Control</a>
+    <a navi_target navi_mouse data-hover href="javascript:void(0)" class="back_white_button accesskey-b" data-sound="SE_RETURN_TOUCH_OFF"></a>
+    <a navi_target navi_mouse data-hover href="https://tvii.mig.lol/program?program=tt6226232" class="remote accesskey-x" data-sound="SE_RETURN_TOUCH_OFF">Remote Control</a>
     </div>
 
   <div class="info-tab program">
