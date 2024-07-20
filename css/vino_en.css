@@ -1439,27 +1439,32 @@ button {
 }
 
 .related-programs .live-program {
-  height: 73px;
+  height: 74px;
 }
 
 .related-programs .live-program .show-genre {
   width: 70px;
   height: 60px;
   font-size: 13px;
+  margin-top: 4px;
 }
 
 .related-programs .live-program .streaming-service {
   margin-top: 6px !important;
 }
 
+.related-programs .live-program .program-name {
+  margin-top: -5px;
+}
+
 .related-programs:nth-child(2) {
   border-top: none !important;
-  margin-top: 1px  !important;
+  margin-top: 1px !important;
 }
 
 .related-programs .live-program:nth-child(2) {
   border-top: none !important;
-  margin-top: 1px  !important;
+  margin-top: 1px !important;
 }
 
 .related-programs:after {
