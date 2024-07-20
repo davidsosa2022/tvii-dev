@@ -1130,7 +1130,7 @@ var tvii = {
             }
         },
         jumpToBrowserAndSetReturnedFlag: function (url) {
-            vino.ls_setItem('is_returned_redirect_url', url);
+            vino.ls_setItem('is_returned_redirect_url', window.location.href);
             vino.jumpToBrowser(url, true);
         },
         setTabMenuTips: function () {
