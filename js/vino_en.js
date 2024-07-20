@@ -968,7 +968,7 @@ var tvii = {
                 $('.day-info .date-day-name').text(dayName);
 
                 //if user happens to use TVii at midnight and the day changes we should always make sure the classes are removed before hand
-                $('.day-info .date-day-name').removeClass();
+                $('.day-info .date-day-name').removeClass('sun mon tue wed thu fri sat');
 
                 $('.day-info .date-day').text(day);
             
