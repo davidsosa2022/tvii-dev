@@ -1601,9 +1601,10 @@ tvii.router.connect("^/program$", function () {
 
     prepareMiiverseModal();
 
-    var scrollAmount = 430;
-    var scrollThreshold = 430;
-    var scrollBackAmount = 464;
+    var initialScrollAmount = 430;
+    var subsequentScrollAmount = 450;
+    var scrollBackFirstAmount = 460;
+    var scrollBackSecondAmount = 464;
     var fadeDuration = 100;
     var isAnimating = false;
     
@@ -1611,7 +1612,7 @@ tvii.router.connect("^/program$", function () {
         var scrollLeft = $(window).scrollLeft();
         var maxScrollLeft = $(document).width() - $(window).width();
     
-        if (scrollLeft < scrollThreshold) {
+        if (scrollLeft < initialScrollAmount) {
             $('.before_page_button').fadeOut(fadeDuration);
             $('.next_page_button').fadeIn(fadeDuration);
         } else if (scrollLeft >= maxScrollLeft) {
@@ -1629,12 +1630,18 @@ tvii.router.connect("^/program$", function () {
         isAnimating = true;
     
         var scrollLeft = $(window).scrollLeft();
-        if (scrollLeft > 0) {
-            $('html, body').animate({ scrollLeft: '-=' + scrollAmount }, 600, function () {
+    
+        if (scrollLeft > scrollBackFirstAmount + scrollBackSecondAmount) {
+            $('html, body').animate({ scrollLeft: '-=' + scrollBackFirstAmount }, 600, function () {
                 isAnimating = false;
                 updateButtonVisibility();
             });
-        } else {
+        } else if (scrollLeft > scrollBackFirstAmount) {
+            $('html, body').animate({ scrollLeft: '-=' + scrollBackSecondAmount }, 600, function () {
+                isAnimating = false;
+                updateButtonVisibility();
+            });
+        } else if (scrollLeft > 0) {
             $('html, body').animate({ scrollLeft: 0 }, 600, function () {
                 isAnimating = false;
                 updateButtonVisibility();
@@ -1649,13 +1656,19 @@ tvii.router.connect("^/program$", function () {
     
         var scrollLeft = $(window).scrollLeft();
         var maxScrollLeft = $(document).width() - $(window).width();
-        if (scrollLeft >= 2 * scrollAmount) {
-            $('html, body').animate({ scrollLeft: maxScrollLeft }, 600, function () {
+    
+        if (scrollLeft < initialScrollAmount) {
+            $('html, body').animate({ scrollLeft: '+=' + initialScrollAmount }, 600, function () {
+                isAnimating = false;
+                updateButtonVisibility();
+            });
+        } else if (scrollLeft < initialScrollAmount + subsequentScrollAmount) {
+            $('html, body').animate({ scrollLeft: '+=' + subsequentScrollAmount }, 600, function () {
                 isAnimating = false;
                 updateButtonVisibility();
             });
         } else {
-            $('html, body').animate({ scrollLeft: '+=' + scrollAmount }, 600, function () {
+            $('html, body').animate({ scrollLeft: maxScrollLeft }, 600, function () {
                 isAnimating = false;
                 updateButtonVisibility();
             });
