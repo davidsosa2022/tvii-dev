@@ -1453,9 +1453,6 @@ button {
   margin-top: 6px !important;
 }
 
-.related-programs .live-program .program-name {
-  margin-top: -5px;
-}
 
 .related-programs:nth-child(2) {
   border-top: none !important;
