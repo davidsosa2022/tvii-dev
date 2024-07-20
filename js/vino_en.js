@@ -1593,6 +1593,16 @@ tvii.router.connect("^/menu$", function () {
     $(".search_input").on("mousedown", function () {
         vino.soundPlay('SE_CMN_TOUCH_ON');
     })
+
+    $(".menu-tab .buttons-section .app_settings").on("click", function () {
+        $(".menu-tab").addClass("none");
+        $(".app-settings").removeClass("none")
+    })
+
+    $(".app-settings .menu-container .back_white_button").on("click", function () {
+        $(".app-settings").addClass("none")
+        $(".menu-tab").removeClass("none");
+    })
 });
 
 tvii.router.connect("^/program$", function () {
