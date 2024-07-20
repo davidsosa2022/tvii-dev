@@ -1606,6 +1606,7 @@ var scrollStartSecondAmount = 465;
 var scrollBackFirstAmount = 460; // First scroll back amount
 var scrollBackSecondAmount = 760; // Second scroll back amount
 var intermediateScrollBackAmount = 465; // Intermediate scroll back amount
+var endScrollBackAmount = 465; // Scroll back amount from the end
 var fadeDuration = 100;
 var isAnimating = false;
 
@@ -1631,8 +1632,14 @@ function scrollLeftPPage() {
     isAnimating = true;
 
     var scrollLeft = $(window).scrollLeft();
+    var maxScrollLeft = $(document).width() - $(window).width();
 
-    if (scrollLeft > scrollStartFirstAmount + scrollStartSecondAmount) {
+    if (scrollLeft >= maxScrollLeft) {
+        $('html, body').animate({ scrollLeft: '-=' + endScrollBackAmount }, 600, function () {
+            isAnimating = false;
+            updateButtonVisibility();
+        });
+    } else if (scrollLeft > scrollStartFirstAmount + scrollStartSecondAmount) {
         $('html, body').animate({ scrollLeft: '-=' + intermediateScrollBackAmount }, 600, function () {
             isAnimating = false;
             updateButtonVisibility();
