@@ -1603,6 +1603,12 @@ tvii.router.connect("^/menu$", function () {
         $(".app-settings").addClass("none")
         $(".menu-tab").removeClass("none");
     })
+
+    $(".menu-container .age-ratings label").on("click", function () {
+        $(".menu-container .age-ratings label").removeClass("selected");
+        $(this).addClass("selected")
+    })
+
 });
 
 tvii.router.connect("^/program$", function () {
