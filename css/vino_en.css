@@ -3384,6 +3384,19 @@ button {
   margin-bottom: 10px;
 }
 
+.menu-container .age-ratings label.age{
+  background: -webkit-gradient(linear, left top, left bottom, from(#e2e2e2), to(#ffffff));
+  background-size: 100px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.39);
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 12px;
+}
+
 .menu-container .back_white_button {
   position: fixed;
   bottom: 0;
@@ -3395,6 +3408,7 @@ button {
   min-width: 120px;
   max-width: 300px;
   line-height: 1.2;
+  text-shadow: 0px 2px #fff;
   text-align: center;
   padding: 5px;
   padding-right: 10px;
