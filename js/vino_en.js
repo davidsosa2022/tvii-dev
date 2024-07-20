@@ -1602,9 +1602,7 @@ tvii.router.connect("^/program$", function () {
     prepareMiiverseModal();
 
     var initialScrollAmount = 430;
-    var subsequentScrollAmount = 450;
-    var scrollBackFirstAmount = 460;
-    var scrollBackSecondAmount = 464;
+    var subsequentScrollAmount = 460;
     var fadeDuration = 100;
     var isAnimating = false;
     
@@ -1631,17 +1629,17 @@ tvii.router.connect("^/program$", function () {
     
         var scrollLeft = $(window).scrollLeft();
     
-        if (scrollLeft > scrollBackFirstAmount + scrollBackSecondAmount) {
-            $('html, body').animate({ scrollLeft: '-=' + scrollBackFirstAmount }, 600, function () {
+        if (scrollLeft > initialScrollAmount + subsequentScrollAmount) {
+            $('html, body').animate({ scrollLeft: '-=' + subsequentScrollAmount }, 600, function () {
                 isAnimating = false;
                 updateButtonVisibility();
             });
-        } else if (scrollLeft > scrollBackFirstAmount) {
-            $('html, body').animate({ scrollLeft: '-=' + scrollBackSecondAmount }, 600, function () {
+        } else if (scrollLeft > initialScrollAmount) {
+            $('html, body').animate({ scrollLeft: '-=' + initialScrollAmount }, 600, function () {
                 isAnimating = false;
                 updateButtonVisibility();
             });
-        } else if (scrollLeft > 0) {
+        } else {
             $('html, body').animate({ scrollLeft: 0 }, 600, function () {
                 isAnimating = false;
                 updateButtonVisibility();
@@ -1674,7 +1672,6 @@ tvii.router.connect("^/program$", function () {
             });
         }
     }
-    
 
     updateButtonVisibility();
 });
