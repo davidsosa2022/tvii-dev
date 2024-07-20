@@ -1573,6 +1573,10 @@ tvii.router.connect("^/menu$", function () {
     $(".back_button").on("click", function () {
         tvii.utils.back();
     })
+
+    $(".search_input").on("mousedown", function () {
+        vino.soundPlay('SE_CMN_TOUCH_ON');
+    })
 });
 
 tvii.router.connect("^/program$", function () {
@@ -1602,11 +1606,11 @@ tvii.router.connect("^/program$", function () {
     var scrollBackAmount = 464;
     var fadeDuration = 100;
     var isAnimating = false;
-
+    
     function updateButtonVisibility() {
         var scrollLeft = $(window).scrollLeft();
         var maxScrollLeft = $(document).width() - $(window).width();
-
+    
         if (scrollLeft < scrollThreshold) {
             $('.before_page_button').fadeOut(fadeDuration);
             $('.next_page_button').fadeIn(fadeDuration);
@@ -1618,16 +1622,15 @@ tvii.router.connect("^/program$", function () {
             $('.next_page_button').fadeIn(fadeDuration);
         }
     }
-
+    
     function scrollLeftPPage() {
         if (isAnimating) return;
         vino.soundPlayVolume("SE_MOVEPAGE_PLAY", 25);
         isAnimating = true;
-
+    
         var scrollLeft = $(window).scrollLeft();
-        var maxScrollLeft = $(document).width() - $(window).width();
-        if (scrollLeft >= maxScrollLeft) {
-            $('html, body').animate({ scrollLeft: '-=' + scrollBackAmount }, 600, function () {
+        if (scrollLeft > 0) {
+            $('html, body').animate({ scrollLeft: '-=' + scrollAmount }, 600, function () {
                 isAnimating = false;
                 updateButtonVisibility();
             });
@@ -1638,15 +1641,15 @@ tvii.router.connect("^/program$", function () {
             });
         }
     }
-
+    
     function scrollRightPPage() {
         if (isAnimating) return;
         vino.soundPlayVolume("SE_MOVEPAGE_PLAY", 25);
         isAnimating = true;
-
+    
         var scrollLeft = $(window).scrollLeft();
         var maxScrollLeft = $(document).width() - $(window).width();
-        if (scrollLeft >= scrollThreshold) {
+        if (scrollLeft >= 2 * scrollAmount) {
             $('html, body').animate({ scrollLeft: maxScrollLeft }, 600, function () {
                 isAnimating = false;
                 updateButtonVisibility();
@@ -1658,6 +1661,7 @@ tvii.router.connect("^/program$", function () {
             });
         }
     }
+    
 
     updateButtonVisibility();
 });
