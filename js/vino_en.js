@@ -1611,6 +1611,8 @@ tvii.router.connect("^/menu$", function () {
     tvii.utils.prepareHover();
     tvii.utils.setNaviTargetResetInterval();
 
+    alert(tvii.utils.getUrlQuery("state"));
+
     $(".back_button").on("click", function () {
         tvii.utils.back();
     })
