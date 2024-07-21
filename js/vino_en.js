@@ -1735,6 +1735,7 @@ tvii.router.connect("^/menu$", function () {
     //checks redirect URL
     if (tvii.utils.getUrlQuery("state") == "app-settings") {
         $(".menu-tab .buttons-section .app_settings").trigger("click");
+        return;
     }
 
 });
