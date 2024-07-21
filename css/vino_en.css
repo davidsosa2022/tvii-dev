@@ -3349,11 +3349,22 @@ button {
 
 .menu-container .age-ratings label.age span.tip {
   padding: 0;
-  top: 0;
-  left: 0;
+  top: -60px;
+  left: -10px;
+  border-radius: 4px;
+  border: 2px solid #919191;
+  width: 132px;
+  padding: 2px;
+  min-height: 42px;
   font-size: 12px;
   line-height: 1.2;
   position: absolute;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  text-align: center;
+  background: #fff;
+  z-index: 4;
 }
 
 .menu-container .settings-label {
