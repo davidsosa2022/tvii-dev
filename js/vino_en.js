@@ -1140,8 +1140,10 @@ var tvii = {
                 state: state
             }
 
-            vino.ls_setItem('is_returned_redirect_data', JSON.stringify(redirectData));
-            vino.jumpToBrowser(url, true);
+            if(vino.runTwoButtonDialog("Do you want to close Nintendo TVii and\nsee this link on the Internet Browser?", "Cancel", "OK") == 0){
+                vino.ls_setItem('is_returned_redirect_data', JSON.stringify(redirectData));
+                vino.jumpToBrowser(url, false);
+            }
         },
         getUrlQuery: function(name) {
             var queryString = window.location.search.substring(1);
