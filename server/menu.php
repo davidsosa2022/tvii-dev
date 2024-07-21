@@ -115,9 +115,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
     </li>
   </ul>
 
-  <a navi_target navi_mouse data-hover href="javascript:void(0)" class="back_white_button accesskey-b" data-sound="SE_RETURN_TOUCH_OFF">
-    Save and<br>Back
-  </a>
+  <a navi_target navi_mouse data-hover href="javascript:void(0)" class="back_white_button accesskey-b" data-sound="SE_RETURN_TOUCH_OFF"></a>
 
 </div>
 
