@@ -44,7 +44,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
           <br><br><span class="allowed-range">Allowed</span><span class="allowed-range not">Not Allowed</span>
         </p>
         <div class="age-ratings program">
-          <span class="age-ratings-label">TV Rating System</label>
+          <span class="age-ratings-label">TV Rating System</span>
           <label navi_target navi_no_reset navi_mouse class="age tv-y selected">
             <input type="radio" name="pc_age" value="TV-Y">
           </label>
@@ -67,7 +67,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
           <p>Select the movie rating you want to set.<br>
           (Uses MPA Rating system) <a href="javascript:void(0)" navi_target navi_no_reset class="mpa-hyperlink">More info</a></p>
         <div class="age-ratings film">
-        <span class="age-ratings-label">Movie Rating System</label>
+        <span class="age-ratings-label">Movie Rating System</span>
           <label navi_target navi_no_reset navi_mouse class="age g">
             <input type="radio" name="pc_age_film" value="G">
           </label>
