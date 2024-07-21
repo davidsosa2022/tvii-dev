@@ -3365,6 +3365,7 @@ button {
   text-align: center;
   background: #fff;
   z-index: 4;
+  display: none;
 }
 
 .menu-container .settings-label {

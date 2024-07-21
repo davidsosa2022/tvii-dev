@@ -1605,6 +1605,8 @@ tvii.router.connect("^/menu$", function () {
 
     $(".menu-container .age-ratings.program label").on("click", function () {
         $(".menu-container .age-ratings.program label").removeClass("selected");
+        $(".menu-container .age-ratings.program label .tip").css("display", "none")
+        $(this).find(".tip").css("display", "-webkit-box");
         $(this).addClass("selected")
         vino.soundPlayVolume("SE_A_CHECK", 25);
     })
