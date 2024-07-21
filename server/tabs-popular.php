@@ -214,13 +214,6 @@ $conn->close();
 ?>
     </div>
 
-    <script>
-      alert("Testing image getting");
-      vino.title_clearImage();
-      alert(vino.title_setFixedImage("https://cdn.discordapp.com/attachments/1253513013038682143/1264439092561707049/image.png?ex=669de02b&is=669c8eab&hm=9a4b8b21f85f17bab2da864390ef38b64f1a916651961429614a5f094e4f8af6&", "image", "", "", "", 1));
-      
-    </script>
-
 <?php
 if(!isset($_SERVER['HTTP_X_PJAX'])) {
     include('footer.php');
