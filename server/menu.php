@@ -100,7 +100,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
     </li>
     <li>
       <div class="settings-option">
-      <span class="settings-label">SpotPass Settings</span>
+      <span class="settings-label">Crossposting Settings</span>
       </div>
     </li>
     <li>
