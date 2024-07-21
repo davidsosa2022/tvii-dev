@@ -58,7 +58,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
           <label navi_target navi_no_reset navi_mouse class="age tv-14">
             <input type="radio" name="pc_age" value="TV-14">
           </label>
-          <label navi_target navi_no_reset navi_mouse class="age tv-14">
+          <label navi_target navi_no_reset navi_mouse class="age tv-ma">
             <input type="radio" name="pc_age" value="TV-MA">
           </label>
         </div>
