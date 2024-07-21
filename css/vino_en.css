@@ -3457,6 +3457,9 @@ button {
   margin: 0;
   -webkit-appearance: none;
   appearance: none;
+  background-size: 80px;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .menu-container .back_white_button {
