@@ -1140,7 +1140,8 @@ var tvii = {
                 state: state
             }
 
-            if(vino.runTwoButtonDialog("Do you want to close Nintendo TVii and\nsee this link on the Internet Browser?", "Cancel", "OK") == 0){
+            if(vino.runTwoButtonDialog("Do you want to close Nintendo TVii and\nsee this link on the Internet Browser?", "Cancel", "OK") == 0) {
+                vino.ls_removeItem('is_returned_redirect_data');
                 vino.ls_setItem('is_returned_redirect_data', JSON.stringify(redirectData));
                 vino.jumpToBrowser(url, false);
             }
