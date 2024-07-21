@@ -1126,12 +1126,19 @@ var tvii = {
             if (vino.ls_getItem('is_returned_redirect_url') && vino.isReturnedFromOtherApplication()) {
                 var url = vino.ls_getItem('is_returned_redirect_url');
                 vino.ls_removeItem('is_returned_redirect_url');
-                tvii.browse.pjax.go(url)
+                tvii.browse.pjax.go(url);
             }
         },
         jumpToBrowserAndSetReturnedFlag: function (url) {
+            if (vino.pc_isControlledBrowser()) {
+                alert("Internet Browser is locked by Parental Controls.");
+                return;
+            }
             vino.ls_setItem('is_returned_redirect_url', window.location.href);
             vino.jumpToBrowser(url, true);
+        },
+        changeHash: function(hash) {
+            window.location.hash = hash;
         },
         setTabMenuTips: function () {
             var tipsArray = [
@@ -1594,11 +1601,13 @@ tvii.router.connect("^/menu$", function () {
     })
 
     $(".menu-tab .buttons-section .app_settings").on("click", function () {
+        tvii.utils.changeHash("appsettings");
         $(".menu-tab").addClass("none");
-        $(".app-settings").removeClass("none")
+        $(".app-settings").removeClass("none");
     })
 
     $(".app-settings .menu-container .back_white_button").on("click", function () {
+        tvii.utils.changeHash("");
         $(".app-settings").addClass("none")
         $(".menu-tab").removeClass("none");
     })
