@@ -45,21 +45,27 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         <div class="age-ratings program">
           <span class="age-ratings-label">TV Rating System</span>
           <label navi_target navi_no_reset navi_mouse class="age tv-y selected">
+            <span class="tip">Appropiate for preschool/all ages</span>
             <input type="radio" name="pc_age" value="TV-Y">
           </label>
           <label navi_target navi_no_reset navi_mouse class="age tv-g">
+          <span class="tip">Appropiate for general audiences</span>
             <input type="radio" name="pc_age" value="TV-G">
           </label>
           <label navi_target navi_no_reset navi_mouse class="age tv-y7">
+          <span class="tip">Appropiate for kids 7 and older</span>
             <input type="radio" name="pc_age" value="TV-Y7">
           </label>
           <label navi_target  navi_no_reset navi_mouse class="age tv-pg">
+          <span class="tip">Requieres parental guidance</span>
             <input type="radio" name="pc_age" value="TV-PG">
           </label>
           <label navi_target navi_no_reset navi_mouse class="age tv-14">
+          <span class="tip">Appropiate for kids 14 and older</span>
             <input type="radio" name="pc_age" value="TV-14">
           </label>
           <label navi_target navi_no_reset navi_mouse class="age tv-ma">
+          <span class="tip">Appropiate for mature audiences only</span>
             <input type="radio" name="pc_age" value="TV-MA">
           </label>
         </div>
@@ -68,15 +74,19 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         <div class="age-ratings film">
         <span class="age-ratings-label">Movie Rating System</span>
           <label navi_target navi_no_reset navi_mouse class="age g">
+          <span class="tip">Appropiate for all ages</span>
             <input type="radio" name="pc_age_film" value="G">
           </label>
           <label navi_target navi_no_reset navi_mouse class="age pg">
+          <span class="tip">Requieres parental guidance</span>
             <input type="radio" name="pc_age_film" value="PG">
           </label>
           <label navi_target navi_no_reset navi_mouse class="age pg13">
+          <span class="tip">Appropiate for kids 13 and older</span>
             <input type="radio" name="pc_age_film" value="PG-13">
           </label>
           <label navi_target navi_no_reset navi_mouse class="age r">
+          <span class="tip">Appropiate for mature audiences only</span>
             <input type="radio" name="pc_age_film" value="R">
           </label>
         </div>
