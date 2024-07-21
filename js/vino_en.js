@@ -2474,7 +2474,8 @@ $(document).on("pjax:error", function (event) {
     event.preventDefault();
     tvii.utils.lockUserOperation(false);
     vino.loading_setIconAppear(false);
-    alert("An network error ocurred while going to this page.");
+    alert("An network error ocurred\nwhile going to this page.");
+    tvii.browse.pjax.top(true);
 })
 
 $(document).on("pjax:end", function () {
