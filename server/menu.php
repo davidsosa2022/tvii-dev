@@ -93,6 +93,11 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
     </li>
     <li>
       <div class="settings-option">
+      <span class="settings-label">Auto Power Down Settings</span>
+      </div>
+    </li>
+    <li>
+      <div class="settings-option">
       <span class="settings-label">Other Settings</span>
       </div>
     </li>
