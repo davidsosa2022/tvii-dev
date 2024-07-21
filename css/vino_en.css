@@ -3347,6 +3347,15 @@ button {
   color: #a2a2a2;
 }
 
+.menu-container .age-ratings label.age span.tip {
+  padding: 0;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+  line-height: 1.2;
+  position: absolute;
+}
+
 .menu-container .settings-label {
   padding-left: 10px;
   padding-bottom: 4px;
@@ -3388,7 +3397,7 @@ button {
   padding-top: 55px;
 }
 
-.menu-container .age-ratings label.age{
+.menu-container .age-ratings label.age {
   background-image: -webkit-radial-gradient(circle, white, white, #eaeaea);
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.39);
   display: inline-block;
@@ -3415,64 +3424,61 @@ button {
   text-align: center;
 }
 
-.menu-container .allowed-range {
+.menu-container .allowed-range {}
 
-}
+.menu-container .allowed-range.not {}
 
-.menu-container .allowed-range.not {
-
-}
-
-.menu-container .age-ratings label.age.tv-y input{
+.menu-container .age-ratings label.age.tv-y input {
   background-image: url(/img/ratings/TV-Y_icon.svg.png)
 }
 
-.menu-container .age-ratings label.age.tv-g input{
+.menu-container .age-ratings label.age.tv-g input {
   background-image: url(/img/ratings/TV-G_icon.svg.png)
 }
 
-.menu-container .age-ratings label.age.tv-y7 input{
+.menu-container .age-ratings label.age.tv-y7 input {
   background-image: url(/img/ratings/TV-Y7_icon.svg.png)
 }
 
-.menu-container .age-ratings label.age.tv-pg input{
+.menu-container .age-ratings label.age.tv-pg input {
   background-image: url(/img/ratings/TV-PG_icon.svg.png)
 }
 
-.menu-container .age-ratings label.age.tv-14 input{
+.menu-container .age-ratings label.age.tv-14 input {
   background-image: url(/img/ratings/TV-14_icon.svg.png)
 }
 
-.menu-container .age-ratings label.age.tv-ma input{
+.menu-container .age-ratings label.age.tv-ma input {
   background-image: url(/img/ratings/TV-MA_icon.svg.png)
 }
 
-.menu-container .age-ratings label.age.g input{
+.menu-container .age-ratings label.age.g input {
   background-image: url(/img/ratings/MPA_G_RATING.svg.png)
 }
 
-.menu-container .age-ratings label.age.pg input{
+.menu-container .age-ratings label.age.pg input {
   background-image: url(/img/ratings/MPA_PG_RATING.svg.png)
 }
 
-.menu-container .age-ratings label.age.pg13 input{
+.menu-container .age-ratings label.age.pg13 input {
   background-image: url(/img/ratings/MPA_PG-13_RATING.svg.png)
 }
 
-.menu-container .age-ratings label.age.r input{
+.menu-container .age-ratings label.age.r input {
   background-image: url(/img/ratings/MPA_R_RATING.svg.png)
 }
 
-.menu-container .age-ratings label.age.selected{
+.menu-container .age-ratings label.age.selected {
   background-image: -webkit-radial-gradient(circle, #ffc572, #ffbe60, #ff6a00);
   border: 1px solid #d65900;
 }
 
-.menu-container .tvus-hyperlink,.menu-container .mpa-hyperlink{
+.menu-container .tvus-hyperlink,
+.menu-container .mpa-hyperlink {
   text-decoration: underline;
 }
 
-.menu-container .age-ratings label.age input{
+.menu-container .age-ratings label.age input {
   position: absolute;
   left: 0;
   top: 0;
