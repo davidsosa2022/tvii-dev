@@ -179,7 +179,7 @@ if(isset($_GET['program'])) {
                     // Check if actor exists
                     if($actor) {
                         // Append HTML for actor to $actors_html
-                        $actors_html .= '<a href="javascript:void(0)" data-actor-name="' . $actor['actor_name'] . '" data-actor-id="' . $actor['actor_id'] . '" data-sound="SE_APPEAR_DETAIL" navi_target class="actor">';
+                        $actors_html .= '<a href="javascript:void(0)" data-actor-name="' . $actor['actor_name'] . '" data-actor-id="' . $actor['actor_id'] . '" data-sound="SE_FACE" navi_target class="actor">';
                         $actors_html .= '<span class="actor_image" style="background-image:url(' . htmlspecialchars($actor['actor_image'] ? $actor['actor_image'] : '/img/no-image.png') . ')"></span>';
                         $actors_html .= '<span class="actor_name">' . $actor['actor_name'] . '</span>';
                         $actors_html .= '</a>';
