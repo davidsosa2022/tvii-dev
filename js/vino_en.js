@@ -1660,7 +1660,31 @@ tvii.router.connect("^/menu$", function () {
     $(".menu-container .age-ratings.film label").on("click", function () {
         clearTimeout(tipTimeout2)
         $(".menu-container .age-ratings.film label").removeClass("selected");
-        $(".menu-container .age-ratings.film label .tip").css("display", "none")
+        $(".menu-container .age-ratings.film label .tip").css("display", "none");
+
+        switch ($(this).find("input").val()) {
+            case "G":
+                $(".menu-container .age-ratings.film label.age.g").addClass("selected");
+                break;
+            case "PG":
+                $(".menu-container .age-ratings.film label.age.g").addClass("selected");
+                $(".menu-container .age-ratings.film label.age.pg").addClass("selected");
+                break;
+            case "PG-13":
+                $(".menu-container .age-ratings.film label.age.g").addClass("selected");
+                $(".menu-container .age-ratings.film label.age.pg").addClass("selected");
+                $(".menu-container .age-ratings.film label.age.pg13").addClass("selected");
+                break;
+            case "R":
+                $(".menu-container .age-ratings.film label.age.g").addClass("selected");
+                $(".menu-container .age-ratings.film label.age.pg").addClass("selected");
+                $(".menu-container .age-ratings.film label.age.pg13").addClass("selected");
+                $(".menu-container .age-ratings.film label.age.r").addClass("selected");
+                break;
+            default:
+                break;
+        }
+
         $(this).find(".tip").css("display", "-webkit-box");
         tipTimeout2 = setTimeout(function () {
             $(".menu-container .age-ratings.film label .tip").css("display", "none");
