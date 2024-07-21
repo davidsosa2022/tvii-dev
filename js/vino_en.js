@@ -1616,6 +1616,12 @@ tvii.router.connect("^/menu$", function () {
     })
 
     $(".menu-container .tvus-hyperlink").on("click", function () {
+        vino.soundPlayVolume("SE_WORD_HENAHENA_A", 25)
+        tvii.utils.jumpToBrowserAndSetReturnedFlag("http://www.tvguidelines.org")
+    });
+
+    $(".menu-container .mpa-hyperlink").on("click", function () {
+        vino.soundPlayVolume("SE_WORD_HENAHENA_E", 25)
         tvii.utils.jumpToBrowserAndSetReturnedFlag("http://www.tvguidelines.org")
     });
 
