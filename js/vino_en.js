@@ -1136,7 +1136,7 @@ var tvii = {
             }
 
             var redirectData = {
-                url: url,
+                url: window.location.href,
                 state: state
             }
 
