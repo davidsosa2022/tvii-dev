@@ -1622,7 +1622,7 @@ tvii.router.connect("^/menu$", function () {
 
     $(".menu-container .mpa-hyperlink").on("click", function () {
         vino.soundPlayVolume("SE_POPUP", 25)
-        tvii.utils.jumpToBrowserAndSetReturnedFlag("http://www.tvguidelines.org")
+        tvii.utils.jumpToBrowserAndSetReturnedFlag("http://www.filmratings.com/")
     });
 
 });
