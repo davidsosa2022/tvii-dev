@@ -3445,7 +3445,7 @@ button {
 }
 
 .menu-container .age-ratings label.age.selected{
-  box-shadow: 0px 0px 0px 4px #f00, 0px 1px 4px 4px rgba(0, 0, 0, 0.39);
+  box-shadow: 0px 0px 0px 4px #ff00bc, 0px 1px 4px 4px rgba(0, 0, 0, 0.39);
 }
 
 .menu-container .tvus-hyperlink,.menu-container .mpa-hyperlink{

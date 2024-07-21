@@ -40,7 +40,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         <p>Configure Parental Controls for programs that can or can not be recommended/shown in the application.
           <br><br>
           Select the TV rating you want to set.<br>
-          (Uses TV Parental Guidelines system) <a href="javascript:void(0)" class="tvus-hyperlink">More info</a>
+          (Uses TV Parental Guidelines system) <a href="javascript:void(0)" navi_target navi_no_reset class="tvus-hyperlink">More info</a>
         </p>
         <div class="age-ratings program">
           <label navi_target navi_no_reset navi_mouse class="age tv-y selected">
@@ -63,7 +63,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
           </label>
         </div>
           <p>Select the movie rating you want to set.<br>
-          (Uses MPA Rating system) <a href="javascript:void(0)" class="mpa-hyperlink">More info</a></p>
+          (Uses MPA Rating system) <a href="javascript:void(0)" navi_target navi_no_reset class="mpa-hyperlink">More info</a></p>
         <div class="age-ratings film">
           <label navi_target navi_no_reset navi_mouse class="age g">
             <input type="radio" name="pc_age_film" value="G">
