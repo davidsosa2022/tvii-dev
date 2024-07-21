@@ -1140,26 +1140,26 @@ var tvii = {
                 state: state
             }
 
-            if(vino.runTwoButtonDialog("Do you want to close Nintendo TVii and\nsee this link on the Internet Browser?", "Cancel", "OK") == 0) {
+            if (vino.runTwoButtonDialog("Do you want to close Nintendo TVii and\nsee this link on the Internet Browser?", "Cancel", "OK") == 0) {
                 vino.ls_removeItem('is_returned_redirect_data');
                 vino.ls_setItem('is_returned_redirect_data', JSON.stringify(redirectData));
                 vino.jumpToBrowser(url, false);
             }
         },
-        getUrlQuery: function(name) {
+        getUrlQuery: function (name) {
             var queryString = window.location.search.substring(1);
             var queries = queryString.split("&");
-        
+
             for (var i = 0; i < queries.length; i++) {
                 var pair = queries[i].split("=");
                 var key = decodeURIComponent(pair[0]);
                 var value = decodeURIComponent(pair[1] || '');
-        
+
                 if (key === name) {
                     return value;
                 }
             }
-        
+
             return null; // Return null if the parameter is not found
         },
         setTabMenuTips: function () {
@@ -1614,8 +1614,6 @@ tvii.router.connect("^/menu$", function () {
     tvii.utils.prepareHover();
     tvii.utils.setNaviTargetResetInterval();
 
-    alert(tvii.utils.getUrlQuery("state"));
-
     $(".back_button").on("click", function () {
         tvii.utils.back();
     })
@@ -1733,6 +1731,11 @@ tvii.router.connect("^/menu$", function () {
         vino.soundPlayVolume("SE_POPUP", 25)
         tvii.utils.jumpToBrowserAndSetReturnedFlag("http://www.filmratings.com/", "app-settings")
     });
+
+    //checks redirect URL
+    if (tvii.utils.getUrlQuery("state") == "app-settings") {
+        $(".menu-tab .buttons-section .app_settings").trigger("click");
+    }
 
 });
 
