@@ -41,6 +41,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
           <br><br>
           Select the TV rating you want to set.<br>
           (Uses TV Parental Guidelines system) <a href="javascript:void(0)" navi_target navi_no_reset class="tvus-hyperlink">More info</a>
+          <br><br><span class="allowed-range">Allowed</span><span class="allowed-range not">Not Allowed</span>
         </p>
         <div class="age-ratings program">
           <label navi_target navi_no_reset navi_mouse class="age tv-y selected">
