@@ -3430,7 +3430,7 @@ button {
 }
 
 .menu-container .age-ratings .age-ratings-label {
-  background: -webkit-gradient(linear, left top, right top, from(#7a7a7a), color-stop(0.4, #3b3b3b), to(#1a1a1a));
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAzSURBVChTY/z//z8HAwT8Z2Rk/AllYwAmKE0QgBT+R8J0BIxQGgVg8yBJnsEGaO5BBgYAQDQQBZrSoosAAAAASUVORK5CYII=), -webkit-gradient(linear, left top, right top, from(#7a7a7a), color-stop(0.4, #3b3b3b), to(#1a1a1a));
   border-bottom: 2px solid #000;
   color: #fff;
   position: absolute;
@@ -3444,10 +3444,6 @@ button {
   width: 100%;
   text-align: center;
 }
-
-.menu-container .allowed-range {}
-
-.menu-container .allowed-range.not {}
 
 .menu-container .age-ratings label.age.tv-y input {
   background-image: url(/img/ratings/TV-Y_icon.svg.png)
