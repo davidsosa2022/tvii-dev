@@ -3377,7 +3377,7 @@ button {
   display: -webkit-box;
   -webkit-box-pack: center;
   -webkit-box-align: center;
-  background: #f1f1f1;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAVtJREFUOE+d1LFKw1AUxvHvNEajdBAi5N4QQZ0cOqvg4FJwc3HXV3DxERz0KfQZ1F0Xi1vFgkiGDq25ESSzCrlHU6g0xcR7zRry49zk/EP4xzUYDOa11p7ruk4Yhm+TBNl6SqkdAMcAdgHMEFGXmY+klLeFZQWmabrFzJcAlqYG0QD2pJTXVqBS6gLAwW+nYuaHLMs2jMFerzfr+/4zgJWq19RoNIQxmCTJAhE9AlirAN+ZedkYLJC6IwO4EUK0rcB+v7/oeV4HwHppVYheAOwLIe6twAIZDoeR4zgnALaLtflen06e56dRFHWt12ZyKmZ2lVKulPKDiPLxvdKEdQWYBvAD/lWAFZim6SYzX9UVYAUqpc4BHNYV0Gq1Pk1QiuN4rtlsPgFYrSsgCIJXI9C0gOnfVBU++ihGBUysRt2kI9CkAJPjlhZ7ugBmvtNan40LsAbHD1QVYAp+AUhnni/CtpXoAAAAAElFTkSuQmCC), #f6f6f6;
   border: 3px solid #e30fff;
   box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.28);
   border-radius: 3px;
@@ -3389,7 +3389,7 @@ button {
 }
 
 .menu-container .age-ratings label.age{
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e2e2e2), to(#ffffff));
+  background-image: -webkit-radial-gradient(circle, white, white, #eaeaea);
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.39);
   display: inline-block;
   position: relative;
