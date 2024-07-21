@@ -1162,6 +1162,29 @@ var tvii = {
 
             return null; // Return null if the parameter is not found
         },
+        removeUrlQuery: function (paramName) {
+            // Get the current URL
+            var url = window.location.href;
+
+            // Create a URL object to manipulate the URL
+            var baseUrl = url.split('?')[0]; // Base URL without query parameters
+            var queryString = url.indexOf('?') !== -1 ? url.split('?')[1] : ''; // Extract query string
+
+            // Split the query string into individual parameters
+            var params = queryString.split('&').filter(function (param) {
+                // Return only those parameters that do not match the one to be removed
+                return param.split('=')[0] !== paramName;
+            });
+
+            // Rebuild the query string
+            var newQueryString = params.join('&');
+
+            // Update the URL with the new query string
+            var newUrl = baseUrl + (newQueryString ? '?' + newQueryString : '');
+
+            // Replace the current URL in the browser without reloading the page
+            history.replaceState(null, document.title, newUrl);
+        },
         setTabMenuTips: function () {
             var tipsArray = [
                 "When you are using a program, open the  HOME Menu and launch this app to quickly check and then return to your suspended program.",
@@ -1734,6 +1757,7 @@ tvii.router.connect("^/menu$", function () {
 
     //checks redirect URL
     if (tvii.utils.getUrlQuery("state") == "app-settings") {
+        tvii.utils.removeUrlQuery("state");
         $(".menu-tab .buttons-section .app_settings").trigger("click");
         return;
     }
