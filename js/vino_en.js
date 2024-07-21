@@ -1610,12 +1610,50 @@ tvii.router.connect("^/menu$", function () {
         clearTimeout(tipTimeout1)
         $(".menu-container .age-ratings.program label").removeClass("selected");
         $(".menu-container .age-ratings.program label .tip").css("display", "none");
+
+        switch ($(this).find("input").val()) {
+            case "TV-Y":
+                $(".menu-container .age-ratings.program label.age.tv-y").addClass("selected");
+                break;
+            case "TV-G":
+                $(".menu-container .age-ratings.program label.age.tv-y").addClass("selected");
+                $(".menu-container .age-ratings.program label.age.tv-g").addClass("selected");
+                break;
+            case "TV-Y7":
+                $(".menu-container .age-ratings.program label.age.tv-y").addClass("selected");
+                $(".menu-container .age-ratings.program label.age.tv-g").addClass("selected");
+                $(".menu-container .age-ratings.program label.age.tv-y7").addClass("selected");
+                break;
+            case "TV-PG":
+                $(".menu-container .age-ratings.program label.age.tv-y").addClass("selected");
+                $(".menu-container .age-ratings.program label.age.tv-g").addClass("selected");
+                $(".menu-container .age-ratings.program label.age.tv-y7").addClass("selected");
+                $(".menu-container .age-ratings.program label.age.tv-pg").addClass("selected");
+                break;
+            case "TV-14":
+                $(".menu-container .age-ratings.program label.age.tv-y").addClass("selected");
+                $(".menu-container .age-ratings.program label.age.tv-g").addClass("selected");
+                $(".menu-container .age-ratings.program label.age.tv-y7").addClass("selected");
+                $(".menu-container .age-ratings.program label.age.tv-pg").addClass("selected");
+                $(".menu-container .age-ratings.program label.age.tv-14").addClass("selected");
+                break;
+            case "TV-MA":
+                $(".menu-container .age-ratings.program label.age.tv-y").addClass("selected");
+                $(".menu-container .age-ratings.program label.age.tv-g").addClass("selected");
+                $(".menu-container .age-ratings.program label.age.tv-y7").addClass("selected");
+                $(".menu-container .age-ratings.program label.age.tv-pg").addClass("selected");
+                $(".menu-container .age-ratings.program label.age.tv-14").addClass("selected");
+                $(".menu-container .age-ratings.program label.age.tv-ma").addClass("selected");
+                break;
+            default:
+                break;
+        }
+
         $(this).find(".tip").css("display", "-webkit-box");
-        tipTimeout1 = setTimeout(function(){
+        tipTimeout1 = setTimeout(function () {
             $(".menu-container .age-ratings.program label .tip").css("display", "none");
             clearTimeout(tipTimeout1)
-        }, 5000)
-        $(this).addClass("selected")
+        }, 5000);
         vino.soundPlayVolume("SE_A_CHECK", 25);
     })
 
@@ -1624,11 +1662,10 @@ tvii.router.connect("^/menu$", function () {
         $(".menu-container .age-ratings.film label").removeClass("selected");
         $(".menu-container .age-ratings.film label .tip").css("display", "none")
         $(this).find(".tip").css("display", "-webkit-box");
-        tipTimeout2 = setTimeout(function(){
+        tipTimeout2 = setTimeout(function () {
             $(".menu-container .age-ratings.film label .tip").css("display", "none");
             clearTimeout(tipTimeout2)
-        }, 5000)
-        $(this).addClass("selected");
+        }, 5000);
         vino.soundPlayVolume("SE_A_CHECK", 25);
     })
 
