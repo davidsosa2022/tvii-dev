@@ -1126,7 +1126,7 @@ var tvii = {
             if (vino.ls_getItem('is_returned_redirect_data') && vino.isReturnedFromOtherApplication()) {
                 var data = JSON.parse(vino.ls_getItem('is_returned_redirect_data'));
                 vino.ls_removeItem('is_returned_redirect_data');
-                tvii.browse.pjax.go(data.url + "&state=" + encodeURIComponent(data.state));
+                tvii.browse.pjax.go(data.url + "?state=" + encodeURIComponent(data.state));
             }
         },
         jumpToBrowserAndSetReturnedFlag: function (url, state) {
