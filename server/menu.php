@@ -73,7 +73,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
           (Uses MPA Rating system) <a href="javascript:void(0)" navi_target navi_no_reset class="mpa-hyperlink">More info</a></p>
         <div class="age-ratings film">
         <span class="age-ratings-label">Movie Rating System</span>
-          <label navi_target navi_no_reset navi_mouse class="age g">
+          <label navi_target navi_no_reset navi_mouse class="age g selected">
           <span class="tip">Appropiate for all ages</span>
             <input type="radio" name="pc_age_film" value="G">
           </label>
