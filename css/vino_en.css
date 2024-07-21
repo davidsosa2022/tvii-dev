@@ -3351,10 +3351,10 @@ button {
   padding: 0;
   top: -55px;
   left: -14px;
-  border-radius: 4px;
+  border-radius: 6px;
   border: 2px solid #ff7f09;
   width: 132px;
-  padding: 2px;
+  padding: 3px;
   padding-left: 4px;
   padding-right: 4px;
   min-height: 42px;

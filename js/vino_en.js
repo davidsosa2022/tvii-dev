@@ -1603,16 +1603,31 @@ tvii.router.connect("^/menu$", function () {
         $(".menu-tab").removeClass("none");
     })
 
+    var tipTimeout1;
+    var tipTimeout2;
+
     $(".menu-container .age-ratings.program label").on("click", function () {
+        clearTimeout(tipTimeout1)
         $(".menu-container .age-ratings.program label").removeClass("selected");
-        $(".menu-container .age-ratings.program label .tip").css("display", "none")
+        $(".menu-container .age-ratings.program label .tip").css("display", "none");
         $(this).find(".tip").css("display", "-webkit-box");
+        tipTimeout1 = setTimeout(function(){
+            $(".menu-container .age-ratings.program label .tip").css("display", "none");
+            clearTimeout(tipTimeout1)
+        }, 5000)
         $(this).addClass("selected")
         vino.soundPlayVolume("SE_A_CHECK", 25);
     })
 
     $(".menu-container .age-ratings.film label").on("click", function () {
+        clearTimeout(tipTimeout2)
         $(".menu-container .age-ratings.film label").removeClass("selected");
+        $(".menu-container .age-ratings.film label .tip").css("display", "none")
+        $(this).find(".tip").css("display", "-webkit-box");
+        tipTimeout2 = setTimeout(function(){
+            $(".menu-container .age-ratings.film label .tip").css("display", "none");
+            clearTimeout(tipTimeout2)
+        }, 5000)
         $(this).addClass("selected");
         vino.soundPlayVolume("SE_A_CHECK", 25);
     })
