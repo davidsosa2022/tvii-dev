@@ -1123,22 +1123,41 @@ var tvii = {
             $('.top-bar').addClass(sessionStorage.getItem('vino_top_bar_color'));
         },
         checkReturnedFlagAndRedirect: function () {
-            if (vino.ls_getItem('is_returned_redirect_url') && vino.isReturnedFromOtherApplication()) {
-                var url = vino.ls_getItem('is_returned_redirect_url');
-                vino.ls_removeItem('is_returned_redirect_url');
-                tvii.browse.pjax.go(url);
+            if (vino.ls_getItem('is_returned_redirect_data') && vino.isReturnedFromOtherApplication()) {
+                var data = JSON.parse(vino.ls_getItem('is_returned_redirect_data'));
+                vino.ls_removeItem('is_returned_redirect_data');
+                tvii.browse.pjax.go(data.url + "&state=" + encodeURIComponent(data.state));
             }
         },
-        jumpToBrowserAndSetReturnedFlag: function (url) {
+        jumpToBrowserAndSetReturnedFlag: function (url, state) {
             if (vino.pc_isControlledBrowser()) {
                 alert("Internet Browser is locked by Parental Controls.");
                 return;
             }
-            vino.ls_setItem('is_returned_redirect_url', window.location.href);
+
+            var redirectData = {
+                url: url,
+                state: state
+            }
+
+            vino.ls_setItem('is_returned_redirect_data', JSON.stringify(redirectData));
             vino.jumpToBrowser(url, true);
         },
-        changeHash: function(hash) {
-            window.location.hash = hash;
+        getUrlQuery: function(name) {
+            var queryString = window.location.search.substring(1);
+            var queries = queryString.split("&");
+        
+            for (var i = 0; i < queries.length; i++) {
+                var pair = queries[i].split("=");
+                var key = decodeURIComponent(pair[0]);
+                var value = decodeURIComponent(pair[1] || '');
+        
+                if (key === name) {
+                    return value;
+                }
+            }
+        
+            return null; // Return null if the parameter is not found
         },
         setTabMenuTips: function () {
             var tipsArray = [
@@ -1601,13 +1620,11 @@ tvii.router.connect("^/menu$", function () {
     })
 
     $(".menu-tab .buttons-section .app_settings").on("click", function () {
-        tvii.utils.changeHash("appsettings");
         $(".menu-tab").addClass("none");
-        $(".app-settings").removeClass("none");
+        $(".app-settings").removeClass("none")
     })
 
     $(".app-settings .menu-container .back_white_button").on("click", function () {
-        tvii.utils.changeHash("");
         $(".app-settings").addClass("none")
         $(".menu-tab").removeClass("none");
     })
@@ -1704,12 +1721,12 @@ tvii.router.connect("^/menu$", function () {
 
     $(".menu-container .tvus-hyperlink").on("click", function () {
         vino.soundPlayVolume("SE_POPUP", 25)
-        tvii.utils.jumpToBrowserAndSetReturnedFlag("http://www.tvguidelines.org")
+        tvii.utils.jumpToBrowserAndSetReturnedFlag("http://www.tvguidelines.org", "app-settings")
     });
 
     $(".menu-container .mpa-hyperlink").on("click", function () {
         vino.soundPlayVolume("SE_POPUP", 25)
-        tvii.utils.jumpToBrowserAndSetReturnedFlag("http://www.filmratings.com/")
+        tvii.utils.jumpToBrowserAndSetReturnedFlag("http://www.filmratings.com/", "app-settings")
     });
 
 });
