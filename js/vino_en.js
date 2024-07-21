@@ -1099,9 +1099,9 @@ var tvii = {
             tvii.utils.initButton();
 
             tvii.utils.requestProfileUpdateWithCallback(function (data) {
+                tvii.router.checkRoutes(window.location.pathname);
                 //if TVii was returned from the Internet Browser (jumped from the app), redirect to the original page
                 tvii.utils.checkReturnedFlagAndRedirect();
-                tvii.router.checkRoutes(window.location.pathname);
             }, function () {
                 alert("Could not update profile, Nintendo TVii will now close.")
                 vino.exit();
@@ -1130,6 +1130,7 @@ var tvii = {
             }
         },
         jumpToBrowserAndSetReturnedFlag: function (url, state) {
+            vino.ls_removeItem('is_returned_redirect_data');
             if (vino.pc_isControlledBrowser()) {
                 alert("Internet Browser is locked by Parental Controls.");
                 return;
@@ -1141,7 +1142,6 @@ var tvii = {
             }
 
             if (vino.runTwoButtonDialog("Do you want to close Nintendo TVii and\nsee this link on the Internet Browser?", "Cancel", "OK") == 0) {
-                vino.ls_removeItem('is_returned_redirect_data');
                 vino.ls_setItem('is_returned_redirect_data', JSON.stringify(redirectData));
                 vino.jumpToBrowser(url, false);
             }
