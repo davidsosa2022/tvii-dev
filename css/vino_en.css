@@ -3381,8 +3381,8 @@ button {
   border: 3px solid #e30fff;
   box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.28);
   border-radius: 3px;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-top: 10px;
   margin-bottom: 25px;
   padding: 4px;
@@ -3390,60 +3390,56 @@ button {
 
 .menu-container .age-ratings label.age{
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e2e2e2), to(#ffffff));
-  background-size: 100px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-color: #fff;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.39);
   display: inline-block;
   position: relative;
-  width: 100px;
-  height: 100px;
-  margin: 12px;
+  width: 90px;
+  height: 90px;
+  margin: 8px;
 }
 
-.menu-container .age-ratings label.age.tv-y{
+.menu-container .age-ratings label.age.tv-y input{
   background-image: url(/img/ratings/TV-Y_icon.svg.png)
 }
 
-.menu-container .age-ratings label.age.tv-g{
+.menu-container .age-ratings label.age.tv-g input{
   background-image: url(/img/ratings/TV-G_icon.svg.png)
 }
 
-.menu-container .age-ratings label.age.tv-y7{
+.menu-container .age-ratings label.age.tv-y7 input{
   background-image: url(/img/ratings/TV-Y7_icon.svg.png)
 }
 
-.menu-container .age-ratings label.age.tv-pg{
+.menu-container .age-ratings label.age.tv-pg input{
   background-image: url(/img/ratings/TV-PG_icon.svg.png)
 }
 
-.menu-container .age-ratings label.age.tv-14{
+.menu-container .age-ratings label.age.tv-14 input{
   background-image: url(/img/ratings/TV-14_icon.svg.png)
 }
 
-.menu-container .age-ratings label.age.tv-ma{
+.menu-container .age-ratings label.age.tv-ma input{
   background-image: url(/img/ratings/TV-MA_icon.svg.png)
 }
 
-.menu-container .age-ratings label.age.g{
+.menu-container .age-ratings label.age.g input{
   background-image: url(/img/ratings/MPA_G_RATING.svg.png)
 }
 
-.menu-container .age-ratings label.age.pg{
+.menu-container .age-ratings label.age.pg input{
   background-image: url(/img/ratings/MPA_PG_RATING.svg.png)
 }
 
-.menu-container .age-ratings label.age.pg13{
+.menu-container .age-ratings label.age.pg13 input{
   background-image: url(/img/ratings/MPA_PG-13_RATING.svg.png)
 }
 
-.menu-container .age-ratings label.age.r{
+.menu-container .age-ratings label.age.r input{
   background-image: url(/img/ratings/MPA_R_RATING.svg.png)
 }
 
 .menu-container .age-ratings label.age.selected{
-  box-shadow: 0px 0px 0px 4px #ff00bc, 0px 1px 4px 4px rgba(0, 0, 0, 0.39);
+  
 }
 
 .menu-container .tvus-hyperlink,.menu-container .mpa-hyperlink{
@@ -3459,7 +3455,6 @@ button {
   padding: 0;
   border: 0;
   margin: 0;
-  opacity: 0;
   -webkit-appearance: none;
   appearance: none;
 }
