@@ -37,9 +37,10 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
       <div class="settings-option">
         <span class="settings-label">Parental Controls Settings</span>
         <span class="important">Parental Controls are enabled on the console</span>
-        <p>Configure Parental Controls for programs that can or can not be recommended/shown in the application.
-          <br><br>
+        <br>
           <div class="pc-setting none">
+          <p>Configure Parental Controls for programs that can or can not be recommended/shown in the application.
+          <br><br>
           Select the TV rating you want to set.<br>
           (Uses TV Parental Guidelines system) <a href="javascript:void(0)" navi_target navi_no_reset class="tvus-hyperlink">More info</a>
         </p>
