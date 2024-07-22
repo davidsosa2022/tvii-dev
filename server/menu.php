@@ -96,7 +96,6 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 
      <div class="pin-ask">
       <p>Please input your PIN to get access to the Parental Controls Settings</p>
-      <br>
       <span class="pin-input">Please input your PIN...</span>
 
      </div>

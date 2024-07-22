@@ -3451,7 +3451,11 @@ button {
 }
 
 .menu-container .pin-input {
-
+  background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAaBAMAAACeFstsAAAAKlBMVEX////9/f3j4+PDw8Pq6urIyMj4+Pj7+/vPz8/d3d309PT+/v7v7+/W1tbJUIE4AAAARElEQVQIW2M0ZgCBvyxKYPo3C4T/g/EumP7MsgdMf2eEyP+DqvvDeAZMf2G5B6a/QdX9YhEE0z8ZIfR/xt1g+isDnQAAEmIScIJZK8QAAAAASUVORK5CYII=) repeat-x;
+  border: 2px #828282 solid;
+  border-radius: 10px;
+  color: #828282;
+  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.4);
 }
 
 .menu-container .age-ratings label.age.tv-y input {
