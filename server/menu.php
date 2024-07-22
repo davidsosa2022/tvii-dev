@@ -39,6 +39,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         <span class="important">Parental Controls are enabled on the console</span>
         <p>Configure Parental Controls for programs that can or can not be recommended/shown in the application.
           <br><br>
+          <div class="pc-setting none">
           Select the TV rating you want to set.<br>
           (Uses TV Parental Guidelines system) <a href="javascript:void(0)" navi_target navi_no_reset class="tvus-hyperlink">More info</a>
         </p>
@@ -90,6 +91,14 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
             <input type="radio" name="pc_age_film" value="R">
           </label>
         </div>
+     </div>
+
+     <div class="pin-ask">
+      <p>Please input your PIN to get access to the Parental Controls Settings</p>
+      <br><br>
+      <div class="pin-input">Please input your PIN...</div>
+
+     </div>
 
       </div>
     </li>

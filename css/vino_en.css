@@ -3450,6 +3450,10 @@ button {
   text-align: center;
 }
 
+.menu-container .pin-input {
+
+}
+
 .menu-container .age-ratings label.age.tv-y input {
   background-image: url(/img/ratings/TV-Y_icon.svg.png)
 }
