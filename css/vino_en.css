@@ -3518,4 +3518,5 @@ button {
   background-size: 100px;
   background-position: center center;
   background-repeat: no-repeat;
+  image-rendering: -webkit-optimize-contrast !important;
 }
