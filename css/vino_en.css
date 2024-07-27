@@ -3455,6 +3455,9 @@ button {
   border: 2px #828282 solid;
   border-radius: 10px;
   color: #828282;
+  display: block;
+  margin: 10px 50px;
+  margin-bottom: 30px;
   box-shadow: 0 2px 0 rgba(255, 255, 255, 0.4);
 }
 

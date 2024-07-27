@@ -1754,6 +1754,18 @@ tvii.router.connect("^/menu$", function () {
         vino.soundPlayVolume("SE_POPUP", 25)
         tvii.utils.jumpToBrowserAndSetReturnedFlag("http://www.filmratings.com/", "app-settings")
     });
+    
+    function checkPin() {
+        if (vino.pc_checkPIN()) {
+            $(".pin-ask").addClass("none");
+            $(".pc-setting").removeClass("none");
+            $(".menu-container .pin-input").off("click");
+
+            $(".menu-container .pin-input").off("click", checkPin);
+        }   
+    }
+
+    $(".menu-container .pin-input").on("click", checkPin);
 
     //checks redirect URL
     if (tvii.utils.getUrlQuery("state") == "app-settings") {
