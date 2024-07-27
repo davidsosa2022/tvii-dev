@@ -656,7 +656,7 @@ button {
   min-height: 420px;
   box-shadow: 0px -2px #cfcfcf, 0px 2px #b8b8b8, 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
   border-radius: 20px;
-  background: #fbfbfb;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.3, #fdfdfd), to(#eeeeee));
 }
 
 .menu-tab .buttons-section {
@@ -3500,6 +3500,7 @@ button {
 .menu-container .tvus-hyperlink,
 .menu-container .mpa-hyperlink {
   text-decoration: underline;
+  text-shadow: none;
 }
 
 .menu-container .age-ratings label.age input {
