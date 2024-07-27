@@ -1764,9 +1764,6 @@ tvii.router.connect("^/menu$", function () {
         if (vino.pc_checkPIN()) {
             $(".pin-ask").addClass("none");
             $(".pc-setting").removeClass("none");
-            $(".menu-container .pin-input").off("click");
-
-            $(".menu-container .pin-input").off("click", checkPin);
         }   
     }
 
