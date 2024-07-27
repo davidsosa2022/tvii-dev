@@ -325,6 +325,10 @@ if (typeof vino === 'undefined') {
         },
         suggest_getString: function () {
         },
+        pc_checkPIN: function () {
+            console.log('PIN is true, perentl conrol allowed');
+            return true;
+        },
         pc_isControlled: function () {
             console.log('Parental Controls are disabled');
             return false;
