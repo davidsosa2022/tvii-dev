@@ -3365,7 +3365,7 @@ button {
 
 .menu-container .age-ratings label.age span.tip:before {
   position: absolute;
-  bottom: -21.4px;
+  bottom: -21px;
   left: 54px;
   content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAESSURBVEhLvZY9TgJBAEZHbAwVPa0FodbQCYkX4A6eQ2n9uQMJJyDWZD2BIZighYUt0cJKs4UJ+L7ZEIXM7A877Ese2ZnmSzYvGw6MMRfYxyqJDvl5wmNs6qYCXvBawyt8xBNs4D55x0uMNSx+cIZneKSLPfCNV6hxsx4WX/iKPazpIiBLvMNne4L/w+IDP7FjT+EYYpQ8JmwPizesY8ueyjPBUfL4h2tYhCp9jreoV72BbzhE6QscYGxPW/iGRZnSVbBGbcEu0obFLqXrtd6gPhResoZF0dJV8EPy6CfPsMhburNgF3mHRVbp3oJdFBlOKz21YBdFhoVKn2IX16VnFhySNo7xHk91USXnuOMfCGN+AZpFPEvFBURJAAAAAElFTkSuQmCC);
 }
