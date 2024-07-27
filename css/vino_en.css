@@ -3356,8 +3356,8 @@ button {
   text-align: center;
   color: #fff;
   box-shadow: 0px 0px 4px 1px #fff;
-  background: rgba(0, 0, 0, 0.8);
-  text-shadow: 0px 0px 2px #000;
+  background: #000;
+  text-shadow: none;
   z-index: 4;
   pointer-events: none;
   display: none;
