@@ -1027,6 +1027,7 @@ var tvii = {
                     req.onreadystatechange = function() {
                         if (req.readyState == 4) {
                             if (req.status = 200) {
+                                alert(req.responseXML)
                                 var sugXML = req.responseXML;
                                 var matches = sugXML.getElementsByTagName("name");
                                 if (!matches) {
