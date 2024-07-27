@@ -150,6 +150,11 @@ button {
   z-index: 10;
 }
 
+.top-bar.menu-section {
+  position: absolute !important;
+  left: 0 !important;
+}
+
 .top-bar:after {
   content: "";
   position: absolute;

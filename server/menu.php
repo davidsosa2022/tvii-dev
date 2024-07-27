@@ -30,7 +30,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 <div class="app-settings none">
 
 <div class="menu-container">
-  <header class="top-bar no-after full" style="position: fixed;">App Settings</header>
+  <header class="top-bar no-after full menu-section">App Settings</header>
 
   <ul>
     <li>
