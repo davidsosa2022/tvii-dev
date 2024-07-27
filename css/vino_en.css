@@ -3440,6 +3440,8 @@ button {
   -webkit-box-sizing: border-box;
   width: 100%;
   text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .menu-container .pin-input {
