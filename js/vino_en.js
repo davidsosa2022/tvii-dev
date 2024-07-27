@@ -2552,6 +2552,7 @@ function prepareMiiverseModal() {
         }
 
         $(".miiverse-posts .textarea-text-input").val("");
+        $(".miiverse-posts .textarea-text-preview").addClass("placeholder");
         $(".miiverse-posts .textarea-text-preview").text($(".textarea-text-preview").attr("data-placeholder"));
         vino.memo_reset();
         var bgImage = "url(" + vino.memo_getImagePng() + ")";
