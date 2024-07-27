@@ -1020,6 +1020,7 @@ var tvii = {
 
                 if (vino.suggest_isOpening() && input !== cachedInput && !suggestReqInProg) {
                     suggestReqInProg = true;
+                    alert(input)
 
                     tvii.browse.ajax.get(
                         tvii.clientUrl + "/v1/recommend?query=" + encodeURIComponent(input),
