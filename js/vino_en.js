@@ -1018,35 +1018,28 @@ var tvii = {
             function getSuggest() {
                 var input = vino.suggest_getString();
 
-                if (vino.suggest_isOpening() && input !== cachedInput && !suggestReqInProg) {
-                    suggestReqInProg = true;
+                if (vino.suggest_isOpening() && input !== cachedInput && !requestInProgress) {
+                    requestInProgress = true;
 
-                    var req = new XMLHttpRequest();
-                    req.open("GET", tvii.clientUrl + "/v1/recommend?query=" + encodeURIComponent(input))
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("GET", vinoClientUrl + "/v1/recommend?query=" + encodeURIComponent(input))
 
-                    req.onreadystatechange = function() {
-                        if (req.readyState == 4) {
-                            if (req.status = 200) {
-                                alert(req.responseXML)
-                                var sugXML = req.responseXML;
-                                var matches = sugXML.getElementsByTagName("name");
-                                if (!matches) {
-                                    vino.suggest_reset();
-                                    cachedInput = input;
-                                    suggestReqInProg = false;
-                                    return;
-                                }
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4) {
+                            if (xhr.status === 200 && xhr.responseXML) {
+                                var xmlDoc = xhr.responseXML;
+                                var matches = xmlDoc.getElementsByTagName("name");
                                 var suggestions = [];
-    
+
                                 for (var i = 0; i < Math.min(matches.length, 10); i++) {
                                     var matchText = matches[i].textContent;
                                     suggestions.push(matchText);
                                 }
-    
+
                                 while (suggestions.length < 10) {
                                     suggestions.push("");
                                 }
-    
+
                                 vino.suggest_set(
                                     suggestions[0],
                                     suggestions[1],
@@ -1059,16 +1052,17 @@ var tvii = {
                                     suggestions[8],
                                     suggestions[9]
                                 );
-                                cachedInput = input;
-                                suggestReqInProg = false;
+                                cachedInput = input; // Update the cached input
+                                requestInProgress = false; // Reset request in progress flag
                             } else {
                                 vino.suggest_reset();
                                 cachedInput = input; // Update the cached input
-                                suggestReqInProg = false; // Reset request in progress flag
+                                requestInProgress = false; // Reset request in progress flag
                             }
                         }
-                    }
-                    req.send();
+                    };
+
+                    xhr.send();
                 }
             }
         },
@@ -1763,12 +1757,12 @@ tvii.router.connect("^/menu$", function () {
         vino.soundPlayVolume("SE_POPUP", 25)
         tvii.utils.jumpToBrowserAndSetReturnedFlag("http://www.filmratings.com/", "app-settings")
     });
-    
+
     function checkPin() {
         if (vino.pc_checkPIN()) {
             $(".pin-ask").addClass("none");
             $(".pc-setting").removeClass("none");
-        }   
+        }
     }
 
     $(".menu-container .pin-input").on("click", checkPin);
