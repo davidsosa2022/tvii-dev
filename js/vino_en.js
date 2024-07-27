@@ -1020,52 +1020,54 @@ var tvii = {
 
                 if (vino.suggest_isOpening() && input !== cachedInput && !suggestReqInProg) {
                     suggestReqInProg = true;
-                    alert(input)
 
-                    tvii.browse.ajax.get(
-                        tvii.clientUrl + "/v1/recommend?query=" + encodeURIComponent(input),
-                        {}, {},
-                        function (data) {
-                            var sugXML = data;
-                            var matches = sugXML.getElementsByTagName("name");
-                            if (!matches) {
-                                vino.suggest_reset();
+                    var req = new XMLHttpRequest();
+                    req.open("GET", tvii.clientUrl + "/v1/recommend?query=" + encodeURIComponent(input))
+
+                    req.onreadystatechange = function() {
+                        if (req.readyState == 4) {
+                            if (req.status = 200) {
+                                var sugXML = req.responseXML;
+                                var matches = sugXML.getElementsByTagName("name");
+                                if (!matches) {
+                                    vino.suggest_reset();
+                                    cachedInput = input;
+                                    suggestReqInProg = false;
+                                    return;
+                                }
+                                var suggestions = [];
+    
+                                for (var i = 0; i < Math.min(matches.length, 10); i++) {
+                                    var matchText = matches[i].textContent;
+                                    suggestions.push(matchText);
+                                }
+    
+                                while (suggestions.length < 10) {
+                                    suggestions.push("");
+                                }
+    
+                                vino.suggest_set(
+                                    suggestions[0],
+                                    suggestions[1],
+                                    suggestions[2],
+                                    suggestions[3],
+                                    suggestions[4],
+                                    suggestions[5],
+                                    suggestions[6],
+                                    suggestions[7],
+                                    suggestions[8],
+                                    suggestions[9]
+                                );
                                 cachedInput = input;
                                 suggestReqInProg = false;
-                                return;
+                            } else {
+                                vino.suggest_reset();
+                                cachedInput = input; // Update the cached input
+                                suggestReqInProg = false; // Reset request in progress flag
                             }
-                            var suggestions = [];
-
-                            for (var i = 0; i < Math.min(matches.length, 10); i++) {
-                                var matchText = matches[i].textContent;
-                                suggestions.push(matchText);
-                            }
-
-                            while (suggestions.length < 10) {
-                                suggestions.push("");
-                            }
-
-                            vino.suggest_set(
-                                suggestions[0],
-                                suggestions[1],
-                                suggestions[2],
-                                suggestions[3],
-                                suggestions[4],
-                                suggestions[5],
-                                suggestions[6],
-                                suggestions[7],
-                                suggestions[8],
-                                suggestions[9]
-                            );
-                            cachedInput = input;
-                            suggestReqInProg = false;
-                        },
-                        function () {
-                            vino.suggest_reset();
-                            cachedInput = input; // Update the cached input
-                            suggestReqInProg = false; // Reset request in progress flag
                         }
-                    )
+                    }
+                    req.send();
                 }
             }
         },
