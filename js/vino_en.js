@@ -1022,7 +1022,7 @@ var tvii = {
                     requestInProgress = true;
 
                     var xhr = new XMLHttpRequest();
-                    xhr.open("GET", vinoClientUrl + "/v1/recommend?query=" + encodeURIComponent(input))
+                    xhr.open("GET", tvii.clientUrl + "/v1/recommend?query=" + encodeURIComponent(input))
 
                     xhr.onreadystatechange = function () {
                         if (xhr.readyState === 4) {
