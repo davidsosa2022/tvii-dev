@@ -290,6 +290,8 @@ button {
   left: 0;
   position: fixed;
   bottom: 0;
+  border-right: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
   box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.7);
   border-top-right-radius: 20px;
 }
@@ -2295,12 +2297,11 @@ button {
   right: 0px;
   z-index: 4;
   line-height: 1.2;
-  text-shadow: 0px 1px 0px #ffffff;
-  border-left: 1px solid #aeaeae;
-  border-top: 1px solid #aeaeae;
+  text-shadow: 0px 2px 0px #ffffff;
+  border-left: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
   border-top-left-radius: 20px;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAjCAYAAADxG9hnAAAAAXNSR0IArs4c6QAAA25JREFUWEfNl8tvG1UUxr8zrzhUie00sRuLxGNSAa0gTRGq1MICFkjdIPUfaGtLbEoXJRt2UMKSTSqhkgUSDgLUbSU2FY+ENM2Dqo/QVn1IhXhSkahJ48ykAjuex2muK1tRCJpG9cS5q5Hu8T2/8517rfMR1qx+vV8PeaHTmqQekSFHCLR2+7m/GQwXrlny7PNFqdjXm+vNVQ6tZjrbcTbdokSzrUormqQmaKQ+d+KNDiixjcfeYzxyHiHvLGVOPjg5KOLKIAMdA+mEmsgm1HaE5QgaqAEySYGAuOxhhVdguSZm7TnM2rOZEw9ODNKA3q+3U2pa15IIy2EopAQCsP5Qhx1YroVcycAcT6foXOcP2a6G3ek2pQ0KyVsCUUnisIsFZwF/rtwfpJ+6LlidSrL5BalxSyEqyf71CphxjGUa6xrldjUBGcHcCb/qXHiYs2dBv780yXEl7hcf6P68Mw+aTE1wXIkFmsjv8LybB03o43UHMV0TNJEc45hcX0XKIOMdl+oP4i2Bxl4c3R4glxIXOSbX99WYQpHRXSPbQBELdDEuQNr8Xlig+6ZngUZiwxyT6vxqPBP0W+vQNgCxQMMtv9YfhE3QUPSXuoMs8RJoKPwzt0n1vax5zoMm35rgxlsh1HpQftZnJgbq4mtF0Mz3Bs9/+BAqghmW/YBs2Ih9FQcx8/Vrh670SDelGpsHPwSAAXive3hj/M0pAZK2rVL2zuHbcG+4W9Yi0RK5W8aeC3uhhrVM2U4IVWyr1JP7eBrL3y1DCnhs9OCh+Wgz9C9SAmKKiPZXQCIAhgH0FIwC8j8uonDjH5QMe1PtcgwHJaP0H1UpTAjtC0FNqmjs3oGW93eiMVke1qcAvEtEZtXpMbOA6QeQ9u/uxhGiiKmXr0KDVg1w4KDzax3txxLrfyQcXq+AqDq9tRHMrK+SHgGwD4D43szSr7x3WfdG3Gp7i5ECDtw7ZGlR7fpqkcLr/rGq/HkiqvreDUE2k3V9rCgi921u+u8PZsqqCKsQ/aQFr3z6aoaIyh73/1Zt7f7Tiz88tnv0HTWnoIACDi68LdTQKy3YSpD03b472cXPF9B0vBnd3/T0EdFnfkrXXBGRsLBYNIwv/+pMneqCFtGifmrU/I5UqmZmocDp1cs+SEQZPzWCBBF/BR8BOPMsagiQJ2TTWWClN8mVAAAAAElFTkSuQmCC) no-repeat 16px 14px, -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.5, #ffffff), color-stop(0.8, #f6f6f6), color-stop(0.96, #f5f5f5), to(#e1e1e1));
-  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
   display: -webkit-box;
   -webkit-box-pack: center;

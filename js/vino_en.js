@@ -1634,6 +1634,7 @@ tvii.router.connect("^/menu$", function () {
     tvii.utils.prepareSound();
     tvii.utils.prepareTouchEffect();
     tvii.utils.prepareMouseEffect();
+    tvii.utils.setTopBarColor();
     tvii.utils.prepareHover();
     tvii.utils.setNaviTargetResetInterval();
 
