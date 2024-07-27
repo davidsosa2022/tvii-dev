@@ -2308,7 +2308,8 @@ function prepareMiiverseModal() {
         $(".miiverse-posts .post-list").html("");
         $(".miiverse-posts .tab-header .tab").removeClass("selected");
         $(".miiverse-posts .tab-header .tab:first-child").addClass("selected");
-        $(".miiverse-posts .post-input-modal").removeClass("none")
+        $(".miiverse-posts .post-input-modal").removeClass("none");
+        $(".miiverse-posts .textarea-text-preview").addClass("placeholder");
     }
 
     function setUpPostModal() {
