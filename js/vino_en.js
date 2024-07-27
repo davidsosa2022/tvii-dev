@@ -1010,7 +1010,7 @@ var tvii = {
         },
         setSuggestCheckInterval: function () {
             var cachedInput = "";
-            var suggestReqInProg = false;
+            var requestInProgress = false;
             // Set the interval to run getSuggest function
             tvii.suggestInterval = setInterval(getSuggest, 0);
             getSuggest();
