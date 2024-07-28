@@ -1771,12 +1771,12 @@ tvii.router.connect("^/menu$", function () {
             setTimeout(function () {
                 alert("Incorrect PIN");
                 tvii.utils.lockUserOperation(false);
-            }, 50)
+            }, 150)
         } else if (check == 0) {
             setTimeout(function () {
                 tvii.utils.lockUserOperation(true);
                 if (vino.runTwoButtonDialog("Incorrect PIN, do you want to close\nNintendo TVii and open Parental Controls\nto recover your PIN?", "Cancel", "Yes") == 0) {
-                    var pcTids = "0005001010048000,0005001010048100,0005001010048200".split(",");
+                    var pcTids = "0x0005001010048000,0x0005001010048100,0x0005001010048200".split(",");
                     var g;
 
                     for (var h = 0; h < pcTids.length; h++) {
@@ -1794,7 +1794,7 @@ tvii.router.connect("^/menu$", function () {
                     $(".menu-container .back_white_button").trigger("click");
                 }
                 tvii.utils.lockUserOperation(false);
-            }, 50)
+            }, 150)
         }
     }
 
