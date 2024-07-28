@@ -1771,7 +1771,7 @@ tvii.router.connect("^/menu$", function () {
             setTimeout(function () {
                 alert("Incorrect PIN");
                 tvii.utils.lockUserOperation(false);
-            }, 300)
+            }, 50)
         } else if (check == 0) {
             setTimeout(function () {
                 tvii.utils.lockUserOperation(true);
@@ -1781,6 +1781,7 @@ tvii.router.connect("^/menu$", function () {
 
                     for (var h = 0; h < pcTids.length; h++) {
                         if (vino.checkTitleExist(pcTids[h])) {
+                            alert("wow.")
                             g = pcTids[h];
                             break;
                         }
@@ -1793,7 +1794,7 @@ tvii.router.connect("^/menu$", function () {
                     $(".menu-container .back_white_button").trigger("click");
                 }
                 tvii.utils.lockUserOperation(false);
-            }, 300)
+            }, 50)
         }
     }
 
