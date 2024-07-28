@@ -2341,6 +2341,9 @@ function prepareMiiverseModal() {
     }
 
     function openPostModal() {
+        if (vino.pc_getMiiverseControlLevel() >= 1) {
+            return;
+        }
         $(".miiverse-posts .posts-top-bar").addClass("none")
         $(".miiverse-posts .tab-header").addClass("none")
         $(".miiverse-posts .post-button").addClass("none")
