@@ -1778,10 +1778,10 @@ tvii.router.connect("^/menu$", function () {
                 if (vino.runTwoButtonDialog("Incorrect PIN, do you want to close\nNintendo TVii and open Parental Controls\nto recover your PIN?", "Cancel", "Yes") == 0) {
                     var pcTids = "0x0005001010048000,0x0005001010048100,0x0005001010048200".split(",");
                     var g;
+                    alert(vino.checkTitleExist("0005001010048100"));
 
                     for (var h = 0; h < pcTids.length; h++) {
                         if (vino.checkTitleExist(pcTids[h])) {
-                            alert("wow.")
                             g = pcTids[h];
                             break;
                         }
