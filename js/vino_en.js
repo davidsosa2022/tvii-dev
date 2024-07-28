@@ -1798,12 +1798,7 @@ tvii.router.connect("^/menu$", function () {
                         gString = "0" + gString;
                     }
                     
-                    // Remove the first two characters
-                    var tid = gString.slice(2);
-                    
-                    alert(tid);
-                    
-                    vino.jumpToTitle(tid, false);
+                    vino.jumpToTitle(gString, false);
 
                 } else {
                     pinCounter = 0;
