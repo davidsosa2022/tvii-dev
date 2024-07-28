@@ -834,26 +834,6 @@ var tvii = {
 
             var lockW = null;
 
-            var stickCheck = setInterval(function () {
-                wiiu.gamepad.update();
-                if (wiiu.gamepad.isDataValid === 0) return;
-
-                switch (wiiu.gamepad.hold) {
-                    case 1073741824:
-                        document.body.scrollLeft += lerp(-15, -15, (wiiu.gamepad.lStickX));
-                        break;
-                    case 536870912:
-                        document.body.scrollLeft += lerp(-15, 15, (wiiu.gamepad.lStickX));
-                        break;
-                    case 268435456:
-                        document.body.scrollTop += lerp(-15, -15, (wiiu.gamepad.lStickY));
-                        break;
-                    case 134217728:
-                        document.body.scrollTop += lerp(15, 15, (wiiu.gamepad.lStickY));
-                        break;
-                }
-            }, 5);
-
             var inputCheck = setInterval(function () {
                 if (tvii.isUserOperationLocked) return;
                 wiiu.gamepad.update();
@@ -862,10 +842,30 @@ var tvii = {
                     return;
                 }
 
-                if (wiiu.gamepad.hold != lockW) {
+                if (wiiu.gamepad.hold != lockW &&
+                    wiiu.gamepad.hold != 1073741824 &&
+                    wiiu.gamepad.hold != 536870912 &&
+                    wiiu.gamepad.hold != 268435456 &&
+                    wiiu.gamepad.hold != 134217728
+                ) {
                     lockW = wiiu.gamepad.hold;
                     $('.accesskey-' + tvii.utils.buttonType[lockW] + ':visible').trigger('click');
                     $('.accesskey-' + tvii.utils.buttonType[lockW] + '.hidden').trigger('click');
+                } else {
+                    switch (wiiu.gamepad.hold) {
+                        case 1073741824:
+                            document.body.scrollLeft += lerp(-15, -15, (wiiu.gamepad.lStickX));
+                            break;
+                        case 536870912:
+                            document.body.scrollLeft += lerp(-15, 15, (wiiu.gamepad.lStickX));
+                            break;
+                        case 268435456:
+                            document.body.scrollTop += lerp(-15, -15, (wiiu.gamepad.lStickY));
+                            break;
+                        case 134217728:
+                            document.body.scrollTop += lerp(15, 15, (wiiu.gamepad.lStickY));
+                            break;
+                    }
                 };
 
             }, 0);
