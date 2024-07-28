@@ -838,7 +838,6 @@ var tvii = {
                 if (tvii.isUserOperationLocked) return;
                 wiiu.gamepad.update();
                 if (wiiu.gamepad.isDataValid === 0) {
-                    $('.accesskey-' + tvii.utils.buttonType[lockW] + ':visible').removeClass('hover');
                     lockW = null;
                     return;
                 }
@@ -852,7 +851,6 @@ var tvii = {
                     lockW = wiiu.gamepad.hold;
                     $('.accesskey-' + tvii.utils.buttonType[lockW] + ':visible').trigger('click');
                     $('.accesskey-' + tvii.utils.buttonType[lockW] + '.hidden').trigger('click');
-                    $('.accesskey-' + tvii.utils.buttonType[lockW] + ':visible').addClass('hover');
                 } else {
                     switch (wiiu.gamepad.hold) {
                         case 1073741824:
@@ -1760,10 +1758,33 @@ tvii.router.connect("^/menu$", function () {
         tvii.utils.jumpToBrowserAndSetReturnedFlag("http://www.filmratings.com/", "app-settings")
     });
 
+    var pinCounter = 0;
+
     function checkPin() {
         if (vino.pc_checkPIN()) {
             $(".pin-ask").addClass("none");
             $(".pc-setting").removeClass("none");
+        } else if (pinCounter < 3) {
+            alert("Incorrect PIN");
+            pinCounter++;
+        } else {
+            if (vino.runTwoButtonDialog("Incorrect PIN, do you want to close Nintendo TVii and open Parental Controls to recover your PIN?", "Cancel", "Yes") == 0) {
+                var pcTids = "0005001010048000,0005001010048100,0005001010048200".split(",");
+                var g;
+
+                for (var h = 0; h < pcTids.length; h++) {
+                    if (vino.checkTitleExist(pcTids[h])) {
+                        g = pcTids[h];
+                        break;
+                    }
+                }
+
+                vino.jumpToTitle(g, false);
+
+            } else {
+                pinCounter = 0;
+                $(".menu-container .back_white_button").trigger("click");
+            }
         }
     }
 
