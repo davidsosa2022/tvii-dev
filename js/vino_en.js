@@ -1790,10 +1790,8 @@ tvii.router.connect("^/menu$", function () {
                         }
                     }
                     
-                    // Convert g to a hexadecimal string
                     var gString = g.toString(16);
                     
-                    // Ensure the string has leading zeros
                     while (gString.length < 16) {
                         gString = "0" + gString;
                     }
@@ -1801,7 +1799,7 @@ tvii.router.connect("^/menu$", function () {
                     vino.jumpToTitle(gString, false);
 
                 } else {
-                    pinCounter = 0;
+                    pinCounter = 1;
                     $(".menu-container .back_white_button").trigger("click");
                 }
                 tvii.utils.lockUserOperation(false);
