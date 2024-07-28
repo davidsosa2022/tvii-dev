@@ -1790,7 +1790,7 @@ tvii.router.connect("^/menu$", function () {
                         }
                     }
 
-                    vino.jumpToTitle(g, false);
+                    vino.jumpToTitle(g.toString(), false);
 
                 } else {
                     pinCounter = 0;
