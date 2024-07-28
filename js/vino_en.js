@@ -871,13 +871,6 @@ var tvii = {
             }, 0);
 
         },
-        openMenu: function(open) {
-            if (open) {
-                $(".menu-modal-container").removeClass("none")
-            } else {
-                $(".menu-modal-container").addClass("none")
-            }
-        },
         prepareSound: function () {
             var els = $("[data-sound]");
             if (!els.length) return;
@@ -1292,7 +1285,6 @@ tvii.router.connect("^/$", function () {
     tvii.utils.setTopBarColor();
     tvii.utils.prepareHover();
     tvii.utils.prepareMouseEffect();
-    tvii.utils.setSuggestCheckInterval();
     tvii.utils.setNaviTargetResetInterval();
 
     $(".exitbtn").on("click", function () {
@@ -1301,13 +1293,7 @@ tvii.router.connect("^/$", function () {
     })
 
     $(".menubtn").on("click", function () {
-        vino.lyt_reset();
-        tvii.utils.openMenu(true);
-    })
-
-    $(".menu-tab .buttons-section .back_button").on("click", function () {
-        tvii.utils.openMenu(false);
-        vino.lyt_drawFixedFrame(455, 211, 383, 86);
+        tvii.browse.openMenu();
     })
 
     $(".label.guide").on("click", function () {

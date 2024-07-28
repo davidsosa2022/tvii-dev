@@ -3332,13 +3332,7 @@ button {
 }
 
 .menu-modal-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  width: 854px;
-  height: 480px;
-  background: rgba(0, 0, 0, 0.45);
+  
 }
 
 .menu-container {
