@@ -1758,17 +1758,17 @@ tvii.router.connect("^/menu$", function () {
         tvii.utils.jumpToBrowserAndSetReturnedFlag("http://www.filmratings.com/", "app-settings")
     });
 
-    var pinCounter = 0;
+    var pinCounter = 1;
 
     function checkPin() {
-        alert(vino.pc_runPINInput())
-        if (vino.pc_checkPIN()) {
+        var check = vino.pc_runPINInput();
+        if (check == 1) {
             $(".pin-ask").addClass("none");
             $(".pc-setting").removeClass("none");
-        } else if (pinCounter < 3) {
+        } else if (pinCounter < 3 && check == 0) {
             alert("Incorrect PIN");
             pinCounter++;
-        } else {
+        } else if (pinCounter > 3 && check == 0) {
             if (vino.runTwoButtonDialog("Incorrect PIN, do you want to close\nNintendo TVii and open Parental Controls to recover your PIN?", "Cancel", "Yes") == 0) {
                 var pcTids = "0005001010048000,0005001010048100,0005001010048200".split(",");
                 var g;
