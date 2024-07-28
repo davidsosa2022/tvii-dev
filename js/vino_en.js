@@ -871,6 +871,9 @@ var tvii = {
             }, 0);
 
         },
+        toggleMenu: function() {
+            $(".menu-modal-container").toggleClass("none")
+        },
         prepareSound: function () {
             var els = $("[data-sound]");
             if (!els.length) return;
@@ -1293,7 +1296,11 @@ tvii.router.connect("^/$", function () {
     })
 
     $(".menubtn").on("click", function () {
-        tvii.browse.openMenu();
+        tvii.utils.toggleMenu();
+    })
+
+    $(".menu-tab .buttons-section .back_button").on("click", function () {
+        tvii.utils.toggleMenu();
     })
 
     $(".label.guide").on("click", function () {
