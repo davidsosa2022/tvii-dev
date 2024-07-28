@@ -1782,17 +1782,27 @@ tvii.router.connect("^/menu$", function () {
                         0x0005001010048200
                     ];
                     var g;
-
+                    
                     for (var h = 0; h < pcTids.length; h++) {
                         if (vino.checkTitleExist(pcTids[h])) {
                             g = pcTids[h];
                             break;
                         }
                     }
-
-                    var tid = g.toString().slice(2);
-                    alert(tid)
-
+                    
+                    // Convert g to a hexadecimal string
+                    var gString = g.toString(16);
+                    
+                    // Ensure the string has leading zeros
+                    while (gString.length < 16) {
+                        gString = "0" + gString;
+                    }
+                    
+                    // Remove the first two characters
+                    var tid = gString.slice(2);
+                    
+                    alert(tid);
+                    
                     vino.jumpToTitle(tid, false);
 
                 } else {
