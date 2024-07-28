@@ -2342,7 +2342,7 @@ function prepareMiiverseModal() {
 
     function openPostModal() {
         if (vino.pc_getMiiverseControlLevel() >= 1) {
-            return;
+            return alert("Posting to Miiverse is disabled by Parental Controls");
         }
         $(".miiverse-posts .posts-top-bar").addClass("none")
         $(".miiverse-posts .tab-header").addClass("none")
