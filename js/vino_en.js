@@ -838,6 +838,7 @@ var tvii = {
                 if (tvii.isUserOperationLocked) return;
                 wiiu.gamepad.update();
                 if (wiiu.gamepad.isDataValid === 0) {
+                    $('.accesskey-' + tvii.utils.buttonType[lockW] + ':visible').removeClass('hover');
                     lockW = null;
                     return;
                 }
@@ -851,6 +852,7 @@ var tvii = {
                     lockW = wiiu.gamepad.hold;
                     $('.accesskey-' + tvii.utils.buttonType[lockW] + ':visible').trigger('click');
                     $('.accesskey-' + tvii.utils.buttonType[lockW] + '.hidden').trigger('click');
+                    $('.accesskey-' + tvii.utils.buttonType[lockW] + ':visible').addClass('hover');
                 } else {
                     switch (wiiu.gamepad.hold) {
                         case 1073741824:
