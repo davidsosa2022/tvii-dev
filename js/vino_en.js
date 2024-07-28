@@ -1766,26 +1766,34 @@ tvii.router.connect("^/menu$", function () {
             $(".pin-ask").addClass("none");
             $(".pc-setting").removeClass("none");
         } else if (pinCounter < 3 && check == 0) {
-            alert("Incorrect PIN");
+            tvii.utils.lockUserOperation(true);
             pinCounter++;
+            setTimeout(function () {
+                alert("Incorrect PIN");
+                tvii.utils.lockUserOperation(false);
+            }, 1000)
         } else if (check == 0) {
-            if (vino.runTwoButtonDialog("Incorrect PIN, do you want to close\nNintendo TVii and open Parental Controls to recover your PIN?", "Cancel", "Yes") == 0) {
-                var pcTids = "0005001010048000,0005001010048100,0005001010048200".split(",");
-                var g;
+            setTimeout(function () {
+                tvii.utils.lockUserOperation(true);
+                if (vino.runTwoButtonDialog("Incorrect PIN, do you want to close\nNintendo TVii and open Parental Controls\nto recover your PIN?", "Cancel", "Yes") == 0) {
+                    var pcTids = "0005001010048000,0005001010048100,0005001010048200".split(",");
+                    var g;
 
-                for (var h = 0; h < pcTids.length; h++) {
-                    if (vino.checkTitleExist(pcTids[h])) {
-                        g = pcTids[h];
-                        break;
+                    for (var h = 0; h < pcTids.length; h++) {
+                        if (vino.checkTitleExist(pcTids[h])) {
+                            g = pcTids[h];
+                            break;
+                        }
                     }
+
+                    vino.jumpToTitle(g, false);
+
+                } else {
+                    pinCounter = 0;
+                    $(".menu-container .back_white_button").trigger("click");
                 }
-
-                vino.jumpToTitle(g, false);
-
-            } else {
-                pinCounter = 0;
-                $(".menu-container .back_white_button").trigger("click");
-            }
+                tvii.utils.lockUserOperation(false);
+            }, 1000)
         }
     }
 
