@@ -854,16 +854,16 @@ var tvii = {
                 } else {
                     switch (wiiu.gamepad.hold) {
                         case 1073741824:
-                            document.body.scrollLeft += lerp(-15, -15, (wiiu.gamepad.lStickX));
+                            document.body.scrollLeft += lerp(-5, -5, (wiiu.gamepad.lStickX));
                             break;
                         case 536870912:
-                            document.body.scrollLeft += lerp(-15, 15, (wiiu.gamepad.lStickX));
+                            document.body.scrollLeft += lerp(-5, 5, (wiiu.gamepad.lStickX));
                             break;
                         case 268435456:
-                            document.body.scrollTop += lerp(-15, -15, (wiiu.gamepad.lStickY));
+                            document.body.scrollTop += lerp(-5, -5, (wiiu.gamepad.lStickY));
                             break;
                         case 134217728:
-                            document.body.scrollTop += lerp(15, 15, (wiiu.gamepad.lStickY));
+                            document.body.scrollTop += lerp(5, 5, (wiiu.gamepad.lStickY));
                             break;
                     }
                 };
