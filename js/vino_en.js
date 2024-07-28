@@ -2253,9 +2253,12 @@ function prepareMiiverseModal() {
 
 
                 function recommendShow() {
+                    vino.soundPlayVolume("SE_CMN_TOUCH_ON", 25);
+                    if (vino.pc_getMiiverseControlLevel() >= 1) {
+                        return alert("Posting to Miiverse is disabled\nby Parental Controls");
+                    }
                     tvii.utils.lockUserOperation(true);
                     $('.miiverse-posts .loading_miiverse').addClass('show');
-                    vino.soundPlayVolume("SE_CMN_TOUCH_ON", 25);
                     var recBut = $(this);
                     if (recBut.hasClass("checked") || recBut.hasClass("adding")) { return; }
                     var showName = $("header.miiverse-with-attributes-top-bar").attr("data-miiverse-topic-tag");
