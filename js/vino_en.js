@@ -1768,7 +1768,7 @@ tvii.router.connect("^/menu$", function () {
         } else if (pinCounter < 3 && check == 0) {
             alert("Incorrect PIN");
             pinCounter++;
-        } else if (pinCounter > 3 && check == 0) {
+        } else if (check == 0) {
             if (vino.runTwoButtonDialog("Incorrect PIN, do you want to close\nNintendo TVii and open Parental Controls to recover your PIN?", "Cancel", "Yes") == 0) {
                 var pcTids = "0005001010048000,0005001010048100,0005001010048200".split(",");
                 var g;
