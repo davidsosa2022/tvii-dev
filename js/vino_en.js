@@ -1771,7 +1771,7 @@ tvii.router.connect("^/menu$", function () {
             setTimeout(function () {
                 alert("Incorrect PIN");
                 tvii.utils.lockUserOperation(false);
-            }, 1000)
+            }, 300)
         } else if (check == 0) {
             setTimeout(function () {
                 tvii.utils.lockUserOperation(true);
@@ -1793,7 +1793,7 @@ tvii.router.connect("^/menu$", function () {
                     $(".menu-container .back_white_button").trigger("click");
                 }
                 tvii.utils.lockUserOperation(false);
-            }, 1000)
+            }, 300)
         }
     }
 
