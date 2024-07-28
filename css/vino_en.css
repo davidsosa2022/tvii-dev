@@ -3339,7 +3339,6 @@ button {
   width: 854px;
   height: 480px;
   background: rgba(0, 0, 0, 0.45);
-  pointer-events: all;
 }
 
 .menu-container {
