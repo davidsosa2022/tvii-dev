@@ -1288,6 +1288,7 @@ tvii.router.connect("^/$", function () {
     tvii.utils.setTopBarColor();
     tvii.utils.prepareHover();
     tvii.utils.prepareMouseEffect();
+    tvii.utils.setSuggestCheckInterval();
     tvii.utils.setNaviTargetResetInterval();
 
     $(".exitbtn").on("click", function () {
@@ -1296,11 +1297,13 @@ tvii.router.connect("^/$", function () {
     })
 
     $(".menubtn").on("click", function () {
+        vino.lyt_reset();
         tvii.utils.toggleMenu();
     })
 
     $(".menu-tab .buttons-section .back_button").on("click", function () {
         tvii.utils.toggleMenu();
+        vino.lyt_drawFixedFrame(455, 211, 383, 86);
     })
 
     $(".label.guide").on("click", function () {
