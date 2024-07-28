@@ -1134,7 +1134,7 @@ var tvii = {
         jumpToBrowserAndSetReturnedFlag: function (url, state) {
             vino.ls_removeItem('is_returned_redirect_data');
             if (vino.pc_isControlledBrowser()) {
-                alert("Internet Browser is locked by Parental Controls.");
+                alert("Internet Browser is locked\nby Parental Controls.");
                 return;
             }
 
@@ -2255,7 +2255,7 @@ function prepareMiiverseModal() {
                 function recommendShow() {
                     vino.soundPlayVolume("SE_CMN_TOUCH_ON", 25);
                     if (vino.pc_getMiiverseControlLevel() >= 1) {
-                        return alert("Posting to Miiverse is disabled\nby Parental Controls");
+                        return alert("Posting to Miiverse is locked\nby Parental Controls");
                     }
                     tvii.utils.lockUserOperation(true);
                     $('.miiverse-posts .loading_miiverse').addClass('show');
@@ -2345,7 +2345,7 @@ function prepareMiiverseModal() {
 
     function openPostModal() {
         if (vino.pc_getMiiverseControlLevel() >= 1) {
-            return alert("Posting to Miiverse is disabled\nby Parental Controls");
+            return alert("Posting to Miiverse is locked\nby Parental Controls");
         }
         $(".miiverse-posts .posts-top-bar").addClass("none")
         $(".miiverse-posts .tab-header").addClass("none")
