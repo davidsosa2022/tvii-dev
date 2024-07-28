@@ -24,7 +24,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
     </div>
 
       <header class="top-bar <?php if (!isset($_SERVER['HTTP_X_PJAX'])) echo 'loading-el'; ?>" data-page-first-load="0">
-        <a href="javascript:void(0)" class="label popular" no_touch
+        <a href="javascript:void(0)" class="label popular selected" no_touch
         ><?php echo localize("vino.program.label.popular") ?></a>
         <a href="javascript:void(0)" class="label accesskey-r guide"
           data-sound="SE_A_TAB_TOUCH_OFF"><?php echo localize("vino.program.label.program-guide") ?></a>
