@@ -904,7 +904,7 @@ var tvii = {
 
             var sel = null;
 
-            elh.on("mousedown", function () {
+            elh.on("touchstart", function () {
                 sel = $(this);
                 if ($(this).attr("data-hover-sound") != null) {
                     vino.soundPlay($(this).attr("data-hover-sound"));
@@ -916,7 +916,7 @@ var tvii = {
                 $(this).addClass("hover");
             });
 
-            elh.on("mouseout", function (evt) {
+            elh.on("touchend", function (evt) {
                 if (sel && sel.length && !sel.is($(this))) {
                     return;
                 };
@@ -937,7 +937,7 @@ var tvii = {
                 sel = null;
             });
 
-            elh.on("mouseup", function () {
+            elh.on("touchend", function () {
                 sel = null;
                 $(this).data("soundPlayed", false)
                 $(this).removeClass("hover");
