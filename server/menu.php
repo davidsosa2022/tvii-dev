@@ -24,10 +24,10 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 <header class="top-bar no-after full menu-section">App Settings</header>
 
 <div class="app-setting-selection-container">
-  <a navi_mouse data-hover data-sound="SE_A_DECIDE_SMALL_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON"  navi_target href="javascript:void(0)" class="setting-option pc">Parental Controls Settings</a>
-  <a navi_mouse data-hover data-sound="SE_APPEAR_DETAIL" -hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON"  navi_target href="javascript:void(0)" class="setting-option mv">Miiverse Settings</a>
-  <a navi_mouse data-hover data-sound="SE_APPEAR_DETAIL_2" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON"  navi_target href="javascript:void(0)" class="setting-option apd">Auto Power Down Settings</a>
-  <a navi_mouse data-hover data-sound="SE_APPEAR_DETAIL_3" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON"  navi_target href="javascript:void(0)" class="setting-option other">Other Settings</a>
+  <a navi_mouse data-hover data-sound="SE_A_DECIDE_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON"  navi_target href="javascript:void(0)" class="setting-option pc">Parental Controls Settings</a>
+  <a navi_mouse data-hover data-sound="SE_A_DECIDE_TOUCH_OFF" -hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON"  navi_target href="javascript:void(0)" class="setting-option mv">Miiverse Settings</a>
+  <a navi_mouse data-hover data-sound="SE_A_DECIDE_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON"  navi_target href="javascript:void(0)" class="setting-option apd">Auto Power Down Settings</a>
+  <a navi_mouse data-hover data-sound="SE_A_DECIDE_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON"  navi_target href="javascript:void(0)" class="setting-option other">Other Settings</a>
 </div>
 
 <a navi_target navi_mouse data-hover href="javascript:void(0)" class="back_white_button accesskey-b" data-sound="SE_RETURN_TOUCH_OFF"></a>
