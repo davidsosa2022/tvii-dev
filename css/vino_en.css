@@ -3348,9 +3348,7 @@ button {
   margin-bottom: 96px;
   width: 750px;
   padding: 15px;
-  display: -webkit-box;
-  -webkit-box-align: center;
-  -webkit-box-pack: center;
+  display: block;
 }
 
 .app-setting-selection-container .setting-option{
