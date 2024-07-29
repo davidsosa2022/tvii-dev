@@ -293,7 +293,7 @@ button {
 
 .back_white_button.miiverse-back,
 .menu-container .back_white_button,
-.app-setting-selection-container .back_white_button{
+.app-setting-selection .back_white_button{
   left: 0;
   position: fixed;
   bottom: 0;
@@ -305,7 +305,7 @@ button {
 
 .back_white_button.miiverse-back.hover,
 .menu-container .back_white_button.hover,
-.app-setting-selection-container .back_white_button.hover {
+.app-setting-selection .back_white_button.hover {
   border-right: 2px solid #ffffff;
   border-top: 2px solid #ffffff;
 }
