@@ -293,7 +293,7 @@ button {
 
 .back_white_button.miiverse-back,
 .menu-container .back_white_button,
-.app-setting-selection .back_white_button{
+.app-setting-selection .back_white_button {
   left: 0;
   position: fixed;
   bottom: 0;
@@ -3349,11 +3349,10 @@ button {
   margin-left: auto;
   margin-right: auto;
   width: 654px;
-  
   display: block;
 }
 
-.app-setting-selection-container .setting-option{
+.app-setting-selection-container .setting-option {
   position: relative;
   float: left;
   display: -webkit-inline-box;
@@ -3361,7 +3360,9 @@ button {
   -webkit-box-pack: center;
   margin-right: 18px;
   margin-left: 18px;
-  font-size: 22px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 21px;
   text-align: center;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -3372,9 +3373,9 @@ button {
   text-shadow: 0px 2px 0px #fff;
   box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.35);
   border-radius: 9px;
-  width: 282px;
-  height: 180px;
-  padding-top: 88px;
+  width: 290px;
+  min-height: 174px;
+  padding-top: 90px;
   padding-bottom: 14px;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.5, #ffffff), color-stop(0.97, #f4f4f4), to(#a9a9a9));
 }
