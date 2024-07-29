@@ -317,7 +317,7 @@ if (!empty($actors_html)) {
 <header class="posts-top-bar miiverse-with-attributes-top-bar" data-miiverse-app-data="<?php echo $userData['mii_user_bio'] ?>"  data-miiverse-search-key="<?php echo $program_id ?>"  data-miiverse-topic-tag="<?php if (strlen($name) > 50) { $name = substr($name, 0, 47) . "..."; echo htmlspecialchars($name); } else { echo htmlspecialchars($name); } ?>"><?php echo localize("vino.program.olv.viewer.header", ["%s" => htmlspecialchars($name)]); ?></header>
 <span class="loading_miiverse"></span>
 <a href="javascript:void(0)" data-hover navi_target class="back_white_button miiverse-back accesskey-b" data-sound="SE_RETURN_TOUCH_OFF"></a>
-<a data-hover navi_target href="javascript:void(0)" data-sound="SE_WAVE_OK_SUB_TOUCH_OFF" class="post-button"><?php echo localize("vino.program.olv.viewer.post-button") ?></a>
+<a data-hover navi_target href="javascript:void(0)" data-sound="SE_POST_TOUCH_OFF" class="post-button"><?php echo localize("vino.program.olv.viewer.post-button") ?></a>
 <menu class="tab-header">
 <a href="javascript:void(0)" navi_target navi_no_reset data-sound="SE_WAVE_BALLOON_OPEN" data-miiverse-tab="posts" class="tab selected"><?php echo localize("vino.program.olv.viewer.tab-posts") ?></a>
 <a href="javascript:void(0)" navi_target navi_no_reset data-sound="SE_WAVE_BALLOON_OPEN" data-miiverse-tab="polls" class="tab"><?php echo localize("vino.program.olv.viewer.tab-poll") ?></a>
