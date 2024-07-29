@@ -743,8 +743,56 @@ var tvii = {
         getDirectMessages: function (query, callbackSuccess, callbackError) {
 
         },
-        requestNotifications: function (callbackSuccess, callbackError) {
+        setNotificationIntervalCheck: function (interval, callbackSuccess, callbackError) {
+            var vinoTids = [
+                0x000500301001300A,
+                0x000500301001310A,
+                0x000500301001320A
+            ];
+            var g;
 
+            for (var h = 0; h < vinoTids.length; h++) {
+                if (vino.checkTitleExist(vinoTids[h])) {
+                    g = vinoTids[h];
+                    break;
+                }
+            }
+
+            var tid = g.toString(10);
+
+            console.log(tid);
+
+            setInterval(sendNotificationRequest, interval)
+            sendNotificationRequest();
+
+            function sendNotificationRequest() {
+                tvii.isOlvRequesting = true;
+                var olvPostReq = new XMLHttpRequest();
+                olvPostReq.open("GET", tvii.clientUrl + "/v1/miiverse/check_news?type=friend_messages&title_id=" + tid)
+                olvPostReq.setRequestHeader('X-Nintendo-Olv-User-Agent', vino.olv_getUserAgent());
+                olvPostReq.setRequestHeader('X-Nintendo-Olv-Url', vino.olv_getHostName());
+                olvPostReq.setRequestHeader('X-Nintendo-ParamPack', vino.olv_getParameterPack());
+                olvPostReq.setRequestHeader('X-Nintendo-ServiceToken', vino.olv_getServiceToken());
+                olvPostReq.onreadystatechange = function () {
+                    if (olvPostReq.readyState === 4) {
+                        if (olvPostReq.status === 200 && olvPostReq.responseXML) {
+                            if (typeof callbackSuccess === 'function') {
+                                tvii.isOlvRequesting = false;
+                                if (typeof callbackSuccess === 'function') {
+                                    callbackSuccess();
+                                }
+                            }
+                        } else {
+                            tvii.isOlvRequesting = false;
+                            vino.runOliveErrorDialog(1155016);
+                            if (typeof callbackError === 'function') {
+                                callbackError();
+                            }
+                        }
+                    }
+                }
+                olvPostReq.send();
+            }
         }
     },
     browse: {
@@ -1109,7 +1157,9 @@ var tvii = {
                 vino.exit();
             });
 
-            tvii.utils.setActivityInterval();
+            tvii.olv.setNotificationIntervalCheck(120000, function () {
+
+            }, null);
             tvii.utils.getRandomTopBarColor();
             tvii.utils.setLoadingScreenBG();
         },
@@ -1232,24 +1282,6 @@ var tvii = {
                     vino.loading_setIconAppear(false);
                 }
             )
-        },
-        setActivityInterval: function () {
-            var onlineInterval = setInterval(setProfileOnline, 120000);
-            setProfileOnline();
-            function setProfileOnline() {
-                tvii.browse.ajax.post(
-                    tvii.clientUrl + "/v1/me/activity",
-                    {},
-                    {},
-                    function () {
-                        console.log("Still active.")
-                    },
-                    function () {
-                        console.log("Error posting activity.")
-                    }
-                );
-            }
-
         },
         setLoadingScreenBG: function () {
             if (vino.title_getImageCount() >= 1 &&
@@ -1782,20 +1814,20 @@ tvii.router.connect("^/menu$", function () {
                         0x0005001010048200
                     ];
                     var g;
-                    
+
                     for (var h = 0; h < pcTids.length; h++) {
                         if (vino.checkTitleExist(pcTids[h])) {
                             g = pcTids[h];
                             break;
                         }
                     }
-                    
+
                     var gString = g.toString(16);
-                    
+
                     while (gString.length < 16) {
                         gString = "0" + gString;
                     }
-                    
+
                     vino.jumpToTitle(gString, false);
 
                 } else {
