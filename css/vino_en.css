@@ -3375,7 +3375,7 @@ button {
   border-radius: 9px;
   width: 290px;
   min-height: 174px;
-  padding-top: 90px;
+  padding-top: 100px;
   padding-bottom: 14px;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.5, #ffffff), color-stop(0.97, #f4f4f4), to(#a9a9a9));
 }
