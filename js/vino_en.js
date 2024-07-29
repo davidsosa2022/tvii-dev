@@ -1690,11 +1690,11 @@ tvii.router.connect("^/menu$", function () {
 
     $(".menu-tab .buttons-section .app_settings").on("click", function () {
         $(".menu-tab").addClass("none");
-        $(".app-settings").removeClass("none")
+        $(".app-setting-selection").removeClass("none");
     })
 
-    $(".app-settings .menu-container .back_white_button").on("click", function () {
-        $(".app-settings").addClass("none")
+    $(".app-setting-selection-container .back_white_button").on("click", function () {
+        $(".app-setting-selection").addClass("none")
         $(".menu-tab").removeClass("none");
     })
 
