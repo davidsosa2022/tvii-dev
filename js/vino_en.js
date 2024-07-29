@@ -1693,7 +1693,7 @@ tvii.router.connect("^/menu$", function () {
         $(".app-setting-selection").removeClass("none");
     })
 
-    $(".app-setting-selection-container .back_white_button").on("click", function () {
+    $(".app-setting-selection .back_white_button").on("click", function () {
         $(".app-setting-selection").addClass("none")
         $(".menu-tab").removeClass("none");
     })
