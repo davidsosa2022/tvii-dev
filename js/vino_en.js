@@ -775,6 +775,7 @@ var tvii = {
                 olvPostReq.open("GET", tvii.clientUrl + "/v1/miiverse/check_news?type=friend_messages&title_id=" + tid)
                 olvPostReq.setRequestHeader('X-Nintendo-Olv-User-Agent', vino.olv_getUserAgent());
                 olvPostReq.setRequestHeader('X-Nintendo-Olv-Url', vino.olv_getHostName());
+                olvPostReq.setRequestHeader('X-Nintendo-User-PID', vino.act_getPid(tvii.userSlot));
                 olvPostReq.setRequestHeader('X-Nintendo-ParamPack', vino.olv_getParameterPack());
                 olvPostReq.setRequestHeader('X-Nintendo-ServiceToken', vino.olv_getServiceToken());
                 olvPostReq.onreadystatechange = function () {
