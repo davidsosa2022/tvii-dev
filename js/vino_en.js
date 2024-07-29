@@ -788,7 +788,10 @@ var tvii = {
                             }
                         } else {
                             tvii.isOlvRequesting = false;
-                            vino.runOliveErrorDialog(1155016);
+
+                            //Run error dialog, when an actual error happens, currently the API will always send an error anyway.
+                            /* vino.runOliveErrorDialog(1155016); */
+
                             if (typeof callbackError === 'function') {
                                 callbackError();
                             }
