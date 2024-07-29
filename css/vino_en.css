@@ -2288,7 +2288,7 @@ button {
   height: 59px;
   box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.4);
   border-bottom: 2px solid #d50094;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA2SURBVChTY/z//78kAwT8ZWRkfAVlYwAmKE0QgBT+heJ/IAH6AUYojQKweZAkz2ADNPcgAwMAOZkP+x8ViUwAAAAASUVORK5CYII=), -webkit-gradient(linear, left top, left bottom, from(#ffaddc), to(#ff03d4));
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA3SURBVChTY2QgHrCDCCYwk8oAZDLYdBCgqg0oJsMAVWzAajIMUGQDXpNhgCwbiDIZBki0gYEBAGugAFuIX1YuAAAAAElFTkSuQmCC), -webkit-gradient(linear, left top, left bottom, from(#ffaddc), to(#ff03d4));
   padding-left: 23px;
   padding-right: 23px;
   -webkit-box-sizing: border-box;
@@ -2302,7 +2302,7 @@ button {
   text-overflow: ellipsis;
   white-space: nowrap;
   z-index: 10;
-  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.6), 0px 5px 0px rgba(0, 0, 0, 0.08);
+  text-shadow: 0px -2px 0px rgba(0, 0, 0, 0.20);
 }
 
 .miiverse-posts .post-button {
