@@ -3344,31 +3344,12 @@ button {
 }
 
 .app-setting-selection-container {
-  position: relative;
-  float: left;
-  display: -webkit-inline-box;
-  -webkit-box-align: center;
-  -webkit-box-pack: center;
-  margin-right: 18px;
-  margin-left: 18px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 21px;
-  text-align: center;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  padding-left: 10px;
-  padding-right: 10px;
-  line-height: 1.2;
-  color: #3c3c3c;
-  text-shadow: 0px 2px 0px #fff;
-  box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.35);
-  border-radius: 9px;
-  width: 290px;
-  height: 170px;
-  padding-top: 90px;
-  padding-bottom: 10px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.5, #ffffff), color-stop(0.97, #f4f4f4), to(#a9a9a9));
+  margin-top: 70px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 654px;
+  display: block;
 }
 
 .app-setting-selection-container .setting-option{
