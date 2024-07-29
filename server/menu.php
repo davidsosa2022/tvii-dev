@@ -19,6 +19,11 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
   </div>
 </div>
 
+
+<div class="app-setting-selection none">
+
+</div>
+
 <div class="manual-modal none">
 
 </div>
