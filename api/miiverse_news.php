@@ -3,12 +3,12 @@
 require_once '../config.php';
 
 $baseUrl = isset($_SERVER['HTTP_X_NINTENDO_OLV_URL']) ? $_SERVER['HTTP_X_NINTENDO_OLV_URL'] : '';
-$xNintendoUserPid = '';
+
+$xNintendoUserPid = isset($_SERVER['HTTP_X_NINTENDO_USER_PID']) ? $_SERVER['HTTP_X_NINTENDO_USER_PID'] : null;
 
 function buildCustomHeaders() {
     $xNintendoServiceToken = isset($_SERVER['HTTP_X_NINTENDO_SERVICETOKEN']) ? $_SERVER['HTTP_X_NINTENDO_SERVICETOKEN'] : null;
     $xNintendoParamPack = isset($_SERVER['HTTP_X_NINTENDO_PARAMPACK']) ? $_SERVER['HTTP_X_NINTENDO_PARAMPACK'] : null;
-    $xNintendoUserPid = isset($_SERVER['HTTP_X_NINTENDO_USER_PID']) ? $_SERVER['HTTP_X_NINTENDO_USER_PID'] : null;
     $customUserAgent = isset($_SERVER['HTTP_X_NINTENDO_OLV_USER_AGENT']) ? $_SERVER['HTTP_X_NINTENDO_OLV_USER_AGENT'] : null;
 
     $customHeaders = [
