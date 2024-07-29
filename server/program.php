@@ -196,7 +196,7 @@ if(isset($_GET['program'])) {
     <a navi_target navi_mouse navi_no_reset data-hover class="favoritebtn"></a>
     <a navi_target navi_mouse data-hover href="javascript:void(0);" class="toppagebtn accesskey-minus" data-sound="SE_TOP_TOUCH_OFF"><?php echo localize("vino.program.top") ?></a>
 
-    <a data-hover navi_target data-hover-sound="SE_MOVEPAGE_SELECT" href="javascript:void(0);" class="before_page_button accesskey-l accesskey-zl"></a>
+    <a data-hover navi_target data-hover-sound="SE_MOVEPAGE_SELECT" href="javascript:void(0);" style="display:none;" class="before_page_button accesskey-l accesskey-zl"></a>
     <a data-hover navi_target data-hover-sound="SE_MOVEPAGE_SELECT" href="javascript:void(0);" class="next_page_button accesskey-r accesskey-zr"></a>
 
     <div class="fixed-left-buttons">
