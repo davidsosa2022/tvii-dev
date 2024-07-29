@@ -257,6 +257,10 @@ if (typeof vino === 'undefined') {
         jumpToTitle: function (TID, bool) {
             console.log('Jump to app ' + TID);
         },
+        checkTitleExist: function(TID) {
+            console.log("TID " + TID + " does exist.")
+            return true;
+        },
         jumpToMiiverse: function (bool) {
             console.log('Jump to Miiverse is ' + bool);
         },
