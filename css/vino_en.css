@@ -3521,15 +3521,24 @@ button {
   border-right: 1px solid #909090;
 }
 
-.program-guide-container .segment-hour {}
-
 .program-guide-container .segment-hour .program {
   font-size: 18px;
   line-height: 1.3;
-  font-weight: lighter;
   border-bottom: 1px solid #909090;
   margin-right: 4px;
   margin-left: 4px;
+}
+
+.program-guide-container .segment-hour:nth-of-type(odd) {
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.program-guide-container .segment-hour:nth-of-type(even) {
+  background: #eaeaea;
+  margin: 0;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 .program-guide-container .segment-hour .program.sixty {
