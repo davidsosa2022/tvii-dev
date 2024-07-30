@@ -763,9 +763,6 @@ var tvii = {
             }
 
             var tid = g.toString(10);
-
-            console.log(tid);
-            
             if (!vino.olv_isEnabled() && vino.olv_getErrorCodeOnInitialize()) {
                 vino.runOliveErrorDialog(vino.olv_getErrorCodeOnInitialize())
                 return;
