@@ -3477,7 +3477,7 @@ button {
   margin-left: 4px;
 }
 
-.program-guide-container .segment-hour .program.sixty{
+.program-guide-container .segment-hour .program.sixty {
   height: 220px;
 }
 
@@ -3498,7 +3498,7 @@ button {
   -webkit-box-sizing: border-box;
 }
 
-.program-guide-container .segment-hour .program .program-description{
+.program-guide-container .segment-hour .program .program-description {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -3508,6 +3508,14 @@ button {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   overflow: hidden;
+}
+
+.program-guide-container .segment-hour .program.sixty .program-title {
+  -webkit-line-clamp: 3 !important;
+}
+
+.program-guide-container .segment-hour .program.sixty .program-description {
+  -webkit-line-clamp: 6 !important;
 }
 
 .menu-container .age-ratings label.age span.tip {
