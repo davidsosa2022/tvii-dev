@@ -3501,6 +3501,18 @@ button {
   -webkit-box-sizing: border-box;
 }
 
+.program-guide-container .segment-hour .program .program-title .full-hour{
+  background: #ffa0c5;
+  padding: 2.5px;
+  font-size: 14px;
+  margin-right: 5px;
+  line-height: 1.9;
+  color: #fff;
+  font-weight: normal;
+  text-shadow: 0px -2px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+}
+
 .program-guide-container .segment-hour .program .program-description {
   display: -webkit-box;
   -webkit-box-orient: vertical;
