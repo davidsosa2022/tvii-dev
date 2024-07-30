@@ -77,19 +77,6 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
             <span class="program-description">Braden has an amazing day with his friends</span>
         </div>
     </div>
-    </div>
-
-    <div class="segment-hour">
-    <div class="program thirty">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-        </div>
-        <div class="program thirty">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-        </div>
-    </div>
-    </div>
 
     <div class="segment-hour">
     <div class="program sixty">
