@@ -3529,11 +3529,11 @@ button {
   margin-left: 4px;
 }
 
-.program-guide-container .segment-hour .program:nth-of-type(odd) {
-}
-
 .program-guide-container .segment-hour .program:nth-of-type(even) {
   background: #eaeaea;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin: 0;
 }
 
 .program-guide-container .segment-hour .program.sixty {
