@@ -3411,7 +3411,7 @@ button {
 .program-guide-container .time-labels .segment {
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.15);
   text-align: center;
-  background: #8b8b8b;
+  background: -webkit-gradient(linear, left top, right top, from(#ffaadc), to(#e951aa));
   display: -webkit-box;
   -webkit-box-pack: center;
   -webkit-box-align: center;
@@ -3422,6 +3422,14 @@ button {
   color: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.program-guide-container .time-labels .segment:nth-of-type(odd) {
+background: -webkit-gradient(linear, left top, right top, from(#ffaadc), to(#e951aa));
+}
+
+.program-guide-container .time-labels .segment:nth-of-type(even) {
+  background: -webkit-gradient(linear, left top, right top, from(#e9a4ff), to(#ac38af));
 }
 
 .program-guide-container .time-labels .segment .bold {
