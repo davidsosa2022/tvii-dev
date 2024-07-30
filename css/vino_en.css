@@ -3405,6 +3405,7 @@ button {
 .program-guide-container .time-labels {
   position: absolute;
   left: 0;
+  z-index: 4;
 }
 
 .program-guide-container .time-labels .segment {
