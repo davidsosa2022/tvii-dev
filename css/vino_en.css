@@ -3394,7 +3394,7 @@ button {
 
 .program-guide-container {
   width: 854px;
-  margin-top: 63px;
+  margin-top: 105px;
   min-height: 480px;
   background: #efefef;
   margin-bottom: 50px;
@@ -3427,7 +3427,7 @@ button {
 
 
 .program-guide-container .channel-container {
-
+  width: 250px;
 }
 
 
