@@ -3433,7 +3433,7 @@ button {
 
 
 .program-guide-container .channel-container .channel-name{
-  position: fixed;
+  position: absolute;
   display: -webkit-box;
   -webkit-box-align: center;
   -webkit-box-sizing: border-box;
@@ -3443,7 +3443,7 @@ button {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 23px;
-  top: 60px;
+  top: -43px;
   width: 250px;
   height: 46px;
   color: #fff;
@@ -3452,7 +3452,7 @@ button {
   background: -webkit-gradient(linear, left top, left bottom, from(#535353), color-stop(0.95, #a6a6a6), to(#797979)) 0 0;
 }
 
-.program-guide-container .channel-container:first-child .channel-name{
+.program-guide-container:nth-child(2).channel-container .channel-name{
 
 }
 
