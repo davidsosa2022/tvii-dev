@@ -1526,9 +1526,9 @@ tvii.router.connect("^/guide$", function () {
         var $leftElements = $('.program-guide-container .channel-container .channel-name');
         
         // Update the position based on scroll
-        $topElement.css('top', scrollTop + 'px'); // Move up/down with vertical scroll
+        $topElement.css('top', -scrollTop + 'px'); // Move up/down with vertical scroll
         
-        // Move all channel-name elements left/right with horizontal scroll
+        // Move the channel-container instead of individual elements
         $leftElements.each(function() {
             $(this).css('left', scrollLeft + 'px');
         });
