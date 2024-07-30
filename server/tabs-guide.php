@@ -36,6 +36,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
     </menu>
 
   <div class="program-guide-container">
+
     <div class="time-labels">
       <span class="segment eight">PM<br>8</span>
       <span class="segment nine">PM<br>9</span>
@@ -45,6 +46,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
     </div>
 
     <div class="channel-container">
+      
       <span class="channel-name">Fox</span>
       <div class="segment-hour">
         <div class="program fifteen">
@@ -121,160 +123,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
           </div>
         </div>
     </div>
-    <div class="channel-container">
-      <span class="channel-name">ABC</span>
-      <div class="segment-hour">
-        <div class="program fifteen">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-        <div class="program fifteen">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-          <div class="program thirty">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-        </div>
-      </div>
-      <div class="segment-hour">
-        <div class="program fifteen">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-        <div class="program fifteen">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-          <div class="program thirty">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-        </div>
-      </div>
-      <div class="segment-hour">
-        <div class="program fifteen">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-        <div class="program fifteen">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-          <div class="program thirty">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-        </div>
-      </div>
-      <div class="segment-hour">
-        <div class="program fifteen">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-        <div class="program fifteen">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-          <div class="program thirty">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-        </div>
-      </div>
-      <div class="segment-hour>
-        <div class="program fifteen">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-        <div class="program fifteen">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-          <div class="program thirty">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-        </div>
-    </div>
-    <div class="channel-container">
-      <span class="channel-name">Discovery Channel</span>
-      <div class="segment-hour">
-        <div class="program fifteen">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-        <div class="program fifteen">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-          <div class="program thirty">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-        </div>
-      </div>
-      <div class="segment-hour">
-        <div class="program fifteen">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-        <div class="program fifteen">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-          <div class="program thirty">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-        </div>
-      </div>
-      <div class="segment-hour">
-        <div class="program fifteen">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-        <div class="program fifteen">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-          <div class="program thirty">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-        </div>
-      </div>
-      <div class="segment-hour">
-        <div class="program fifteen">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-        <div class="program fifteen">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-          <div class="program thirty">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-        </div>
-      </div>
-      <div class="segment-hour>
-        <div class="program fifteen">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-        <div class="program fifteen">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-          <div class="program thirty">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
-          </div>
-        </div>
-    </div>
+  
   </div>
 
 <?php
