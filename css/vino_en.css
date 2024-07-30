@@ -3455,7 +3455,9 @@ button {
 }
 
 .program-guide-container .segment-hour {
-
+  width: 250px;
+  height: 220px;
+  position: relative;
 }
 
 .program-guide-container .segment-hour {
