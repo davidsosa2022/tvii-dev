@@ -3471,11 +3471,11 @@ button {
 }
 
 .program-guide-container .segment-hour .program.fifteen{
-
+  height: 33px;
 }
 
 .program-guide-container .segment-hour .program.thirty{
-
+  height: 66px;
 }
 
 .program-guide-container .segment-hour .program .program-name{
