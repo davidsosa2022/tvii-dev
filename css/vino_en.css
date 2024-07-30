@@ -3461,8 +3461,8 @@ button {
   height: 220px;
   position: relative;
   display: block;
-  border-top: 1px solid #909090;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0);
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
   border-right: 1px solid #909090;
 }
 
