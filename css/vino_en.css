@@ -3531,9 +3531,10 @@ button {
 
 .program-guide-container .segment-hour .program:nth-of-type(even) {
   background: #eaeaea;
-  padding-left: 4px;
-  padding-right: 4px;
-  margin: 0;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 1px;
+  margin-right: 1px;
 }
 
 .program-guide-container .segment-hour .program.sixty {
