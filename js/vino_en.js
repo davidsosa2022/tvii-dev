@@ -1525,14 +1525,12 @@ tvii.router.connect("^/guide$", function () {
         var $topElement = $('.program-guide-container .time-labels');
         var $leftElement = $('.program-guide-container .channel-container .channel-name');
         
-        // Adjust the position of fixed elements based on scroll
-        $topElement.css('left', scrollLeft + 'px');
-        $leftElement.css('top', scrollTop + 'px');
- });
-
+        // Update the position based on scroll
+        $topElement.css('top', scrollTop + 'px'); // Move up/down with vertical scroll
+        $leftElement.css('left', scrollLeft + 'px'); // Move left/right with horizontal scroll
+    });
     vino.loading_setIconAppear(true);
 
-    //New guide code TODO
     vino.loading_setIconAppear(false);
 });
 
