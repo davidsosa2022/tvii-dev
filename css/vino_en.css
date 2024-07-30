@@ -3394,7 +3394,7 @@ button {
 
 .program-guide-container {
   min-width: 854px;
-  margin-top: 105px;
+  margin-top: 108px;
   margin-left: 66px;
   min-height: 480px;
   margin-bottom: 51px;
@@ -3445,7 +3445,8 @@ button {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 23px;
-  top: -43px;
+  top: 0px;
+  margin-top: -44px;
   width: 250px;
   height: 46px;
   color: #fff;
