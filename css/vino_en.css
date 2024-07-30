@@ -3394,9 +3394,10 @@ button {
 
 .program-guide-container {
   width: 854px;
-  margin-top: 64px;
+  margin-top: 63px;
   min-height: 480px;
   background: #efefef;
+  margin-bottom: 50px;
 }
 
 .program-guide-container .time-labels {
@@ -3410,16 +3411,17 @@ button {
   display: -webkit-box;
   -webkit-box-pack: center;
   -webkit-box-align: center;
-  height: 200px;
-  width: 80px;
-  font-size: 26px;
+  height: 220px;
+  width: 70px;
+  font-size: 22px;
+  line-height: 1.2;
   color: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .program-guide-container .time-labels .segment .bold {
-  
+  font-size: 42px;
 }
 
 
