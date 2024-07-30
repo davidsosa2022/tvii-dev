@@ -3446,7 +3446,8 @@ button {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 23px;
-  top: 64px;
+  top: 0px;
+  margin-top: 64px;
   width: 250px;
   height: 46px;
   color: #fff;
