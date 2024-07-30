@@ -763,14 +763,13 @@ var tvii = {
             }
 
             var tid = g.toString(10);
-            if (!vino.olv_isEnabled() && vino.olv_getErrorCodeOnInitialize()) {
-                vino.runOliveErrorDialog(vino.olv_getErrorCodeOnInitialize())
-                return;
-            }
             setInterval(sendNotificationRequest, interval);
             sendNotificationRequest();
 
             function sendNotificationRequest() {
+                if (!vino.olv_isEnabled() && vino.olv_getErrorCodeOnInitialize()) {
+                    return;
+                }
                 tvii.isOlvRequesting = true;
                 var olvPostReq = new XMLHttpRequest();
                 olvPostReq.open("GET", tvii.clientUrl + "/v1/miiverse/check_news?type=friend_messages&title_id=" + tid)
