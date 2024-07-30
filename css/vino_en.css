@@ -3437,8 +3437,7 @@ button {
 
 .program-guide-container .channel-container .channel-name {
   position: absolute;
-  display: -webkit-box;
-  -webkit-box-align: center;
+  display: block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 4px 10px;
@@ -3449,6 +3448,7 @@ button {
   top: 0px;
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
   margin-top: -44px;
+  line-height: 1.3;
   width: 250px;
   height: 46px;
   color: #fff;
