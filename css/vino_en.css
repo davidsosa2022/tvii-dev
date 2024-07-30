@@ -3395,6 +3395,7 @@ button {
 .program-guide-container {
   min-width: 854px;
   margin-top: 105px;
+  margin-left: 66px;
   min-height: 480px;
   margin-bottom: 51px;
   padding-bottom: 20px;
@@ -3402,7 +3403,8 @@ button {
 }
 
 .program-guide-container .time-labels {
-
+  position: absolute;
+  left: 0;
 }
 
 .program-guide-container .time-labels .segment {
@@ -3413,8 +3415,8 @@ button {
   -webkit-box-pack: center;
   -webkit-box-align: center;
   height: 220px;
-  width: 70px;
-  font-size: 22px;
+  width: 65px;
+  font-size: 20px;
   line-height: 1.2;
   color: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
@@ -3422,7 +3424,7 @@ button {
 }
 
 .program-guide-container .time-labels .segment .bold {
-  font-size: 42px;
+  font-size: 38px;
 }
 
 
