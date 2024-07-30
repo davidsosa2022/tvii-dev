@@ -3452,10 +3452,6 @@ button {
   background: -webkit-gradient(linear, left top, left bottom, from(#535353), color-stop(0.95, #a6a6a6), to(#797979)) 0 0;
 }
 
-.program-guide-container:nth-child(2) .channel-name{
-
-}
-
 .program-guide-container .segment-hour {
   width: 250px;
   height: 220px;
