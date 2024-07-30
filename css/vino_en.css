@@ -3479,11 +3479,12 @@ button {
 }
 
 .program-guide-container .segment-hour .program .program-name{
-
+  display: block;
+  font-weight: bold;
 }
 
 .program-guide-container .segment-hour .program .program-description{
-
+  display: block;
 }
 
 .menu-container .age-ratings label.age span.tip {
