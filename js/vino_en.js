@@ -1519,6 +1519,15 @@ tvii.router.connect("^/guide$", function () {
     })
 
     $(document).on('scroll', function() {
+        var scrollTop = $(window).scrollTop();
+        var scrollLeft = $(window).scrollLeft();
+        
+        var $topElement = $('.program-guide-container .time-labels');
+        var $leftElement = $('.program-guide-container .channel-container .channel-name');
+        
+        // Adjust the position of fixed elements based on scroll
+        $topElement.css('left', scrollLeft + 'px');
+        $leftElement.css('top', scrollTop + 'px');
  });
 
     vino.loading_setIconAppear(true);
