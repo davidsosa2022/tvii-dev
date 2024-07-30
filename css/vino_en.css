@@ -3398,6 +3398,7 @@ button {
   min-height: 480px;
   background: #efefef;
   margin-bottom: 50px;
+  display: -webkit-box;
 }
 
 .program-guide-container .time-labels {
