@@ -3478,7 +3478,7 @@ button {
   height: 110px;
 }
 
-.program-guide-container .segment-hour .program .program-name{
+.program-guide-container .segment-hour .program .program-title {
   display: block;
   font-weight: bold;
 }
