@@ -3394,14 +3394,50 @@ button {
 
 .program-guide-container {
   width: 854px;
+  margin-top: 64px;
   min-height: 480px;
   background: #efefef;
 }
 
-.program-guide-container .time-container {
+.program-guide-container .time-labels {
   background: #efefef;
 }
 
+.program-guide-container .time-labels .segment {
+  background: #efefef;
+}
+
+.program-guide-container .channel-container {
+
+}
+
+.program-guide-container .segment-hour {
+
+}
+
+.program-guide-container .segment-hour {
+
+}
+
+.program-guide-container .segment-hour .program{
+
+}
+
+.program-guide-container .segment-hour .program.fifteen{
+
+}
+
+.program-guide-container .segment-hour .program.thirty{
+
+}
+
+.program-guide-container .segment-hour .program .program-name{
+
+}
+
+.program-guide-container .segment-hour .program .program-description{
+
+}
 
 .menu-container .age-ratings label.age span.tip {
   padding: 0;
