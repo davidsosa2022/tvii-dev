@@ -3403,9 +3403,12 @@ button {
 }
 
 .program-guide-container .time-labels {
-  position: fixed;
-  left: 0;
-  z-index: 4;
+    position: fixed;
+    left: 0;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    margin-top: 108px;
 }
 
 .program-guide-container .time-labels .segment {
