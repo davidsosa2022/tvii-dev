@@ -3446,6 +3446,7 @@ button {
   width: 250px;
   height: 46px;
   color: #fff;
+  z-index: 5;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
   background: -webkit-gradient(linear, left top, left bottom, from(#535353), color-stop(0.95, #a6a6a6), to(#797979)) 0 0;
 }
