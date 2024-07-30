@@ -94,6 +94,55 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 
 </div>
 
+<div class="channel-container">
+    
+    <span class="channel-name">Fox</span>
+
+    <div class="segment-hour">
+    <div class="program thirty">
+            <span class="program-title">The amazing adventure of Braden Kun</span>
+            <span class="program-description">Braden has an amazing day with his friends</span>
+        </div>
+        <div class="program thirty">
+            <span class="program-title">The amazing adventure of Braden Kun</span>
+            <span class="program-description">Braden has an amazing day with his friends</span>
+        </div>
+    </div>
+
+    <div class="segment-hour">
+    <div class="program sixty">
+            <span class="program-title">The amazing adventure of Braden Kun</span>
+            <span class="program-description">Braden has an amazing day with his friends</span>
+        </div>
+    </div>
+
+    <div class="segment-hour">
+    <div class="program thirty">
+            <span class="program-title">The amazing adventure of Braden Kun</span>
+            <span class="program-description">Braden has an amazing day with his friends</span>
+        </div>
+        <div class="program thirty">
+            <span class="program-title">The amazing adventure of Braden Kun</span>
+            <span class="program-description">Braden has an amazing day with his friends</span>
+        </div>
+    </div>
+
+    <div class="segment-hour">
+    <div class="program sixty">
+            <span class="program-title">The amazing adventure of Braden Kun</span>
+            <span class="program-description">Braden has an amazing day with his friends</span>
+        </div>
+    </div>
+    
+    <div class="segment-hour">
+    <div class="program sixty">
+            <span class="program-title">The amazing adventure of Braden Kun</span>
+            <span class="program-description">Braden has an amazing day with his friends</span>
+        </div>
+    </div>
+
+</div>
+
 </div>
 
 
