@@ -3530,15 +3530,10 @@ button {
 }
 
 .program-guide-container .segment-hour:nth-of-type(odd) {
-  margin-right: 4px;
-  margin-left: 4px;
 }
 
 .program-guide-container .segment-hour:nth-of-type(even) {
   background: #eaeaea;
-  margin: 0;
-  padding-left: 4px;
-  padding-right: 4px;
 }
 
 .program-guide-container .segment-hour .program.sixty {
