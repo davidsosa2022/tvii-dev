@@ -38,11 +38,11 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
     <div class="program-guide-container">
 
 <div class="time-labels">
-    <span class="segment eight">PM<br>8</span>
-    <span class="segment nine">PM<br>9</span>
-    <span class="segment ten">PM<br>10</span>
-    <span class="segment eleven">PM<br>11</span>
-    <span class="segment twelve">PM<br>12</span>
+    <span class="segment eight">PM<br><span class="bold">8</span></span>
+    <span class="segment nine">PM<br><span class="bold">9</span></span>
+    <span class="segment ten">PM<br><span class="bold">10</span></span>
+    <span class="segment eleven">PM<br><span class="bold">11</span></span>
+    <span class="segment twelve">PM<br><span class="bold">12</span></span>
 </div>
 
 <div class="channel-container">
