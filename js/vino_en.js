@@ -1519,12 +1519,7 @@ tvii.router.connect("^/guide$", function () {
     })
 
     $(document).on('scroll', function() {
-        var scrollTop = $(window).scrollTop();
-        var scrollLeft = $(window).scrollLeft();
-        
-        $('.program-guide-container .time-labels').css('left', scrollLeft + 'px');
-        $('.program-guide-container .channel-container .channel-name').css('top', scrollTop + 'px');
-    });
+ });
 
     vino.loading_setIconAppear(true);
 
