@@ -3430,6 +3430,19 @@ button {
 
 }
 
+
+.program-guide-container .channel-container .channel-name{
+  position: fixed;
+  top: 60px;
+  width: 250px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.95, #f1f1f1), to(#f3f3f3)) 0 0;
+}
+
+.program-guide-container .channel-container .channel-name:first-child{
+
+}
+
 .program-guide-container .segment-hour {
 
 }
