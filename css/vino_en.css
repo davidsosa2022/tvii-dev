@@ -3392,6 +3392,16 @@ button {
   padding: 15px;
 }
 
+.program-guide-container {
+  width: 854px;
+  min-height: 480px;
+  background: #efefef;
+}
+
+.program-guide-container .time-container {
+  background: #efefef;
+}
+
 
 .menu-container .age-ratings label.age span.tip {
   padding: 0;
