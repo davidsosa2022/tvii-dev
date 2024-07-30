@@ -3527,6 +3527,8 @@ button {
   border-bottom: 1px solid #909090;
   margin-right: 4px;
   margin-left: 4px;
+  display: table;
+  color: #323232;
 }
 
 .program-guide-container .segment-hour .program:nth-of-type(even) {
