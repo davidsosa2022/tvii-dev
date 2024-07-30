@@ -3425,7 +3425,7 @@ button {
 }
 
 .program-guide-container .time-labels .segment:nth-of-type(1) {
-  background: -webkit-gradient(linear, left top, right top, from(#ffaadc), to(#e951aa));
+  background: -webkit-gradient(linear, left top, right top, from(#ffaadc), to(#e9339d));
 }
 
 .program-guide-container .time-labels .segment:nth-of-type(2) {
@@ -3433,43 +3433,43 @@ button {
 }
 
 .program-guide-container .time-labels .segment:nth-of-type(3) {
-  background: -webkit-gradient(linear, left top, right top, from(#99ccff), to(#6699ff));
+  background: -webkit-gradient(linear, left top, right top, from(#99ccff), to(#3d78ef));
 }
 
 .program-guide-container .time-labels .segment:nth-of-type(4) {
-  background: -webkit-gradient(linear, left top, right top, from(#ffcc99), to(#ff9966));
+  background: -webkit-gradient(linear, left top, right top, from(#ffcc99), to(#ff5f0f));
 }
 
 .program-guide-container .time-labels .segment:nth-of-type(5) {
-  background: -webkit-gradient(linear, left top, right top, from(#ccff99), to(#99ff66));
+  background: -webkit-gradient(linear, left top, right top, from(#ccff99), to(#46d200));
 }
 
 .program-guide-container .time-labels .segment:nth-of-type(6) {
-  background: -webkit-gradient(linear, left top, right top, from(#99ffcc), to(#66ff99));
+  background: -webkit-gradient(linear, left top, right top, from(#9bffcd), to(#16d756));
 }
 
 .program-guide-container .time-labels .segment:nth-of-type(7) {
-  background: -webkit-gradient(linear, left top, right top, from(#99ff99), to(#66ff66));
+  background: -webkit-gradient(linear, left top, right top, from(#eeff91), to(#f7bd00));
 }
 
 .program-guide-container .time-labels .segment:nth-of-type(8) {
-  background: -webkit-gradient(linear, left top, right top, from(#ff99cc), to(#ff66aa));
+  background: -webkit-gradient(linear, left top, right top, from(#ffa2a2), to(#e92d2d));
 }
 
 .program-guide-container .time-labels .segment:nth-of-type(9) {
-  background: -webkit-gradient(linear, left top, right top, from(#ff9999), to(#ff6666));
+  background: -webkit-gradient(linear, left top, right top, from(#8fb6ff), to(#0062b0));
 }
 
 .program-guide-container .time-labels .segment:nth-of-type(10) {
-  background: -webkit-gradient(linear, left top, right top, from(#ffccff), to(#ff99ff));
+  background: -webkit-gradient(linear, left top, right top, from(#ffc0ff), to(#ff00ff));
 }
 
 .program-guide-container .time-labels .segment:nth-of-type(11) {
-  background: -webkit-gradient(linear, left top, right top, from(#ccccff), to(#9999ff));
+  background: -webkit-gradient(linear, left top, right top, from(#ccccff), to(#6d6dbc));
 }
 
 .program-guide-container .time-labels .segment:nth-of-type(12) {
-  background: -webkit-gradient(linear, left top, right top, from(#99ccff), to(#6699ff));
+  background: -webkit-gradient(linear, left top, right top, from(#5d5d5d), to(#121212));
 }
 
 
