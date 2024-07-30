@@ -3424,13 +3424,54 @@ button {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.program-guide-container .time-labels .segment:nth-of-type(odd) {
-background: -webkit-gradient(linear, left top, right top, from(#ffaadc), to(#e951aa));
+.program-guide-container .time-labels .segment:nth-of-type(1) {
+  background: -webkit-gradient(linear, left top, right top, from(#ffaadc), to(#e951aa));
 }
 
-.program-guide-container .time-labels .segment:nth-of-type(even) {
+.program-guide-container .time-labels .segment:nth-of-type(2) {
   background: -webkit-gradient(linear, left top, right top, from(#e9a4ff), to(#ac38af));
 }
+
+.program-guide-container .time-labels .segment:nth-of-type(3) {
+  background: -webkit-gradient(linear, left top, right top, from(#99ccff), to(#6699ff));
+}
+
+.program-guide-container .time-labels .segment:nth-of-type(4) {
+  background: -webkit-gradient(linear, left top, right top, from(#ffcc99), to(#ff9966));
+}
+
+.program-guide-container .time-labels .segment:nth-of-type(5) {
+  background: -webkit-gradient(linear, left top, right top, from(#ccff99), to(#99ff66));
+}
+
+.program-guide-container .time-labels .segment:nth-of-type(6) {
+  background: -webkit-gradient(linear, left top, right top, from(#99ffcc), to(#66ff99));
+}
+
+.program-guide-container .time-labels .segment:nth-of-type(7) {
+  background: -webkit-gradient(linear, left top, right top, from(#99ff99), to(#66ff66));
+}
+
+.program-guide-container .time-labels .segment:nth-of-type(8) {
+  background: -webkit-gradient(linear, left top, right top, from(#ff99cc), to(#ff66aa));
+}
+
+.program-guide-container .time-labels .segment:nth-of-type(9) {
+  background: -webkit-gradient(linear, left top, right top, from(#ff9999), to(#ff6666));
+}
+
+.program-guide-container .time-labels .segment:nth-of-type(10) {
+  background: -webkit-gradient(linear, left top, right top, from(#ffccff), to(#ff99ff));
+}
+
+.program-guide-container .time-labels .segment:nth-of-type(11) {
+  background: -webkit-gradient(linear, left top, right top, from(#ccccff), to(#9999ff));
+}
+
+.program-guide-container .time-labels .segment:nth-of-type(12) {
+  background: -webkit-gradient(linear, left top, right top, from(#99ccff), to(#6699ff));
+}
+
 
 .program-guide-container .time-labels .segment .bold {
   font-size: 38px;
