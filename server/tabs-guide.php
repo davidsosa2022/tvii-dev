@@ -38,6 +38,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
     <div class="program-guide-container">
 
 <div class="time-labels">
+    <span class="segment eight">PM<br><span class="bold">7</span></span>
     <span class="segment eight">PM<br><span class="bold">8</span></span>
     <span class="segment nine">PM<br><span class="bold">9</span></span>
     <span class="segment ten">PM<br><span class="bold">10</span></span>
@@ -49,16 +50,23 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
     
     <span class="channel-name"><span class="bold">4</span>WTMJ</span>
 
+    <div class="segment-hour" id="7">
+    <div class="program sixty" id="60">
+    <span class="full-hour">7:00PM</span>
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+        </div>
+    </div>
+
     <div class="segment-hour" id="8">
-    <div class="program sixty">
-    <span class="full-hour">8:00PM</span>
+    <div class="program sixty" id="60">
             <span class="program-title">Primetime in Paris: The Olympics</span>
             <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
         </div>
     </div>
 
     <div class="segment-hour" id="9">
-    <div class="program sixty">
+    <div class="program sixty" id="60">
             <span class="program-title">Primetime in Paris: The Olympics</span>
             <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
         </div>
@@ -87,7 +95,6 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 
     <div class="segment-hour" id="12">
     <div class="program sixty">
-            <span class="full-hour">11:05PM</span>
             <span class="program-title">2024 Paris Olympics</span>
             <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
         </div>
