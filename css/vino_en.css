@@ -3396,7 +3396,6 @@ button {
   min-width: 854px;
   margin-top: 105px;
   min-height: 480px;
-  background: #efefef;
   margin-bottom: 51px;
   padding-bottom: 20px;
   display: -webkit-box;
@@ -3429,6 +3428,7 @@ button {
 
 .program-guide-container .channel-container {
   width: 250px;
+  background: #efefef;
 }
 
 
