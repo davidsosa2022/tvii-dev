@@ -1015,7 +1015,7 @@ var tvii = {
                 var dayName = dayNames[now.getDay()];
                 var day = now.getDate();
                 var hours = now.getHours();
-                var ampm = hours >= 12 ? 'PM' : 'AM';
+                var ampm = hours >= 12 ? 'pm' : 'am';
 
                 hours = hours % 12;
                 hours = hours ? hours : 12;
