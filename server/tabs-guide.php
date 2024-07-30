@@ -51,6 +51,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 
     <div class="segment-hour" id="8">
     <div class="program sixty">
+    <span class="full-hour">8:00PM</span>
             <span class="program-title">Primetime in Paris: The Olympics</span>
             <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
         </div>
@@ -69,26 +70,26 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
             <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
         </div>
         <div class="program thirty" id="30">
+        <span class="full-hour">10:30PM</span>
             <span class="program-title">TMJ4 News at 10</span>
             <span class="program-description">Local, national and international news coverage.</span>
         </div>
     </div>
 
-    <div class="segment-hour">
-    <div class="program thirty">
-            <span class="program-title">Primetime in Paris: The Olympics</span>
-            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
-        </div>
-        <div class="program thirty">
-            <span class="program-title">TMJ4 News at 10</span>
-            <span class="program-description">Local, national and international news coverage.</span>
+    
+    <div class="segment-hour" id="11">
+    <div class="program sixty">
+            <span class="full-hour">11:05PM</span>
+            <span class="program-title">2024 Paris Olympics</span>
+            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
         </div>
     </div>
-    
-    <div class="segment-hour">
+
+    <div class="segment-hour" id="12">
     <div class="program sixty">
-            <span class="program-title">The amazing adventure of Braden Kun</span>
-            <span class="program-description">Braden has an amazing day with his friends</span>
+            <span class="full-hour">11:05PM</span>
+            <span class="program-title">2024 Paris Olympics</span>
+            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
         </div>
     </div>
 
