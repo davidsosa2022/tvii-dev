@@ -671,8 +671,8 @@ button {
 }
 
 .program-guide-settings .offset-guide-option .bold {
-  display: -webkit-box;
-  -webkit-box-pack: center;
+  display: block;
+  text-align: center;
   font-size: 22px;
   margin-top: 4px;
   overflow: hidden;
