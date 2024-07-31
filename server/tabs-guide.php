@@ -45,7 +45,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 
         <div class="day-container">
             <span class="label-day">Today</span>
-            <span class="day">30
+            <span class="day tue">30
                 <span class="name">Tue</span>
             </span>
 
@@ -82,7 +82,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 
         <div class="day-container">
             <span class="label-day">Tomorrow</span>
-            <span class="day">31
+            <span class="day wed">31
                 <span class="name">Wed</span>
             </span>
 
@@ -119,7 +119,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 
         <div class="day-container">
             <span class="label-day"></span>
-            <span class="day">1
+            <span class="day thu">1
                 <span class="name">Thu</span>
             </span>
 
