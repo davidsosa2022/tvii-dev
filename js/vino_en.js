@@ -1522,6 +1522,10 @@ tvii.router.connect("^/guide$", function () {
         clearProgramGuide();
         openProgramGuideSettings();
     })
+    
+    $(".program-guide-settings .option-button.cancel-guide-option").on("click", function () {
+        closeProgramGuideSettings()
+    })
 
     
     $(".program-guide-settings .day-list .day-container .day-select select").on("change", function () {
@@ -1551,6 +1555,7 @@ tvii.router.connect("^/guide$", function () {
         $(".program-guide-settings").addClass("none");
         $(".menu-buttons").removeClass("none");
         $(".program-guide-container").removeClass("none");
+        tvii.utils.lockUserOperation(false);
     }
 
 
