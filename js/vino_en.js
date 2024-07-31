@@ -1531,11 +1531,13 @@ tvii.router.connect("^/guide$", function () {
         tvii.utils.lockUserOperation(true);
         $(".program-guide-container").addClass("none");
         $(".menu-buttons").addClass("none");
+        $(".program-guide-settings").removeClass("none");
         tvii.utils.lockUserOperation(false);
     }
 
     function closeProgramGuideSettings() {
         tvii.utils.lockUserOperation(true);
+        $(".program-guide-settings").addClass("none");
         $(".menu-buttons").removeClass("none");
         $(".program-guide-container").removeClass("none");
     }
