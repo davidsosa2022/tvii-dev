@@ -753,7 +753,11 @@ button {
   margin-top: 20px;
 }
 
-.program-guide-settings .day-list .day-container .day-select{
+.program-guide-settings .day-list .day-container .day-select.selected{
+  border: 2px solid #009bcf;
+  text-shadow: 0px -2px #009bcf;
+  color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#72dcff), color-stop(0.5, #4fd3ff), color-stop(0.95, #1ec6ff), to(#00afea));
 
 }
 
