@@ -25,7 +25,10 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
     <a navi_target navi_mouse data-hover href="javascript:void(0)" class="remote accesskey-x" data-sound="SE_RETURN_TOUCH_OFF">Remote Control</a>
     </div>
 
-      <div class="info-tab" no_touch><span><?php echo localize("vino.program.info-tab2") ?></span>
+      <div class="info-tab">
+      <a href="javascript:void(0)" class="guide-settings">Change date/channel offset</a>
+      <a href="javascript:void(0)" class="guide-ad"></a>
+
       <div class="day-info">
         <div class="date-day-name"></div>
         <div class="date-day"></div>
