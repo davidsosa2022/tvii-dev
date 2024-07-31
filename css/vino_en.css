@@ -814,14 +814,14 @@ button {
   text-shadow: 0px 2px 0px #fff;
   box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.35);
   border-radius: 9px;
-  width: 78px;
+  width: 79px;
   height: 85px;
   margin-left: 6px;
   margin-top: 20px;
 }
 
 .program-guide-settings .day-list .day-container .day-select.selected {
-  border: 2px solid #009bcf;
+  border: 1px solid #009bcf;
   box-shadow: none;
   text-shadow: 0px -2px #009bcf;
   color: #fff;
