@@ -648,6 +648,17 @@ button {
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.5, #ffffff), color-stop(0.95, #f4f4f4), to(#c5c5c5));
 }
 
+.program-guide-settings .help-guide-button.hover {
+  top: 11px;
+  border-bottom: 1px solid #dfdfdf;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.45);
+}
+
+.program-guide-settings .option-button.hover {
+  top: 3px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.45);
+}
+
 .program-guide-settings .offset-guide-option {
   min-width: 0;
   width: 70px;
@@ -675,6 +686,7 @@ button {
 
 .program-guide-settings .title {
   display: block;
+  max-width: 600px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
