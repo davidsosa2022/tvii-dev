@@ -545,7 +545,7 @@ button {
   padding-right: 255px;
 }
 
-.info-tab .guide-settings{
+.info-tab .guide-settings {
   position: relative;
   display: -webkit-box;
   -webkit-box-align: center;
@@ -623,7 +623,7 @@ button {
   margin: 0px 14px;
 }
 
-.program-guide-settings .option-button input{
+.program-guide-settings .option-button input {
   position: absolute;
   left: 0;
   top: 0;
@@ -656,16 +656,24 @@ button {
   margin: 0;
   margin-left: 10px;
   margin-top: 40px;
+  padding: 0;
 }
 
-.program-guide-settings .offset-guide-option .bold{}
+.program-guide-settings .offset-guide-option .bold {
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  font-size: 22px;
+  margin-top: 4px;
+  overflow: hidden;
+  word-break: break-all;
+}
 
 .program-guide-settings .option-button.hover {
   top: 3px;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.45);
 }
 
-.program-guide-settings .title{
+.program-guide-settings .title {
   display: block;
   overflow: hidden;
   white-space: nowrap;
@@ -678,7 +686,7 @@ button {
   text-shadow: 0px 1px #fff;
 }
 
-.program-guide-settings .title-label{
+.program-guide-settings .title-label {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -697,7 +705,7 @@ button {
   margin-bottom: 15px;
 }
 
-.program-guide-settings .day-list .day-container{
+.program-guide-settings .day-list .day-container {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   height: 200px;
@@ -714,7 +722,7 @@ button {
   box-shadow: 1px 0px #ffffff;
 }
 
-.program-guide-settings .day-list .day-container .label-day{
+.program-guide-settings .day-list .day-container .label-day {
   text-overflow: ellipsis;
   display: block;
   white-space: nowrap;
@@ -726,13 +734,13 @@ button {
   height: 30px;
 }
 
-.program-guide-settings .day-list .day-container .day{
+.program-guide-settings .day-list .day-container .day {
   display: -webkit-box;
   -webkit-box-pack: center;
   font-size: 22px;
 }
 
-.program-guide-settings .day-list .day-container .day .name{
+.program-guide-settings .day-list .day-container .day .name {
   background: #2cb3ff;
   color: #fff;
   font-size: 16px;
@@ -757,27 +765,27 @@ button {
   background: #006eff;
 }
 
-.program-guide-settings .day-list .day-container .day.tue .name  {
+.program-guide-settings .day-list .day-container .day.tue .name {
   background: #11cf00;
 }
 
-.program-guide-settings .day-list .day-container .day.wed .name  {
+.program-guide-settings .day-list .day-container .day.wed .name {
   background: #ff00c8;
 }
 
-.program-guide-settings .day-list .day-container .day.thu .name  {
+.program-guide-settings .day-list .day-container .day.thu .name {
   background: #ff0015;
 }
 
-.program-guide-settings .day-list .day-container .day.fri .name   {
+.program-guide-settings .day-list .day-container .day.fri .name {
   background: #ff9100;
 }
 
-.program-guide-settings .day-list .day-container .day.sat .name  {
+.program-guide-settings .day-list .day-container .day.sat .name {
   background: #001adf;
 }
 
-.program-guide-settings .day-list .day-container .day-select{
+.program-guide-settings .day-list .day-container .day-select {
   position: relative;
   display: -webkit-box;
   -webkit-box-pack: center;
@@ -800,7 +808,7 @@ button {
   margin-top: 20px;
 }
 
-.program-guide-settings .day-list .day-container .day-select.selected{
+.program-guide-settings .day-list .day-container .day-select.selected {
   border: 2px solid #009bcf;
   box-shadow: none;
   text-shadow: 0px -2px #009bcf;
@@ -808,7 +816,7 @@ button {
   background: -webkit-gradient(linear, left top, left bottom, from(#72dcff), color-stop(0.5, #4fd3ff), color-stop(0.95, #1ec6ff), to(#00afea));
 }
 
-.program-guide-settings .day-list .day-container .day-select select{
+.program-guide-settings .day-list .day-container .day-select select {
   position: absolute;
   left: 0;
   top: 0;
