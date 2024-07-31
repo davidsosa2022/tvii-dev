@@ -597,6 +597,7 @@ button {
   -webkit-box-align: center;
   -webkit-box-orient: vertical;
   margin: 25px;
+  margin-top: 30px;
   margin-left: 55px;
   z-index: 100;
   width: 742px;
@@ -648,9 +649,11 @@ button {
   -webkit-box-pack: center;
   -webkit-box-align: center;
   width: 70px;
-  font-size: 15px;
-  text-shadow: 1px 0px #fff;
-  height: 70px;
+  color: #323232;
+  padding: 3px;
+  font-size: 18px;
+  text-shadow: 0px 2px #fff;
+  height: 65px;
   text-align: center;
   border-left: 2px solid #dddddd;
   border-bottom: 2px solid #dddddd;
