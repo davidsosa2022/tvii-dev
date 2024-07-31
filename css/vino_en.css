@@ -637,8 +637,8 @@ button {
 
 .program-guide-settings .help-guide-button {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 9px;
+  right: 10px;
   font-size: 18px;
   width: 40px;
   height: 40px;
