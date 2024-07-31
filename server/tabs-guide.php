@@ -26,7 +26,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
     </div>
 
       <div class="info-tab">
-      <a href="javascript:void(0)" class="guide-settings">Change date/channel offset</a>
+      <a navi_target navi_margin="2" data-hover-out-sound="SE_A_DECIDE_TOUCH_OFF" data-hover-sound="SE_CMN_TOUCH_ON"  data-hover href="javascript:void(0)" class="guide-settings">Change date/channel offset</a>
       <a href="javascript:void(0)" class="guide-ad"></a>
 
       <div class="day-info">
