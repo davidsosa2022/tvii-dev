@@ -729,8 +729,9 @@ button {
   display: -webkit-box;
   -webkit-box-pack: center;
   -webkit-box-align: center;
-  font-size: 16px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.5, #ffffff), color-stop(0.95, #f4f4f4), to(#a9a9a9));
+  font-size: 22px;
+  word-break: break-all;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.5, #ffffff), color-stop(0.95, #f4f4f4), to(#e1e1e1));
   text-align: center;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -740,9 +741,9 @@ button {
   text-shadow: 0px 2px 0px #fff;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.35);
   border-radius: 9px;
-  width: 90px;
-  height: 50px;
-  margin-left: 4px;
+  width: 85px;
+  height: 85px;
+  margin-left: 7px;
   margin-top: 20px;
 }
 
