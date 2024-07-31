@@ -1569,6 +1569,7 @@ tvii.router.connect("^/guide$", function () {
     function restoreCacheProgramGuide() {
         if (!sessionStorage.getItem('guide_html_cache')) {return false;}
         $(".program-guide-container").html(sessionStorage.getItem('guide_html_cache'));
+        sessionStorage.removeItem('guide_html_cache')
     }
 
     function requestAd() {
