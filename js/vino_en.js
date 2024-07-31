@@ -1527,10 +1527,13 @@ tvii.router.connect("^/guide$", function () {
     $(".program-guide-settings .day-list .day-container .day-select select").on("change", function () {
         var selectedText = $(this).find("option:selected").text();
         $(this).siblings("span").text(selectedText);
+    });
+
+    $(".program-guide-settings .day-list .day-container .day-select select").on("click", function () {
         $(".program-guide-settings .day-list .day-container .day-select").removeClass("selected")
         $(this).parent().addClass("selected");
     });
-
+    
     function requestProgramGuide() {
         tvii.utils.lockUserOperation(true);
     }
@@ -1553,6 +1556,7 @@ tvii.router.connect("^/guide$", function () {
 
     function clearProgramGuide() {
         $(".program-guide-container").html("");
+        vino.requestGarbageCollect();
     }
 
     function requestAd() {
