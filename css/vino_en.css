@@ -587,6 +587,71 @@ button {
   box-shadow: -1px 0px 0px #bababa;
 }
 
+.program-guide-settings {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-orient: vertical;
+  margin: 25px;
+  margin-left: 55px;
+  z-index: 100;
+  width: 742px;
+  min-height: 420px;
+  box-shadow: 1px -2px #cfcfcf, 0px 2px #b8b8b8, 0px 1px 8px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), color-stop(0.3, #f6f6f6), to(#e5e5e5));
+}
+
+.program-guide-settings .title{
+  display: -webkit-box;
+  color: #535353;
+  font-size: 20px;
+  padding: 0px 20px;
+  text-align: center;
+  text-shadow: 0px 1px #fff;
+}
+
+.program-guide-settings .title-label{
+  display: -webkit-box;
+  color: #535353;
+  font-size: 20px;
+  padding: 0px 20px;
+  text-align: center;
+  text-shadow: 0px 1px #fff;
+}
+
+
+.program-guide-settings .day-list {
+
+}
+
+.program-guide-settings .day-list .day-container{
+
+}
+
+
+.program-guide-settings .day-list .day-container .label-day{
+
+}
+
+
+.program-guide-settings .day-list .day-container .day{
+
+}
+
+.program-guide-settings .day-list .day-container .day .name{
+
+}
+
+.program-guide-settings .day-list .day-container .day-select{
+
+}
+
+.program-guide-settings .day-list .day-container .day-select select{
+
+}
+
+
 
 .miiverse-button {
   position: absolute;

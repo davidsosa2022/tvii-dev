@@ -43,13 +43,14 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         <span class="title-label">When you select a time, this will show 3 hours of content starting from the hour you selected</span>
         <div class="day-list">
 
-        <div class="day">
+        <div class="day-container">
             <span class="label-day">Today</span>
             <span class="day">30
                 <span class="name">Tue</span>
             </span>
 
             <a href="javascript:void(0)" class="day-select">
+                <span>12:00AM</span>
             <select name="day1" id="day1">
                 <option value="12AM">12:00AM</option>
                 <option value="1AM">1:00AM</option>
@@ -79,13 +80,14 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
             </a>
         </div>
 
-        <div class="day">
+        <div class="day-container">
             <span class="label-day">Tomorrow</span>
             <span class="day">31
                 <span class="name">Wed</span>
             </span>
 
             <a href="javascript:void(0)" class="day-select">
+            <span>12:00AM</span>
             <select name="day2" id="day2">
                 <option value="12AM">12:00AM</option>
                 <option value="1AM">1:00AM</option>
@@ -115,13 +117,14 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
             </a>
         </div>
 
-        <div class="day">
+        <div class="day-container">
             <span class="label-day"></span>
             <span class="day">1
                 <span class="name">Thu</span>
             </span>
 
             <a href="javascript:void(0)" class="day-select">
+            <span>12:00AM</span>
             <select name="day3" id="day3">
                 <option value="12AM">12:00AM</option>
                 <option value="1AM">1:00AM</option>
@@ -152,6 +155,9 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         </div>
 
         </div>
+
+        <a href="javascript:void(0)" class="option-button accesskey-b"> Cancel</a>
+        <a href="javascript:void(0)" class="option-button">Apply</a>
     </div>
 
     <div class="program-guide-container">
