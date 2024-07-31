@@ -809,7 +809,7 @@ button {
   box-shadow: none;
   text-shadow: 0px -2px #009bcf;
   color: #fff;
-  background: -webkit-gradient(linear, left top, left bottom, from(#72dcff), color-stop(0.5, #4fd3ff), color-stop(0.95, #1ec6ff), to(#00afea));
+  background: -webkit-gradient(linear, left top, left bottom, from(#97e5ff), to(#00bfff));
 }
 
 .program-guide-settings .day-list .day-container .day-select select {
