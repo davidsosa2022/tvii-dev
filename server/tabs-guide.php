@@ -776,7 +776,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
             <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
     </a>
         <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program thirty" id="30">
-            <span class="program-title"><span class="full-hour">10:30PM</span>TMJ4 News at 10</span>
+            <span class="program-title"><span class="new-label">NEW</span><span class="rating-label">TV-PG</span>TMJ4 News at 10</span>
             <span class="program-description">Local, national and international news coverage.</span>
     </a>
     </div>
