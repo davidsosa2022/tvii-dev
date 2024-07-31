@@ -655,7 +655,10 @@ button {
   font-size: 14px;
   margin: 0;
   margin-left: 10px;
+  margin-top: 40px;
 }
+
+.program-guide-settings .offset-guide-option .bold{}
 
 .program-guide-settings .option-button.hover {
   top: 3px;

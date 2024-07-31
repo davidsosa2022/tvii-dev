@@ -154,7 +154,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
             </a>
         </div>
         <a href="javascript:void(0)" navi_target navi_mouse navi_margin="2" data-sound="SE_CHECK_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" data-hover  class="option-button offset-guide-option">
-            <span>Channel Offset: 0</span>
+            <span>Channel Offset:<span class="bold">0</span></span>
             <input type="number" name="choffset" value="0" minlength="1" maxlength="4">
         </a>
         </div>
