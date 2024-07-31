@@ -1561,7 +1561,7 @@ tvii.router.connect("^/guide$", function () {
 
 
     function cacheAndClearProgramGuide() {
-        sessionStorage.setItem('guide_html_cache', $(".program-guide-container").html(""));
+        sessionStorage.setItem('guide_html_cache', $(".program-guide-container").html());
         $(".program-guide-container").html("");
         vino.requestGarbageCollect();
     }
