@@ -552,7 +552,6 @@ button {
   -webkit-box-pack: center;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  line-height: 1.2;
   width: 240px;
   font-size: 15px;
   text-align: center;
@@ -586,9 +585,6 @@ button {
   box-shadow: -1px 0px 0px #bababa;
 }
 
-.info-tab .guide-ad.hover  {
-  height: 110%;
-}
 
 .miiverse-button {
   position: absolute;
