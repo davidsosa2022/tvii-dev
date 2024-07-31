@@ -668,6 +668,7 @@ button {
   margin-left: 10px;
   margin-top: 40px;
   padding: 0;
+  -webkit-box-orient: vertical;
 }
 
 .program-guide-settings .offset-guide-option .bold {
