@@ -39,7 +39,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
     </menu>
 
     <div class="program-guide-settings none">
-        <span class="title">Guide/Program Offset Settings.</span>
+        <span class="title">Guide/Program Offset Settings</span>
         <span class="title-label">When you select a time, this will show 3 hours of content starting from the hour you selected</span>
         <div class="day-list">
 

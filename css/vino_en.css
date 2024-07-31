@@ -753,6 +753,10 @@ button {
   margin-top: 20px;
 }
 
+.program-guide-settings .day-list .day-container .day-select{
+
+}
+
 .program-guide-settings .day-list .day-container .day-select select{
   position: absolute;
   left: 0;
