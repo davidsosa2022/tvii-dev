@@ -623,6 +623,7 @@ button {
 
 .program-guide-settings .day-list {
   display: -webkit-box;
+  margin-top: 15px;
 }
 
 .program-guide-settings .day-list .day-container{
@@ -642,19 +643,27 @@ button {
   box-shadow: 1px 0px #ffffff;
 }
 
-
-
 .program-guide-settings .day-list .day-container .label-day{
-
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  color: #676767;
+  font-size: 16px;
+  text-align: center;
+  height: 30px;
 }
 
-
 .program-guide-settings .day-list .day-container .day{
-
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  font-size: 22px;
 }
 
 .program-guide-settings .day-list .day-container .day .name{
-
+  background: #2cb3ff;
+  color: #fff;
+  font-size: 20px;
+  padding: 2px 5px;
+  border-radius: 3px;
 }
 
 .program-guide-settings .day-list .day-container .day-select{
