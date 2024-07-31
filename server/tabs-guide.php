@@ -49,10 +49,10 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
                 <span class="name">Tue</span>
             </span>
 
-            <a href="javascript:void(0)" class="day-select">
+            <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
                 <span>12:00AM</span>
             <select name="day1" id="day1">
-                <option value="12AM">12:00AM</option>
+                <option selected value="12AM">12:00AM</option>
                 <option value="1AM">1:00AM</option>
                 <option value="2AM">2:00AM</option>
                 <option value="3AM">3:00AM</option>
@@ -86,10 +86,10 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
                 <span class="name">Wed</span>
             </span>
 
-            <a href="javascript:void(0)" class="day-select">
+            <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
             <span>12:00AM</span>
             <select name="day2" id="day2">
-                <option value="12AM">12:00AM</option>
+                <option selected value="12AM">12:00AM</option>
                 <option value="1AM">1:00AM</option>
                 <option value="2AM">2:00AM</option>
                 <option value="3AM">3:00AM</option>
@@ -123,10 +123,10 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
                 <span class="name">Thu</span>
             </span>
 
-            <a href="javascript:void(0)" class="day-select">
+            <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
             <span>12:00AM</span>
             <select name="day3" id="day3">
-                <option value="12AM">12:00AM</option>
+                <option selected value="12AM">12:00AM</option>
                 <option value="1AM">1:00AM</option>
                 <option value="2AM">2:00AM</option>
                 <option value="3AM">3:00AM</option>
@@ -156,8 +156,8 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 
         </div>
 
-        <a href="javascript:void(0)" class="option-button accesskey-b"> Cancel</a>
-        <a href="javascript:void(0)" class="option-button">Apply</a>
+        <a href="javascript:void(0)" navi_target navi_mouse navi_margin="2" data-sound="SE_CANCEL_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" data-hover class="option-button accesskey-b"> Cancel</a>
+        <a href="javascript:void(0)" navi_target navi_mouse navi_margin="2" data-sound="SE_CHECK_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" data-hover  class="option-button">Apply</a>
     </div>
 
     <div class="program-guide-container">

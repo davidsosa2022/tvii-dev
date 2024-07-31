@@ -638,6 +638,7 @@ button {
   color: #848484;
   font-size: 18px;
   padding: 0px 20px;
+  padding-bottom: 5px;
   text-align: center;
   text-shadow: 0px 1px #fff;
 }
