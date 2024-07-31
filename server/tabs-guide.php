@@ -153,14 +153,13 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
             </select>
             </a>
         </div>
-
-        </div>
-
-        <a href="javascript:void(0)" navi_target navi_mouse navi_margin="2" data-sound="SE_A_CLOSE_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" data-hover class="option-button cancel-guide-option accesskey-b"> Cancel</a>
         <a href="javascript:void(0)" navi_target navi_mouse navi_margin="2" data-sound="SE_CHECK_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" data-hover  class="option-button offset-guide-option">
             <span>Channel Offset: 0</span>
             <input type="number" name="choffset" value="0" minlength="1" maxlength="4">
         </a>
+        </div>
+
+        <a href="javascript:void(0)" navi_target navi_mouse navi_margin="2" data-sound="SE_A_CLOSE_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" data-hover class="option-button cancel-guide-option accesskey-b"> Cancel</a>
         <a href="javascript:void(0)" class="help-guide-button">Help</a>
         <a href="javascript:void(0)" navi_target navi_mouse navi_margin="2" data-sound="SE_CHECK_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" data-hover  class="option-button apply-guide-option">Apply</a>
     </div>

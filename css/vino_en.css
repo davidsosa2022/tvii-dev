@@ -636,7 +636,16 @@ button {
 }
 
 .program-guide-settings .help-guide-button {
-
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  color: #323232;
+  border-radius: 40px;
+  box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.40);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.5, #ffffff), color-stop(0.95, #f4f4f4), to(#c5c5c5));
 }
 
 .program-guide-settings .option-button.hover {
