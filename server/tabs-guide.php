@@ -49,7 +49,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
                 <span class="name">Tue</span>
             </span>
 
-            <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
+            <a href="javascript:void(0)" navi_target navi_no_reset class="day-select selected">
                 <span>12:00AM</span>
             <select name="day1" id="day1">
                 <option selected value="12AM">12:00AM</option>
