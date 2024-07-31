@@ -566,7 +566,7 @@ button {
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.35);
 }
 
-.info-tab .guide-settings {
+.info-tab .guide-settings.hover {
   top: 2px;
   box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
 }
@@ -586,7 +586,7 @@ button {
   box-shadow: -1px 0px 0px #bababa;
 }
 
-.info-tab .guide-ad  {
+.info-tab .guide-ad.hover  {
   top: 2px;
 }
 
