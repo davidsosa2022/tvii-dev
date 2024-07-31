@@ -623,6 +623,11 @@ button {
   margin: 0px 14px;
 }
 
+.program-guide-settings .option-button.hover {
+  top: 3px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.45);
+}
+
 .program-guide-settings .title{
   display: -webkit-box;
   color: #535353;
