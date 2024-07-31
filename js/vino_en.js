@@ -1523,6 +1523,12 @@ tvii.router.connect("^/guide$", function () {
         openProgramGuideSettings();
     })
 
+    
+    $(".program-guide-settings .day-list .day-container .day-select select").on("change", function () {
+        var selectedText = $(this).find("option:selected").text();
+        $(this).siblings("span").text(selectedText);
+    });
+
     function requestProgramGuide() {
         tvii.utils.lockUserOperation(true);
     }
