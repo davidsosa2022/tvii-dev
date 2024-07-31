@@ -25,7 +25,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 
 <div class="app-setting-selection-container">
   <a navi_mouse data-hover data-sound="SE_A_DECIDE_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON"  navi_target href="javascript:void(0)" class="setting-option pc">Parental Controls Settings</a>
-  <a navi_mouse data-hover data-sound="SE_A_DECIDE_TOUCH_OFF" -hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON"  navi_target href="javascript:void(0)" class="setting-option mv">Miiverse Settings</a>
+  <a navi_mouse data-hover data-sound="SE_A_DECIDE_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON"  navi_target href="javascript:void(0)" class="setting-option mv">Miiverse Settings</a>
   <a navi_mouse data-hover data-sound="SE_A_DECIDE_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON"  navi_target href="javascript:void(0)" class="setting-option apd">Auto Power Down Settings</a>
   <a navi_mouse data-hover data-sound="SE_A_DECIDE_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON"  navi_target href="javascript:void(0)" class="setting-option other">Other Settings</a>
 </div>
