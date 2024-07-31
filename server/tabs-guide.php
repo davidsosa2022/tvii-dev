@@ -156,7 +156,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 
         </div>
 
-        <a href="javascript:void(0)" navi_target navi_mouse navi_margin="2" data-sound="SE_RETURN_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" data-hover class="option-button accesskey-b"> Cancel</a>
+        <a href="javascript:void(0)" navi_target navi_mouse navi_margin="2" data-sound="SE_A_CLOSE_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" data-hover class="option-button accesskey-b"> Cancel</a>
         <a href="javascript:void(0)" navi_target navi_mouse navi_margin="2" data-sound="SE_CHECK_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" data-hover  class="option-button">Apply</a>
     </div>
 
