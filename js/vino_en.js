@@ -1529,7 +1529,7 @@ tvii.router.connect("^/guide$", function () {
 
     function openProgramGuideSettings() {
         tvii.utils.lockUserOperation(true);
-        $("..program-guide-container").addClass("none");
+        $(".program-guide-container").addClass("none");
         $(".menu-buttons").addClass("none");
         tvii.utils.lockUserOperation(false);
     }
