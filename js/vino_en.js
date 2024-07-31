@@ -1519,12 +1519,13 @@ tvii.router.connect("^/guide$", function () {
     })
 
     $(".info-tab .guide-settings").on("click", function () {
-        clearProgramGuide();
+        cacheAndClearProgramGuide();
         openProgramGuideSettings();
     })
     
     $(".program-guide-settings .option-button.cancel-guide-option").on("click", function () {
         closeProgramGuideSettings()
+        restoreCacheProgramGuide();
     })
 
     
@@ -1559,9 +1560,15 @@ tvii.router.connect("^/guide$", function () {
     }
 
 
-    function clearProgramGuide() {
+    function cacheAndClearProgramGuide() {
+        sessionStorage.setItem('guide_html_cache', $(".program-guide-container").html(""));
         $(".program-guide-container").html("");
         vino.requestGarbageCollect();
+    }
+
+    function restoreCacheProgramGuide() {
+        if (!sessionStorage.getItem('guide_html_cache')) {return false;}
+        $(".program-guide-container").html(sessionStorage.getItem('guide_html_cache'));
     }
 
     function requestAd() {
