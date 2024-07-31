@@ -1542,7 +1542,7 @@ tvii.router.connect("^/guide$", function () {
 
 
     function clearProgramGuide() {
-        $("..program-guide-container").html("");
+        $(".program-guide-container").html("");
     }
 
     function requestAd() {
