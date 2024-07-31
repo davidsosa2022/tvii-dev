@@ -680,6 +680,7 @@ button {
   color: #848484;
   font-size: 18px;
   padding: 0px 20px;
+  max-width: 700px;
   padding-bottom: 5px;
   text-align: center;
   overflow: hidden;
@@ -694,9 +695,10 @@ button {
 
 .program-guide-settings .day-list .day-container {
   display: -webkit-box;
+  -webkit-box-align: center;
   -webkit-box-orient: vertical;
   height: 200px;
-  width: 90px;
+  width: 100px;
   border-right: 1px solid #b3b3b3;
   border-left: 1px solid #fff;
 }
@@ -730,7 +732,7 @@ button {
 .program-guide-settings .day-list .day-container .day .name {
   background: #2cb3ff;
   color: #fff;
-  font-size: 16px;
+  font-size: 17px;
   padding: 2px;
   text-align: center;
   border-radius: 3px;
@@ -739,7 +741,7 @@ button {
   -webkit-box-pack: center;
   -webkit-box-align: center;
   width: 40px;
-  margin-left: 6px;
+  margin-left: 8px;
   height: 25px;
   margin-top: 3px;
 }
@@ -791,7 +793,6 @@ button {
   border-radius: 9px;
   width: 79px;
   height: 85px;
-  margin-left: 6px;
   margin-top: 20px;
 }
 
