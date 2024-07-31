@@ -546,11 +546,39 @@ button {
 }
 
 .info-tab .guide-settings{
-
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  line-height: 1.2;
+  width: 240px;
+  font-size: 15px;
+  text-align: center;
+  height: 38px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 6px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.5, #ffffff), color-stop(0.95, #f4f4f4), to(#a9a9a9));
+  color: #323232;
+  text-shadow: 0px 2px #fff;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.35);
 }
 
 .info-tab .guide-ad {
-
+  background: -webkit-gradient(linear, left top, left bottom, from(#cbcbcb), to(#f6f6f6)) 0 0;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  display: -webkit-box;
+  height: 100%;
+  width: 230px;
+  border-left: 1px solid #fff;
+  position: relative;
+  margin-left: 14px;
+  margin-right: -24px;
+  box-shadow: -1px 0px 0px #bababa;
 }
 
 .miiverse-button {
