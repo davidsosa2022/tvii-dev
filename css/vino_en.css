@@ -659,32 +659,6 @@ button {
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.45);
 }
 
-.program-guide-settings .offset-guide-option {
-  min-width: 0;
-  width: 70px;
-  height: 100px;
-  font-size: 14px;
-  margin: 0;
-  margin-left: 10px;
-  margin-top: 40px;
-  padding: 0;
-  -webkit-box-orient: vertical;
-}
-
-.program-guide-settings .offset-guide-option .bold {
-  display: block;
-  text-align: center;
-  font-size: 22px;
-  margin-top: 4px;
-  overflow: hidden;
-  word-break: break-all;
-}
-
-.program-guide-settings .option-button.hover {
-  top: 3px;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.45);
-}
-
 .program-guide-settings .title {
   display: block;
   max-width: 600px;

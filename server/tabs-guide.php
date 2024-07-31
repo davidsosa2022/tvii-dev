@@ -26,7 +26,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
     </div>
 
       <div class="info-tab">
-      <a navi_target navi_margin="2" data-sound="SE_REMINDER" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON"  data-hover href="javascript:void(0)" class="guide-settings">Change date/channel offset</a>
+      <a navi_target navi_margin="2" data-sound="SE_REMINDER" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON"  data-hover href="javascript:void(0)" class="guide-settings">Change guide date and hour</a>
       <a navi_target navi_margin="2" data-sound="SE_A_DECIDE2_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON"  data-hover href="javascript:void(0)" class="guide-ad"></a>
 
       <div class="day-info">
@@ -39,8 +39,8 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
     </menu>
 
     <div class="program-guide-settings none">
-        <span class="title">Guide/Program Offset Settings</span>
-        <span class="title-label">When you select a time, this will show 3 hours of content starting from the hour you selected</span>
+        <span class="title">Change guide date and hour</span>
+        <span class="title-label">When you select a day with an hour, this will show 6 hours of content starting from the hour of the day you just selected.</span>
         <div class="day-list">
 
         <div class="day-container">
@@ -153,15 +153,11 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
             </select>
             </a>
         </div>
-        <a href="javascript:void(0)" navi_target navi_mouse navi_margin="2" data-sound="SE_CHECK_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" data-hover  class="option-button offset-guide-option">
-            <span>Channel Offset:<span class="bold">0</span></span>
-            <input type="number" name="choffset" value="0" minlength="1" maxlength="4">
-        </a>
         </div>
 
         <a href="javascript:void(0)" navi_target navi_mouse navi_margin="2" data-sound="SE_A_CLOSE_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" data-hover class="option-button cancel-guide-option accesskey-b"> Cancel</a>
         <a href="javascript:void(0)" navi_target navi_mouse navi_margin="2" data-sound="SE_HELP_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" data-hover class="help-guide-button"></a>
-        <a href="javascript:void(0)" navi_target navi_mouse navi_margin="2" data-sound="SE_CHECK_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" data-hover  class="option-button apply-guide-option">Apply</a>
+        <a href="javascript:void(0)" navi_target navi_mouse navi_margin="2" data-sound="SE_A_DECIDE_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" data-hover  class="option-button apply-guide-option">Apply</a>
     </div>
 
     <div class="program-guide-container">
