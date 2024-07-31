@@ -602,9 +602,25 @@ button {
   background: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), color-stop(0.3, #f6f6f6), to(#e5e5e5));
 }
 
-
 .program-guide-settings .option-button {
-
+  position: relative;
+  display: -webkit-inline-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  font-size: 22px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.5, #ffffff), color-stop(0.95, #f4f4f4), to(#a9a9a9));
+  text-align: center;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 6px;
+  line-height: 1.2;
+  color: #3c3c3c;
+  text-shadow: 0px 2px 0px #fff;
+  box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.45);
+  border-radius: 12px;
+  min-width: 225px;
+  height: 52px;
+  margin: 0px 14px;
 }
 
 .program-guide-settings .title{
@@ -629,6 +645,7 @@ button {
 .program-guide-settings .day-list {
   display: -webkit-box;
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .program-guide-settings .day-list .day-container{
