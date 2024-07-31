@@ -38,6 +38,122 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 
     </menu>
 
+    <div class="program-guide-settings none">
+        <span class="title">Select the hour you want to start from the guide or change the channel offset.</span>
+        <span class="label">When you select a time, this will show 3 hours of content starting from the hour you selected</span>
+        <div class="day-list">
+
+        <div class="day">
+            <span class="label-day">Today</span>
+            <span class="day">30
+                <span class="name">Tue</span>
+            </span>
+
+            <a href="javascript:void(0)" class="day-select">
+            <select name="day1" id="day1">
+                <option value="12AM">12:00AM</option>
+                <option value="1AM">1:00AM</option>
+                <option value="2AM">2:00AM</option>
+                <option value="3AM">3:00AM</option>
+                <option value="1AM">4:00AM</option>
+                <option value="2AM">5:00AM</option>
+                <option value="3AM">6:00AM</option>
+                <option value="1AM">7:00AM</option>
+                <option value="2AM">8:00AM</option>
+                <option value="3AM">9:00AM</option>
+                <option value="1AM">10:00AM</option>
+                <option value="2AM">11:00AM</option>
+                <option value="3AM">12:00PM</option>
+                <option value="1AM">1:00PM</option>
+                <option value="2AM">2:00PM</option>
+                <option value="3AM">3:00PM</option>
+                <option value="1AM">4:00PM</option>
+                <option value="2AM">5:00PM</option>
+                <option value="3AM">6:00PM</option>
+                <option value="1AM">7:00PM</option>
+                <option value="2AM">8:00PM</option>
+                <option value="3AM">9:00PM</option>
+                <option value="1AM">10:00PM</option>
+                <option value="2AM">11:00PM</option>
+            </select>
+            </a>
+        </div>
+
+        <div class="day">
+            <span class="label-day">Tomorrow</span>
+            <span class="day">31
+                <span class="name">Wed</span>
+            </span>
+
+            <a href="javascript:void(0)" class="day-select">
+            <select name="day2" id="day2">
+                <option value="12AM">12:00AM</option>
+                <option value="1AM">1:00AM</option>
+                <option value="2AM">2:00AM</option>
+                <option value="3AM">3:00AM</option>
+                <option value="1AM">4:00AM</option>
+                <option value="2AM">5:00AM</option>
+                <option value="3AM">6:00AM</option>
+                <option value="1AM">7:00AM</option>
+                <option value="2AM">8:00AM</option>
+                <option value="3AM">9:00AM</option>
+                <option value="1AM">10:00AM</option>
+                <option value="2AM">11:00AM</option>
+                <option value="3AM">12:00PM</option>
+                <option value="1AM">1:00PM</option>
+                <option value="2AM">2:00PM</option>
+                <option value="3AM">3:00PM</option>
+                <option value="1AM">4:00PM</option>
+                <option value="2AM">5:00PM</option>
+                <option value="3AM">6:00PM</option>
+                <option value="1AM">7:00PM</option>
+                <option value="2AM">8:00PM</option>
+                <option value="3AM">9:00PM</option>
+                <option value="1AM">10:00PM</option>
+                <option value="2AM">11:00PM</option>
+            </select>
+            </a>
+        </div>
+
+        <div class="day">
+            <span class="label-day"></span>
+            <span class="day">1
+                <span class="name">Thu</span>
+            </span>
+
+            <a href="javascript:void(0)" class="day-select">
+            <select name="day3" id="day3">
+                <option value="12AM">12:00AM</option>
+                <option value="1AM">1:00AM</option>
+                <option value="2AM">2:00AM</option>
+                <option value="3AM">3:00AM</option>
+                <option value="1AM">4:00AM</option>
+                <option value="2AM">5:00AM</option>
+                <option value="3AM">6:00AM</option>
+                <option value="1AM">7:00AM</option>
+                <option value="2AM">8:00AM</option>
+                <option value="3AM">9:00AM</option>
+                <option value="1AM">10:00AM</option>
+                <option value="2AM">11:00AM</option>
+                <option value="3AM">12:00PM</option>
+                <option value="1AM">1:00PM</option>
+                <option value="2AM">2:00PM</option>
+                <option value="3AM">3:00PM</option>
+                <option value="1AM">4:00PM</option>
+                <option value="2AM">5:00PM</option>
+                <option value="3AM">6:00PM</option>
+                <option value="1AM">7:00PM</option>
+                <option value="2AM">8:00PM</option>
+                <option value="3AM">9:00PM</option>
+                <option value="1AM">10:00PM</option>
+                <option value="2AM">11:00PM</option>
+            </select>
+            </a>
+        </div>
+
+        </div>
+    </div>
+
     <div class="program-guide-container">
 
 <div class="time-labels">

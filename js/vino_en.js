@@ -1518,6 +1518,37 @@ tvii.router.connect("^/guide$", function () {
         tvii.browse.top(true);
     })
 
+    $(".info-tab .guide-settings").on("click", function () {
+        clearProgramGuide();
+        openProgramGuideSettings();
+    })
+
+    function requestProgramGuide() {
+        tvii.utils.lockUserOperation(true);
+    }
+
+    function openProgramGuideSettings() {
+        tvii.utils.lockUserOperation(true);
+        $("..program-guide-container").addClass("none");
+        $(".menu-buttons").addClass("none");
+        tvii.utils.lockUserOperation(false);
+    }
+
+    function closeProgramGuideSettings() {
+        tvii.utils.lockUserOperation(true);
+        $(".menu-buttons").removeClass("none");
+        $("..program-guide-container").removeClass("none");
+    }
+
+
+    function clearProgramGuide() {
+        $("..program-guide-container").html("");
+    }
+
+    function requestAd() {
+
+    }
+
     vino.loading_setIconAppear(true);
 
     vino.loading_setIconAppear(false);
