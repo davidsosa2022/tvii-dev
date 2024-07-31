@@ -374,6 +374,482 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 
 </div>
 
+<div class="channel-container">
+    
+    <span class="channel-name"><span class="bold">4</span>WTMJ</span>
+
+    <div class="segment-hour" id="7">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title"><span class="full-hour">7:00PM</span>Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+     </a>
+    </div>
+
+    <div class="segment-hour" id="8">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+     </a>
+    </div>
+
+    <div class="segment-hour" id="9">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+    </a>
+    </div>
+
+    <div class="segment-hour" id="10">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program thirty" id="30">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+    </a>
+        <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program thirty" id="30">
+            <span class="program-title"><span class="full-hour">10:30PM</span>TMJ4 News at 10</span>
+            <span class="program-description">Local, national and international news coverage.</span>
+    </a>
+    </div>
+
+    
+    <div class="segment-hour" id="11">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty">
+            <span class="program-title"><span class="full-hour">11:05PM</span>2024 Paris Olympics</span>
+            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
+    </a>
+    </div>
+
+    <div class="segment-hour" id="12">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty">
+            <span class="program-title">2024 Paris Olympics</span>
+            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
+    </a>
+    </div>
+
+</div>
+
+<div class="channel-container">
+    
+    <span class="channel-name"><span class="bold">4</span>WTMJ</span>
+
+    <div class="segment-hour" id="7">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title"><span class="full-hour">7:00PM</span>Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+     </a>
+    </div>
+
+    <div class="segment-hour" id="8">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+     </a>
+    </div>
+
+    <div class="segment-hour" id="9">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+    </a>
+    </div>
+
+    <div class="segment-hour" id="10">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program thirty" id="30">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+    </a>
+        <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program thirty" id="30">
+            <span class="program-title"><span class="full-hour">10:30PM</span>TMJ4 News at 10</span>
+            <span class="program-description">Local, national and international news coverage.</span>
+    </a>
+    </div>
+
+    
+    <div class="segment-hour" id="11">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty">
+            <span class="program-title"><span class="full-hour">11:05PM</span>2024 Paris Olympics</span>
+            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
+    </a>
+    </div>
+
+    <div class="segment-hour" id="12">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty">
+            <span class="program-title">2024 Paris Olympics</span>
+            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
+    </a>
+    </div>
+
+</div>
+
+<div class="channel-container">
+    
+    <span class="channel-name"><span class="bold">4</span>WTMJ</span>
+
+    <div class="segment-hour" id="7">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title"><span class="full-hour">7:00PM</span>Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+     </a>
+    </div>
+
+    <div class="segment-hour" id="8">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+     </a>
+    </div>
+
+    <div class="segment-hour" id="9">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+    </a>
+    </div>
+
+    <div class="segment-hour" id="10">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program thirty" id="30">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+    </a>
+        <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program thirty" id="30">
+            <span class="program-title"><span class="full-hour">10:30PM</span>TMJ4 News at 10</span>
+            <span class="program-description">Local, national and international news coverage.</span>
+    </a>
+    </div>
+
+    
+    <div class="segment-hour" id="11">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty">
+            <span class="program-title"><span class="full-hour">11:05PM</span>2024 Paris Olympics</span>
+            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
+    </a>
+    </div>
+
+    <div class="segment-hour" id="12">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty">
+            <span class="program-title">2024 Paris Olympics</span>
+            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
+    </a>
+    </div>
+
+</div>
+
+<div class="channel-container">
+    
+    <span class="channel-name"><span class="bold">4</span>WTMJ</span>
+
+    <div class="segment-hour" id="7">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title"><span class="full-hour">7:00PM</span>Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+     </a>
+    </div>
+
+    <div class="segment-hour" id="8">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+     </a>
+    </div>
+
+    <div class="segment-hour" id="9">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+    </a>
+    </div>
+
+    <div class="segment-hour" id="10">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program thirty" id="30">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+    </a>
+        <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program thirty" id="30">
+            <span class="program-title"><span class="full-hour">10:30PM</span>TMJ4 News at 10</span>
+            <span class="program-description">Local, national and international news coverage.</span>
+    </a>
+    </div>
+
+    
+    <div class="segment-hour" id="11">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty">
+            <span class="program-title"><span class="full-hour">11:05PM</span>2024 Paris Olympics</span>
+            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
+    </a>
+    </div>
+
+    <div class="segment-hour" id="12">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty">
+            <span class="program-title">2024 Paris Olympics</span>
+            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
+    </a>
+    </div>
+
+</div>
+
+<div class="channel-container">
+    
+    <span class="channel-name"><span class="bold">4</span>WTMJ</span>
+
+    <div class="segment-hour" id="7">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title"><span class="full-hour">7:00PM</span>Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+     </a>
+    </div>
+
+    <div class="segment-hour" id="8">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+     </a>
+    </div>
+
+    <div class="segment-hour" id="9">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+    </a>
+    </div>
+
+    <div class="segment-hour" id="10">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program thirty" id="30">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+    </a>
+        <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program thirty" id="30">
+            <span class="program-title"><span class="full-hour">10:30PM</span>TMJ4 News at 10</span>
+            <span class="program-description">Local, national and international news coverage.</span>
+    </a>
+    </div>
+
+    
+    <div class="segment-hour" id="11">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty">
+            <span class="program-title"><span class="full-hour">11:05PM</span>2024 Paris Olympics</span>
+            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
+    </a>
+    </div>
+
+    <div class="segment-hour" id="12">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty">
+            <span class="program-title">2024 Paris Olympics</span>
+            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
+    </a>
+    </div>
+
+</div>
+
+<div class="channel-container">
+    
+    <span class="channel-name"><span class="bold">4</span>WTMJ</span>
+
+    <div class="segment-hour" id="7">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title"><span class="full-hour">7:00PM</span>Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+     </a>
+    </div>
+
+    <div class="segment-hour" id="8">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+     </a>
+    </div>
+
+    <div class="segment-hour" id="9">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+    </a>
+    </div>
+
+    <div class="segment-hour" id="10">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program thirty" id="30">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+    </a>
+        <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program thirty" id="30">
+            <span class="program-title"><span class="full-hour">10:30PM</span>TMJ4 News at 10</span>
+            <span class="program-description">Local, national and international news coverage.</span>
+    </a>
+    </div>
+
+    
+    <div class="segment-hour" id="11">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty">
+            <span class="program-title"><span class="full-hour">11:05PM</span>2024 Paris Olympics</span>
+            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
+    </a>
+    </div>
+
+    <div class="segment-hour" id="12">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty">
+            <span class="program-title">2024 Paris Olympics</span>
+            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
+    </a>
+    </div>
+
+</div>
+
+<div class="channel-container">
+    
+    <span class="channel-name"><span class="bold">4</span>WTMJ</span>
+
+    <div class="segment-hour" id="7">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title"><span class="full-hour">7:00PM</span>Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+     </a>
+    </div>
+
+    <div class="segment-hour" id="8">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+     </a>
+    </div>
+
+    <div class="segment-hour" id="9">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+    </a>
+    </div>
+
+    <div class="segment-hour" id="10">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program thirty" id="30">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+    </a>
+        <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program thirty" id="30">
+            <span class="program-title"><span class="full-hour">10:30PM</span>TMJ4 News at 10</span>
+            <span class="program-description">Local, national and international news coverage.</span>
+    </a>
+    </div>
+
+    
+    <div class="segment-hour" id="11">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty">
+            <span class="program-title"><span class="full-hour">11:05PM</span>2024 Paris Olympics</span>
+            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
+    </a>
+    </div>
+
+    <div class="segment-hour" id="12">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty">
+            <span class="program-title">2024 Paris Olympics</span>
+            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
+    </a>
+    </div>
+
+</div>
+
+<div class="channel-container">
+    
+    <span class="channel-name"><span class="bold">4</span>WTMJ</span>
+
+    <div class="segment-hour" id="7">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title"><span class="full-hour">7:00PM</span>Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+     </a>
+    </div>
+
+    <div class="segment-hour" id="8">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+     </a>
+    </div>
+
+    <div class="segment-hour" id="9">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+    </a>
+    </div>
+
+    <div class="segment-hour" id="10">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program thirty" id="30">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+    </a>
+        <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program thirty" id="30">
+            <span class="program-title"><span class="full-hour">10:30PM</span>TMJ4 News at 10</span>
+            <span class="program-description">Local, national and international news coverage.</span>
+    </a>
+    </div>
+
+    
+    <div class="segment-hour" id="11">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty">
+            <span class="program-title"><span class="full-hour">11:05PM</span>2024 Paris Olympics</span>
+            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
+    </a>
+    </div>
+
+    <div class="segment-hour" id="12">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty">
+            <span class="program-title">2024 Paris Olympics</span>
+            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
+    </a>
+    </div>
+
+</div>
+
+<div class="channel-container">
+    
+    <span class="channel-name"><span class="bold">4</span>WTMJ</span>
+
+    <div class="segment-hour" id="7">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title"><span class="full-hour">7:00PM</span>Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+     </a>
+    </div>
+
+    <div class="segment-hour" id="8">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+     </a>
+    </div>
+
+    <div class="segment-hour" id="9">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty" id="60">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+    </a>
+    </div>
+
+    <div class="segment-hour" id="10">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program thirty" id="30">
+            <span class="program-title">Primetime in Paris: The Olympics</span>
+            <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
+    </a>
+        <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program thirty" id="30">
+            <span class="program-title"><span class="full-hour">10:30PM</span>TMJ4 News at 10</span>
+            <span class="program-description">Local, national and international news coverage.</span>
+    </a>
+    </div>
+
+    
+    <div class="segment-hour" id="11">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty">
+            <span class="program-title"><span class="full-hour">11:05PM</span>2024 Paris Olympics</span>
+            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
+    </a>
+    </div>
+
+    <div class="segment-hour" id="12">
+    <a href="javascript:void(0)" navi_target navi_mouse data-sound="SE_APPEAR_DETAIL" class="program sixty">
+            <span class="program-title">2024 Paris Olympics</span>
+            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
+    </a>
+    </div>
+
+</div>
 
 
 </div>
