@@ -153,6 +153,119 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
             </select>
             </a>
         </div>
+
+        <div class="day-container">
+            <span class="label-day"></span>
+            <span class="day fri">2
+                <span class="name">Fri</span>
+            </span>
+
+            <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
+            <span>12:00AM</span>
+            <select name="day3" id="day3">
+                <option selected value="12AM">12:00AM</option>
+                <option disabled value="1AM">1:00AM</option>
+                <option value="2AM">2:00AM</option>
+                <option value="3AM">3:00AM</option>
+                <option value="1AM">4:00AM</option>
+                <option value="2AM">5:00AM</option>
+                <option value="3AM">6:00AM</option>
+                <option value="1AM">7:00AM</option>
+                <option value="2AM">8:00AM</option>
+                <option value="3AM">9:00AM</option>
+                <option value="1AM">10:00AM</option>
+                <option value="2AM">11:00AM</option>
+                <option value="3AM">12:00PM</option>
+                <option value="1AM">1:00PM</option>
+                <option value="2AM">2:00PM</option>
+                <option value="3AM">3:00PM</option>
+                <option value="1AM">4:00PM</option>
+                <option value="2AM">5:00PM</option>
+                <option value="3AM">6:00PM</option>
+                <option value="1AM">7:00PM</option>
+                <option value="2AM">8:00PM</option>
+                <option value="3AM">9:00PM</option>
+                <option value="1AM">10:00PM</option>
+                <option value="2AM">11:00PM</option>
+            </select>
+            </a>
+        </div>
+
+        <div class="day-container">
+            <span class="label-day"></span>
+            <span class="day sat">3
+                <span class="name">Sat</span>
+            </span>
+
+            <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
+            <span>12:00AM</span>
+            <select name="day3" id="day3">
+                <option selected value="12AM">12:00AM</option>
+                <option disabled value="1AM">1:00AM</option>
+                <option value="2AM">2:00AM</option>
+                <option value="3AM">3:00AM</option>
+                <option value="1AM">4:00AM</option>
+                <option value="2AM">5:00AM</option>
+                <option value="3AM">6:00AM</option>
+                <option value="1AM">7:00AM</option>
+                <option value="2AM">8:00AM</option>
+                <option value="3AM">9:00AM</option>
+                <option value="1AM">10:00AM</option>
+                <option value="2AM">11:00AM</option>
+                <option value="3AM">12:00PM</option>
+                <option value="1AM">1:00PM</option>
+                <option value="2AM">2:00PM</option>
+                <option value="3AM">3:00PM</option>
+                <option value="1AM">4:00PM</option>
+                <option value="2AM">5:00PM</option>
+                <option value="3AM">6:00PM</option>
+                <option value="1AM">7:00PM</option>
+                <option value="2AM">8:00PM</option>
+                <option value="3AM">9:00PM</option>
+                <option value="1AM">10:00PM</option>
+                <option value="2AM">11:00PM</option>
+            </select>
+            </a>
+        </div>
+
+        
+        <div class="day-container">
+            <span class="label-day"></span>
+            <span class="day sun">4
+                <span class="name">Sun</span>
+            </span>
+
+            <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
+            <span>12:00AM</span>
+            <select name="day3" id="day3">
+                <option selected value="12AM">12:00AM</option>
+                <option disabled value="1AM">1:00AM</option>
+                <option value="2AM">2:00AM</option>
+                <option value="3AM">3:00AM</option>
+                <option value="1AM">4:00AM</option>
+                <option value="2AM">5:00AM</option>
+                <option value="3AM">6:00AM</option>
+                <option value="1AM">7:00AM</option>
+                <option value="2AM">8:00AM</option>
+                <option value="3AM">9:00AM</option>
+                <option value="1AM">10:00AM</option>
+                <option value="2AM">11:00AM</option>
+                <option value="3AM">12:00PM</option>
+                <option value="1AM">1:00PM</option>
+                <option value="2AM">2:00PM</option>
+                <option value="3AM">3:00PM</option>
+                <option value="1AM">4:00PM</option>
+                <option value="2AM">5:00PM</option>
+                <option value="3AM">6:00PM</option>
+                <option value="1AM">7:00PM</option>
+                <option value="2AM">8:00PM</option>
+                <option value="3AM">9:00PM</option>
+                <option value="1AM">10:00PM</option>
+                <option value="2AM">11:00PM</option>
+            </select>
+            </a>
+        </div>
+
         </div>
 
         <a href="javascript:void(0)" navi_target navi_mouse navi_margin="2" data-sound="SE_A_CLOSE_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" data-hover class="option-button cancel-guide-option accesskey-b"> Cancel</a>
