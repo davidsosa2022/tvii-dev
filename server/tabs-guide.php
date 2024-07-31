@@ -40,7 +40,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 
     <div class="program-guide-settings none">
         <span class="title">Select the hour you want to start from the guide or change the channel offset.</span>
-        <span class="label">When you select a time, this will show 3 hours of content starting from the hour you selected</span>
+        <span class="title-label">When you select a time, this will show 3 hours of content starting from the hour you selected</span>
         <div class="day-list">
 
         <div class="day">
