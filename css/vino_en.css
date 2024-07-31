@@ -648,7 +648,6 @@ button {
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.5, #ffffff), color-stop(0.95, #f4f4f4), to(#c5c5c5));
 }
 
-
 .program-guide-settings .offset-guide-button {
   min-width: 0;
   width: 70px;
