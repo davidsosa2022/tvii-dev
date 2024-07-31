@@ -623,6 +623,22 @@ button {
   margin: 0px 14px;
 }
 
+.program-guide-settings .option-button input{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  opacity: 0;
+  -webkit-opacity: 0;
+}
+
+.program-guide-settings .help-guide-button {
+
+}
+
 .program-guide-settings .option-button.hover {
   top: 3px;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.45);
@@ -737,7 +753,7 @@ button {
   -webkit-box-align: center;
   font-size: 22px;
   word-break: break-all;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.5, #ffffff), color-stop(0.95, #f4f4f4), to(#e1e1e1));
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.5, #ffffff), color-stop(0.95, #f4f4f4), to(#c5c5c5));
   text-align: center;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -745,7 +761,7 @@ button {
   line-height: 1.2;
   color: #3c3c3c;
   text-shadow: 0px 2px 0px #fff;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.35);
   border-radius: 9px;
   width: 85px;
   height: 85px;
@@ -755,10 +771,10 @@ button {
 
 .program-guide-settings .day-list .day-container .day-select.selected{
   border: 2px solid #009bcf;
+  box-shadow: none;
   text-shadow: 0px -2px #009bcf;
   color: #fff;
   background: -webkit-gradient(linear, left top, left bottom, from(#72dcff), color-stop(0.5, #4fd3ff), color-stop(0.95, #1ec6ff), to(#00afea));
-
 }
 
 .program-guide-settings .day-list .day-container .day-select select{
