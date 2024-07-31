@@ -605,29 +605,43 @@ button {
 .program-guide-settings .title{
   display: -webkit-box;
   color: #535353;
-  font-size: 20px;
-  padding: 0px 20px;
+  font-size: 24px;
+  padding: 5px 20px;
+  padding-top: 15px;
   text-align: center;
   text-shadow: 0px 1px #fff;
 }
 
 .program-guide-settings .title-label{
   display: -webkit-box;
-  color: #535353;
-  font-size: 20px;
+  color: #848484;
+  font-size: 18px;
   padding: 0px 20px;
   text-align: center;
   text-shadow: 0px 1px #fff;
 }
 
-
 .program-guide-settings .day-list {
-
+  display: -webkit-box;
 }
 
 .program-guide-settings .day-list .day-container{
-
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  height: 200px;
+  width: 100px;
+  border-right: 1px solid #b3b3b3;
+  border-left: 1px solid #fff;
 }
+
+.program-guide-settings .day-list .day-container:first-child {
+  box-shadow: -1px 0px #b3b3b3;
+}
+
+.program-guide-settings .day-list .day-container:last-child {
+  box-shadow: 1px 0px #ffffff;
+}
+
 
 
 .program-guide-settings .day-list .day-container .label-day{
