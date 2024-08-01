@@ -58,6 +58,10 @@ $daysOfWeek = [
     'sat' => 'Saturday',
 ];
 
+// Get the current hour and minute
+$currentHour = date('H');
+$currentMinute = date('i');
+
 // Generate the day containers
 for ($i = 0; $i < 7; $i++) {
     // Calculate the day of the week
@@ -69,7 +73,7 @@ for ($i = 0; $i < 7; $i++) {
     $dayNumber = date('j', strtotime("+$i day"));
 
     // Get the localized day name
-    $localizedDayName = localize("vino.guide.day." . $dayName . ".short"); // Updated to use long names
+    $localizedDayName = localize("vino.guide.day." . $dayName . ".short");
 
     // Determine the label for the day
     if ($i == 0) {
@@ -91,14 +95,24 @@ for ($i = 0; $i < 7; $i++) {
     echo '    <span class="day ' . $dayName . '">' . $dayNumber;
     echo '        <span class="name">' . htmlspecialchars($localizedDayName) . '</span>';
     echo '    </span>';
+    
     echo '    <a href="javascript:void(0)" navi_target navi_no_reset class="day-select ' . $additionalClass . '">';
-    echo '        <span>12:00AM</span>';
+    
+    // Determine the closest hour
+    $closestHour = $currentHour;
+    $closestHourFormatted = str_pad($closestHour, 2, '0', STR_PAD_LEFT) . ':00';
+    $closestHour12 = ($closestHour % 12) ?: 12;
+    $closestAmPm = ($closestHour < 12) ? 'AM' : 'PM';
+    $closestHourText = $closestHour12 . ':00' . $closestAmPm;
+    
+    echo '        <span>' . htmlspecialchars($closestHourText) . '</span>';
     echo '        <select name="' . htmlspecialchars($date) . '" id="day' . $i . '">';
     for ($hour = 0; $hour < 24; $hour++) {
         $hourFormatted = str_pad($hour, 2, '0', STR_PAD_LEFT) . ':00';
         $amPm = ($hour < 12) ? 'AM' : 'PM';
         $hour12 = ($hour % 12) ?: 12;
-        echo '        <option value="' . $hourFormatted . '">' . $hour12 . ':00' . $amPm . '</option>';
+        $selected = ($hourFormatted == $closestHourFormatted) ? ' selected' : '';
+        echo '        <option value="' . $hourFormatted . '"' . $selected . '>' . $hour12 . ':00' . $amPm . '</option>';
     }
     echo '        </select>';
     echo '    </a>';
