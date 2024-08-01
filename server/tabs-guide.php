@@ -43,6 +43,42 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         <span class="title-label"><?php echo localize("vino.guide.settings.title.label") ?></span>
         <div class="day-list">
 
+        <div class="day-container">
+            <span class="label-day"></span>
+            <span class="day sun">4
+                <span class="name">Sun</span>
+            </span>
+
+            <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
+            <span>12:00AM</span>
+            <select name="day0" id="day0">
+                <option selected value="00:00">12:00AM</option>
+                <option value="01:00">1:00AM</option>
+                <option value="02:00">2:00AM</option>
+                <option value="03:00">3:00AM</option>
+                <option value="04:00">4:00AM</option>
+                <option value="05:00">5:00AM</option>
+                <option value="06:00">6:00AM</option>
+                <option value="07:00">7:00AM</option>
+                <option value="08:00">8:00AM</option>
+                <option value="09:00">9:00AM</option>
+                <option value="10:00">10:00AM</option>
+                <option value="11:00">11:00AM</option>
+                <option value="12:00">12:00PM</option>
+                <option value="13:00">1:00PM</option>
+                <option value="14:00">2:00PM</option>
+                <option value="15:00">3:00PM</option>
+                <option value="16:00">4:00PM</option>
+                <option value="17:00">5:00PM</option>
+                <option value="18:00">6:00PM</option>
+                <option value="19:00">7:00PM</option>
+                <option value="20:00">8:00PM</option>
+                <option value="21:00">9:00PM</option>
+                <option value="22:00">10:00PM</option>
+                <option value="23:00">11:00PM</option>
+            </select>
+            </a>
+        </div>
         
         <div class="day-container">
             <span class="label-day"></span>
@@ -52,31 +88,31 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 
             <a href="javascript:void(0)" navi_target navi_no_reset class="day-select selected">
             <span>12:00AM</span>
-            <select name="day0" id="day0">
-                <option selected value="12AM">12:00AM</option>
-                <option value="1AM">1:00AM</option>
-                <option value="2AM">2:00AM</option>
-                <option value="3AM">3:00AM</option>
-                <option value="1AM">4:00AM</option>
-                <option value="2AM">5:00AM</option>
-                <option value="3AM">6:00AM</option>
-                <option value="1AM">7:00AM</option>
-                <option value="2AM">8:00AM</option>
-                <option value="3AM">9:00AM</option>
-                <option value="1AM">10:00AM</option>
-                <option value="2AM">11:00AM</option>
-                <option value="3AM">12:00PM</option>
-                <option value="1AM">1:00PM</option>
-                <option value="2AM">2:00PM</option>
-                <option value="3AM">3:00PM</option>
-                <option value="1AM">4:00PM</option>
-                <option value="2AM">5:00PM</option>
-                <option value="3AM">6:00PM</option>
-                <option value="1AM">7:00PM</option>
-                <option value="2AM">8:00PM</option>
-                <option value="3AM">9:00PM</option>
-                <option value="1AM">10:00PM</option>
-                <option value="2AM">11:00PM</option>
+            <select name="day1" id="day1">
+                <option selected value="00:00">12:00AM</option>
+                <option value="01:00">1:00AM</option>
+                <option value="02:00">2:00AM</option>
+                <option value="03:00">3:00AM</option>
+                <option value="04:00">4:00AM</option>
+                <option value="05:00">5:00AM</option>
+                <option value="06:00">6:00AM</option>
+                <option value="07:00">7:00AM</option>
+                <option value="08:00">8:00AM</option>
+                <option value="09:00">9:00AM</option>
+                <option value="10:00">10:00AM</option>
+                <option value="11:00">11:00AM</option>
+                <option value="12:00">12:00PM</option>
+                <option value="13:00">1:00PM</option>
+                <option value="14:00">2:00PM</option>
+                <option value="15:00">3:00PM</option>
+                <option value="16:00">4:00PM</option>
+                <option value="17:00">5:00PM</option>
+                <option value="18:00">6:00PM</option>
+                <option value="19:00">7:00PM</option>
+                <option value="20:00">8:00PM</option>
+                <option value="21:00">9:00PM</option>
+                <option value="22:00">10:00PM</option>
+                <option value="23:00">11:00PM</option>
             </select>
             </a>
         </div>
@@ -89,31 +125,31 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 
             <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
                 <span>12:00AM</span>
-            <select name="day1" id="day1">
-                <option selected value="12AM">12:00AM</option>
-                <option value="1AM">1:00AM</option>
-                <option value="2AM">2:00AM</option>
-                <option value="3AM">3:00AM</option>
-                <option value="1AM">4:00AM</option>
-                <option value="2AM">5:00AM</option>
-                <option value="3AM">6:00AM</option>
-                <option value="1AM">7:00AM</option>
-                <option value="2AM">8:00AM</option>
-                <option value="3AM">9:00AM</option>
-                <option value="1AM">10:00AM</option>
-                <option value="2AM">11:00AM</option>
-                <option value="3AM">12:00PM</option>
-                <option value="1AM">1:00PM</option>
-                <option value="2AM">2:00PM</option>
-                <option value="3AM">3:00PM</option>
-                <option value="1AM">4:00PM</option>
-                <option value="2AM">5:00PM</option>
-                <option value="3AM">6:00PM</option>
-                <option value="1AM">7:00PM</option>
-                <option value="2AM">8:00PM</option>
-                <option value="3AM">9:00PM</option>
-                <option value="1AM">10:00PM</option>
-                <option value="2AM">11:00PM</option>
+                <select name="day2" id="day2">
+                <option selected value="00:00">12:00AM</option>
+                <option value="01:00">1:00AM</option>
+                <option value="02:00">2:00AM</option>
+                <option value="03:00">3:00AM</option>
+                <option value="04:00">4:00AM</option>
+                <option value="05:00">5:00AM</option>
+                <option value="06:00">6:00AM</option>
+                <option value="07:00">7:00AM</option>
+                <option value="08:00">8:00AM</option>
+                <option value="09:00">9:00AM</option>
+                <option value="10:00">10:00AM</option>
+                <option value="11:00">11:00AM</option>
+                <option value="12:00">12:00PM</option>
+                <option value="13:00">1:00PM</option>
+                <option value="14:00">2:00PM</option>
+                <option value="15:00">3:00PM</option>
+                <option value="16:00">4:00PM</option>
+                <option value="17:00">5:00PM</option>
+                <option value="18:00">6:00PM</option>
+                <option value="19:00">7:00PM</option>
+                <option value="20:00">8:00PM</option>
+                <option value="21:00">9:00PM</option>
+                <option value="22:00">10:00PM</option>
+                <option value="23:00">11:00PM</option>
             </select>
             </a>
         </div>
@@ -126,31 +162,31 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 
             <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
             <span>12:00AM</span>
-            <select name="day2" id="day2">
-                <option selected value="12AM">12:00AM</option>
-                <option value="1AM">1:00AM</option>
-                <option value="2AM">2:00AM</option>
-                <option value="3AM">3:00AM</option>
-                <option value="1AM">4:00AM</option>
-                <option value="2AM">5:00AM</option>
-                <option value="3AM">6:00AM</option>
-                <option value="1AM">7:00AM</option>
-                <option value="2AM">8:00AM</option>
-                <option value="3AM">9:00AM</option>
-                <option value="1AM">10:00AM</option>
-                <option value="2AM">11:00AM</option>
-                <option value="3AM">12:00PM</option>
-                <option value="1AM">1:00PM</option>
-                <option value="2AM">2:00PM</option>
-                <option value="3AM">3:00PM</option>
-                <option value="1AM">4:00PM</option>
-                <option value="2AM">5:00PM</option>
-                <option value="3AM">6:00PM</option>
-                <option value="1AM">7:00PM</option>
-                <option value="2AM">8:00PM</option>
-                <option value="3AM">9:00PM</option>
-                <option value="1AM">10:00PM</option>
-                <option value="2AM">11:00PM</option>
+            <select name="day3" id="day3">
+                <option selected value="00:00">12:00AM</option>
+                <option value="01:00">1:00AM</option>
+                <option value="02:00">2:00AM</option>
+                <option value="03:00">3:00AM</option>
+                <option value="04:00">4:00AM</option>
+                <option value="05:00">5:00AM</option>
+                <option value="06:00">6:00AM</option>
+                <option value="07:00">7:00AM</option>
+                <option value="08:00">8:00AM</option>
+                <option value="09:00">9:00AM</option>
+                <option value="10:00">10:00AM</option>
+                <option value="11:00">11:00AM</option>
+                <option value="12:00">12:00PM</option>
+                <option value="13:00">1:00PM</option>
+                <option value="14:00">2:00PM</option>
+                <option value="15:00">3:00PM</option>
+                <option value="16:00">4:00PM</option>
+                <option value="17:00">5:00PM</option>
+                <option value="18:00">6:00PM</option>
+                <option value="19:00">7:00PM</option>
+                <option value="20:00">8:00PM</option>
+                <option value="21:00">9:00PM</option>
+                <option value="22:00">10:00PM</option>
+                <option value="23:00">11:00PM</option>
             </select>
             </a>
         </div>
@@ -163,31 +199,31 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 
             <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
             <span>12:00AM</span>
-            <select name="day3" id="day3">
-                <option selected value="12AM">12:00AM</option>
-                <option value="1AM">1:00AM</option>
-                <option value="2AM">2:00AM</option>
-                <option value="3AM">3:00AM</option>
-                <option value="1AM">4:00AM</option>
-                <option value="2AM">5:00AM</option>
-                <option value="3AM">6:00AM</option>
-                <option value="1AM">7:00AM</option>
-                <option value="2AM">8:00AM</option>
-                <option value="3AM">9:00AM</option>
-                <option value="1AM">10:00AM</option>
-                <option value="2AM">11:00AM</option>
-                <option value="3AM">12:00PM</option>
-                <option value="1AM">1:00PM</option>
-                <option value="2AM">2:00PM</option>
-                <option value="3AM">3:00PM</option>
-                <option value="1AM">4:00PM</option>
-                <option value="2AM">5:00PM</option>
-                <option value="3AM">6:00PM</option>
-                <option value="1AM">7:00PM</option>
-                <option value="2AM">8:00PM</option>
-                <option value="3AM">9:00PM</option>
-                <option value="1AM">10:00PM</option>
-                <option value="2AM">11:00PM</option>
+            <select name="day4" id="day4">
+                <option selected value="00:00">12:00AM</option>
+                <option value="01:00">1:00AM</option>
+                <option value="02:00">2:00AM</option>
+                <option value="03:00">3:00AM</option>
+                <option value="04:00">4:00AM</option>
+                <option value="05:00">5:00AM</option>
+                <option value="06:00">6:00AM</option>
+                <option value="07:00">7:00AM</option>
+                <option value="08:00">8:00AM</option>
+                <option value="09:00">9:00AM</option>
+                <option value="10:00">10:00AM</option>
+                <option value="11:00">11:00AM</option>
+                <option value="12:00">12:00PM</option>
+                <option value="13:00">1:00PM</option>
+                <option value="14:00">2:00PM</option>
+                <option value="15:00">3:00PM</option>
+                <option value="16:00">4:00PM</option>
+                <option value="17:00">5:00PM</option>
+                <option value="18:00">6:00PM</option>
+                <option value="19:00">7:00PM</option>
+                <option value="20:00">8:00PM</option>
+                <option value="21:00">9:00PM</option>
+                <option value="22:00">10:00PM</option>
+                <option value="23:00">11:00PM</option>
             </select>
             </a>
         </div>
@@ -200,31 +236,31 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 
             <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
             <span>12:00AM</span>
-            <select name="day4" id="day4">
-                <option selected value="12AM">12:00AM</option>
-                <option value="1AM">1:00AM</option>
-                <option value="2AM">2:00AM</option>
-                <option value="3AM">3:00AM</option>
-                <option value="1AM">4:00AM</option>
-                <option value="2AM">5:00AM</option>
-                <option value="3AM">6:00AM</option>
-                <option value="1AM">7:00AM</option>
-                <option value="2AM">8:00AM</option>
-                <option value="3AM">9:00AM</option>
-                <option value="1AM">10:00AM</option>
-                <option value="2AM">11:00AM</option>
-                <option value="3AM">12:00PM</option>
-                <option value="1AM">1:00PM</option>
-                <option value="2AM">2:00PM</option>
-                <option value="3AM">3:00PM</option>
-                <option value="1AM">4:00PM</option>
-                <option value="2AM">5:00PM</option>
-                <option value="3AM">6:00PM</option>
-                <option value="1AM">7:00PM</option>
-                <option value="2AM">8:00PM</option>
-                <option value="3AM">9:00PM</option>
-                <option value="1AM">10:00PM</option>
-                <option value="2AM">11:00PM</option>
+            <select name="day5" id="day5">
+                <option selected value="00:00">12:00AM</option>
+                <option value="01:00">1:00AM</option>
+                <option value="02:00">2:00AM</option>
+                <option value="03:00">3:00AM</option>
+                <option value="04:00">4:00AM</option>
+                <option value="05:00">5:00AM</option>
+                <option value="06:00">6:00AM</option>
+                <option value="07:00">7:00AM</option>
+                <option value="08:00">8:00AM</option>
+                <option value="09:00">9:00AM</option>
+                <option value="10:00">10:00AM</option>
+                <option value="11:00">11:00AM</option>
+                <option value="12:00">12:00PM</option>
+                <option value="13:00">1:00PM</option>
+                <option value="14:00">2:00PM</option>
+                <option value="15:00">3:00PM</option>
+                <option value="16:00">4:00PM</option>
+                <option value="17:00">5:00PM</option>
+                <option value="18:00">6:00PM</option>
+                <option value="19:00">7:00PM</option>
+                <option value="20:00">8:00PM</option>
+                <option value="21:00">9:00PM</option>
+                <option value="22:00">10:00PM</option>
+                <option value="23:00">11:00PM</option>
             </select>
             </a>
         </div>
@@ -237,69 +273,31 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
 
             <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
             <span>12:00AM</span>
-            <select name="day5" id="day5">
-                <option selected value="12AM">12:00AM</option>
-                <option value="1AM">1:00AM</option>
-                <option value="2AM">2:00AM</option>
-                <option value="3AM">3:00AM</option>
-                <option value="1AM">4:00AM</option>
-                <option value="2AM">5:00AM</option>
-                <option value="3AM">6:00AM</option>
-                <option value="1AM">7:00AM</option>
-                <option value="2AM">8:00AM</option>
-                <option value="3AM">9:00AM</option>
-                <option value="1AM">10:00AM</option>
-                <option value="2AM">11:00AM</option>
-                <option value="3AM">12:00PM</option>
-                <option value="1AM">1:00PM</option>
-                <option value="2AM">2:00PM</option>
-                <option value="3AM">3:00PM</option>
-                <option value="1AM">4:00PM</option>
-                <option value="2AM">5:00PM</option>
-                <option value="3AM">6:00PM</option>
-                <option value="1AM">7:00PM</option>
-                <option value="2AM">8:00PM</option>
-                <option value="3AM">9:00PM</option>
-                <option value="1AM">10:00PM</option>
-                <option value="2AM">11:00PM</option>
-            </select>
-            </a>
-        </div>
-
-        
-        <div class="day-container">
-            <span class="label-day"></span>
-            <span class="day sun">4
-                <span class="name">Sun</span>
-            </span>
-
-            <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
-            <span>12:00AM</span>
             <select name="day6" id="day6">
-                <option selected value="12AM">12:00AM</option>
-                <option value="1AM">1:00AM</option>
-                <option value="2AM">2:00AM</option>
-                <option value="3AM">3:00AM</option>
-                <option value="1AM">4:00AM</option>
-                <option value="2AM">5:00AM</option>
-                <option value="3AM">6:00AM</option>
-                <option value="1AM">7:00AM</option>
-                <option value="2AM">8:00AM</option>
-                <option value="3AM">9:00AM</option>
-                <option value="1AM">10:00AM</option>
-                <option value="2AM">11:00AM</option>
-                <option value="3AM">12:00PM</option>
-                <option value="1AM">1:00PM</option>
-                <option value="2AM">2:00PM</option>
-                <option value="3AM">3:00PM</option>
-                <option value="1AM">4:00PM</option>
-                <option value="2AM">5:00PM</option>
-                <option value="3AM">6:00PM</option>
-                <option value="1AM">7:00PM</option>
-                <option value="2AM">8:00PM</option>
-                <option value="3AM">9:00PM</option>
-                <option value="1AM">10:00PM</option>
-                <option value="2AM">11:00PM</option>
+                <option selected value="00:00">12:00AM</option>
+                <option value="01:00">1:00AM</option>
+                <option value="02:00">2:00AM</option>
+                <option value="03:00">3:00AM</option>
+                <option value="04:00">4:00AM</option>
+                <option value="05:00">5:00AM</option>
+                <option value="06:00">6:00AM</option>
+                <option value="07:00">7:00AM</option>
+                <option value="08:00">8:00AM</option>
+                <option value="09:00">9:00AM</option>
+                <option value="10:00">10:00AM</option>
+                <option value="11:00">11:00AM</option>
+                <option value="12:00">12:00PM</option>
+                <option value="13:00">1:00PM</option>
+                <option value="14:00">2:00PM</option>
+                <option value="15:00">3:00PM</option>
+                <option value="16:00">4:00PM</option>
+                <option value="17:00">5:00PM</option>
+                <option value="18:00">6:00PM</option>
+                <option value="19:00">7:00PM</option>
+                <option value="20:00">8:00PM</option>
+                <option value="21:00">9:00PM</option>
+                <option value="22:00">10:00PM</option>
+                <option value="23:00">11:00PM</option>
             </select>
             </a>
         </div>
