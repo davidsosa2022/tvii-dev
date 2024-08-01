@@ -57,13 +57,19 @@ $daysOfWeek = [
     'sat' => 'Saturday',
 ];
 
+// Get the current date and month
+$currentDate = date('j'); // Day of the month
+$currentMonth = date('m'); // Current month
+
 // Generate the day containers
 for ($i = 0; $i < 7; $i++) {
+    // Calculate the day of the week
     $dayIndex = ($currentDayIndex + $i) % 7;
     $dayName = array_keys($daysOfWeek)[$dayIndex];
-    $dayNumber = ($i + 1); // Example: day number for display, adjust if needed
-    $dayLabel = $daysOfWeek[$dayName];
     
+    // Calculate the day number (e.g., today + i days)
+    $dayNumber = date('j', strtotime("+$i day"));
+
     // Get the localized day name
     $localizedDayName = localize("vino.guide.day." . $dayName . ".short");
 
