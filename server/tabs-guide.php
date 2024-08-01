@@ -58,43 +58,42 @@ $daysOfWeek = [
     'sat' => 'Saturday',
 ];
 
-// Get the current date
-$currentDate = date('j');
-
 // Generate the day containers
 for ($i = 0; $i < 7; $i++) {
     // Calculate the day of the week
     $dayIndex = ($currentDayIndex + $i) % 7;
     $dayName = array_keys($daysOfWeek)[$dayIndex];
     
-    // Calculate the day number (e.g., today + i days)
+    // Calculate the date (e.g., today + i days)
+    $date = date('m/d/Y', strtotime("+$i day"));
     $dayNumber = date('j', strtotime("+$i day"));
 
     // Get the localized day name
-    $localizedDayName = localize("vino.guide.day." . $dayName . ".short");
+    $localizedDayName = localize("vino.guide.day." . $dayName . ".long"); // Updated to use long names
 
     // Determine the label for the day
     if ($i == 0) {
         $labelDay = localize("vino.guide.day.today");
+        $additionalClass = 'selected'; // Set class to selected for the first day
     } elseif ($i == 1) {
         $labelDay = localize("vino.guide.day.tomorrow");
+        $additionalClass = '';
     } elseif ($i == 6) {
         $labelDay = localize("vino.guide.day.lastday");
+        $additionalClass = '';
     } else {
         $labelDay = ''; // No label for intermediate days
+        $additionalClass = '';
     }
-
-    // Generate the day name for the select element
-    $selectName = $daysOfWeek[$dayName];
 
     echo '<div class="day-container">';
     echo '    <span class="label-day">' . htmlspecialchars($labelDay) . '</span>';
     echo '    <span class="day ' . $dayName . '">' . $dayNumber;
     echo '        <span class="name">' . htmlspecialchars($localizedDayName) . '</span>';
     echo '    </span>';
-    echo '    <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">';
+    echo '    <a href="javascript:void(0)" navi_target navi_no_reset class="day-select ' . $additionalClass . '">';
     echo '        <span>12:00AM</span>';
-    echo '        <select name="' . htmlspecialchars($selectName) . '" id="day' . $i . '">';
+    echo '        <select name="' . htmlspecialchars($date) . '" id="day' . $i . '">';
     for ($hour = 0; $hour < 24; $hour++) {
         $hourFormatted = str_pad($hour, 2, '0', STR_PAD_LEFT) . ':00';
         $amPm = ($hour < 12) ? 'AM' : 'PM';
