@@ -1619,48 +1619,28 @@ tvii.router.connect("^/guide$", function () {
     function requestAd() {
 
     }
+
     var country = vino.info_getCountry();
     var lang = vino.info_getLanguage().toLowerCase();
     var today = new Date();
 
+    // Function to ensure two-digit formatting
     function formatTwoDigits(value) {
-        return value.toString().padStart(2, '0');
+        // Convert the number to a string and manually pad with a leading zero if necessary
+        return value < 10 ? '0' + value : value.toString();
     }
-    
-    // Alert to check if the script is running
-    alert("Script started");
-    
-    // Create a new date object for today
-    var today = new Date();
-    alert("Date object created: " + today);
     
     // Extract and format month, day, and year
-    try {
-        var month = formatTwoDigits(today.getMonth() + 1); // Months are zero-based
-        var day = formatTwoDigits(today.getDate());
-        var year = today.getFullYear();
-        
-        // Alert the extracted and formatted values
-        alert("Formatted month: " + month);
-        alert("Formatted day: " + day);
-        alert("Year: " + year);
+    var month = formatTwoDigits(today.getMonth() + 1); // Months are zero-based
+    var day = formatTwoDigits(today.getDate());
+    var year = today.getFullYear();
     
-        // Create the formatted date string
-        var formattedDate = month + '/' + day + '/' + year;
-        alert("Formatted date: " + formattedDate);
-    
-        // Additional alert to confirm code execution
-        alert("stop after formatting");
-    
-    } catch (error) {
-        // Alert any errors that occur
-        alert("An error occurred: " + error.message);
-    }
-
     // Format the date as MM/DD/YYYY
     var dateVal = month + '/' + day + '/' + year;
+
     var hours = String(today.getHours()).padStart(2, '0');
     var dateHourVal = hours + ':00';
+
     requestProgramGuide(createQueryString(dateVal, dateHourVal, country, lang));
 });
 
