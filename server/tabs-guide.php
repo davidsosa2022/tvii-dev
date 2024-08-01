@@ -69,7 +69,7 @@ for ($i = 0; $i < 7; $i++) {
     $dayNumber = date('j', strtotime("+$i day"));
 
     // Get the localized day name
-    $localizedDayName = localize("vino.guide.day." . $dayName . ".long"); // Updated to use long names
+    $localizedDayName = localize("vino.guide.day." . $dayName . ".short"); // Updated to use long names
 
     // Determine the label for the day
     if ($i == 0) {
