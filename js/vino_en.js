@@ -1619,12 +1619,10 @@ tvii.router.connect("^/guide$", function () {
     function requestAd() {
 
     }
-    alert("Poop")
     var country = vino.info_getCountry();
     var lang = vino.info_getLanguage().toLowerCase();
     var today = new Date();
 
-    alert("Poop")
     // Function to ensure two-digit formatting
     function formatTwoDigits(value) {
         return value.toString().padStart(2, '0');
@@ -1632,16 +1630,15 @@ tvii.router.connect("^/guide$", function () {
     alert("Poop")
     // Extract and format month, day, and year
     var month = formatTwoDigits(today.getMonth() + 1); // Months are zero-based
+    alert("Poop")
     var day = formatTwoDigits(today.getDate());
+    alert("Poop")
     var year = today.getFullYear();
     alert("Poop")
     // Format the date as MM/DD/YYYY
     var dateVal = month + '/' + day + '/' + year;
-    alert("Poop")
     var hours = String(today.getHours()).padStart(2, '0');
     var dateHourVal = hours + ':00';
-    alert("Poop")
-
     requestProgramGuide(createQueryString(dateVal, dateHourVal, country, lang));
 });
 
