@@ -22,6 +22,7 @@ RewriteRule ^v1/miiverse/empathies$ /api/miiverse_empathies.php [L,NC,QSA]
 RewriteRule ^v1/miiverse/check_news$ /api/miiverse_news.php [L,NC,QSA]
 RewriteRule ^v1/recommend$ /api/recommend.php [L,NC,QSA]
 RewriteRule ^v1/create$ /api/create.php [L,NC,QSA]
+RewriteRule ^v1/guide$ /api/guide_endpoint.php [L,NC,QSA]
 RewriteRule ^v1/me/update$ /api/update_profile.php [L,NC,QSA]
 
 RewriteRule ^manage$ /admin/manage-programs.php [L,NC,QSA]

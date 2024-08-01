@@ -1,9 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <vino_tv_guide>
 
-<grid>
-<channel>
-</channel>
-</grid>
+<grid date="2024-08-01" segments="6">
 
+<channel name="WTMJ" irnumber="4" starthour="2024-08-01T19:00:00Z" endhour="2024-08-02T12:00:00Z">
+
+<program starttime="2024-08-01T19:00:00Z" endtime="2024-08-01T21:30:00Z" length="180" year="" season="" episode="" rating="" sound="" dvs="0" cc="0"
+ isnew="0" islive="1" ispremiere="0">
+<program_name>Primetime in Paris: The Olympics</program_name>
+<program_description></program_description>
+<program_episode_name></program_episode_name>
+</program>
+
+<program starttime="2024-08-01T21:30:00Z" endtime="2024-08-01T22:00:00Z" length="30" year="2024" season="2" episode="56" rating="" sound="" dvs="0" cc="0"
+ isnew="0" islive="1" ispremiere="0">
+<program_name>Braden has a heart attack and dies</program_name>
+<program_description>Braden receives a punch in the head so bad that turns him into a skibidi toilet, but the skibidi doesn't have a heart so he dies.</program_description>
+<program_episode_name>The Final Episode</program_episode_name>
+</program>
+
+<program starttime="2024-08-01T22:00:00Z" endtime="2024-08-02T12:00:00Z" length="30" year="2024" season="1" episode="1" rating="TV-PG" sound="Stereo" dvs="0" cc="1"
+ isnew="0" islive="1" ispremiere="0">
+<program_name>Chayton teaches you to code</program_name>
+<program_description>In this episode, Chayton teaches you how to deal against Pretendo Kiddies</program_description>
+<program_episode_name>Pilot Episode</program_episode_name>
+</program>
+
+</channel>
+
+</grid>
 
 </vino_tv_guide>

@@ -1528,6 +1528,11 @@ tvii.router.connect("^/guide$", function () {
         restoreCacheProgramGuide();
     })
 
+    $(".program-guide-settings .option-button.apply-guide-option").on("click", function () {
+        closeProgramGuideSettings();
+        var date = $(".program-guide-settings .day-list .day-container .day-select.selected");
+    })
+
     
     $(".program-guide-settings .day-list .day-container .day-select select").on("change", function () {
         var selectedText = $(this).find("option:selected").text();
@@ -1538,9 +1543,42 @@ tvii.router.connect("^/guide$", function () {
         $(".program-guide-settings .day-list .day-container .day-select").removeClass("selected")
         $(this).parent().addClass("selected");
     });
-    
-    function requestProgramGuide() {
+
+
+    function createQueryString(date, country, lang) {
+        const formattedDate = (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear();
+        
+        const hours = date.getHours();
+        const minutes = date.getMinutes();
+        
+        const queryString = '?day=' + formattedDate + 
+                            '&hour=' + hours + ':' + (minutes < 10 ? '0' + minutes : minutes) + 
+                            '&country=' + country + 
+                            '&lang=' + lang;
+        
+        return queryString;
+      }
+
+    function requestProgramGuide(queryString) {
         tvii.utils.lockUserOperation(true);
+
+        var req = new XMLHttpRequest();
+        req.open("GET", tvii.clientUrl + "/v1/guide" + queryString);
+        req.onreadystatechange = function() {
+            if (req.readyState == 4) {
+                if (req.status == 200 && req.responseXML) {
+                    clearProgramGuide();
+                    appendGuideByXMLData(req.responseXML);
+                } else {
+                    clearProgramGuide();
+                }
+            }
+        }
+        req.send();
+    }
+
+    function appendGuideByXMLData(xml) {
+
     }
 
     function openProgramGuideSettings() {
@@ -1562,6 +1600,11 @@ tvii.router.connect("^/guide$", function () {
 
     function cacheAndClearProgramGuide() {
         sessionStorage.setItem('guide_html_cache', $(".program-guide-container").html());
+        $(".program-guide-container").html("");
+        vino.requestGarbageCollect();
+    }
+
+    function clearProgramGuide() {
         $(".program-guide-container").html("");
         vino.requestGarbageCollect();
     }
