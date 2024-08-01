@@ -42,12 +42,11 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         <span class="title"><?php echo localize("vino.guide.settings.title") ?></span>
         <span class="title-label"><?php echo localize("vino.guide.settings.title.label") ?></span>
     <div class="day-list">
-
     <?php
 // Get the current day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
 $currentDayIndex = date('w');
 
-// Define the days of the week
+// Define the days of the week with full names
 $daysOfWeek = [
     'sun' => 'Sunday',
     'mon' => 'Monday',
@@ -62,13 +61,16 @@ $daysOfWeek = [
 for ($i = 0; $i < 7; $i++) {
     $dayIndex = ($currentDayIndex + $i) % 7;
     $dayName = array_keys($daysOfWeek)[$dayIndex];
-    $dayNumber = ($i + 1) % 31; // Example: day number for display, adjust if needed
-    $dayLabel = array_values($daysOfWeek)[$dayIndex];
+    $dayNumber = ($i + 1); // Example: day number for display, adjust if needed
+    $dayLabel = $daysOfWeek[$dayName];
     
+    // Get the localized day name
+    $localizedDayName = localize("vino.guide.day." . $dayName . ".long");
+
     echo '<div class="day-container">';
     echo '    <span class="label-day"></span>';
     echo '    <span class="day ' . $dayName . '">' . $dayNumber;
-    echo '        <span class="name"><?php echo localize("vino.guide.day.' . $dayName . '.short") ?></span>';
+    echo '        <span class="name">' . htmlspecialchars($localizedDayName) . '</span>';
     echo '    </span>';
     echo '    <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">';
     echo '        <span>12:00AM</span>';
@@ -84,7 +86,6 @@ for ($i = 0; $i < 7; $i++) {
     echo '</div>';
 }
 ?>
-
 
     </div>
 
