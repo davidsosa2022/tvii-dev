@@ -1629,21 +1629,16 @@ tvii.router.connect("^/guide$", function () {
         // Convert the number to a string and manually pad with a leading zero if necessary
         return value < 10 ? '0' + value : value.toString();
     }
-    try {
-        // Extract and format month, day, and year
-        var month = formatTwoDigits(today.getMonth() + 1); // Months are zero-based
-        var day = formatTwoDigits(today.getDate());
-        var year = today.getFullYear();
-
-    } catch (error) {
-        // Alert any errors that occur
-        alert("An error occurred: " + error.message);
-    }
-
+    
+    // Extract and format month, day, and year
+    var month = formatTwoDigits(today.getMonth() + 1); // Months are zero-based
+    var day = formatTwoDigits(today.getDate());
+    var year = today.getFullYear();
+    
     // Format the date as MM/DD/YYYY
     var dateVal = month + '/' + day + '/' + year;
 
-    var hours = String(today.getHours()).padStart(2, '0');
+    var hours = formatTwoDigits(today.getHours());
     var dateHourVal = hours + ':00';
 
     requestProgramGuide(createQueryString(dateVal, dateHourVal, country, lang));
