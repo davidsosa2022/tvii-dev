@@ -42,6 +42,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         <span class="title"><?php echo localize("vino.guide.settings.title") ?></span>
         <span class="title-label"><?php echo localize("vino.guide.settings.title.label") ?></span>
     <div class="day-list">
+   
     <?php
 // Get the current day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
 $currentDayIndex = date('w');
@@ -57,9 +58,8 @@ $daysOfWeek = [
     'sat' => 'Saturday',
 ];
 
-// Get the current date and month
-$currentDate = date('j'); // Day of the month
-$currentMonth = date('m'); // Current month
+// Get the current date
+$currentDate = date('j');
 
 // Generate the day containers
 for ($i = 0; $i < 7; $i++) {
@@ -73,8 +73,19 @@ for ($i = 0; $i < 7; $i++) {
     // Get the localized day name
     $localizedDayName = localize("vino.guide.day." . $dayName . ".short");
 
+    // Determine the label for the day
+    if ($i == 0) {
+        $labelDay = localize("vino.guide.day.today");
+    } elseif ($i == 1) {
+        $labelDay = localize("vino.guide.day.tomorrow");
+    } elseif ($i == 6) {
+        $labelDay = localize("vino.guide.day.lastday");
+    } else {
+        $labelDay = ''; // No label for intermediate days
+    }
+
     echo '<div class="day-container">';
-    echo '    <span class="label-day"></span>';
+    echo '    <span class="label-day">' . htmlspecialchars($labelDay) . '</span>';
     echo '    <span class="day ' . $dayName . '">' . $dayNumber;
     echo '        <span class="name">' . htmlspecialchars($localizedDayName) . '</span>';
     echo '    </span>';
@@ -92,6 +103,7 @@ for ($i = 0; $i < 7; $i++) {
     echo '</div>';
 }
 ?>
+
 
     </div>
 

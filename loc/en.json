@@ -21,6 +21,10 @@
     "vino.guide.day.sat.short": "Sat",
     "vino.guide.day.sun.short": "Sun",
 
+    "vino.guide.day.today": "Today",
+    "vino.guide.day.tomorrow": "Tomorrow",
+    "vino.guide.day.lastday": "Last Day",
+
     "vino.guide.settings.title": "Change guide date and hour",
     "vino.guide.settings.title.label": "When you select a day with an hour, this will show 6 hours of content starting from the hour of the day you just selected.",
 
