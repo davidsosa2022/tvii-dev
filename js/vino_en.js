@@ -257,7 +257,7 @@ if (typeof vino === 'undefined') {
         jumpToTitle: function (TID, bool) {
             console.log('Jump to app ' + TID);
         },
-        checkTitleExist: function(TID) {
+        checkTitleExist: function (TID) {
             console.log("TID " + TID + " does exist.")
             return true;
         },
@@ -1522,7 +1522,7 @@ tvii.router.connect("^/guide$", function () {
         cacheAndClearProgramGuide();
         openProgramGuideSettings();
     })
-    
+
     $(".program-guide-settings .option-button.cancel-guide-option").on("click", function () {
         closeProgramGuideSettings()
         restoreCacheProgramGuide();
@@ -1539,7 +1539,7 @@ tvii.router.connect("^/guide$", function () {
         requestProgramGuide(createQueryString(dateVal, dateHourVal, country, lang));
     })
 
-    
+
     $(".program-guide-settings .day-list .day-container .day-select select").on("change", function () {
         var selectedText = $(this).find("option:selected").text();
         $(this).siblings("span").text(selectedText);
@@ -1552,20 +1552,20 @@ tvii.router.connect("^/guide$", function () {
 
 
     function createQueryString(date, hour, country, lang) {
-        var queryString = '?day=' + date + 
-                            '&hour=' + hour + 
-                            '&country=' + country + 
-                            '&lang=' + lang;
-        
+        var queryString = '?day=' + date +
+            '&hour=' + hour +
+            '&country=' + country +
+            '&lang=' + lang;
+
         return queryString;
-      }
+    }
 
     function requestProgramGuide(queryString) {
         tvii.utils.lockUserOperation(true);
         vino.loading_setIconAppear(true);
         var req = new XMLHttpRequest();
         req.open("GET", tvii.clientUrl + "/v1/guide" + queryString);
-        req.onreadystatechange = function() {
+        req.onreadystatechange = function () {
             if (req.readyState == 4) {
                 if (req.status == 200 && req.responseXML) {
                     clearProgramGuide();
@@ -1587,19 +1587,15 @@ tvii.router.connect("^/guide$", function () {
     }
 
     function openProgramGuideSettings() {
-        tvii.utils.lockUserOperation(true);
         $(".program-guide-container").addClass("none");
         $(".menu-buttons").addClass("none");
         $(".program-guide-settings").removeClass("none");
-        tvii.utils.lockUserOperation(false);
     }
 
     function closeProgramGuideSettings() {
-        tvii.utils.lockUserOperation(true);
         $(".program-guide-settings").addClass("none");
         $(".menu-buttons").removeClass("none");
         $(".program-guide-container").removeClass("none");
-        tvii.utils.lockUserOperation(false);
     }
 
 
@@ -1615,7 +1611,7 @@ tvii.router.connect("^/guide$", function () {
     }
 
     function restoreCacheProgramGuide() {
-        if (!sessionStorage.getItem('guide_html_cache')) {return false;}
+        if (!sessionStorage.getItem('guide_html_cache')) { return false; }
         $(".program-guide-container").html(sessionStorage.getItem('guide_html_cache'));
         sessionStorage.removeItem('guide_html_cache')
     }
@@ -1623,6 +1619,14 @@ tvii.router.connect("^/guide$", function () {
     function requestAd() {
 
     }
+
+    var country = vino.info_getCountry();
+    var lang = vino.info_getLanguage().toLowerCase();
+    var today = new Date();
+    var dateVal = today.toLocaleDateString('en-US');
+
+    var hours = String(today.getHours()).padStart(2, '0');
+    var dateHourVal = hours + ':00';
 
     requestProgramGuide(createQueryString(dateVal, dateHourVal, country, lang));
 });
