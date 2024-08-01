@@ -1623,7 +1623,19 @@ tvii.router.connect("^/guide$", function () {
     var country = vino.info_getCountry();
     var lang = vino.info_getLanguage().toLowerCase();
     var today = new Date();
-    var dateVal = today.toLocaleDateString('en-US');
+
+    // Function to ensure two-digit formatting
+    function formatTwoDigits(value) {
+        return value.toString().padStart(2, '0');
+    }
+    
+    // Extract and format month, day, and year
+    var month = formatTwoDigits(today.getMonth() + 1); // Months are zero-based
+    var day = formatTwoDigits(today.getDate());
+    var year = today.getFullYear();
+    
+    // Format the date as MM/DD/YYYY
+    var dateVal = month + '/' + day + '/' + year;
 
     var hours = String(today.getHours()).padStart(2, '0');
     var dateHourVal = hours + ':00';
