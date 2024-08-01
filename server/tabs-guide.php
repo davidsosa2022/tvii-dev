@@ -46,7 +46,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         <div class="day-container">
             <span class="label-day"></span>
             <span class="day sun">4
-                <span class="name">Sun</span>
+                <span class="name"><?php echo localize("vino.guide.day.sunday.short") ?></span>
             </span>
 
             <a href="javascript:void(0)" navi_target navi_no_reset class="day-select selected">
@@ -83,7 +83,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         <div class="day-container">
             <span class="label-day"></span>
             <span class="day mon">29
-                <span class="name">Mon</span>
+                <span class="name"><?php echo localize("vino.guide.day.monday.short") ?></span>
             </span>
 
             <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
@@ -120,7 +120,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         <div class="day-container">
             <span class="label-day"></span>
             <span class="day tue">30
-                <span class="name">Tue</span>
+                <span class="name"><?php echo localize("vino.guide.day.tuesday.short") ?></span>
             </span>
 
             <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
@@ -157,7 +157,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         <div class="day-container">
             <span class="label-day"></span>
             <span class="day wed">31
-                <span class="name">Wed</span>
+                <span class="name"><?php echo localize("vino.guide.day.wednesday.short") ?></span>
             </span>
 
             <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
@@ -194,7 +194,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         <div class="day-container">
             <span class="label-day"></span>
             <span class="day thu">1
-                <span class="name">Thu</span>
+                <span class="name"><?php echo localize("vino.guide.day.thursday.short") ?></span>
             </span>
 
             <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
@@ -231,7 +231,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         <div class="day-container">
             <span class="label-day"></span>
             <span class="day fri">2
-                <span class="name">Fri</span>
+                <span class="name"><?php echo localize("vino.guide.day.friday.short") ?></span>
             </span>
 
             <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
@@ -268,7 +268,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         <div class="day-container">
             <span class="label-day"></span>
             <span class="day sat">3
-                <span class="name">Sat</span>
+                <span class="name"><?php echo localize("vino.guide.day.saturday.short") ?></span>
             </span>
 
             <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
