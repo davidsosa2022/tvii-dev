@@ -43,8 +43,46 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         <span class="title-label">When you select a day with an hour, this will show 6 hours of content starting from the hour of the day you just selected.</span>
         <div class="day-list">
 
+        
         <div class="day-container">
-            <span class="label-day">Today</span>
+            <span class="label-day"></span>
+            <span class="day mon">5
+                <span class="name">Mon</span>
+            </span>
+
+            <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
+            <span>12:00AM</span>
+            <select name="day7" id="day7">
+                <option selected value="12AM">12:00AM</option>
+                <option disabled value="1AM">1:00AM</option>
+                <option value="2AM">2:00AM</option>
+                <option value="3AM">3:00AM</option>
+                <option value="1AM">4:00AM</option>
+                <option value="2AM">5:00AM</option>
+                <option value="3AM">6:00AM</option>
+                <option value="1AM">7:00AM</option>
+                <option value="2AM">8:00AM</option>
+                <option value="3AM">9:00AM</option>
+                <option value="1AM">10:00AM</option>
+                <option value="2AM">11:00AM</option>
+                <option value="3AM">12:00PM</option>
+                <option value="1AM">1:00PM</option>
+                <option value="2AM">2:00PM</option>
+                <option value="3AM">3:00PM</option>
+                <option value="1AM">4:00PM</option>
+                <option value="2AM">5:00PM</option>
+                <option value="3AM">6:00PM</option>
+                <option value="1AM">7:00PM</option>
+                <option value="2AM">8:00PM</option>
+                <option value="3AM">9:00PM</option>
+                <option value="1AM">10:00PM</option>
+                <option value="2AM">11:00PM</option>
+            </select>
+            </a>
+        </div>
+
+        <div class="day-container">
+            <span class="label-day"></span>
             <span class="day tue">30
                 <span class="name">Tue</span>
             </span>
@@ -81,7 +119,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         </div>
 
         <div class="day-container">
-            <span class="label-day">Tomorrow</span>
+            <span class="label-day"></span>
             <span class="day wed">31
                 <span class="name">Wed</span>
             </span>
@@ -266,43 +304,6 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
             </a>
         </div>
 
-        <div class="day-container">
-            <span class="label-day"></span>
-            <span class="day mon">5
-                <span class="name">Mon</span>
-            </span>
-
-            <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
-            <span>12:00AM</span>
-            <select name="day7" id="day7">
-                <option selected value="12AM">12:00AM</option>
-                <option disabled value="1AM">1:00AM</option>
-                <option value="2AM">2:00AM</option>
-                <option value="3AM">3:00AM</option>
-                <option value="1AM">4:00AM</option>
-                <option value="2AM">5:00AM</option>
-                <option value="3AM">6:00AM</option>
-                <option value="1AM">7:00AM</option>
-                <option value="2AM">8:00AM</option>
-                <option value="3AM">9:00AM</option>
-                <option value="1AM">10:00AM</option>
-                <option value="2AM">11:00AM</option>
-                <option value="3AM">12:00PM</option>
-                <option value="1AM">1:00PM</option>
-                <option value="2AM">2:00PM</option>
-                <option value="3AM">3:00PM</option>
-                <option value="1AM">4:00PM</option>
-                <option value="2AM">5:00PM</option>
-                <option value="3AM">6:00PM</option>
-                <option value="1AM">7:00PM</option>
-                <option value="2AM">8:00PM</option>
-                <option value="3AM">9:00PM</option>
-                <option value="1AM">10:00PM</option>
-                <option value="2AM">11:00PM</option>
-            </select>
-            </a>
-        </div>
-
         </div>
 
         <a href="javascript:void(0)" navi_target navi_mouse navi_margin="2" data-sound="SE_A_CLOSE_TOUCH_OFF" data-hover-out-sound="SE_CMN_TOUCH_CANCEL" data-hover-sound="SE_CMN_TOUCH_ON" data-hover class="option-button cancel-guide-option accesskey-b"> Cancel</a>
@@ -311,7 +312,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
     </div>
 
     <div class="program-guide-container">
-        
+
     </div>
 
 
