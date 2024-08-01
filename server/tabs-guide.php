@@ -65,7 +65,7 @@ for ($i = 0; $i < 7; $i++) {
     $dayLabel = $daysOfWeek[$dayName];
     
     // Get the localized day name
-    $localizedDayName = localize("vino.guide.day." . $dayName . ".long");
+    $localizedDayName = localize("vino.guide.day." . $dayName . ".short");
 
     echo '<div class="day-container">';
     echo '    <span class="label-day"></span>';
