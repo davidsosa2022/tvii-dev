@@ -1627,14 +1627,13 @@ tvii.router.connect("^/guide$", function () {
     function formatTwoDigits(value) {
         return value.toString().padStart(2, '0');
     }
-    alert("Poop")
+    alert("stop")
     // Extract and format month, day, and year
     var month = formatTwoDigits(today.getMonth() + 1); // Months are zero-based
-    alert("Poop")
+    alert("stop")
     var day = formatTwoDigits(today.getDate());
-    alert("Poop")
     var year = today.getFullYear();
-    alert("Poop")
+
     // Format the date as MM/DD/YYYY
     var dateVal = month + '/' + day + '/' + year;
     var hours = String(today.getHours()).padStart(2, '0');
