@@ -39,8 +39,8 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
     </menu>
 
     <div class="program-guide-settings none">
-        <span class="title">Change guide date and hour</span>
-        <span class="title-label">When you select a day with an hour, this will show 6 hours of content starting from the hour of the day you just selected.</span>
+        <span class="title"><?php echo localize("vino.guide.settings.title") ?></span>
+        <span class="title-label"><?php echo localize("vino.guide.settings.title.label") ?></span>
         <div class="day-list">
 
         
