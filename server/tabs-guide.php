@@ -102,19 +102,22 @@ for ($i = 0; $i < 7; $i++) {
     echo '    <a href="javascript:void(0)" navi_target navi_no_reset class="day-select ' . $additionalClass . '">';
     echo '        <span>' . $hour12 . ':00' . $amPm . '</span>';
     echo '        <select name="' . htmlspecialchars($date) . '" id="day' . $i . '">';
+
     for ($hour = 0; $hour < 24; $hour++) {
         $hourFormatted = str_pad($hour, 2, '0', STR_PAD_LEFT) . ':00';
         $amPm = ($hour < 12) ? 'AM' : 'PM';
         $hour12 = ($hour % 12) ?: 12;
         $selected = ($hour == $currentHour) ? ' selected' : '';
-        echo '        <option value="' . $hourFormatted . '"' . $selected . '>' . $hour12 . ':00' . $amPm . '</option>';
+        $disabled = ($i == 0 && $hour < $currentHour) ? ' disabled' : ''; // Disable previous hours for the first day
+
+        echo '        <option value="' . $hourFormatted . '"' . $selected . $disabled . '>' . $hour12 . ':00' . $amPm . '</option>';
     }
+
     echo '        </select>';
     echo '    </a>';
     echo '</div>';
 }
 ?>
-
 
 
     </div>
