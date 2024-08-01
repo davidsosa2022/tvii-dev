@@ -46,15 +46,15 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         
         <div class="day-container">
             <span class="label-day"></span>
-            <span class="day mon">5
+            <span class="day mon">29
                 <span class="name">Mon</span>
             </span>
 
-            <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
+            <a href="javascript:void(0)" navi_target navi_no_reset class="day-select selected">
             <span>12:00AM</span>
-            <select name="day7" id="day7">
+            <select name="day0" id="day0">
                 <option selected value="12AM">12:00AM</option>
-                <option disabled value="1AM">1:00AM</option>
+                <option value="1AM">1:00AM</option>
                 <option value="2AM">2:00AM</option>
                 <option value="3AM">3:00AM</option>
                 <option value="1AM">4:00AM</option>
@@ -87,7 +87,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
                 <span class="name">Tue</span>
             </span>
 
-            <a href="javascript:void(0)" navi_target navi_no_reset class="day-select selected">
+            <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">
                 <span>12:00AM</span>
             <select name="day1" id="day1">
                 <option selected value="12AM">12:00AM</option>
@@ -202,7 +202,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
             <span>12:00AM</span>
             <select name="day4" id="day4">
                 <option selected value="12AM">12:00AM</option>
-                <option disabled value="1AM">1:00AM</option>
+                <option value="1AM">1:00AM</option>
                 <option value="2AM">2:00AM</option>
                 <option value="3AM">3:00AM</option>
                 <option value="1AM">4:00AM</option>
@@ -239,7 +239,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
             <span>12:00AM</span>
             <select name="day5" id="day5">
                 <option selected value="12AM">12:00AM</option>
-                <option disabled value="1AM">1:00AM</option>
+                <option value="1AM">1:00AM</option>
                 <option value="2AM">2:00AM</option>
                 <option value="3AM">3:00AM</option>
                 <option value="1AM">4:00AM</option>
@@ -277,7 +277,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
             <span>12:00AM</span>
             <select name="day6" id="day6">
                 <option selected value="12AM">12:00AM</option>
-                <option disabled value="1AM">1:00AM</option>
+                <option value="1AM">1:00AM</option>
                 <option value="2AM">2:00AM</option>
                 <option value="3AM">3:00AM</option>
                 <option value="1AM">4:00AM</option>
