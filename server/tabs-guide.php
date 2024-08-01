@@ -42,7 +42,7 @@ if(!isset($_SERVER['HTTP_X_PJAX'])) {
         <span class="title"><?php echo localize("vino.guide.settings.title") ?></span>
         <span class="title-label"><?php echo localize("vino.guide.settings.title.label") ?></span>
     <div class="day-list">
-   
+  
     <?php
 // Get the current day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
 $currentDayIndex = date('w');
@@ -84,6 +84,9 @@ for ($i = 0; $i < 7; $i++) {
         $labelDay = ''; // No label for intermediate days
     }
 
+    // Generate the day name for the select element
+    $selectName = $daysOfWeek[$dayName];
+
     echo '<div class="day-container">';
     echo '    <span class="label-day">' . htmlspecialchars($labelDay) . '</span>';
     echo '    <span class="day ' . $dayName . '">' . $dayNumber;
@@ -91,7 +94,7 @@ for ($i = 0; $i < 7; $i++) {
     echo '    </span>';
     echo '    <a href="javascript:void(0)" navi_target navi_no_reset class="day-select">';
     echo '        <span>12:00AM</span>';
-    echo '        <select name="day' . $i . '" id="day' . $i . '">';
+    echo '        <select name="' . htmlspecialchars($selectName) . '" id="day' . $i . '">';
     for ($hour = 0; $hour < 24; $hour++) {
         $hourFormatted = str_pad($hour, 2, '0', STR_PAD_LEFT) . ':00';
         $amPm = ($hour < 12) ? 'AM' : 'PM';
