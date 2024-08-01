@@ -1562,7 +1562,7 @@ tvii.router.connect("^/guide$", function () {
 
     function requestProgramGuide(queryString) {
         tvii.utils.lockUserOperation(true);
-
+        vino.loading_setIconAppear(true);
         var req = new XMLHttpRequest();
         req.open("GET", tvii.clientUrl + "/v1/guide" + queryString);
         req.onreadystatechange = function() {
@@ -1570,8 +1570,12 @@ tvii.router.connect("^/guide$", function () {
                 if (req.status == 200 && req.responseXML) {
                     clearProgramGuide();
                     appendGuideByXMLData(req.responseXML);
+                    vino.loading_setIconAppear(false);
+                    tvii.utils.lockUserOperation(false);
                 } else {
                     clearProgramGuide();
+                    vino.loading_setIconAppear(false);
+                    tvii.utils.lockUserOperation(false);
                 }
             }
         }
@@ -1620,9 +1624,7 @@ tvii.router.connect("^/guide$", function () {
 
     }
 
-    vino.loading_setIconAppear(true);
-
-    vino.loading_setIconAppear(false);
+    requestProgramGuide(createQueryString(dateVal, dateHourVal, country, lang));
 });
 
 // Favorites page code
