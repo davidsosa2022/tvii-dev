@@ -1531,6 +1531,12 @@ tvii.router.connect("^/guide$", function () {
     $(".program-guide-settings .option-button.apply-guide-option").on("click", function () {
         closeProgramGuideSettings();
         var date = $(".program-guide-settings .day-list .day-container .day-select.selected");
+        var dateVal = date.find("select").attr('name');
+        var dateHourVal = date.find("select").val();
+        var country = vino.info_getCountry();
+        var lang = vino.info_getLanguage().toLowerCase();
+
+        requestProgramGuide(createQueryString(dateVal, dateHourVal, country, lang));
     })
 
     
@@ -1545,14 +1551,9 @@ tvii.router.connect("^/guide$", function () {
     });
 
 
-    function createQueryString(date, country, lang) {
-        const formattedDate = (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear();
-        
-        const hours = date.getHours();
-        const minutes = date.getMinutes();
-        
-        const queryString = '?day=' + formattedDate + 
-                            '&hour=' + hours + ':' + (minutes < 10 ? '0' + minutes : minutes) + 
+    function createQueryString(date, hour, country, lang) {
+        var queryString = '?day=' + date + 
+                            '&hour=' + hour + 
                             '&country=' + country + 
                             '&lang=' + lang;
         
