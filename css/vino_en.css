@@ -3818,6 +3818,31 @@ button {
   color: #323232;
 }
 
+.program-guide-container .segment-hours .program[style="height: 110px;"] .program-title {
+  -webkit-line-clamp: 1;
+}
+
+.program-guide-container .segment-hours .program[style="height: 110px;"] .program-description {
+  -webkit-line-clamp: 1;
+}
+
+.program-guide-container .segment-hours .program[style="height: 110px;"] .program-description {
+  -webkit-line-clamp: 2;
+}
+
+.program-guide-container .segment-hours .program[style="height: 220px"] .program-title {
+  -webkit-line-clamp: 2;
+}
+
+.program-guide-container .segment-hours .program[style="height: 220px"] .program-description {
+  -webkit-line-clamp: 1;
+}
+
+.program-guide-container .segment-hours .program[style="height: 220px"] .program-description {
+  -webkit-line-clamp: 6;
+}
+
+
 .program-guide-container .segment-hours .program:nth-of-type(even) {
   background: #eaeaea;
   padding-left: 3px;
