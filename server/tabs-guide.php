@@ -192,7 +192,7 @@ for ($i = 0; $i < 7; $i++) {
     </a>
 
         
-    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 220px" class="program">
+    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 220px;" class="program">
             <span class="program-title"><span class="full-hour">9:01PM</span>The Real CSI: Miami</span>
             <span class="program-episode">Game Over</span>
             <span class="program-description">James Barry is murdered in a house full of his loved ones; examination of the murder weapon and an intriguing development involving digital forensics reveals a startling motive.</span>
