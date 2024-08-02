@@ -1568,12 +1568,10 @@ tvii.router.connect("^/guide$", function () {
         req.onreadystatechange = function () {
             if (req.readyState == 4) {
                 if (req.status == 200 && req.responseXML) {
-                    clearProgramGuide();
                     appendGuideByXMLData(req.responseXML);
                     vino.loading_setIconAppear(false);
                     tvii.utils.lockUserOperation(false);
                 } else {
-                    clearProgramGuide();
                     vino.loading_setIconAppear(false);
                     tvii.utils.lockUserOperation(false);
                 }
