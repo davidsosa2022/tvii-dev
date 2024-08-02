@@ -144,22 +144,18 @@ for ($i = 0; $i < 7; $i++) {
     <span class="channel-name"><span class="bold">4</span>WTMJ</span>
 
     <div class="segment-hours">
-    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 660px;" class="program" id="60">
+    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 770px;" class="program" id="60">
             <span class="program-title"><span class="full-hour">7:00PM</span>Primetime in Paris: The Olympics</span>
             <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
      </a>
 
-        <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" class="program" id="30">
-            <span class="program-title"><span class="new-label">NEW</span><span class="rating-label">TV-PG</span>TMJ4 News at 10</span>
+        <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 110px;" class="program" id="30">
+            <span class="program-title"><span class="full-hour">7:00PM</span><span class="new-label">NEW</span><span class="rating-label">TV-PG</span>TMJ4 News at 10</span>
             <span class="program-description">Local, national and international news coverage.</span>
     </a>
     
-    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" class="program">
+    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 440px;" class="program">
             <span class="program-title"><span class="full-hour">11:05PM</span>2024 Paris Olympics</span>
-            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
-    </a>
-    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" class="program">
-            <span class="program-title">2024 Paris Olympics</span>
             <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
     </a>
     </div>
