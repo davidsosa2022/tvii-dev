@@ -3843,14 +3843,6 @@ button {
 }
 
 
-.program-guide-container .segment-hours .program:nth-of-type(even) {
-  background: #eaeaea;
-  padding-left: 3px;
-  padding-right: 3px;
-  margin-left: 1px;
-  margin-right: 1px;
-}
-
 .program-guide-container .segment-hours .program.sixty {
   height: 220px;
 }
