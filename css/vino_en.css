@@ -3822,7 +3822,7 @@ button {
   -webkit-line-clamp: 1;
 }
 
-.program-guide-container .segment-hours .program[style="height: 110px;"] .program-description {
+.program-guide-container .segment-hours .program[style="height: 110px;"] .program-episode {
   -webkit-line-clamp: 1;
 }
 
@@ -3830,15 +3830,15 @@ button {
   -webkit-line-clamp: 2;
 }
 
-.program-guide-container .segment-hours .program[style="height: 220px"] .program-title {
+.program-guide-container .segment-hours .program[style="height: 220px;"] .program-title {
   -webkit-line-clamp: 2;
 }
 
-.program-guide-container .segment-hours .program[style="height: 220px"] .program-description {
+.program-guide-container .segment-hours .program[style="height: 220px;"] .program-episode {
   -webkit-line-clamp: 1;
 }
 
-.program-guide-container .segment-hours .program[style="height: 220px"] .program-description {
+.program-guide-container .segment-hours .program[style="height: 220px;"] .program-description {
   -webkit-line-clamp: 6;
 }
 
