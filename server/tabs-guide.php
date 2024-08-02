@@ -190,6 +190,32 @@ for ($i = 0; $i < 7; $i++) {
             <span class="program-episode">Whodunnit</span>
             <span class="program-description">Sam, Jay and the ghosts go into detective mode when Sam's podcast editor gives her one last episode to wrap up Alberta's murder; Trevor, Flower and Pete discover an email from a Nigerian prince asking for help.</span>
     </a>
+
+        
+    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 220px" class="program">
+            <span class="program-title"><span class="full-hour">9:01PM</span>The Real CSI: Miami</span>
+            <span class="program-episode">Game Over</span>
+            <span class="program-description">James Barry is murdered in a house full of his loved ones; examination of the murder weapon and an intriguing development involving digital forensics reveals a startling motive.</span>
+    </a>
+
+    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 110px;" class="program">
+            <span class="program-title"><span class="full-hour">10:00PM</span>CBS 58 News at 10pm</span>
+            <span class="program-description">The major news events of the day, late-breaking stories, sports, weather and tomorrow's forecast.</span>
+    </a>
+
+    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 220px;" class="program">
+            <span class="program-title"><span class="full-hour">10:35PM</span>The Late Show With Stephen Colbert</span>
+            <span class="program-episode">Glen Powell; Charlamagne Tha God</span>
+            <span class="program-description">Actor Glen Powell; radio and TV personality Charlamagne Tha God.</span>
+    </a>
+
+    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 220px;" class="program">
+            <span class="program-title"><span class="full-hour">11:37PM</span>After Midnight</span>
+            <span class="program-episode">Alex Edelman; Jack McBrayer; Jackie Tohn</span>
+            <span class="program-description">Comic Alex Edelman; actor Jack McBrayer; actress Jackie Tohn.</span>
+    </a>
+
+
     </div>
 
 </div>
