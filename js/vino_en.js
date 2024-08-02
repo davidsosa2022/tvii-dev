@@ -1583,7 +1583,7 @@ tvii.router.connect("^/guide$", function () {
     }
 
     function appendGuideByXMLData(xml) {
-
+        
     }
 
     function openProgramGuideSettings() {

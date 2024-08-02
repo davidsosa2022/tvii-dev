@@ -3797,7 +3797,7 @@ button {
 
 .program-guide-container .segment-hour {
   width: 250px;
-  height: 220px;
+  height: auto;
   position: relative;
   display: block;
   border-top: 1px solid rgba(0, 0, 0, 0);
