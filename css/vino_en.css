@@ -3823,12 +3823,24 @@ button {
   margin-right: 1px;
 }
 
+.program-guide-container .segment-hours .program.oneeighty {
+  height: 660px;
+}
+
+.program-guide-container .segment-hours .program.onetwenty {
+  height: 440px;
+}
+
 .program-guide-container .segment-hours .program.sixty {
   height: 220px;
 }
 
 .program-guide-container .segment-hours .program.thirty {
   height: 110px;
+}
+
+.program-guide-container .segment-hours .program.fifty {
+  height: 55px;
 }
 
 .program-guide-container .segment-hours .program .program-title {
