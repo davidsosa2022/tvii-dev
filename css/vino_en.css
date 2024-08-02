@@ -3823,14 +3823,6 @@ button {
   margin-right: 1px;
 }
 
-.program-guide-container .segment-hours .program.oneeighty {
-  height: 660px;
-}
-
-.program-guide-container .segment-hours .program.onetwenty {
-  height: 440px;
-}
-
 .program-guide-container .segment-hours .program.sixty {
   height: 220px;
 }
@@ -3839,9 +3831,6 @@ button {
   height: 110px;
 }
 
-.program-guide-container .segment-hours .program.fifty {
-  height: 55px;
-}
 
 .program-guide-container .segment-hours .program .program-title {
   display: -webkit-box;
@@ -3909,7 +3898,7 @@ button {
 .program-guide-container .segment-hours .program .program-description {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  /*-webkit-line-clamp: 2;*/
   padding: 4px;
   padding-top: 2px;
   padding-bottom: 3px;
@@ -3917,14 +3906,6 @@ button {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   overflow: hidden;
-}
-
-.program-guide-container .segment-hours .program.sixty .program-title {
-  -webkit-line-clamp: 3 !important;
-}
-
-.program-guide-container .segment-hours .program.sixty .program-description {
-  -webkit-line-clamp: 6 !important;
 }
 
 .menu-container .age-ratings label.age span.tip {
