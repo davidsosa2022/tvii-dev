@@ -144,24 +144,55 @@ for ($i = 0; $i < 7; $i++) {
     <span class="channel-name"><span class="bold">4</span>WTMJ</span>
 
     <div class="segment-hours">
-    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 770px;" class="program" id="60">
+    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 660px;" class="program" id="60">
             <span class="program-title"><span class="full-hour">7:00PM</span>Primetime in Paris: The Olympics</span>
             <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
      </a>
 
         <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 110px;" class="program" id="30">
-            <span class="program-title"><span class="full-hour">7:00PM</span><span class="new-label">NEW</span><span class="rating-label">TV-PG</span>TMJ4 News at 10</span>
+            <span class="program-title"><span class="full-hour">10:00PM</span><span class="new-label">NEW</span><span class="rating-label">TV-PG</span>TMJ4 News at 10</span>
             <span class="program-description">Local, national and international news coverage.</span>
     </a>
     
-    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 440px;" class="program">
-            <span class="program-title"><span class="full-hour">11:05PM</span>2024 Paris Olympics</span>
-            <span class="program-description">Surfing wraps up in Tahiti, plus coverage from basketball 3x3 pool play and more.</span>
+    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 330px;" class="program">
+            <span class="program-title"><span class="full-hour">10:35PM</span>2024 Paris Olympics</span>
+            <span class="program-episode">Surfing, Basketball 3x3</span>
+            <span class="program-description">Coverage of pool play in basketball 3x3, a report on surfing and more.</span>
+    </a>
+
+    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 660px;" class="program">
+            <span class="program-title"><span class="full-hour">12:00PM</span>Primetime in Paris: The Olympics</span>
+            <span class="program-episode">Gymnastics, Swimming: Primetime in Paris</span>
+            <span class="program-description">Coverage includes the women's all-around final in gymnastics and the women's 200m fly final and more in swimming.</span>
     </a>
     </div>
 
 </div>
 
+<div class="channel-container">
+    
+    <span class="channel-name"><span class="bold">5</span>WDJT</span>
+
+    <div class="segment-hours">
+    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 220px;" class="program" id="60">
+            <span class="program-title"><span class="full-hour">7:00PM</span>Big Brother</span>
+            <span class="program-description">Following a live vote, a houseguest is evicted and interviewed; remaining houseguests compete for power in the next head of household.</span>
+     </a>
+
+        <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 110px;" class="program" id="30">
+            <span class="program-title"><span class="full-hour">8:00PM</span><span class="new-label">NEW</span><span class="rating-label">TV-PG</span>Young Sheldon</span>
+            <span class="program-episode">An Ankle Monitor and a Big Plastic Crap House</span>
+            <span class="program-description">Sheldon studies to be Meemaw's lawyer when she is put on house arrest; the Coopers have a plumbing emergency.</span>
+    </a>
+    
+    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 440px;" class="program">
+            <span class="program-title"><span class="full-hour">8:31PM</span>Ghosts</span>
+            <span class="program-episode">Whodunnit</span>
+            <span class="program-description">Sam, Jay and the ghosts go into detective mode when Sam's podcast editor gives her one last episode to wrap up Alberta's murder; Trevor, Flower and Pete discover an email from a Nigerian prince asking for help.</span>
+    </a>
+    </div>
+
+</div>
 
 
 </div>
