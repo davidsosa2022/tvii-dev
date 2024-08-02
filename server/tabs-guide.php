@@ -185,7 +185,7 @@ for ($i = 0; $i < 7; $i++) {
             <span class="program-description">Sheldon studies to be Meemaw's lawyer when she is put on house arrest; the Coopers have a plumbing emergency.</span>
     </a>
     
-    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 440px;" class="program">
+    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 110px;" class="program">
             <span class="program-title"><span class="full-hour">8:31PM</span>Ghosts</span>
             <span class="program-episode">Whodunnit</span>
             <span class="program-description">Sam, Jay and the ghosts go into detective mode when Sam's podcast editor gives her one last episode to wrap up Alberta's murder; Trevor, Flower and Pete discover an email from a Nigerian prince asking for help.</span>
