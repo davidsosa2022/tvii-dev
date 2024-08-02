@@ -144,7 +144,7 @@ for ($i = 0; $i < 7; $i++) {
     <span class="channel-name"><span class="bold">4</span>WTMJ</span>
 
     <div class="segment-hours">
-    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 775px;" class="program" id="60">
+    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 660px;" class="program" id="60">
             <span class="program-title"><span class="full-hour">7:00PM</span>Primetime in Paris: The Olympics</span>
             <span class="program-description">Medals are awarded in the women's gymnastics team final, women's 100m backstroke and more in swimming. Plus, coverage of the surfing finals.</span>
      </a>
