@@ -3808,7 +3808,7 @@ button {
   border-right: 1px solid #909090;
 }
 
-.program-guide-container:nth-child(2) {
+.program-guide-container .channel-container:first-child .segment-hours{
   border-left: none;
 }
 
