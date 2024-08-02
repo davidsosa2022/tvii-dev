@@ -150,7 +150,7 @@ for ($i = 0; $i < 7; $i++) {
      </a>
 
         <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 110px;" class="program" id="30">
-            <span class="program-title"><span class="full-hour">10:00PM</span><span class="new-label">NEW</span><span class="rating-label">TV-PG</span>TMJ4 News at 10</span>
+            <span class="program-title"><span class="full-hour">10:00PM</span><span class="new-label">NEW</span>TMJ4 News at 10</span>
             <span class="program-description">Local, national and international news coverage.</span>
     </a>
     
@@ -180,7 +180,7 @@ for ($i = 0; $i < 7; $i++) {
      </a>
 
         <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 110px;" class="program" id="30">
-            <span class="program-title"><span class="full-hour">8:00PM</span><span class="new-label">NEW</span><span class="rating-label">TV-PG</span>Young Sheldon</span>
+            <span class="program-title"><span class="full-hour">8:00PM</span><span class="new-label">NEW</span>Young Sheldon</span>
             <span class="program-episode">An Ankle Monitor and a Big Plastic Crap House</span>
             <span class="program-description">Sheldon studies to be Meemaw's lawyer when she is put on house arrest; the Coopers have a plumbing emergency.</span>
     </a>
