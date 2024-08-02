@@ -3806,10 +3806,8 @@ button {
   border-bottom: 1px solid rgba(0, 0, 0, 0);
   border-left: 1px solid #fff;
   border-right: 1px solid #909090;
-}
-
-.program-guide-container:nth-child(2).segment-hours{
-  border-left: none !important;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 .program-guide-container .segment-hours .program {
