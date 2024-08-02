@@ -215,6 +215,13 @@ for ($i = 0; $i < 7; $i++) {
             <span class="program-description">Comic Alex Edelman; actor Jack McBrayer; actress Jackie Tohn.</span>
     </a>
 
+    <a href="javascript:void(0)" navi_target="" navi_mouse="" data-sound="SE_APPEAR_DETAIL" style="height: 110px;" class="program">
+            <span class="program-title"><span class="full-hour">12:37PM</span>Inside Edition</span>
+            <span class="program-episode">Behind the Scenes at Miss USA Pageants</span>
+            <span class="program-description">Behind the scenes at Miss Teen and Miss USA pageants.</span>
+    </a>
+
+
 
     </div>
 
