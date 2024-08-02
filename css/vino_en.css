@@ -3847,6 +3847,22 @@ button {
   -webkit-box-sizing: border-box;
 }
 
+.program-guide-container .segment-hours .program .program-episode {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-weight: bold;
+  padding: 4px;
+  padding-top: 0px;
+  font-style: italic;
+  font-size: 17px;
+  color: #5d5d5d;
+  text-shadow: 0px -1px #fff;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
 .program-guide-container .segment-hours .program .program-title .full-hour {
   background: #ffa0c5;
   padding: 2.5px;
