@@ -3799,16 +3799,17 @@ button {
 
 .program-guide-container .segment-hours {
   width: 250px;
-  height: auto;
   position: relative;
   display: block;
   border-top: 1px solid rgba(0, 0, 0, 0);
-  border-bottom: 1px solid rgba(0, 0, 0, 0);
   border-left: 1px solid #fff;
   border-right: 1px solid #909090;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
-}
+  height: 1320px;
+  overflow: hidden;
+  border-bottom: 1px solid #909090;
+  background: #efefef;}
 
 .program-guide-container .segment-hours .program {
   font-size: 18px;
@@ -3822,6 +3823,10 @@ button {
   display: block;
   overflow: hidden;
   color: #323232;
+}
+
+.program-guide-container .segment-hours .program:last-child {
+  border-bottom: none;
 }
 
 .program-guide-container .segment-hours .program[style="height: 110px;"] .program-title {
@@ -3864,7 +3869,7 @@ button {
   overflow: hidden;
   font-weight: bold;
   padding: 4px;
-  padding-top: 9px;
+  padding-top: 7px;
   font-size: 17px;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
