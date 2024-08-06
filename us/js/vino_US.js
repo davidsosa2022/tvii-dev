@@ -389,7 +389,7 @@ var tvii = tvii || {
             for (var i = 0; i < tvii.templates.templateList.length; i++) {
                 (function (temToLoad) {
                     var xhr = new XMLHttpRequest();
-                    xhr.open("GET", tvii.clientUrl + "/templates/" + temToLoad.template_file);
+                    xhr.open("GET", tvii.clientUrl + "./templates/" + temToLoad.template_file);
                     xhr.onreadystatechange = function () {
                         if (xhr.readyState == 4) {
                             if (xhr.status == 200) {
@@ -451,7 +451,7 @@ var tvii = tvii || {
             $(".wrapper").removeClass("none");
         },
         hasInitalizedBefore: function () {
-            if (sessionStorage.getItem("temLoaded") != "true" && window.location.pathname != "/") {
+            if (sessionStorage.getItem("temLoaded") != "true" && window.location.pathname != "/us/index.html") {
                 vino.requestGarbageCollect();
                 window.location.href = "/";
             }
