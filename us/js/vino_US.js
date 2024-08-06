@@ -372,15 +372,15 @@ var tvii = tvii || {
         templateList: [
             {
                 template_query: "programs",
-                template_file: "./templates/programs.html"
+                template_file: "programs.html"
             },
             {
                 template_query: "settings",
-                template_file: "./templates/settings.html"
+                template_file: "settings.html"
             },
             {
                 template_query: "home",
-                template_file: "./templates/home.html"
+                template_file: "home.html"
             }
         ],
         requestAll: function () {
@@ -389,7 +389,7 @@ var tvii = tvii || {
             for (var i = 0; i < tvii.templates.templateList.length; i++) {
                 (function (temToLoad) {
                     var xhr = new XMLHttpRequest();
-                    xhr.open("GET", tvii.clientUrl + "/templates/" + temToLoad.template_file);
+                    xhr.open("GET", tvii.clientUrl + "/us/templates/" + temToLoad.template_file);
                     xhr.onreadystatechange = function () {
                         if (xhr.readyState == 4) {
                             if (xhr.status == 200) {
