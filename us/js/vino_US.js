@@ -389,7 +389,7 @@ var tvii = tvii || {
             for (var i = 0; i < tvii.templates.templateList.length; i++) {
                 (function (temToLoad) {
                     var xhr = new XMLHttpRequest();
-                    xhr.open("GET", tvii.clientUrl + "/us/templates/" + temToLoad.template_file);
+                    xhr.open("GET", tvii.clientUrl + "/templates/" + temToLoad.template_file);
                     xhr.onreadystatechange = function () {
                         if (xhr.readyState == 4) {
                             if (xhr.status == 200) {
@@ -442,7 +442,7 @@ var tvii = tvii || {
 
             $(document).on("tvii:templates:loaded", function () {
                 $(document).off("tvii:templates:loaded")
-                $(document).trigger("tvii:initialize");
+                $(document).trigger("tvii:initialized");
             })
             tvii.templates.requestAll();
         },
@@ -451,7 +451,7 @@ var tvii = tvii || {
             $(".wrapper").removeClass("none");
         },
         hasInitalizedBefore: function () {
-            if (sessionStorage.getItem("temLoaded") != "true" && window.location.pathname != "/us/index.html") {
+            if (sessionStorage.getItem("temLoaded") != "true" && window.location.pathname != "/") {
                 vino.requestGarbageCollect();
                 window.location.href = "/";
             }
@@ -505,6 +505,66 @@ var tvii = tvii || {
                 $(".wrapper").addClass("none");
             }
         },
+        clearEvents: function () {
+            $(document).off("mousedown");
+            $(document).off("mousemove");
+            $(document).off("mouseup");
+            $(document).off("scroll");
+            $(document).off("click");
+            $(document).off("tvii:tabchange");
+        },
+        setScrollingContainer: function (container) {
+            var scrCont = container;
+            var isMouseDown = false;
+            var startX, scrollLeft;
+            var lastScrollLeft, scrollVelocity = 0;
+            var friction = 0.95; // Inertia friction factor
+            var inertiaInterval; // Interval ID for inertia
+
+            scrCont.on('mousedown', function (e) {
+                isMouseDown = true;
+                startX = e.pageX;
+                scrollLeft = scrCont.scrollLeft();
+                lastScrollLeft = scrollLeft; // Track the last scroll position for velocity calculation
+                scrollVelocity = 0; // Reset scroll velocity on mousedown
+                scrCont.css('cursor', 'grabbing');
+                clearInterval(inertiaInterval); // Stop any previous inertia interval
+            });
+
+            $(document).on('mouseup', function () {
+                if (isMouseDown) {
+                    isMouseDown = false;
+                    scrCont.css('cursor', 'grab');
+                    // Smooth scrolling inertia
+                    inertiaInterval = setInterval(function () {
+                        if (Math.abs(scrollVelocity) > 0.1) { // Continue scrolling if velocity is significant
+                            scrCont.scrollLeft(scrCont.scrollLeft() + scrollVelocity);
+                            scrollVelocity *= friction;
+                        } else {
+                            clearInterval(inertiaInterval); // Stop inertia when velocity is low
+                        }
+                    }, 20); // Update every 20ms for smooth scrolling
+                }
+            });
+
+            scrCont.on('mousemove', function (e) {
+                if (isMouseDown) {
+                    var x = e.pageX;
+                    var walk = (x - startX) * 2; // Scroll speed
+                    scrCont.scrollLeft(scrollLeft - walk);
+                    scrollVelocity = scrCont.scrollLeft() - lastScrollLeft; // Update velocity based on scroll change
+                    lastScrollLeft = scrCont.scrollLeft(); // Update last scroll position
+                }
+            });
+        },
+        setTabs: function() {
+            $(".tab-label").on("click", function () {
+                vino.soundPlay("SE_A_TAB_TOUCH_OFF");
+                $(".tab-label").removeClass("selected");
+                $(this).addClass("selected");
+                $(document).trigger("tvii:tabchange", [$(this)]);
+            })
+        },
         initPageLinks: function () {
             $('a').on("click", function () {
                 var link = $(this);
@@ -524,19 +584,20 @@ $(window).on("load", function () {
 })
 
 
-$(document).on("tvii:initialize", function () {
+$(document).on("tvii:initialized", function () {
     tvii.utils.endInitialLoading();
     tvii.utils.changePage("?page=home", true);
-    $(document).off("tvii:initialize");
+    $(document).off("tvii:initialized");
 });
 
 $(document).on("tvii:pagechange", function () {
+    tvii.utils.clearEvents()
     vino.requestGarbageCollect();
     tvii.utils.initPageLinks();
 })
 
 $(window).on("popstate", function () {
-    tvii.utils.changePage(location.search, true)
+    tvii.utils.changePage(location.search, true);
 });
 
 tvii.router.connect("^[?&]page=home(?:&|$)", function () {
@@ -565,48 +626,19 @@ tvii.router.connect("^[?&]page=settings(?:&|$)", function () {
     $(".mii-body img").attr("src", vino.act_getMiiImageEx(tvii.userSlot, 7));
     $(".mii-body span").text(vino.act_getName(tvii.userSlot));
 
-    var $scrollArea = $('.settings-container');
-    var isMouseDown = false;
-    var startX, scrollLeft;
-    var lastScrollLeft, scrollVelocity = 0;
-    var friction = 0.95; // Inertia friction factor
-    var inertiaInterval; // Interval ID for inertia
+    tvii.utils.setScrollingContainer($('.settings-container'));
+    tvii.utils.setScrollingContainer($('.credits-container'));
+    tvii.utils.setTabs();
 
-    $scrollArea.on('mousedown', function (e) {
-        isMouseDown = true;
-        startX = e.pageX;
-        scrollLeft = $scrollArea.scrollLeft();
-        lastScrollLeft = scrollLeft; // Track the last scroll position for velocity calculation
-        scrollVelocity = 0; // Reset scroll velocity on mousedown
-        $scrollArea.css('cursor', 'grabbing');
-        clearInterval(inertiaInterval); // Stop any previous inertia interval
-    });
-
-    $(document).on('mouseup', function () {
-        if (isMouseDown) {
-            isMouseDown = false;
-            $scrollArea.css('cursor', 'grab');
-            // Smooth scrolling inertia
-            inertiaInterval = setInterval(function () {
-                if (Math.abs(scrollVelocity) > 0.1) { // Continue scrolling if velocity is significant
-                    $scrollArea.scrollLeft($scrollArea.scrollLeft() + scrollVelocity);
-                    scrollVelocity *= friction;
-                } else {
-                    clearInterval(inertiaInterval); // Stop inertia when velocity is low
-                }
-            }, 20); // Update every 20ms for smooth scrolling
+    $(document).on("tvii:tabchange", function (event, tab) {
+        if (tab.attr("data-section") == "about") {
+            $(".settings-container").addClass("none");
+            $(".about-container").removeClass("none");
+        } else {
+            $(".about-container").addClass("none");
+            $(".settings-container").removeClass("none");
         }
-    });
-
-    $scrollArea.on('mousemove', function (e) {
-        if (isMouseDown) {
-            var x = e.pageX;
-            var walk = (x - startX) * 2; // Scroll speed
-            $scrollArea.scrollLeft(scrollLeft - walk);
-            scrollVelocity = $scrollArea.scrollLeft() - lastScrollLeft; // Update velocity based on scroll change
-            lastScrollLeft = $scrollArea.scrollLeft(); // Update last scroll position
-        }
-    });
+    })
 });
 
 tvii.router.connect("^[?&]page=programs(?:&|$)", function () {
@@ -616,50 +648,10 @@ tvii.router.connect("^[?&]page=programs(?:&|$)", function () {
         history.back();
     })
 
-    $(".tab-label").on("click", function () {
-        vino.soundPlay("SE_A_TAB_TOUCH_OFF");
+    $(document).on("tvii:tabchange", function (event, tab) {
+        console.log(tab)
     })
 
-    var $scrollArea = $('.program-container');
-    var isMouseDown = false;
-    var startX, scrollLeft;
-    var lastScrollLeft, scrollVelocity = 0;
-    var friction = 0.95; // Inertia friction factor
-    var inertiaInterval; // Interval ID for inertia
-
-    $scrollArea.on('mousedown', function (e) {
-        isMouseDown = true;
-        startX = e.pageX;
-        scrollLeft = $scrollArea.scrollLeft();
-        lastScrollLeft = scrollLeft; // Track the last scroll position for velocity calculation
-        scrollVelocity = 0; // Reset scroll velocity on mousedown
-        $scrollArea.css('cursor', 'grabbing');
-        clearInterval(inertiaInterval); // Stop any previous inertia interval
-    });
-
-    $(document).on('mouseup', function () {
-        if (isMouseDown) {
-            isMouseDown = false;
-            $scrollArea.css('cursor', 'grab');
-            // Smooth scrolling inertia
-            inertiaInterval = setInterval(function () {
-                if (Math.abs(scrollVelocity) > 0.1) { // Continue scrolling if velocity is significant
-                    $scrollArea.scrollLeft($scrollArea.scrollLeft() + scrollVelocity);
-                    scrollVelocity *= friction;
-                } else {
-                    clearInterval(inertiaInterval); // Stop inertia when velocity is low
-                }
-            }, 20); // Update every 20ms for smooth scrolling
-        }
-    });
-
-    $scrollArea.on('mousemove', function (e) {
-        if (isMouseDown) {
-            var x = e.pageX;
-            var walk = (x - startX) * 2; // Scroll speed
-            $scrollArea.scrollLeft(scrollLeft - walk);
-            scrollVelocity = $scrollArea.scrollLeft() - lastScrollLeft; // Update velocity based on scroll change
-            lastScrollLeft = $scrollArea.scrollLeft(); // Update last scroll position
-        }
-    });
+    tvii.utils.setScrollingContainer($('.program-container'));
+    tvii.utils.setTabs();
 });

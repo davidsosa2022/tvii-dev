@@ -122,7 +122,7 @@ body.scroll {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border-top: 1px solid rgba(255, 255, 255, 0.6);
-    background: -webkit-radial-gradient(circle, #ffffff, #9fd2ff);
+    background: url(/img/mii-shine.png) center center no-repeat, -webkit-radial-gradient(circle, #ffffff, #9fd2ff);
     border-radius: 6px;
     margin-left: 1px;
 }
@@ -297,8 +297,8 @@ body.scroll {
 
 .tab-container .tab-label {
     font-size: 24px;
-    color: #FFFFFF;
-    text-shadow: 0px 1px 0px #3f3f3f;
+    color: #eeeeee;
+    text-shadow: 0px 1px 2px #1e1e1e;
     padding: 10px;
     margin-left: 16px;
     position: relative;
@@ -307,11 +307,11 @@ body.scroll {
 }
 
 .tab-container .tab-label.selected {
+    color: #ffffff;
     text-shadow: 0px 0px 20px #3a90c3, 0px 0px 20px #3a90c3, 0px 0px 20px #3a90c3;
 }
 
-.program-container,
-.settings-container {
+.container {
     position: absolute;
     width: 854px;
     height: 400px;
@@ -329,13 +329,93 @@ body.scroll {
     top: 66px;
 }
 
+.credits-container {
+    height: 200px;
+    top: 190px;
+}
+
+.about-container .vino-logo {
+    position: absolute;
+    top: 90px;
+    left: 230px;
+}
+
+.about-container .vino-version {
+    position: absolute;
+    top: 150px;
+    color: #fcfcfc;
+    width: 600px;
+    left: 50px;
+    text-shadow: 0px 3px 0px #3b3b3b;
+    z-index: 5;
+    font-size: 22px;
+}
+
+.about-container .copyright {
+    position: absolute;
+    top: 396px;
+    width: 854px;
+    height: 65px;
+    text-align: center;
+    color: #d3d3d3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size: 14px;
+    padding-left: 70px;
+    padding-right: 70px;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.37);
+}
+
+
+.about-container .card {
+    width: 300px;
+    height: 180px;
+    position: relative;
+    background: -webkit-radial-gradient(circle, #ffffff, #f3f3f3);
+    white-space: normal;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align: center;
+    line-height: 1.4;
+    font-size: 13px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.26);
+    color: #888888;
+}
+
+.about-container .card span {
+    position: absolute;
+    bottom: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    margin: 0 10px;
+    width: 280px;
+    height: 75px;
+}
+
+.about-container .card img {
+    max-height: 60px;
+    margin: 15px auto;
+    display: block;
+}
+
 .program-container .program {
     width: 276px;
     height: 155px;
     background: #c1c1c1;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.26);
     display: inline-block;
     position: relative;
-    margin: 10px 6px;
+    margin: 7px 6px;
 }
 
 .program-container .program img {
@@ -361,7 +441,7 @@ body.scroll {
     padding-bottom: 9px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.45);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.45);
 }
 
 .program-container .program .name {
@@ -375,8 +455,7 @@ body.scroll {
     overflow: hidden;
 }
 
-.program-container::-webkit-scrollbar,
-.settings-container::-webkit-scrollbar {
+.container::-webkit-scrollbar {
     width: 0 !important;
     height: 0 !important;
 }
@@ -389,11 +468,13 @@ body.scroll {
     width: 240px;
     height: 340px;
     z-index: 50;
-    background-color: #acd6ec;
+    background: url(/img/mii-body-shine.png) center center no-repeat, #acd6ec;
 }
 
 .settings-container .mii-body img {
     width: 240px;
+    position: absolute;
+    bottom: 0;
 }
 
 .settings-container .mii-body span {
@@ -432,9 +513,12 @@ body.scroll {
     margin-top: 28px;
     width: 206px;
     height: 156px;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
-    background: #fff;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #a9a295), color-stop(1, #7e7b6f));
+    color: #4d4c43;
+    font-weight: bold;
+    line-height: 1.2;
 }
 
 .settings-buttons .favorite-btn {
@@ -447,21 +531,41 @@ body.scroll {
     color: #549449;
 }
 
+.settings-buttons .social-btn {
+    background: url(/img/social-set.png) center 9px no-repeat, #f38176;
+    color: #A7463E;
+}
+
+.settings-buttons .manual-btn {
+    background: url(/img/man-set.png) center 7px no-repeat, #25b9ff;
+    color: #1667A5;
+}
+
+.settings-buttons .parental-btn {
+    background: url(/img/pc-set.png) center 13px no-repeat, #ffa9ed;
+    color: #ff008c;
+}
+
+.settings-buttons .setup-btn {
+    background: url(/img/setup-set.png) center 13px no-repeat, #ffaf66;
+    color: #da6800;
+}
+
 .program-container .program .episode {
     width: auto;
     max-width: 205px;
     float: left;
     padding-top: 1px;
     font-size: 14px;
-    padding-right: 0px;
     color: #e8e8e8;
 }
 
 .program-container .program .season {
-    width: 70px;
+    width: 71px;
     float: left;
     padding-top: 1px;
     font-size: 14px;
+    padding-left: 0px;
     color: #e8e8e8;
 }
 
@@ -469,5 +573,5 @@ body.scroll {
     position: absolute;
     bottom: 0;
     left: 0;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0)), color-stop(1, rgba(0, 0, 0, 0.5)));
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0)), color-stop(1, rgba(0, 0, 0, 0.75)));
 }
