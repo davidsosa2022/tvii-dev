@@ -372,15 +372,15 @@ var tvii = tvii || {
         templateList: [
             {
                 template_query: "programs",
-                template_file: "programs.html"
+                template_file: "./templates/programs.html"
             },
             {
                 template_query: "settings",
-                template_file: "settings.html"
+                template_file: "./templates/settings.html"
             },
             {
                 template_query: "home",
-                template_file: "home.html"
+                template_file: "./templates/home.html"
             }
         ],
         requestAll: function () {
