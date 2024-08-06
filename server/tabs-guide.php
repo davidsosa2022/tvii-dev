@@ -1,14 +1,4 @@
 <?php
-//TEST REDIRECT FOR US TVII, ONLY FOR QUICK TEST
-$url = '/us/index.html';
-
-// Send the HTTP Location header to redirect the browser
-header('Location: ' . $url);
-
-// Terminate the script
-exit;
-//TEST REDIRECT ENDS HERE
-
 include('init.php');
 
 if(!isset($_SERVER['HTTP_X_PJAX'])) {
