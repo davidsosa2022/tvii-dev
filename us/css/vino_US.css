@@ -122,7 +122,7 @@ body.scroll {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border-top: 1px solid rgba(255, 255, 255, 0.6);
-    background: url(/img/mii-shine.png) center center no-repeat, -webkit-radial-gradient(circle, #ffffff, #9fd2ff);
+    background: url(./img/mii-shine.png) center center no-repeat, -webkit-radial-gradient(circle, #ffffff, #9fd2ff);
     border-radius: 6px;
     margin-left: 1px;
 }
@@ -468,7 +468,7 @@ body.scroll {
     width: 240px;
     height: 340px;
     z-index: 50;
-    background: url(/img/mii-body-shine.png) center center no-repeat, #acd6ec;
+    background: url(./img/mii-body-shine.png) center center no-repeat, #acd6ec;
 }
 
 .settings-container .mii-body img {
@@ -522,32 +522,32 @@ body.scroll {
 }
 
 .settings-buttons .favorite-btn {
-    background: url(/img/fav-set.png) center 4px no-repeat, #f2d461;
+    background: url(./img/fav-set.png) center 4px no-repeat, #f2d461;
     color: #A9892D;
 }
 
 .settings-buttons .streaming-btn {
-    background: url(/img/str-set.png) center 6px no-repeat, #89d282;
+    background: url(./img/str-set.png) center 6px no-repeat, #89d282;
     color: #549449;
 }
 
 .settings-buttons .social-btn {
-    background: url(/img/social-set.png) center 9px no-repeat, #f38176;
+    background: url(./img/social-set.png) center 9px no-repeat, #f38176;
     color: #A7463E;
 }
 
 .settings-buttons .manual-btn {
-    background: url(/img/man-set.png) center 7px no-repeat, #25b9ff;
+    background: url(./img/man-set.png) center 7px no-repeat, #25b9ff;
     color: #1667A5;
 }
 
 .settings-buttons .parental-btn {
-    background: url(/img/pc-set.png) center 13px no-repeat, #ffa9ed;
+    background: url(./img/pc-set.png) center 13px no-repeat, #ffa9ed;
     color: #ff008c;
 }
 
 .settings-buttons .setup-btn {
-    background: url(/img/setup-set.png) center 13px no-repeat, #ffaf66;
+    background: url(./img/setup-set.png) center 13px no-repeat, #ffaf66;
     color: #da6800;
 }
 
