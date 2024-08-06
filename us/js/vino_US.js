@@ -451,7 +451,7 @@ var tvii = tvii || {
             $(".wrapper").removeClass("none");
         },
         hasInitalizedBefore: function () {
-            if (sessionStorage.getItem("temLoaded") != "true" && window.location.search != "/us/index.html") {
+            if (sessionStorage.getItem("temLoaded") != "true" && window.location.pathname != "/us/index.html") {
                 vino.requestGarbageCollect();
                 window.location.href = "/";
             }
